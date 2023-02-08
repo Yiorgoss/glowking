@@ -1,17 +1,17 @@
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 
-import type { PageWithHeaderLayout } from "@types/layoutTypes"
+import type { PageWithHeaderLayout } from "@cTypes/layoutTypes"
 
 
 type AppPropsWithLayout = AppProps & {
-  Component: PageWithHeaderLayout
+    Component: PageWithHeaderLayout
 }
 
 
 export default function App({ Component, pageProps }: AppPropsWithLayout) {
-  const getLayout = Component.getLayout || ((page) => page)
+    const getLayout = Component.getLayout || ((page) => page)
     return (
-      getLayout(<Component {...pageProps} />)
+        getLayout(<Component {...pageProps} />)
     )
 }
