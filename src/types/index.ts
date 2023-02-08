@@ -1,1 +1,0 @@
-import layoutTypes from "./layoutTypes"
