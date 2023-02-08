@@ -20,7 +20,7 @@
       "@pages/*" : ["./src/pages/*"],
       "@components/*" : ["./src/components/*"],
       "@layouts/*" : ["./src/layouts/*"],
-      "@customTypes/*"  : ["./src/types/*"]
+      "@cTypes/*"  : ["./src/types/*"]
 
     }
   },
