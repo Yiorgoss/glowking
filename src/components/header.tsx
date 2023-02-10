@@ -13,12 +13,12 @@ interface headerProps {
 export default function Header({ navLinks }: headerProps): JSX.Element {
     //TODO: refactor and split code up
     //TODO: add clickListener to close on surrounding click
-    //TODO: refactor the different headings for responsive and normal view
+
 
     const [isOpen, setIsOpen] = useState<boolean>(true);
 
     return (
-        <div className="">
+        <div className="md:shadow-layered">
             <div className=" grid grid-cols-2 md:grid-cols-3 items-center justify-items-center">
                 <div className="text-xl md:text-5xl font-bold">69 123 456 78</div>
                 <div className="py-2 pt-2 text-lg font-medium md:col-auto col-span-full">* snappy * motto * or * TLDR *</div>
@@ -30,7 +30,7 @@ export default function Header({ navLinks }: headerProps): JSX.Element {
                         fill
                     />
                 </div>
-                <ul className="col-span-full my-3 text-2xl ">
+                <ul className="col-span-full my-3 text-2xl">
                     <div className="py-1 md:hidden" onClick={() => setIsOpen(!isOpen)}>
                         <AiOutlineMenu className="mx-auto font-black text-secondary text-2xl" />
                     </div>
