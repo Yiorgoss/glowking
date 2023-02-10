@@ -7,7 +7,8 @@ module.exports = {
     extend: {
       boxShadow: {
         'inset-color': ' 0px 2px 4px #fb138580 ,  0px 4px 8px #fb138560,  0px 8px 16px #fb138530 ',
-        'custom': '0px 1px 2px #fb138550, 0px 2px 4px #fb138550, 0px 4px 8px #fb138550, 0px 8px 16px #fb138550'
+        'layered': '0px 1px 2px #fb138550, 0px 2px 4px #fb138550, 0px 4px 8px #fb138550, 0px 8px 16px #fb138550',
+        'layered-xl': '0px 2px 4px #fb138550, 0px 4px 8px #fb138550, 0px 8px 16px #fb138550, 0px 16px 32px #fb138550'
 
       },
 
