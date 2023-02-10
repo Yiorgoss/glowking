@@ -15,7 +15,7 @@ export default function Header({ navLinks }: headerProps): JSX.Element {
     //TODO: add clickListener to close on surrounding click
 
 
-    const [isOpen, setIsOpen] = useState<boolean>(true);
+    const [isOpen, setIsOpen] = useState<boolean>(true)
 
     return (
         <div className="md:shadow-layered">
