@@ -1,0 +1,17 @@
+1/  Link building strategy - internal links within page
+2/  Core Web Vitals - faster speed google lighthouse
+3/  Targeted keywords per country/language
+4/  SERP - Featured snippets
+5/  SEO audit - content audit and on-page audit
+6/  People Also Ask - H2s, H3s and H4s FAQs
+
+maybe
+1/  boosting price of competitors marketing strategy
+
+Refrences
+https://www.wordstream.com/blog/ws/2018/06/20/seo-audit
+https://www.wordstream.com/blog/ws/2019/01/14/seo-tools
+
+https://developers.google.com/search/docs/fundamentals/how-search-works
+https://www.google.com/webmasters/markup-helper/u/0/
+https://ads.google.com/aw/keywordplanner/
