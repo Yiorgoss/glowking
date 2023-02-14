@@ -1,4 +1,4 @@
 {
-  "ignorePatterns": ["/src/types/*.ts"],
+  "ignorePatterns": ["/src/types/**"],
   "extends": ["next/core-web-vitals","prettier"]
 }
