@@ -3,7 +3,7 @@ import HeaderLayout from "@layouts/headerLayout";
 
 import { ReactElement } from "react";
 
-import Card from "@components/common/card/card";
+import CardMain from "@components/cardMain";
 import Button from "@components/common/button/button";
 import type { PageWithHeaderLayout } from "@cTypes/layoutTypes";
 
@@ -22,10 +22,10 @@ const Services: PageWithHeaderLayout = () => {
                 <div className="flex flex-wrap content-center justify-center">
                     <Button href="" text="Book Now" />
                 </div>
-                <Card />
-                <Card />
-                <Card />
-                <Card />
+                <CardMain />
+                <CardMain />
+                <CardMain />
+                <CardMain />
             </div>
         </div>
     );
