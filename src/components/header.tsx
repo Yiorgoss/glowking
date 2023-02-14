@@ -1,8 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
+
 import { useRef, useState, useEffect } from "react";
 
 import { AiOutlineMenu } from "react-icons/ai";
+import { Trans } from '@lingui/macro'
 
 import { navLinkType } from "@cTypes/inputTypes";
 import Divider from "./divider";
@@ -21,7 +23,7 @@ export default function Header({ navLinks }: headerProps): JSX.Element {
         <div className="md:shadow-layered">
             <div className=" grid grid-cols-2 md:grid-cols-3 items-center justify-items-center">
                 <div className="text-xl md:text-5xl font-bold">69 123 456 78</div>
-                <div className="py-2 pt-2 text-lg font-medium md:col-auto col-span-full">* snappy * motto * or * TLDR *</div>
+                <div className="py-2 pt-2 text-lg font-medium md:col-auto col-span-full"><Trans id="header_text">Needs to be translated</Trans></div>
                 <div className="relative m-5 h-[150px] w-[150px] row-start-1 col-start-2 md:row-start-auto md:col-start-auto">
                     <Image
                         className="h-auto w-auto"

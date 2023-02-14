@@ -6,17 +6,24 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "extract": "lingui extract",
+    "compile": "lingui compile"
   },
   "dependencies": {
+    "@babel/core": "^7.20.12",
+    "@lingui/loader": "^3.17.1",
+    "@lingui/react": "^3.17.1",
     "@next/font": "13.1.6",
     "@sendgrid/mail": "^7.7.0",
     "@types/node": "18.11.18",
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
     "autoprefixer": "^10.4.13",
+    "babel-plugin-macros": "^3.1.0",
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",
+    "make-plural": "^7.2.0",
     "next": "13.1.6",
     "nodemailer": "^6.9.1",
     "postcss": "^8.4.21",
@@ -27,6 +34,8 @@
     "typescript": "4.9.5"
   },
   "devDependencies": {
+    "@lingui/cli": "^3.17.1",
+    "@lingui/macro": "^3.17.1",
     "eslint-config-prettier": "^8.6.0",
     "prettier": "^2.8.3",
     "prettier-plugin-tailwindcss": "^0.2.2"
