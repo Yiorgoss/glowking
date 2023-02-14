@@ -31,6 +31,18 @@ const Graphic = ({
         </div>
     );
 };
+
+//Content and Header seperate for SEO reasons
+const Header = ({
+    children,
+    className,
+}: {
+    children: ReactElement | ReactElement[] | string;
+    className?: string;
+}) => {
+    return <h3 className={className}> {children} </h3>;
+};
+
 const Content = ({
     children,
     className,
@@ -40,6 +52,7 @@ const Content = ({
 }) => {
     return <div className={className}>{children}</div>;
 };
+
 const Card = ({
     children,
     className,
@@ -50,6 +63,7 @@ const Card = ({
     return <div className={className}>{children}</div>;
 };
 
+Card.Header = Header;
 Card.Content = Content;
 Card.Graphic = Graphic;
 
