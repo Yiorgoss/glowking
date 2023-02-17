@@ -3,13 +3,9 @@ import { ReactElement, useContext, createContext, useState } from "react";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
 import dayjs, { Dayjs } from "dayjs";
-import objectPlugin from "dayjs/plugin/toObject";
 import isTodayPlugin from "dayjs/plugin/isToday";
-import toObject from "dayjs/plugin/toObject";
 
-dayjs.extend(objectPlugin);
 dayjs.extend(isTodayPlugin);
-dayjs.extend(toObject);
 
 const DatePickerContext = createContext({});
 
@@ -44,15 +40,6 @@ const DaysOfTheWeek = () => {
                         {dayjs().day(i).format("ddd")}
                     </div>
                 ))}
-        </div>
-    );
-};
-
-const MonthlyHeader = () => {
-    return (
-        <div className="">
-            <MonthSwitcher />
-            <DaysOfTheWeek />
         </div>
     );
 };
@@ -99,24 +86,33 @@ const DatesOfTheMonth = () => {
         <div className="grid grid-cols-7">
             {arr.map((dateObj, i) => (
                 <div className="" key={i}>
-                    {dateObj.format("dd DD MMM")}
+                    {dateObj.format("D")}
                 </div>
             ))}
         </div>
     );
 };
 
-const DatePicker = () => {
+const SelectedDateDisplay = () => {
+    return <div className="">needs context date</div>;
+};
+const DatePicker = ({
+    children,
+}: {
+    children: ReactElement | ReactElement[];
+}) => {
     const [displayMonth, setDisplayMonth] = useState(dayjs());
 
     return (
         <DatePickerContext.Provider value={[displayMonth, setDisplayMonth]}>
-            <div className="">
-                <MonthlyHeader />
-                <DatesOfTheMonth />
-            </div>
+            {children}
         </DatePickerContext.Provider>
     );
 };
+
+DatePicker.DatesOfTheMonth = DatesOfTheMonth;
+DatePicker.MonthSwitcher = MonthSwitcher;
+DatePicker.DaysOfTheWeek = DaysOfTheWeek;
+DatePicker.SelectedDateDisplay = SelectedDateDisplay;
 
 export default DatePicker;
