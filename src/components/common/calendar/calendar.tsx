@@ -3,9 +3,15 @@ import TimePicker from "./timePicker"
 
 const Calendar = () => {
     return(
-        <>
-        <DatePicker />
-        <TimePicke />
-        </>
+        <div className="w-[400px]">
+            <DatePicker>
+                <DatePicker.MonthSwitcher />
+                <DatePicker.DaysOfTheWeek />
+                <DatePicker.DatesOfTheMonth />
+            </DatePicker>
+            <TimePicker />
+        </div>
     )
 }
+
+export default Calendar
