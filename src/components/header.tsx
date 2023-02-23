@@ -1,59 +1,57 @@
-import Link from "next/link";
 import Image from "next/image";
 
 import { useRef, useState, useEffect } from "react";
 
 import { AiOutlineMenu } from "react-icons/ai";
-import { Trans } from '@lingui/macro'
+import { Trans } from "@lingui/macro";
 
+import ActiveLink from "@components/common/activeLink/activeLink";
 import { navLinkType } from "@cTypes/inputTypes";
-import Divider from "./divider";
-import LangSwitcher from "@/components/langSwitcher"
+import LangSwitcher from "@/components/langSwitcher";
+import Button from "@components/common/button/button";
 
-interface headerProps {
-    navLinks: navLinkType[];
-}
-export default function Header({ navLinks }: headerProps): JSX.Element {
+export default function Header({
+    navLinks,
+    //bgColor must be tailwind background color
+    bgColor,
+}: {
+    navLinks: { title: string; path: string }[];
+    bgColor?: string;
+}): JSX.Element {
     //TODO: refactor and split code up
     //TODO: add clickListener to close on surrounding click
 
-
-    const [isOpen, setIsOpen] = useState<boolean>(true)
+    const [isOpen, setIsOpen] = useState<boolean>(true);
 
     return (
-        <div className="md:shadow-layered">
-            <div className=" grid grid-cols-2 md:grid-cols-3 items-center justify-items-center">
-                <div className="text-xl md:text-5xl font-bold">69 123 456 78
-                    <div className="">
-                        <LangSwitcher />
-                    </div></div>
-                <div className="py-2 pt-2 text-lg font-medium md:col-auto col-span-full"><Trans id="header_text">Needs to be translated</Trans></div>
-                <div className="relative m-5 h-[150px] w-[150px] row-start-1 col-start-2 md:row-start-auto md:col-start-auto">
+        <div className={`${bgColor ? bgColor : "bg-transparent"}`}>
+            <div className=" grid h-[100px] grid-cols-5 uppercase">
+                <div className="my-auto pl-10">
                     <Image
-                        className="h-auto w-auto"
-                        src="https://via.placeholder.com/150"
-                        alt="logo"
-                        fill
+                        src="/images/glowking_logo.jpg"
+                        alt="glowking logo"
+                        width={80}
+                        height={80}
                     />
                 </div>
-                <ul className="col-span-full my-3 text-2xl">
-                    <div className="py-1 md:hidden" onClick={() => setIsOpen(!isOpen)}>
-                        <AiOutlineMenu className="mx-auto font-black text-secondary text-2xl" />
-                    </div>
-                    {navLinks.map((link, index) => (
-                        <li className={` ${isOpen && 'hidden'} md:block rounded-md hover:-translate-y-1 transition-transform hover:shadow-inset-color md:float-left mx-3 p-3 `} key={index}>
-                            <div className=" p-1 relative after:absolute after:content-['.'] after:bg-secondary after:w-0 after:transition-width after:duration-150 hover:after:w-3/4 after:h-[2px] after:m-auto after:text-transparent after:left-0 after:right-0 after:bottom-0">
-                                <Link
-                                    className=" relative p-2"
+                <div className="col-span-3 mx-auto my-auto text-base font-normal text-secondary">
+                    <ul>
+                        {navLinks.map((link, i) => (
+                            <li className="inline px-6" key={i}>
+                                <ActiveLink
                                     href={link.path}
-                                    onClick={() => setIsOpen(!isOpen)}
+                                    activeClassName="text-tertiary"
                                 >
                                     {link.title}
-                                </Link>
-                            </div>
-                        </li>
-                    ))}
-                </ul>
+                                </ActiveLink>
+                            </li>
+                        ))}
+                        <LangSwitcher />
+                    </ul>
+                </div>
+                <div className="my-auto w-fit">
+                    <Button href="/contact">Book Now</Button>
+                </div>
             </div>
         </div>
     );
