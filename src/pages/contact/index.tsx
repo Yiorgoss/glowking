@@ -1,4 +1,4 @@
-import HeaderLayout from "@layouts/headerLayout";
+import LayoutLayout from "@layouts/landingLayout";
 import { ReactElement, useState } from "react";
 
 import type { PageWithHeaderLayout } from "@cTypes/layoutTypes";
@@ -6,69 +6,47 @@ import type { PageWithHeaderLayout } from "@cTypes/layoutTypes";
 const Contact: PageWithHeaderLayout = () => {
     //TODO: refactor form into compound component
     //TODO: remove form elements and instead use react and axios/fetch
-    const [name, setName] = useState("Name");
-    const [email, setEmail] = useState("Email");
-    const [messageBody, setMessageBody] = useState("Message");
 
     return (
-        <div className="container mx-auto">
-            <div className="mt-10">
-                <h2 className="text-center font-bold text-4xl">
+        <div className="10 container mx-auto mt-[100px]">
+            <div className="my-10 pb-20">
+                <h2 className="my-20 pt-10 text-center text-5xl font-semibold">
                     Contact Us
                 </h2>
-                <div className="grid mt-10 grid-cols-2 gap-4 justify-center font-bold">
-                    <div className="text-xl text-right font-semibold">Telephone:</div>
-                    <div className="text-xl font-semibold">69 123 456 78</div>
-                    <div className="text-xl text-right font-semibold">Email:</div>
-                    <div className="text-xl font-semibold">glowkingath@gmail.com</div>
-                </div>
-            </div>
-            <h2 className="mt-10 text-center text-3xl font-bold">
-                Send us an Email
-            </h2>
-            <div className="">
-                <form className="" action="/api/contact" method="post">
-                    <div className=" grid grid-cols-2 justify-center gap-y-5 gap-x-5 rounded-md p-10 text-lg">
-                        <input
-                            className="rounded-md px-10 py-2"
-                            placeholder="Name"
-                            type="text"
-                            required
-                            id="name"
-                            name="name"
-                        />
-                        <input
-                            className="rounded-md px-10 py-2"
-                            placeholder="Email"
-                            type="text"
-                            required
-                            id="email"
-                            name='email'
-                        />
-                        <div className="col-span-full h-[300px]">
-                            <textarea
-                                id="messageBody"
-                                required
-                                placeholder="Message"
-                                name="message"
-                                className="h-full w-full rounded-md px-10 py-5"
-                            />
-                        </div>
-                        <button
-                            className="w-1/2 rounded-md bg-white px-5 py-2"
-                            type="submit"
-                        >
-                            Submit
-                        </button>
+                <div className="grid grid-cols-2 tracking-wider ">
+                    <div className="pr-20 text-right text-6xl">
+                        We love to
+                        <br />
+                        <span className="text-9xl  font-bold uppercase text-tertiary">
+                            {" "}
+                            help
+                        </span>
                     </div>
-                </form>
+                    <div className="my-auto flex flex-col text-2xl">
+                        <div className="text-2xl ">
+                            <span className="text-3xl font-semibold">
+                                Phone:
+                            </span>{" "}
+                            +30 691 234 5678
+                        </div>
+                        <div className="my-8 pl-10 text-6xl font-bold">
+                            Or By
+                        </div>
+                        <div className="text-2xl">
+                            <span className="text-3xl font-semibold">
+                                Email:
+                            </span>{" "}
+                            glowkingath@gmail.com
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );
 };
 
 Contact.getLayout = function getLayout(page: ReactElement) {
-    return <HeaderLayout>{page}</HeaderLayout>;
+    return <LayoutLayout>{page}</LayoutLayout>;
 };
 
 export default Contact;
