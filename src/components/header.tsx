@@ -36,6 +36,7 @@ export default function Header({
                 </div>
                 <div className="col-span-3 mx-auto my-auto text-base font-normal text-secondary">
                     <ul>
+                        <LangSwitcher />
                         {navLinks.map((link, i) => (
                             <li className="inline px-6" key={i}>
                                 <ActiveLink
@@ -46,7 +47,6 @@ export default function Header({
                                 </ActiveLink>
                             </li>
                         ))}
-                        <LangSwitcher />
                     </ul>
                 </div>
                 <div className="my-auto w-fit">

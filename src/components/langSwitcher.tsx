@@ -1,9 +1,7 @@
-import {useState } from 'react'
+import {useState, useEffect} from 'react'
 import {useRouter} from 'next/router'
 
 import {LOCALE} from '@cTypes/inputTypes'
-
-
 
 const LangSwitcher = () => {
 
@@ -11,8 +9,8 @@ const LangSwitcher = () => {
     const [locale, setLocale] = useState<LOCALE>(router.locale!.split("-")[0] as LOCALE)
 
     const languages: {[key:string]: string} = {
-        en: "English",
-        gr: "Ελληνικά"
+        en: "En",
+        gr: "Ελ"
     }
 
     const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -23,7 +21,7 @@ const LangSwitcher = () => {
     }
 
     return (
-        <select value={locale} onChange={handleChange}>
+        <select className="bg-inherit focus:outline-none text-sm" value={locale} onChange={handleChange}>
             {Object.keys(languages).map((lang, i) => {
                 return (
                     <option value={lang} key={i}>
