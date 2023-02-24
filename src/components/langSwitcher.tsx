@@ -10,7 +10,7 @@ const LangSwitcher = () => {
 
     const languages: {[key:string]: string} = {
         en: "En",
-        gr: "Ελ"
+        el: "Ελ"
     }
 
     const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {

@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
 
 import { AiOutlineMenu } from "react-icons/ai";
-import { Trans } from "@lingui/macro";
+import { t } from "@lingui/macro";
 
 import ActiveLink from "@components/common/activeLink/activeLink";
 import { navLinkType } from "@cTypes/inputTypes";
@@ -28,7 +28,7 @@ export default function Header({
             <div className=" grid h-[100px] grid-cols-5 uppercase">
                 <div className="my-auto pl-10">
                     <Image
-                        src="/glowking_logo.png"
+                        src="/images/glowking_logo.jpg"
                         alt="glowking logo"
                         width={80}
                         height={80}
@@ -50,7 +50,9 @@ export default function Header({
                     </ul>
                 </div>
                 <div className="my-auto w-fit">
-                    <Button href="/contact">Book Now</Button>
+                    <Button href="/contact">
+                        {t({ id: "headerButton", message: "Book Now" })}
+                    </Button>
                 </div>
             </div>
         </div>

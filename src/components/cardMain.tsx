@@ -1,5 +1,9 @@
 import Link from "next/link";
+import { ReactElement } from "react";
+
 import Card from "@components/common/card/card";
+
+import { Trans } from "@lingui/macro";
 
 const CardMain = ({
     href,
@@ -8,7 +12,7 @@ const CardMain = ({
     image,
 }: {
     href: string;
-    header?: string;
+    header?: any;
     content?: string;
     image?: string;
 }) => {
@@ -18,7 +22,7 @@ const CardMain = ({
                 <Card.Graphic className="h-[200px] w-full" src={image} />
 
                 <Card.Header className="mt-8 text-center text-2xl font-bold">
-                    {header}
+                    <Trans>{header}</Trans>
                 </Card.Header>
                 <Card.Content className="break-all p-5">{content}</Card.Content>
             </Link>
