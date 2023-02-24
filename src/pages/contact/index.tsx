@@ -1,4 +1,5 @@
 import LayoutLayout from "@layouts/landingLayout";
+import Image from "next/image";
 import { ReactElement, useState } from "react";
 
 import type { PageWithHeaderLayout } from "@cTypes/layoutTypes";
@@ -8,12 +9,21 @@ const Contact: PageWithHeaderLayout = () => {
     //TODO: remove form elements and instead use react and axios/fetch
 
     return (
-        <div className="10 container mx-auto mt-[100px]">
+        <div className="mx-auto mt-[100px]">
             <div className="my-10 pb-20">
-                <h2 className="my-20 pt-10 text-center text-5xl font-semibold">
-                    Contact Us
-                </h2>
-                <div className="grid grid-cols-2 tracking-wider ">
+                <div className="relative mt-[100px] h-[300px] w-screen overflow-hidden ">
+                    <Image
+                        className="object-cover"
+                        src="/images/red_lambo.jpg"
+                        alt="banner image of a black lamborghini"
+                        fill
+                    />
+                    <h2 className="absolute inset-x-0 bottom-0 my-20 pb-10 pt-10 text-center text-5xl font-semibold tracking-wider text-primary">
+                        Contact Us
+                    </h2>
+                </div>
+
+                <div className="mt-20 grid grid-cols-2 tracking-wider ">
                     <div className="pr-20 text-right text-6xl">
                         We love to
                         <br />

@@ -11,43 +11,46 @@ import type { PageWithHeaderLayout } from "@cTypes/layoutTypes";
 
 const SERVICES_LIST = [
     {
-        title: "Service",
+        title: "Service 1",
         content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac",
-        image: "https://via.placeholder.com/1000x1000.png",
+        image: "/images/car_1.png",
     },
     {
-        title: "Service",
+        title: "Service 2",
         content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac",
-        image: "https://via.placeholder.com/1000x1000.png",
+        image: "/images/car_2.png",
     },
     {
-        title: "Service",
+        title: "Service 3",
         content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac",
-        image: "https://via.placeholder.com/1000x1000.png",
+        image: "/images/car_3.png",
     },
     {
-        title: "Service",
+        title: "Service 4",
         content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac",
-        image: "https://via.placeholder.com/1000x1000.png",
+        image: "/images/car_5.png",
     },
 ];
 const Services: PageWithHeaderLayout = () => {
     return (
         <div className="mt-[100px]">
             <div className="">
-                <div className="relative h-[300px] w-screen ">
-                    <Image
-                        src="https://via.placeholder.com/1000x400.png"
-                        alt="banner"
-                        fill
-                    />
-                    <h2 className="absolute inset-x-0 bottom-0 pb-20  text-center text-4xl font-bold tracking-wider">
-                        Our <span className="text-tertiary">Services</span>
-                    </h2>
+                <div className="relative mt-[100px] h-[300px] w-screen ">
+                    <div className="relative mt-[100px] h-[300px] w-screen overflow-hidden ">
+                        <Image
+                            className="object-cover"
+                            src="/images/red_lambo.jpg"
+                            alt="banner image of a black lamborghini"
+                            fill
+                        />
+                        <h2 className="absolute inset-x-0 bottom-0 my-20 pb-10 pt-10 text-center text-5xl font-semibold tracking-wider text-primary">
+                            Services
+                        </h2>
+                    </div>
                 </div>
             </div>
             <div className="mt-10">

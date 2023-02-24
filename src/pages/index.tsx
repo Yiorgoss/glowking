@@ -28,65 +28,66 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 
 const FEATURE_LIST = [
     {
-        title: "Feature",
+        title: "Extra Careful",
         content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac",
-        image: "https://via.placeholder.com/1000x1000.png",
+        image: "/images/lambo_orange_clean.jpg",
     },
     {
-        title: "Feature",
+        title: "Eco Friendly",
         content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac",
-        image: "https://via.placeholder.com/1000x1000.png",
+        image: "/images/glowking_van_1.jpg",
     },
     {
-        title: "Feature",
+        title: "Discrete",
         content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac",
-        image: "https://via.placeholder.com/1000x1000.png",
+        image: "/images/black_lambo_2.jpg",
     },
     {
-        title: "Feature",
+        title: "Effective",
         content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac",
-        image: "https://via.placeholder.com/1000x1000.png",
+        image: "/images/soapy_wheel.jpg",
     },
 ];
 
 const SERVICES_LIST = [
     {
-        title: "Service",
+        title: "Car Wash",
         content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac",
-        image: "https://via.placeholder.com/1000x1000.png",
+        image: "/images/black_lambo_2.jpg",
     },
     {
-        title: "Service",
+        title: "Boat Wash",
         content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac",
-        image: "https://via.placeholder.com/1000x1000.png",
+        image: "/images/clean_jeep.jpg",
     },
     {
-        title: "Service",
+        title: "Road Cleaning",
         content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac",
-        image: "https://via.placeholder.com/1000x1000.png",
+        image: "/images/van_lambo.jpg",
     },
     {
-        title: "Service",
+        title: "Property Cleaning",
         content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac",
-        image: "https://via.placeholder.com/1000x1000.png",
+        image: "/images/clean_mustang.jpg",
     },
 ];
 
 const Home: PageWithHeaderLayout = () => {
     return (
-        <div className=" overflow-hidden ">
+        <div className="overflow-hidden ">
             <div className="h-screen w-screen ">
                 <div className="relative -z-10 h-full w-full">
                     <Image
-                        src="https://via.placeholder.com/1000x1000.png"
+                    className="object-cover"
+                        src="/images/landing_page_2.jpg"
                         alt="landing page image"
                         fill
                     />
@@ -101,7 +102,7 @@ const Home: PageWithHeaderLayout = () => {
             </div>
             <div className="container mx-auto">
                 <div className="py-10">
-                    <h1 className="my-10 text-center text-5xl">{t`Our Services`}</h1>
+                    <h1 className="my-10 text-center font-bold tracking-wider text-6xl">{t`Features`}</h1>
                     <div className="grid grid-cols-4">
                         {FEATURE_LIST.map((feature, i) => (
                             <CardMain
@@ -118,8 +119,8 @@ const Home: PageWithHeaderLayout = () => {
             <div className="container mx-auto my-20">
                 <ServiceSection
                     isLeft={false}
-                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum  ac"
-                    image="https://via.placeholder.com/1000x1000.png"
+                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae epsum dolor sit amet, consectetur adipiscing elit. Proin vitae epsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum  ac"
+                    image="/images/soapy_merc.jpg"
                 />
             </div>
             <div className="container mx-auto my-20">
