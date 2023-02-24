@@ -28,13 +28,13 @@ export default function Header({
             <div className=" grid h-[100px] grid-cols-5 uppercase">
                 <div className="my-auto pl-10">
                     <Image
-                        src="/images/glowking_logo.jpg"
+                        src="/glowking_logo.png"
                         alt="glowking logo"
                         width={80}
                         height={80}
                     />
                 </div>
-                <div className="col-span-3 mx-auto my-auto text-base font-normal text-secondary">
+                <div className="col-span-3 mx-auto my-auto text-base font-semibold text-secondary">
                     <ul>
                         <LangSwitcher />
                         {navLinks.map((link, i) => (

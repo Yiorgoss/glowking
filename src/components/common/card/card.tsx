@@ -34,7 +34,7 @@ const Graphic = ({
     }
     return (
         <div className={`relative ${className}`}>
-            <Image src={src} alt={alt} {...imageProps} />
+            <Image className="object-cover" src={src} alt={alt} {...imageProps} />
         </div>
     );
 };

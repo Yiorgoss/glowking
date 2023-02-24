@@ -27,7 +27,7 @@ const TextPortion = ({
     content?: string;
 }) => {
     return (
-        <div className={className}>
+        <div className={`flex flex-col justify-between ${className}`}>
             <h3 className="mt-6 mb-10 text-center text-2xl font-medium tracking-wider">
                 {title}
             </h3>
@@ -43,19 +43,23 @@ const ServiceSection = ({
     title,
     content,
     image,
+    className,
 }: {
     isLeft: boolean;
     title?: string;
     content?: string;
     image: string;
+    className: string;
 }) => {
     return (
-        <div className="py-10">
-            <div className="grid grid-cols-2 gap-5 overflow-hidden">
+        <div className={`py-10 ${className}`}>
+            <div className="grid min-h-[400px] grid-cols-2 gap-5 overflow-hidden">
                 <TextPortion title={title} content={content} />
                 <ImagePortion
                     image={image}
-                    className={`${isLeft ? "order-first" : "order-last"}`}
+                    className={`object-cover ${
+                        isLeft ? "order-first" : "order-last"
+                    }`}
                 />
             </div>
         </div>
