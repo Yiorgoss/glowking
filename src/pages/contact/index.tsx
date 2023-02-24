@@ -2,6 +2,8 @@ import LayoutLayout from "@layouts/landingLayout";
 import Image from "next/image";
 import { ReactElement, useState } from "react";
 
+import { t } from "@lingui/macro";
+
 import type { PageWithHeaderLayout } from "@cTypes/layoutTypes";
 
 const Contact: PageWithHeaderLayout = () => {
@@ -19,32 +21,38 @@ const Contact: PageWithHeaderLayout = () => {
                         fill
                     />
                     <h2 className="absolute inset-x-0 bottom-0 my-20 pb-10 pt-10 text-center text-5xl font-semibold tracking-wider text-primary">
-                        Contact Us
+                        {t({ id: "Contact.contactUs", message: "Contact Us" })}
                     </h2>
                 </div>
 
                 <div className="mt-20 grid grid-cols-2 tracking-wider ">
                     <div className="pr-20 text-right text-6xl">
-                        We love to
+                        {t({
+                            id: "Contact.welovetohelp",
+                            message: "We love to",
+                        })}
                         <br />
                         <span className="text-9xl  font-bold uppercase text-tertiary">
                             {" "}
-                            help
+                            {t({
+                                id: "Contact.welovetohelphelp",
+                                message: "help",
+                            })}
                         </span>
                     </div>
                     <div className="my-auto flex flex-col text-2xl">
                         <div className="text-2xl ">
                             <span className="text-3xl font-semibold">
-                                Phone:
+                                {t({ id: "Contact.phone", message: "Phone:" })}
                             </span>{" "}
                             +30 691 234 5678
                         </div>
                         <div className="my-8 pl-10 text-6xl font-bold">
-                            Or By
+                            {t({ id: "Contact.orBy", message: "Or By" })}
                         </div>
                         <div className="text-2xl">
                             <span className="text-3xl font-semibold">
-                                Email:
+                                {t({ id: "Contact.email", message: "Email:" })}
                             </span>{" "}
                             glowkingath@gmail.com
                         </div>

@@ -2,6 +2,8 @@ import Image from "next/image";
 
 import { ReactElement } from "react";
 
+import { Trans } from "@lingui/macro";
+
 import LandingLayout from "@layouts/landingLayout";
 import type { PageWithHeaderLayout } from "@cTypes/layoutTypes";
 
@@ -29,7 +31,9 @@ const Portfolio: PageWithHeaderLayout = () => {
     return (
         <div className=" container mx-auto mt-[100px]">
             <h1 className="text-center text-6xl font-bold tracking-wider">
-                Our <span className="text-tertiary">Portfolio</span>
+                <Trans id="Portfolio.header">
+                    Our <span className="text-tertiary">Portfolio</span>
+                </Trans>
             </h1>
             <div className="grid grid-cols-3 gap-10 p-10 ">
                 {ImageGallery.map((pic, i) => (

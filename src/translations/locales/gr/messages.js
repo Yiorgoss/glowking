@@ -1,1 +1,0 @@
-/*eslint-disable*/module.exports={messages:JSON.parse("{\"blah\":\"Love Your Car\",\"header_text\":\"Needs to be translated\"}")};

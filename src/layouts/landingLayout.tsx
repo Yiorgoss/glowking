@@ -10,31 +10,31 @@ interface HeaderLayoutProps {
 
 //title: t({id:`llayout.home`, message:'Home'}),
 
+
+export default function LandingLayout({ children }: HeaderLayoutProps) {
 const NAV_LINKS = [
     {
-        title: "Home",
+        title: t({id:'navlinks.home',message:"Home"}),
         path: "/",
     },
     {
-        title: "Services",
+        title: t({id:'navlinks.services',message:"Services"}),
         path: "/services",
     },
     {
-        title: "Contact",
+        title: t({id:'navlinks.contact',message:"Contact"}),
         path: "/contact",
     },
     {
-        title: "Portfolio",
+        title: t({id:'navlinks.portfolio',message:"Portfolio"}),
         path: "/portfolio",
     },
 ];
-
-export default function LandingLayout({ children }: HeaderLayoutProps) {
     return (
         <div className=" text-secondary">
             <Header navLinks={NAV_LINKS}/>
-            <div className="-mt-[100px]">{children}</div>
-            <Footer  />
+                <div className="-mt-[100px]">{children}</div>
+            <Footer navLinks={NAV_LINKS}/>
         </div>
     );
 }

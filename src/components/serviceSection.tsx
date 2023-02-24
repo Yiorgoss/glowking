@@ -2,6 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, createContext, useContext } from "react";
 
+import { t } from "@lingui/macro";
+
 import Button from "@components/common/button/button";
 
 const ImagePortion = ({
@@ -33,7 +35,7 @@ const TextPortion = ({
             </h3>
             <div className="px-10 tracking-wide">{content}</div>
             <Button className="mx-auto my-10" href="/contact">
-                Book Now
+                {t({ id: "serviceSection.button.text", message: "Book Now" })}
             </Button>
         </div>
     );
