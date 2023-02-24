@@ -49,7 +49,7 @@ const ServiceSection = ({
     title?: string;
     content?: string;
     image: string;
-    className: string;
+    className?: string;
 }) => {
     return (
         <div className={`py-10 ${className}`}>
