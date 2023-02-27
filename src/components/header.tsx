@@ -1,8 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { useRef, useState, useEffect } from "react";
 
 import { AiOutlineMenu } from "react-icons/ai";
+import { CgPhone } from "react-icons/cg";
+
 import { t } from "@lingui/macro";
 
 import ActiveLink from "@components/common/activeLink/activeLink";
@@ -24,9 +27,9 @@ export default function Header({
     const [isOpen, setIsOpen] = useState<boolean>(true);
 
     return (
-        <div className={`${bgColor ? bgColor : "bg-transparent"}`}>
-            <div className=" grid h-[100px] grid-cols-5 uppercase">
-                <div className="my-auto pl-10">
+        <div className={`${bgColor ? bgColor : "bg-transparent"} `}>
+            <div className=" grid h-[100px] w-full grid-flow-row-dense grid-cols-4 uppercase md:grid-cols-5">
+                <div className="my-auto md:pl-10">
                     <Image
                         src="/images/glowking_logo.jpg"
                         alt="glowking logo"
@@ -34,11 +37,18 @@ export default function Header({
                         height={80}
                     />
                 </div>
-                <div className="col-span-3 mx-auto my-auto text-base font-semibold text-secondary">
+                <Link
+                    href="tel:6980000013"
+                    className=" col-span-2 my-auto flex h-full w-full items-center justify-center gap-2 text-center text-sm md:hidden"
+                >
+                    <CgPhone className="h-8 w-8 " />
+                    <div className="my-auto">6912345678</div>
+                </Link>
+                <div className="col-span-full mx-auto my-auto pt-4 text-sm font-medium text-secondary md:col-span-3 md:text-base md:font-semibold">
                     <ul>
                         <LangSwitcher />
                         {navLinks.map((link, i) => (
-                            <li className="inline px-6" key={i}>
+                            <li className="inline px-2 md:px-6" key={i}>
                                 <ActiveLink
                                     href={link.path}
                                     activeClassName="text-tertiary"
@@ -49,7 +59,7 @@ export default function Header({
                         ))}
                     </ul>
                 </div>
-                <div className="my-auto w-fit">
+                <div className="grid-auto float-right my-auto mr-2 w-fit whitespace-nowrap md:float-none ">
                     <Button href="/contact">
                         {t({ id: "headerButton", message: "Book Now" })}
                     </Button>

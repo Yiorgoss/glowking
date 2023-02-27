@@ -20,9 +20,6 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
         process.env.NODE_ENV === "production"
     );
 
-    //    const res = await fetch("/data/featureList.ts");
-    //    const featureList = await res.json();
-
     return {
         props: {
             translation,

@@ -10,7 +10,7 @@ const SocialsTab = ({
 }) => {
     return (
         <div
-            className={`flex gap-5 text-white ${
+            className={`flex items-center justify-center gap-5 text-white ${
                 isVert ? "flex-col" : ""
             } ${className}`}
         >

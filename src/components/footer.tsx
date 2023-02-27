@@ -5,13 +5,6 @@ import { t } from "@lingui/macro";
 
 import SocialsTab from "./socialsTab";
 
-const CONTACT_DETAILS = [
-    "69 123 456 78",
-    "Address Line 1",
-    "Address Line 2",
-    "16675",
-];
-
 export default function Footer({
     navLinks,
 }: {
@@ -49,52 +42,59 @@ export default function Footer({
         },
     ];
     return (
-        <div className="bg-slate-800 py-10">
+        <div className="bg-slate-800 pb-[400px] md:py-10">
             <div className="container mx-auto grid grid-cols-2 gap-10 text-white">
-                <div className="p-4">
-                    <div className="relative my-4">
+                <div className="col-span-full p-4 md:col-span-1">
+                    <div className="relative float-left mx-4 my-4 md:float-none ">
                         <Image
                             src="/images/glowking_logo.jpg"
                             width={100}
                             height={100}
                             alt="glowking logo"
+                            className=""
                         />
                     </div>
-                    <div className="">
+                    <div className=" mx-4 my-4 break-all">
                         {t({
                             id: "Footer.aboutUs",
                             message:
                                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Proin vitae erat luctus, venenatis tortor sit amet,aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac Lorem ipsumjdolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac",
                         })}
                     </div>
-                    <SocialsTab className="mt-5 " />
+                    <SocialsTab className="mx-auto mt-5" />
                 </div>
-                <div className="my-auto grid grid-cols-3 gap-4">
+                <div className="grid-col-1 col-span-full mx-auto my-auto grid gap-4 md:divide-none divide-y md:col-span-1 md:grid-cols-3">
                     <div className="">
                         <h4 className="mb-8 text-xl font-semibold">
                             {t({ id: "Footer.sitemap", message: "Sitemap" })}
                         </h4>
                         <ul>
-                            {helpLinks.map((link, i) => (
+                            {navLinks.map((link, i) => (
                                 <Link href={link.path} key={i}>
-                                    <li className=" py-1 ">{link.title}</li>
+                                    <li className="py-0 md:py-1">
+                                        {link.title}
+                                    </li>
                                 </Link>
                             ))}
+
                         </ul>
                     </div>
-                    <div className="pl-10">
-                        <h4 className="mb-8 text-xl font-semibold">
+                    <div className="pt-4 pl-0 md:pt-0 ">
+                        <h4 className="mb-5 text-xl font-semibold md:mb-8">
                             {t({ id: "Footer.help", message: "Help" })}
                         </h4>
                         <ul>
-                            {navLinks.map((link, i) => (
+                            {helpLinks.map((link, i) => (
                                 <Link href={link.path} key={i}>
-                                    <li className="py-1">{link.title}</li>
+                                    <li className="py-0 md:py-1 ">
+                                        {link.title}
+                                    </li>
                                 </Link>
                             ))}
+
                         </ul>
                     </div>
-                    <div className="">
+                    <div className="pt-4 md:pt-0">
                         <h4 className="mb-8 text-xl font-semibold">
                             {t({
                                 id: "Footer.location",
@@ -103,7 +103,7 @@ export default function Footer({
                         </h4>
                         <ul>
                             {contactDetails.map((line, i) => (
-                                <li className="py-1" key={i}>
+                                <li className="py-0 md:py-1" key={i}>
                                     {line}
                                 </li>
                             ))}

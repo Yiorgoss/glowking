@@ -31,7 +31,7 @@ const NAV_LINKS = [
     },
 ];
     return (
-        <div className=" text-secondary">
+        <div className="overflow-hidden text-secondary">
             <Header navLinks={NAV_LINKS}/>
                 <div className="-mt-[100px]">{children}</div>
             <Footer navLinks={NAV_LINKS}/>
