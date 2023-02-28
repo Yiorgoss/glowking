@@ -157,7 +157,7 @@ const Home: PageWithHeaderLayout = ({}) => {
                     <div className="grid grid-cols-4">
                         {featureList.map((feature, i) => (
                             <CardMain
-                                href="/service"
+                                href="/services"
                                 header={feature.header}
                                 content={feature.content}
                                 image={feature.image}
@@ -181,11 +181,6 @@ const Home: PageWithHeaderLayout = ({}) => {
                     })}
                     image="/images/soapy_merc.jpg"
                 />
-            </div>
-            <div className="container mx-auto my-20">
-                <div className="my-auto mx-auto h-[600px] w-full rounded-lg bg-black text-white">
-                    Video Goes Here
-                </div>
             </div>
             <div className="container mx-auto my-20">
                 <div className="py-10">

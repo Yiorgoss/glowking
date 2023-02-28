@@ -69,7 +69,7 @@ const Contact: PageWithHeaderLayout = () => {
                         </div>
                         <div className="text-lg md:text-2xl">
                             <span className="text-xl font-semibold md:text-3xl">
-                                {t({ id: "Contact.email", message: "Email:" })}
+                                Email:
                             </span>{" "}
                             glowkingath@gmail.com
                         </div>

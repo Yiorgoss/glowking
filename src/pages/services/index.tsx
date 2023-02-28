@@ -33,7 +33,7 @@ const Services: PageWithHeaderLayout = () => {
                 message: "External Cleaning",
             }),
             content: t({
-                id: "services.serviceslist.content.one",
+                id: "Services.serviceslist.content.one",
                 message:
                     "External cleaning is done without the use of a brush or sponge, but only with the use of hot water for less damage to the car's exterior paint.At Glow King we offer you a complete exterior cleaning with pre-washing and mainly washing the vehicle with active foam, cleaning the domes and rims, removing insects, protective wax and rinsing the car with deionized water!The vehicle is then thoroughly wiped.",
             }),
@@ -45,7 +45,7 @@ const Services: PageWithHeaderLayout = () => {
                 message: "Internal Cleaning",
             }),
             content: t({
-                id: "services.serviceslist.content.two",
+                id: "Services.servicesList.content.two",
                 message:
                     "In internal cleaning, with respect for people and the environment as our guiding principle, we use ecologically biodegradable products.Internally we blow the vehicle to remove the dust and then vacuum the cabin and the luggage compartment, cleaning the windows and all glass surfaces.Finally, we proceed with cleaning and maintenance of all leather and plastic surfaces, dry cleaning of carpets and perfuming the cabin area.",
             }),
@@ -53,7 +53,7 @@ const Services: PageWithHeaderLayout = () => {
         },
         {
             title: t({
-                id: "services.serviceslist.header.three",
+                id: "Services.servicesList.header.three",
                 message: "Boat Washing",
             }),
             content: t({
@@ -64,7 +64,7 @@ const Services: PageWithHeaderLayout = () => {
         },
         {
             title: t({
-                id: "services.serviceslist.header.four",
+                id: "Services.serviceslist.header.four",
                 message: "Pavement/Garage Washing",
             }),
             content: t({
@@ -87,7 +87,7 @@ const Services: PageWithHeaderLayout = () => {
                         />
                         <h2 className="absolute inset-x-0 bottom-0 my-20 pb-10 pt-10 text-center text-5xl font-semibold tracking-wider text-primary">
                             {t({
-                                id: "services.services.header",
+                                id: "Services.services.header",
                                 message: "services",
                             })}
                         </h2>
@@ -109,8 +109,8 @@ const Services: PageWithHeaderLayout = () => {
     );
 };
 
-services.getLayout = function getLayout(page: ReactElement) {
+Services.getLayout = function getLayout(page: ReactElement) {
     return <LandingLayout>{page}</LandingLayout>;
 };
 
-export default services;
+export default Services;

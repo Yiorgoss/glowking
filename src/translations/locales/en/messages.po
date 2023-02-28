@@ -17,27 +17,27 @@ msgstr ""
 #~ msgid "<0/>"
 #~ msgstr "<0/>"
 
-#: src/pages/contact/index.tsx:24
+#: src/pages/contact/index.tsx:41
 msgid "Contact.contactUs"
 msgstr "Contact Us"
 
-#: src/pages/contact/index.tsx:55
-msgid "Contact.email"
-msgstr "Email:"
+#: src/pages/contact/index.tsx:72
+#~ msgid "Contact.email"
+#~ msgstr "Email:"
 
-#: src/pages/contact/index.tsx:51
+#: src/pages/contact/index.tsx:68
 msgid "Contact.orBy"
 msgstr "Or By"
 
-#: src/pages/contact/index.tsx:46
+#: src/pages/contact/index.tsx:63
 msgid "Contact.phone"
 msgstr "Phone:"
 
-#: src/pages/contact/index.tsx:30
+#: src/pages/contact/index.tsx:47
 msgid "Contact.welovetohelp"
 msgstr "We love to"
 
-#: src/pages/contact/index.tsx:37
+#: src/pages/contact/index.tsx:54
 msgid "Contact.welovetohelphelp"
 msgstr "help"
 
@@ -85,11 +85,11 @@ msgstr "Where to find us"
 msgid "Footer.sitemap"
 msgstr "Sitemap"
 
-#: src/pages/index.tsx:159
+#: src/pages/index.tsx:155
 msgid "Home.Features"
 msgstr "Features"
 
-#: src/pages/index.tsx:197
+#: src/pages/index.tsx:188
 msgid "Home.Services"
 msgstr "Our Services"
 
@@ -125,15 +125,15 @@ msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae era
 msgid "Home.featureList.one.header"
 msgstr "Extra Careful"
 
-#: src/pages/index.tsx:144
+#: src/pages/index.tsx:145
 msgid "Home.motto"
 msgstr "One Call at <0>Your Door</0>"
 
-#: src/pages/index.tsx:181
+#: src/pages/index.tsx:177
 msgid "Home.serviceSection.content"
 msgstr "GLOW KING ATHENS is an innovative idea that annihilates distances! It started in 2019 and in the middle of the pandemic it covered all the southern suburbs. Complete cleaning services of the vehicle, the property, the pavement and everything else you need! GLOW KING ATHENS operates with the environment and people as its main focus, next to your every need. Glow King Athens starring... you!"
 
-#: src/pages/index.tsx:177
+#: src/pages/index.tsx:173
 msgid "Home.serviceSection.title"
 msgstr "Who Are We?"
 
@@ -185,45 +185,53 @@ msgstr "Boat Wash"
 #~ msgid "Our Services"
 #~ msgstr "Our Services"
 
-#: src/pages/portfolio/index.tsx:34
+#: src/pages/portfolio/index.tsx:49
 msgid "Portfolio.header"
 msgstr "Our <0>Portfolio</0>"
 
-#: src/pages/services/index.tsx:78
+#: src/pages/services/index.tsx:89
 msgid "Services.services.header"
 msgstr "Services"
 
-#: src/pages/services/index.tsx:58
+#: src/pages/services/index.tsx:70
 msgid "Services.servicesList.content.four"
 msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac"
 
 #: src/pages/services/index.tsx:22
-msgid "Services.servicesList.content.one"
-msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac"
+#~ msgid "Services.servicesList.content.one"
+#~ msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac"
 
-#: src/pages/services/index.tsx:46
+#: src/pages/services/index.tsx:59
 msgid "Services.servicesList.content.three"
 msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac"
 
-#: src/pages/services/index.tsx:34
+#: src/pages/services/index.tsx:47
 msgid "Services.servicesList.content.two"
 msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac"
 
 #: src/pages/services/index.tsx:54
-msgid "Services.servicesList.header.four"
-msgstr "Service 4"
+#~ msgid "Services.servicesList.header.four"
+#~ msgstr "Service 4"
 
-#: src/pages/services/index.tsx:18
+#: src/pages/services/index.tsx:31
 msgid "Services.servicesList.header.one"
 msgstr "Service 1"
 
-#: src/pages/services/index.tsx:42
+#: src/pages/services/index.tsx:55
 msgid "Services.servicesList.header.three"
 msgstr "Service 3"
 
-#: src/pages/services/index.tsx:30
+#: src/pages/services/index.tsx:43
 msgid "Services.servicesList.header.two"
 msgstr "Service 2"
+
+#: src/pages/services/index.tsx:35
+msgid "Services.serviceslist.content.one"
+msgstr "External cleaning is done without the use of a brush or sponge, but only with the use of hot water for less damage to the car's exterior paint.At Glow King we offer you a complete exterior cleaning with pre-washing and mainly washing the vehicle with active foam, cleaning the domes and rims, removing insects, protective wax and rinsing the car with deionized water!The vehicle is then thoroughly wiped."
+
+#: src/pages/services/index.tsx:66
+msgid "Services.serviceslist.header.four"
+msgstr "Pavement/Garage Washing"
 
 #: src/pages/index.tsx:192
 #~ msgid "Who Are We?"
@@ -281,10 +289,30 @@ msgstr "Portfolio"
 msgid "navlinks.services"
 msgstr "Services"
 
-#: src/components/serviceSection.tsx:38
+#: src/components/serviceSection.tsx:40
 msgid "serviceSection.button.text"
 msgstr "Book Now"
 
+#: src/pages/services/index.tsx:89
+#~ msgid "services.services.header"
+#~ msgstr "services"
+
+#: src/pages/services/index.tsx:35
+#~ msgid "services.serviceslist.content.one"
+#~ msgstr "External cleaning is done without the use of a brush or sponge, but only with the use of hot water for less damage to the car's exterior paint.At Glow King we offer you a complete exterior cleaning with pre-washing and mainly washing the vehicle with active foam, cleaning the domes and rims, removing insects, protective wax and rinsing the car with deionized water!The vehicle is then thoroughly wiped."
+
+#: src/pages/services/index.tsx:47
+#~ msgid "services.serviceslist.content.two"
+#~ msgstr "In internal cleaning, with respect for people and the environment as our guiding principle, we use ecologically biodegradable products.Internally we blow the vehicle to remove the dust and then vacuum the cabin and the luggage compartment, cleaning the windows and all glass surfaces.Finally, we proceed with cleaning and maintenance of all leather and plastic surfaces, dry cleaning of carpets and perfuming the cabin area."
+
+#: src/pages/services/index.tsx:66
+#~ msgid "services.serviceslist.header.four"
+#~ msgstr "Pavement/Garage Washing"
+
+#: src/pages/services/index.tsx:55
+#~ msgid "services.serviceslist.header.three"
+#~ msgstr "Boat Washing"
+
 #: src/components/cardMain.tsx:25
-msgid "{header}"
-msgstr "{header}"
+#~ msgid "{header}"
+#~ msgstr "{header}"
