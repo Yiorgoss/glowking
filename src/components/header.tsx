@@ -38,13 +38,13 @@ export default function Header({
                     />
                 </div>
                 <Link
-                    href="tel:6980000013"
+                    href="tel:6980000015"
                     className=" col-span-2 my-auto flex h-full w-full items-center justify-center gap-2 text-center text-sm md:hidden"
                 >
                     <CgPhone className="h-8 w-8 " />
                     <div className="my-auto">6980 000 015</div>
                 </Link>
-                <div className="col-span-full mx-auto my-auto text-sm font-medium text-secondary md:col-span-3 md:pt-4 md:text-base md:font-semibold">
+                <div className="col-span-full mx-auto my-auto mb-4 md:pb-0 text-sm font-medium text-secondary md:col-span-3 md:pt-4 md:text-base md:font-semibold">
                     <ul>
                         <LangSwitcher />
                         {navLinks.map((link, i) => (
