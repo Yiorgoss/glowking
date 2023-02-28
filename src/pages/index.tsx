@@ -194,6 +194,7 @@ const Home: PageWithHeaderLayout = ({}) => {
                                 header={service.header}
                                 content={service.content}
                                 image={service.image}
+                                key={i}
                             />
                         ))}
                     </div>
