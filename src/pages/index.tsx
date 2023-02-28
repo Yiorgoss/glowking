@@ -5,7 +5,7 @@ import Link from "next/link";
 import { GetServerSideProps, GetStaticProps } from "next";
 import { ReactElement } from "react";
 
-import { t, Trans, defineMessage } from "@lingui/macro";
+import { t, Trans } from "@lingui/macro";
 
 import { loadTranslation } from "@/utils/utils";
 import LandingLayout from "@layouts/landingLayout";
@@ -33,24 +33,24 @@ const Home: PageWithHeaderLayout = ({}) => {
         {
             header: t({
                 id: `Home.servicesList.one.header`,
-                message: "Car Wash",
+                message: "External Wash",
             }),
             content: t({
                 id: `Home.servicesList.one.content`,
                 message:
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac",
+                    "External cleaning is done without the use of a brush or sponge, but only with the use of hot water for less damage to the car's exterior paint.At Glow King we offer you a complete exterior cleaning with pre-washing and mainly washing the vehicle with active foam, cleaning the domes and rims, removing insects, protective wax and rinsing the car with deionized water!The vehicle is then thoroughly wiped.",
             }),
             image: "/images/black_lambo_2.jpg",
         },
         {
             header: t({
                 id: `Home.servicesList.two.header`,
-                message: "Boat Wash",
+                message: "Internal Cleaning",
             }),
             content: t({
                 id: `Home.servicesList.two.content`,
                 message:
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac",
+                    "In internal cleaning, with respect for people and the environment as our guiding principle, we use ecologically biodegradable products.Internally we blow the vehicle to remove the dust and then vacuum the cabin and the luggage compartment, cleaning the windows and all glass surfaces.Finally, we proceed with cleaning and maintenance of all leather and plastic surfaces, dry cleaning of carpets and perfuming the cabin area.",
             }),
             image: "/images/clean_jeep.jpg",
         },
@@ -60,9 +60,8 @@ const Home: PageWithHeaderLayout = ({}) => {
                 message: "Road Cleaning",
             }),
             content: t({
-                id: `Home.servicesList.two.content`,
-                message:
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac",
+                id: `Home.servicesList.three.content`,
+                message: "",
             }),
             image: "/images/van_lambo.jpg",
         },
@@ -73,8 +72,7 @@ const Home: PageWithHeaderLayout = ({}) => {
             }),
             content: t({
                 id: `Home.servicesList.four.content`,
-                message:
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac",
+                message: "",
             }),
             image: "/images/clean_mustang.jpg",
         },
@@ -84,42 +82,48 @@ const Home: PageWithHeaderLayout = ({}) => {
         {
             header: t({
                 id: "Home.featureList.one.header",
-                message: "Extra Careful",
+                message: "Location Of Your Choice",
             }),
             content: t({
                 id: "Home.featureList.one.content",
                 message:
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac",
+                    "Professional washing and cleaning for your car!The mobile car wash GLOW KING a mobile business that deals exclusively with the cleaning and care of cars, gives a new dimension to the space, comes to where you are, zeroing out the distances and taking care of your own car as if it were unique.",
             }),
             image: "/images/lambo_orange_clean.jpg",
         },
         {
             header: t({
                 id: "Home.feature.two.header",
-                message: "Eco Friendly",
+                message: "Biological Cleaning",
             }),
             content: t({
                 id: "Home.feature.two.content",
                 message:
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac",
+                    "In biological cleaning, we remove from the cabin area, stains, fungi, bacteria and any other organic matter. We disinfect the seats, the sky, floors, luggage compartment and side upholstery. We also disinfect the air ducts of the car, removing the stench from the use of the air conditioner.",
             }),
             image: "/images/glowking_van_1.jpg",
         },
         {
-            header: t({ id: "Home.feature.three.header", message: "Discrete" }),
+            header: t({
+                id: "Home.feature.three.header",
+                message: "Safe and Effective",
+            }),
             content: t({
                 id: "Home.feature.three.content",
                 message:
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac",
+                    "The products used for cleaning and disinfection are certified and friendly to humans and the environment, complying with eu standards and regulations. Our products and machines are of the utmost quality, including AUTOGLYM and KARCHER.",
             }),
             image: "/images/black_lambo_2.jpg",
         },
         {
-            header: t({ id: "Home.feature.four.header", message: "Effective" }),
+            header: t({
+                id: "Home.feature.four.header",
+                message: "Privacy Focused",
+            }),
             content: t({
                 id: "Home.feature.four.content",
                 message:
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac",
+                    "Glow King Athens and its staff will never share your personal information or vehicle information without your consent.",
             }),
             image: "/images/soapy_wheel.jpg",
         },
@@ -135,9 +139,10 @@ const Home: PageWithHeaderLayout = ({}) => {
                         fill
                     />
                 </div>
-                <div className="absolute inset-x-0 bottom-0 pb-10 text-center text-8xl font-semibold text-secondary">
-                    <div className="">{t`More Than Just a Car`}</div>
-                    <div className="text-center text-6xl font-medium text-secondary">{t`It's a Lifestyle`}</div>
+                <div className="absolute inset-x-0 bottom-0 pb-10 text-center text-6xl font-semibold text-secondary">
+                    <div className="mx-auto w-fit -skew-y-3 rounded-lg bg-fuchsia-800 px-6 ">
+                        <Trans id="Home.motto">One Call at Your Door</Trans>
+                    </div>
                 </div>
                 <div className="absolute bottom-0 right-0 pr-10 pb-5 ">
                     <SocialsTab isVert={true} />
@@ -145,7 +150,9 @@ const Home: PageWithHeaderLayout = ({}) => {
             </div>
             <div className="container mx-auto">
                 <div className="py-10">
-                    <h1 className="my-10 text-center text-6xl font-bold tracking-wider">{t`Features`}</h1>
+                    <h1 className="my-10 text-center text-6xl font-bold tracking-wider">
+                        {t({ id: "Home.Features", message: "Features" })}
+                    </h1>
                     <div className="grid grid-cols-4">
                         {featureList.map((feature, i) => (
                             <CardMain
@@ -162,23 +169,28 @@ const Home: PageWithHeaderLayout = ({}) => {
             <div className="container mx-auto my-20">
                 <ServiceSection
                     isLeft={false}
+                    title={t({
+                        id: "Home.serviceSection.title",
+                        message: "Who Are We?",
+                    })}
                     content={t({
-                        id: "Home.serviceSelection.title",
+                        id: "Home.serviceSection.content",
                         message:
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae epsum dolor sit amet, consectetur adipiscing elit. Proin vitae epsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum  ac",
+                            "GLOW KING ATHENS is an innovative idea that annihilates distances! It started in 2019 and in the middle of the pandemic it covered all the southern suburbs. Complete cleaning services of the vehicle, the property, the pavement and everything else you need! GLOW KING ATHENS operates with the environment and people as its main focus, next to your every need. Glow King Athens starring... you!",
                     })}
                     image="/images/soapy_merc.jpg"
                 />
             </div>
             <div className="container mx-auto my-20">
-                <h3 className="my-10 text-center text-5xl font-semibold tracking-wider">{t`Who Are We?`}</h3>
                 <div className="my-auto mx-auto h-[600px] w-full rounded-lg bg-black text-white">
                     Video Goes Here
                 </div>
             </div>
             <div className="container mx-auto my-20">
                 <div className="py-10">
-                    <h1 className="my-10 text-center text-5xl">{t`Our Services`}</h1>
+                    <h1 className="my-10 text-center text-5xl">
+                        {t({ id: "Home.Services", message: "Our Services" })}
+                    </h1>
                     <div className="grid grid-cols-4">
                         {serviceList.map((service, i) => (
                             <CardMain

@@ -45,7 +45,7 @@ const Contact: PageWithHeaderLayout = () => {
                             <span className="text-3xl font-semibold">
                                 {t({ id: "Contact.phone", message: "Phone:" })}
                             </span>{" "}
-                            +30 691 234 5678
+                            6980 000 015
                         </div>
                         <div className="my-8 pl-10 text-6xl font-bold">
                             {t({ id: "Contact.orBy", message: "Or By" })}

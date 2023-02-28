@@ -13,30 +13,30 @@ export default function Footer({
     const contactDetails = [
         "6980 000 015",
         t({ id: "Footer.contact.one", message: "Street of YOUR choice" }),
-        t({ id: "Footer.contact.two", message: "Voula, Vouligmenis" }),
-        t({ id: "Footer.contact.three", message: "Glyfada, Varkiza" }),
+        t({ id: "Footer.contact.two", message: "Glyfada, Voula" }),
+        t({ id: "Footer.contact.three", message: "Vouligmenis, Varkiza" }),
         t({ id: "Footer.contact.four", message: "Illioupoli, Argyroupoli" }),
     ];
     const helpLinks = [
         {
-            title: t({ id: "helpLinks.one", message: "How does it work?" }),
+            title: t({ id: "footer.helpLinks.one", message: "How does it work?" }),
             path: "/contact#faq",
         },
         {
             title: t({
-                id: "helpLinks.two",
-                message: "Where to ask Questions",
+                id: "footer.helpLinks.two",
+                message: "Where to ask Questions?",
             }),
             path: "/contact#faq",
         },
         {
-            title: t({ id: "helpLinks.three", message: "How to pay" }),
+            title: t({ id: "footer.helpLinks.three", message: "How to pay?" }),
             path: "/contact#faq",
         },
         {
             title: t({
                 id: "footer.helpLinks.four",
-                message: "What is needed for this",
+                message: "What is needed for this?",
             }),
             path: "/contact#faq",
         },
@@ -58,7 +58,7 @@ export default function Footer({
                         {t({
                             id: "Footer.aboutUs",
                             message:
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Proin vitae erat luctus, venenatis tortor sit amet,aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac Lorem ipsumjdolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac",
+                                "GLOW KING ATHENS is an innovative idea that annihilates distances! It started in 2019 and in the middle of the pandemic it covered all the southern suburbs. Complete cleaning services of the vehicle, the property, the pavement and everything else you need! GLOW KING ATHENS operates with the environment and people as its main focus, next to your every need. Glow King Athens starring... you!",
                         })}
                     </div>
                     <SocialsTab className="mx-auto mt-5" />

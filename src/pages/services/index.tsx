@@ -17,24 +17,24 @@ const Services: PageWithHeaderLayout = () => {
         {
             title: t({
                 id: "Services.servicesList.header.one",
-                message: "Service 1",
+                message: "External Cleaning",
             }),
             content: t({
                 id: "Services.servicesList.content.one",
                 message:
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac",
+                    "External cleaning is done without the use of a brush or sponge, but only with the use of hot water for less damage to the car's exterior paint.At Glow King we offer you a complete exterior cleaning with pre-washing and mainly washing the vehicle with active foam, cleaning the domes and rims, removing insects, protective wax and rinsing the car with deionized water!The vehicle is then thoroughly wiped.",
             }),
             image: "/images/car_1.png",
         },
         {
             title: t({
                 id: "Services.servicesList.header.two",
-                message: "Service 2",
+                message: "Internal Cleaning",
             }),
             content: t({
                 id: "Services.servicesList.content.two",
                 message:
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac",
+                    "In internal cleaning, with respect for people and the environment as our guiding principle, we use ecologically biodegradable products.Internally we blow the vehicle to remove the dust and then vacuum the cabin and the luggage compartment, cleaning the windows and all glass surfaces.Finally, we proceed with cleaning and maintenance of all leather and plastic surfaces, dry cleaning of carpets and perfuming the cabin area.",
             }),
             image: "/images/car_2.png",
         },
@@ -45,8 +45,7 @@ const Services: PageWithHeaderLayout = () => {
             }),
             content: t({
                 id: "Services.servicesList.content.three",
-                message:
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac",
+                message: "",
             }),
             image: "/images/car_3.png",
         },
@@ -57,8 +56,7 @@ const Services: PageWithHeaderLayout = () => {
             }),
             content: t({
                 id: "Services.servicesList.content.four",
-                message:
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac",
+                message: "",
             }),
             image: "/images/car_5.png",
         },
