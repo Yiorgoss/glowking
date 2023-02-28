@@ -1,29 +1,15 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-02-24 16:45+0200\n"
+"POT-Creation-Date: 2023-02-28 20:39+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: en\n"
-"Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Plural-Forms: \n"
-
-#: src/pages/index.tsx:108
-#~ msgid "<0/>"
-#~ msgstr "<0/>"
 
 #: src/pages/contact/index.tsx:41
 msgid "Contact.contactUs"
 msgstr "Contact Us"
-
-#: src/pages/contact/index.tsx:72
-#~ msgid "Contact.email"
-#~ msgstr "Email:"
 
 #: src/pages/contact/index.tsx:68
 msgid "Contact.orBy"
@@ -41,21 +27,9 @@ msgstr "We love to"
 msgid "Contact.welovetohelphelp"
 msgstr "help"
 
-#: public/data/feature_list.ts:11
-#~ msgid "Eco Friendly"
-#~ msgstr "Eco Friendly"
-
-#: public/data/feature_list.ts:5
-#~ msgid "Extra Careful"
-#~ msgstr "Extra Careful"
-
-#: src/pages/index.tsx:160
-#~ msgid "Features"
-#~ msgstr "Features"
-
 #: src/components/footer.tsx:58
 msgid "Footer.aboutUs"
-msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Proin vitae erat luctus, venenatis tortor sit amet,aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac Lorem ipsumjdolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac"
+msgstr "GLOW KING ATHENS is an innovative idea that annihilates distances! It started in 2019 and in the middle of the pandemic it covered all the southern suburbs. Complete cleaning services of the vehicle, the property, the pavement and everything else you need! GLOW KING ATHENS operates with the environment and people as its main focus, next to your every need. Glow King Athens starring... you!"
 
 #: src/components/footer.tsx:18
 msgid "Footer.contact.four"
@@ -67,11 +41,11 @@ msgstr "Street of YOUR choice"
 
 #: src/components/footer.tsx:17
 msgid "Footer.contact.three"
-msgstr "Glyfada, Varkiza"
+msgstr "Vouligmenis, Varkiza"
 
 #: src/components/footer.tsx:16
 msgid "Footer.contact.two"
-msgstr "Voula, Vouligmenis"
+msgstr "Glyfada, Voula"
 
 #: src/components/footer.tsx:84
 msgid "Footer.help"
@@ -95,39 +69,39 @@ msgstr "Our Services"
 
 #: src/pages/index.tsx:123
 msgid "Home.feature.four.content"
-msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac"
+msgstr "Glow King Athens and its staff will never share your personal information or vehicle information without your consent."
 
 #: src/pages/index.tsx:119
 msgid "Home.feature.four.header"
-msgstr "Effective"
+msgstr "Privacy Focused"
 
 #: src/pages/index.tsx:111
 msgid "Home.feature.three.content"
-msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac"
+msgstr "The products used for cleaning and disinfection are certified and friendly to humans and the environment, complying with eu standards and regulations. Our products and machines are of the utmost quality, including AUTOGLYM and KARCHER."
 
 #: src/pages/index.tsx:107
 msgid "Home.feature.three.header"
-msgstr "Discrete"
+msgstr "Safe and Effective"
 
 #: src/pages/index.tsx:99
 msgid "Home.feature.two.content"
-msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac"
+msgstr "In biological cleaning, we remove from the cabin area, stains, fungi, bacteria and any other organic matter. We disinfect the seats, the sky, floors, luggage compartment and side upholstery. We also disinfect the air ducts of the car, removing the stench from the use of the air conditioner."
 
 #: src/pages/index.tsx:95
 msgid "Home.feature.two.header"
-msgstr "Eco Friendly"
+msgstr "Biological Cleaning"
 
 #: src/pages/index.tsx:87
 msgid "Home.featureList.one.content"
-msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac"
+msgstr "Professional washing and cleaning for your car!The mobile car wash GLOW KING a mobile business that deals exclusively with the cleaning and care of cars, gives a new dimension to the space, comes to where you are, zeroing out the distances and taking care of your own car as if it were unique."
 
 #: src/pages/index.tsx:83
 msgid "Home.featureList.one.header"
-msgstr "Extra Careful"
+msgstr "Location Of Your Choice"
 
 #: src/pages/index.tsx:145
 msgid "Home.motto"
-msgstr "One Call at <0>Your Door</0>"
+msgstr "One Call at Your Door"
 
 #: src/pages/index.tsx:177
 msgid "Home.serviceSection.content"
@@ -137,93 +111,69 @@ msgstr "GLOW KING ATHENS is an innovative idea that annihilates distances! It st
 msgid "Home.serviceSection.title"
 msgstr "Who Are We?"
 
-#: src/pages/index.tsx:179
-#~ msgid "Home.serviceSelection.title"
-#~ msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae epsum dolor sit amet, consectetur adipiscing elit. Proin vitae epsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum  ac"
-
 #: src/pages/index.tsx:73
 msgid "Home.servicesList.four.content"
-msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac"
+msgstr "A garage full of dust, mud and clutter? Our company undertakes a complete cleaning of your garage. Our trusted staff combined with the top of our products will make your garage shine!"
 
 #: src/pages/index.tsx:69
 msgid "Home.servicesList.four.header"
-msgstr "Property Cleaning"
+msgstr "Pavement/Garage Washing"
 
 #: src/pages/index.tsx:38
 msgid "Home.servicesList.one.content"
-msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac"
+msgstr "External cleaning is done without the use of a brush or sponge, but only with the use of hot water for less damage to the car's exterior paint.At Glow King we offer you a complete exterior cleaning with pre-washing and mainly washing the vehicle with active foam, cleaning the domes and rims, removing insects, protective wax and rinsing the car with deionized water!The vehicle is then thoroughly wiped."
 
 #: src/pages/index.tsx:34
 msgid "Home.servicesList.one.header"
-msgstr "Car Wash"
+msgstr "External Wash"
 
 #: src/pages/index.tsx:62
 msgid "Home.servicesList.three.content"
-msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac"
+msgstr "Your boat has found its master! Our company undertakes both the interior and exterior cleaning of your boat. Our trusted staff combined with the top quality of our products will make your boat shine!"
 
 #: src/pages/index.tsx:58
 msgid "Home.servicesList.three.header"
-msgstr "Road Cleaning"
+msgstr "Boat Washing"
 
 #: src/pages/index.tsx:50
 msgid "Home.servicesList.two.content"
-msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac"
+msgstr "In internal cleaning, with respect for people and the environment as our guiding principle, we use ecologically biodegradable products.Internally we blow the vehicle to remove the dust and then vacuum the cabin and the luggage compartment, cleaning the windows and all glass surfaces.Finally, we proceed with cleaning and maintenance of all leather and plastic surfaces, dry cleaning of carpets and perfuming the cabin area."
 
 #: src/pages/index.tsx:46
 msgid "Home.servicesList.two.header"
-msgstr "Boat Wash"
-
-#: src/pages/index.tsx:140
-#~ msgid "It's a Lifestyle"
-#~ msgstr "It's a Lifestyle"
-
-#: src/pages/index.tsx:139
-#~ msgid "More Than Just a Car"
-#~ msgstr "More Than Just a Car"
-
-#: src/pages/index.tsx:199
-#~ msgid "Our Services"
-#~ msgstr "Our Services"
+msgstr "Internal Cleaning"
 
 #: src/pages/portfolio/index.tsx:49
 msgid "Portfolio.header"
-msgstr "Our <0>Portfolio</0>"
+msgstr "Our Portfolio"
 
 #: src/pages/services/index.tsx:89
 msgid "Services.services.header"
-msgstr "Services"
+msgstr "services"
 
 #: src/pages/services/index.tsx:70
 msgid "Services.servicesList.content.four"
-msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac"
-
-#: src/pages/services/index.tsx:22
-#~ msgid "Services.servicesList.content.one"
-#~ msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac"
+msgstr "A garage full of dust, mud and clutter? Our company undertakes a complete cleaning of your garage. Our trusted staff combined with the top of our products will make your garage shine!"
 
 #: src/pages/services/index.tsx:59
 msgid "Services.servicesList.content.three"
-msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac"
+msgstr "Your boat has found its master! Our company undertakes both the interior and exterior cleaning of your boat. Our trusted staff combined with the top quality of our products will make your boat shine!"
 
 #: src/pages/services/index.tsx:47
 msgid "Services.servicesList.content.two"
-msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac"
-
-#: src/pages/services/index.tsx:54
-#~ msgid "Services.servicesList.header.four"
-#~ msgstr "Service 4"
+msgstr "In internal cleaning, with respect for people and the environment as our guiding principle, we use ecologically biodegradable products.Internally we blow the vehicle to remove the dust and then vacuum the cabin and the luggage compartment, cleaning the windows and all glass surfaces.Finally, we proceed with cleaning and maintenance of all leather and plastic surfaces, dry cleaning of carpets and perfuming the cabin area."
 
 #: src/pages/services/index.tsx:31
 msgid "Services.servicesList.header.one"
-msgstr "Service 1"
+msgstr "External Cleaning"
 
 #: src/pages/services/index.tsx:55
 msgid "Services.servicesList.header.three"
-msgstr "Service 3"
+msgstr "Boat Washing"
 
 #: src/pages/services/index.tsx:43
 msgid "Services.servicesList.header.two"
-msgstr "Service 2"
+msgstr "Internal Cleaning"
 
 #: src/pages/services/index.tsx:35
 msgid "Services.serviceslist.content.one"
@@ -233,17 +183,9 @@ msgstr "External cleaning is done without the use of a brush or sponge, but only
 msgid "Services.serviceslist.header.four"
 msgstr "Pavement/Garage Washing"
 
-#: src/pages/index.tsx:192
-#~ msgid "Who Are We?"
-#~ msgstr "Who Are We?"
-
-#: src/pages/index.tsx:31
-#~ msgid "feature.one"
-#~ msgstr "Extra Careful"
-
 #: src/components/footer.tsx:37
 msgid "footer.helpLinks.four"
-msgstr "What is needed for this"
+msgstr "What is needed for this?"
 
 #: src/components/footer.tsx:22
 msgid "footer.helpLinks.one"
@@ -251,27 +193,15 @@ msgstr "How does it work?"
 
 #: src/components/footer.tsx:33
 msgid "footer.helpLinks.three"
-msgstr "How to pay"
+msgstr "How to pay?"
 
 #: src/components/footer.tsx:26
 msgid "footer.helpLinks.two"
-msgstr "Where to ask Questions"
+msgstr "Where to ask Questions?"
 
 #: src/components/header.tsx:64
 msgid "headerButton"
 msgstr "Book Now"
-
-#: src/components/footer.tsx:22
-#~ msgid "helpLinks.one"
-#~ msgstr "How does it work?"
-
-#: src/components/footer.tsx:33
-#~ msgid "helpLinks.three"
-#~ msgstr "How to pay"
-
-#: src/components/footer.tsx:26
-#~ msgid "helpLinks.two"
-#~ msgstr "Where to ask Questions"
 
 #: src/layouts/landingLayout.tsx:25
 msgid "navlinks.contact"
@@ -292,27 +222,3 @@ msgstr "Services"
 #: src/components/serviceSection.tsx:40
 msgid "serviceSection.button.text"
 msgstr "Book Now"
-
-#: src/pages/services/index.tsx:89
-#~ msgid "services.services.header"
-#~ msgstr "services"
-
-#: src/pages/services/index.tsx:35
-#~ msgid "services.serviceslist.content.one"
-#~ msgstr "External cleaning is done without the use of a brush or sponge, but only with the use of hot water for less damage to the car's exterior paint.At Glow King we offer you a complete exterior cleaning with pre-washing and mainly washing the vehicle with active foam, cleaning the domes and rims, removing insects, protective wax and rinsing the car with deionized water!The vehicle is then thoroughly wiped."
-
-#: src/pages/services/index.tsx:47
-#~ msgid "services.serviceslist.content.two"
-#~ msgstr "In internal cleaning, with respect for people and the environment as our guiding principle, we use ecologically biodegradable products.Internally we blow the vehicle to remove the dust and then vacuum the cabin and the luggage compartment, cleaning the windows and all glass surfaces.Finally, we proceed with cleaning and maintenance of all leather and plastic surfaces, dry cleaning of carpets and perfuming the cabin area."
-
-#: src/pages/services/index.tsx:66
-#~ msgid "services.serviceslist.header.four"
-#~ msgstr "Pavement/Garage Washing"
-
-#: src/pages/services/index.tsx:55
-#~ msgid "services.serviceslist.header.three"
-#~ msgstr "Boat Washing"
-
-#: src/components/cardMain.tsx:25
-#~ msgid "{header}"
-#~ msgstr "{header}"

@@ -154,7 +154,7 @@ const Home: PageWithHeaderLayout = ({}) => {
                     <h1 className="my-10 text-center text-6xl font-bold tracking-wider">
                         {t({ id: "Home.Features", message: "Features" })}
                     </h1>
-                    <div className="grid grid-cols-4">
+                    <div className="grid grid-cols-1 md:grid-cols-4">
                         {featureList.map((feature, i) => (
                             <CardMain
                                 href="/services"
@@ -187,7 +187,7 @@ const Home: PageWithHeaderLayout = ({}) => {
                     <h1 className="my-10 text-center text-5xl">
                         {t({ id: "Home.Services", message: "Our Services" })}
                     </h1>
-                    <div className="grid grid-cols-4">
+                    <div className="grid grid-cols-1 md:grid-cols-4">
                         {serviceList.map((service, i) => (
                             <CardMain
                                 href="/services"
