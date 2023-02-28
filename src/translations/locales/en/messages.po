@@ -49,31 +49,31 @@ msgstr "help"
 #~ msgid "Extra Careful"
 #~ msgstr "Extra Careful"
 
-#: src/pages/index.tsx:151
-msgid "Features"
-msgstr "Features"
+#: src/pages/index.tsx:160
+#~ msgid "Features"
+#~ msgstr "Features"
 
-#: src/components/footer.tsx:64
+#: src/components/footer.tsx:58
 msgid "Footer.aboutUs"
 msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Proin vitae erat luctus, venenatis tortor sit amet,aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac Lorem ipsumjdolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac"
 
-#: src/components/footer.tsx:25
+#: src/components/footer.tsx:18
 msgid "Footer.contact.four"
 msgstr "Illioupoli, Argyroupoli"
 
-#: src/components/footer.tsx:22
+#: src/components/footer.tsx:15
 msgid "Footer.contact.one"
 msgstr "Street of YOUR choice"
 
-#: src/components/footer.tsx:24
+#: src/components/footer.tsx:17
 msgid "Footer.contact.three"
 msgstr "Glyfada, Varkiza"
 
-#: src/components/footer.tsx:23
+#: src/components/footer.tsx:16
 msgid "Footer.contact.two"
 msgstr "Voula, Vouligmenis"
 
-#: src/components/footer.tsx:87
+#: src/components/footer.tsx:84
 msgid "Footer.help"
 msgstr "Help"
 
@@ -81,86 +81,109 @@ msgstr "Help"
 msgid "Footer.location"
 msgstr "Where to find us"
 
-#: src/components/footer.tsx:75
+#: src/components/footer.tsx:69
 msgid "Footer.sitemap"
 msgstr "Sitemap"
 
-#: src/pages/index.tsx:122
+#: src/pages/index.tsx:159
+msgid "Home.Features"
+msgstr "Features"
+
+#: src/pages/index.tsx:197
+msgid "Home.Services"
+msgstr "Our Services"
+
+#: src/pages/index.tsx:123
 msgid "Home.feature.four.content"
 msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac"
 
-#: src/pages/index.tsx:121
+#: src/pages/index.tsx:119
 msgid "Home.feature.four.header"
 msgstr "Effective"
 
-#: src/pages/index.tsx:113
+#: src/pages/index.tsx:111
 msgid "Home.feature.three.content"
 msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac"
 
-#: src/pages/index.tsx:112
+#: src/pages/index.tsx:107
 msgid "Home.feature.three.header"
 msgstr "Discrete"
 
-#: src/pages/index.tsx:104
+#: src/pages/index.tsx:99
 msgid "Home.feature.two.content"
 msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac"
 
-#: src/pages/index.tsx:100
+#: src/pages/index.tsx:95
 msgid "Home.feature.two.header"
 msgstr "Eco Friendly"
 
-#: src/pages/index.tsx:92
+#: src/pages/index.tsx:87
 msgid "Home.featureList.one.content"
 msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac"
 
-#: src/pages/index.tsx:88
+#: src/pages/index.tsx:83
 msgid "Home.featureList.one.header"
 msgstr "Extra Careful"
 
-#: src/pages/index.tsx:168
-msgid "Home.serviceSelection.title"
-msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae epsum dolor sit amet, consectetur adipiscing elit. Proin vitae epsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum  ac"
+#: src/pages/index.tsx:144
+msgid "Home.motto"
+msgstr "One Call at <0>Your Door</0>"
 
-#: src/pages/index.tsx:77
+#: src/pages/index.tsx:181
+msgid "Home.serviceSection.content"
+msgstr "GLOW KING ATHENS is an innovative idea that annihilates distances! It started in 2019 and in the middle of the pandemic it covered all the southern suburbs. Complete cleaning services of the vehicle, the property, the pavement and everything else you need! GLOW KING ATHENS operates with the environment and people as its main focus, next to your every need. Glow King Athens starring... you!"
+
+#: src/pages/index.tsx:177
+msgid "Home.serviceSection.title"
+msgstr "Who Are We?"
+
+#: src/pages/index.tsx:179
+#~ msgid "Home.serviceSelection.title"
+#~ msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae epsum dolor sit amet, consectetur adipiscing elit. Proin vitae epsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum  ac"
+
+#: src/pages/index.tsx:73
 msgid "Home.servicesList.four.content"
 msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac"
 
-#: src/pages/index.tsx:73
+#: src/pages/index.tsx:69
 msgid "Home.servicesList.four.header"
 msgstr "Property Cleaning"
 
-#: src/pages/index.tsx:41
+#: src/pages/index.tsx:38
 msgid "Home.servicesList.one.content"
 msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac"
 
-#: src/pages/index.tsx:37
+#: src/pages/index.tsx:34
 msgid "Home.servicesList.one.header"
 msgstr "Car Wash"
 
-#: src/pages/index.tsx:61
+#: src/pages/index.tsx:62
+msgid "Home.servicesList.three.content"
+msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac"
+
+#: src/pages/index.tsx:58
 msgid "Home.servicesList.three.header"
 msgstr "Road Cleaning"
 
-#: src/pages/index.tsx:53
-#: src/pages/index.tsx:65
+#: src/pages/index.tsx:50
 msgid "Home.servicesList.two.content"
 msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac"
 
-#: src/pages/index.tsx:49
+#: src/pages/index.tsx:46
 msgid "Home.servicesList.two.header"
 msgstr "Boat Wash"
 
-#: src/pages/index.tsx:143
-msgid "It's a Lifestyle"
-msgstr "It's a Lifestyle"
+#: src/pages/index.tsx:140
+#~ msgid "It's a Lifestyle"
+#~ msgstr "It's a Lifestyle"
 
-#: src/pages/index.tsx:142
-msgid "More Than Just a Car"
-msgstr "More Than Just a Car"
+#: src/pages/index.tsx:139
+#~ msgid "More Than Just a Car"
+#~ msgstr "More Than Just a Car"
 
-#: src/pages/index.tsx:184
-msgid "Our Services"
-msgstr "Our Services"
+#: src/pages/index.tsx:199
+#~ msgid "Our Services"
+#~ msgstr "Our Services"
 
 #: src/pages/portfolio/index.tsx:34
 msgid "Portfolio.header"
@@ -202,33 +225,45 @@ msgstr "Service 3"
 msgid "Services.servicesList.header.two"
 msgstr "Service 2"
 
-#: src/pages/index.tsx:177
-msgid "Who Are We?"
-msgstr "Who Are We?"
+#: src/pages/index.tsx:192
+#~ msgid "Who Are We?"
+#~ msgstr "Who Are We?"
 
 #: src/pages/index.tsx:31
 #~ msgid "feature.one"
 #~ msgstr "Extra Careful"
 
-#: src/components/footer.tsx:44
+#: src/components/footer.tsx:37
 msgid "footer.helpLinks.four"
 msgstr "What is needed for this"
 
-#: src/components/header.tsx:54
+#: src/components/footer.tsx:22
+msgid "footer.helpLinks.one"
+msgstr "How does it work?"
+
+#: src/components/footer.tsx:33
+msgid "footer.helpLinks.three"
+msgstr "How to pay"
+
+#: src/components/footer.tsx:26
+msgid "footer.helpLinks.two"
+msgstr "Where to ask Questions"
+
+#: src/components/header.tsx:64
 msgid "headerButton"
 msgstr "Book Now"
 
-#: src/components/footer.tsx:29
-msgid "helpLinks.one"
-msgstr "How does it work?"
-
-#: src/components/footer.tsx:40
-msgid "helpLinks.three"
-msgstr "How to pay"
+#: src/components/footer.tsx:22
+#~ msgid "helpLinks.one"
+#~ msgstr "How does it work?"
 
 #: src/components/footer.tsx:33
-msgid "helpLinks.two"
-msgstr "Where to ask Questions"
+#~ msgid "helpLinks.three"
+#~ msgstr "How to pay"
+
+#: src/components/footer.tsx:26
+#~ msgid "helpLinks.two"
+#~ msgstr "Where to ask Questions"
 
 #: src/layouts/landingLayout.tsx:25
 msgid "navlinks.contact"

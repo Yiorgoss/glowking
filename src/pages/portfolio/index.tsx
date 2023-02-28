@@ -31,7 +31,7 @@ const Portfolio: PageWithHeaderLayout = () => {
         <div className=" container mx-auto mt-[100px]">
             <h1 className="text-center pt-10 px-10 text-6xl font-bold tracking-wider">
                 <Trans id="Portfolio.header">
-                    Our <span className="text-tertiary">Portfolio</span>
+                    Our Portfolio
                 </Trans>
             </h1>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10 p-10 ">

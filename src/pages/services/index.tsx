@@ -13,25 +13,25 @@ const services: PageWithHeaderLayout = () => {
     const servicesList = [
         {
             title: t({
-                id: "services.serviceslist.header.one",
-                message: "service 1",
+                id: "Services.servicesList.header.one",
+                message: "External Cleaning",
             }),
             content: t({
                 id: "services.serviceslist.content.one",
                 message:
-                    "lorem ipsum dolor sit amet, consectetur adipiscing elit. proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac lorem ipsum dolor sit amet, consecteturadipiscing elit. proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac",
+                    "External cleaning is done without the use of a brush or sponge, but only with the use of hot water for less damage to the car's exterior paint.At Glow King we offer you a complete exterior cleaning with pre-washing and mainly washing the vehicle with active foam, cleaning the domes and rims, removing insects, protective wax and rinsing the car with deionized water!The vehicle is then thoroughly wiped.",
             }),
             image: "/media/images/car_1.png",
         },
         {
             title: t({
-                id: "services.serviceslist.header.two",
-                message: "service 2",
+                id: "Services.servicesList.header.two",
+                message: "Internal Cleaning",
             }),
             content: t({
                 id: "services.serviceslist.content.two",
                 message:
-                    "lorem ipsum dolor sit amet, consectetur adipiscing elit. proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac lorem ipsum dolor sit amet, consecteturadipiscing elit. proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac",
+                    "In internal cleaning, with respect for people and the environment as our guiding principle, we use ecologically biodegradable products.Internally we blow the vehicle to remove the dust and then vacuum the cabin and the luggage compartment, cleaning the windows and all glass surfaces.Finally, we proceed with cleaning and maintenance of all leather and plastic surfaces, dry cleaning of carpets and perfuming the cabin area.",
             }),
             image: "/media/images/car_2.png",
         },
@@ -41,9 +41,8 @@ const services: PageWithHeaderLayout = () => {
                 message: "service 3",
             }),
             content: t({
-                id: "services.serviceslist.content.three",
-                message:
-                    "lorem ipsum dolor sit amet, consectetur adipiscing elit. proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac lorem ipsum dolor sit amet, consecteturadipiscing elit. proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac",
+                id: "Services.servicesList.content.three",
+                message: "",
             }),
             image: "/media/images/car_3.png",
         },
@@ -53,9 +52,8 @@ const services: PageWithHeaderLayout = () => {
                 message: "service 4",
             }),
             content: t({
-                id: "services.serviceslist.content.four",
-                message:
-                    "lorem ipsum dolor sit amet, consectetur adipiscing elit. proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac lorem ipsum dolor sit amet, consecteturadipiscing elit. proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac",
+                id: "Services.servicesList.content.four",
+                message: "",
             }),
             image: "/media/images/car_5.png",
         },
