@@ -1,5 +1,6 @@
 import LayoutLayout from "@layouts/landingLayout";
 import Image from "next/image";
+import Link from "next/link";
 import { ReactElement, useState } from "react";
 
 import { t } from "@lingui/macro";
@@ -32,7 +33,7 @@ const Contact: PageWithHeaderLayout = () => {
                 <div className="relative mt-[100px] h-[300px] w-screen overflow-hidden ">
                     <Image
                         className="object-cover"
-                        src="/images/red_lambo.jpg"
+                        src="/media/images/red_lambo.jpg"
                         alt="banner image of a black lamborghini"
                         fill
                     />
@@ -41,14 +42,14 @@ const Contact: PageWithHeaderLayout = () => {
                     </h2>
                 </div>
 
-                <div className="mt-20 grid grid-cols-2 tracking-wider ">
-                    <div className="pr-20 text-right text-6xl">
+                <div className="grid grid-cols-1 divide-y p-8 tracking-wider md:mt-20 md:grid-cols-2 ">
+                    <div className="py-6 text-right text-6xl md:pr-20 ">
                         {t({
                             id: "Contact.welovetohelp",
                             message: "We love to",
                         })}
                         <br />
-                        <span className="text-9xl  font-bold uppercase text-tertiary">
+                        <span className="font-bold  uppercase text-tertiary md:text-7xl">
                             {" "}
                             {t({
                                 id: "Contact.welovetohelphelp",
@@ -56,18 +57,18 @@ const Contact: PageWithHeaderLayout = () => {
                             })}
                         </span>
                     </div>
-                    <div className="my-auto flex flex-col text-2xl">
-                        <div className="text-2xl ">
-                            <span className="text-3xl font-semibold">
+                    <div className="my-auto flex flex-col pt-10 text-2xl">
+                        <div className="text-lg md:text-2xl ">
+                            <span className="text-xl font-semibold md:text-3xl">
                                 {t({ id: "Contact.phone", message: "Phone:" })}
                             </span>{" "}
-                            6980 000 015
+                            <Link href="tel:6980000015">6980 000 015</Link>
                         </div>
-                        <div className="my-8 pl-10 text-6xl font-bold">
+                        <div className="my-8 pl-10 text-xl font-bold md:text-6xl">
                             {t({ id: "Contact.orBy", message: "Or By" })}
                         </div>
-                        <div className="text-2xl">
-                            <span className="text-3xl font-semibold">
+                        <div className="text-lg md:text-2xl">
+                            <span className="text-xl font-semibold md:text-3xl">
                                 {t({ id: "Contact.email", message: "Email:" })}
                             </span>{" "}
                             glowkingath@gmail.com

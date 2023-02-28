@@ -18,9 +18,9 @@ const Graphic = ({
     w?: number;
     className?: string;
 }) => {
-        if (!src) {
-            return <></>
-        }
+    if (!src) {
+        return <></>
+    }
 
     let imageProps;
     // fill nextjs image if height and width not provided
@@ -29,11 +29,11 @@ const Graphic = ({
     } else {
         imageProps = { fill: true };
     }
-    if (src ==null) {
+    if (src == null) {
         return <></>
     }
     return (
-        <div className={`relative ${className}`}>
+        <div className={`relative rounded-lg overflow-hidden ${className}`}>
             <Image className="object-cover" src={src} alt={alt} {...imageProps} />
         </div>
     );
@@ -63,7 +63,7 @@ const Content = ({
     if (!children) {
         return <></>
     }
-    return <div className={className}>{children}</div>;
+    return <p className={className}>{children}</p>;
 };
 
 const Card = ({

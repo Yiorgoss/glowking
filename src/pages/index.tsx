@@ -40,7 +40,7 @@ const Home: PageWithHeaderLayout = ({}) => {
                 message:
                     "External cleaning is done without the use of a brush or sponge, but only with the use of hot water for less damage to the car's exterior paint.At Glow King we offer you a complete exterior cleaning with pre-washing and mainly washing the vehicle with active foam, cleaning the domes and rims, removing insects, protective wax and rinsing the car with deionized water!The vehicle is then thoroughly wiped.",
             }),
-            image: "/images/black_lambo_2.jpg",
+            image: "/media/images/black_lambo_2.jpg",
         },
         {
             header: t({
@@ -52,29 +52,29 @@ const Home: PageWithHeaderLayout = ({}) => {
                 message:
                     "In internal cleaning, with respect for people and the environment as our guiding principle, we use ecologically biodegradable products.Internally we blow the vehicle to remove the dust and then vacuum the cabin and the luggage compartment, cleaning the windows and all glass surfaces.Finally, we proceed with cleaning and maintenance of all leather and plastic surfaces, dry cleaning of carpets and perfuming the cabin area.",
             }),
-            image: "/images/clean_jeep.jpg",
+            image: "/media/images/clean_jeep.jpg",
         },
         {
             header: t({
                 id: `Home.servicesList.three.header`,
-                message: "Road Cleaning",
+                message: "Boat Washing",
             }),
             content: t({
                 id: `Home.servicesList.three.content`,
-                message: "",
+                message: "Your boat has found its master! Our company undertakes both the interior and exterior cleaning of your boat. Our trusted staff combined with the top quality of our products will make your boat shine!",
             }),
-            image: "/images/van_lambo.jpg",
+            image: "/media/images/van_lambo.jpg",
         },
         {
             header: t({
                 id: `Home.servicesList.four.header`,
-                message: "Property Cleaning",
+                message: "Pavement/Garage Washing",
             }),
             content: t({
                 id: `Home.servicesList.four.content`,
-                message: "",
+                message: "A garage full of dust, mud and clutter? Our company undertakes a complete cleaning of your garage. Our trusted staff combined with the top of our products will make your garage shine!",
             }),
-            image: "/images/clean_mustang.jpg",
+            image: "/media/images/clean_mustang.jpg",
         },
     ];
 
@@ -128,6 +128,7 @@ const Home: PageWithHeaderLayout = ({}) => {
             image: "/images/soapy_wheel.jpg",
         },
     ];
+
     return (
         <div className="overflow-hidden ">
             <div className="h-screen w-screen ">
@@ -166,7 +167,7 @@ const Home: PageWithHeaderLayout = ({}) => {
                     </div>
                 </div>
             </div>
-            <div className="container mx-auto my-20">
+            <div className="container mx-auto my-20 h-full">
                 <ServiceSection
                     isLeft={false}
                     title={t({
@@ -198,7 +199,6 @@ const Home: PageWithHeaderLayout = ({}) => {
                                 header={service.header}
                                 content={service.content}
                                 image={service.image}
-                                key={i}
                             />
                         ))}
                     </div>

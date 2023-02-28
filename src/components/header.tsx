@@ -31,7 +31,7 @@ export default function Header({
             <div className=" grid h-[100px] w-full grid-flow-row-dense grid-cols-4 uppercase md:grid-cols-5">
                 <div className="my-auto md:pl-10">
                     <Image
-                        src="/images/glowking_logo.jpg"
+                        src="/media/images/glowking_logo.jpg"
                         alt="glowking logo"
                         width={80}
                         height={80}
@@ -44,7 +44,7 @@ export default function Header({
                     <CgPhone className="h-8 w-8 " />
                     <div className="my-auto">6980 000 015</div>
                 </Link>
-                <div className="col-span-full mx-auto my-auto pt-4 text-sm font-medium text-secondary md:col-span-3 md:text-base md:font-semibold">
+                <div className="col-span-full mx-auto my-auto text-sm font-medium text-secondary md:col-span-3 md:pt-4 md:text-base md:font-semibold">
                     <ul>
                         <LangSwitcher />
                         {navLinks.map((link, i) => (
