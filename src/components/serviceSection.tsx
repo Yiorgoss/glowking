@@ -14,7 +14,9 @@ const ImagePortion = ({
     image: string;
 }) => {
     return (
-        <div className={`relative overflow-hidden rounded-lg ${className}`}>
+        <div
+            className={`relative order-first h-[400px] overflow-hidden rounded-lg ${className}`}
+        >
             <Image src={image} alt="" fill />
         </div>
     );
@@ -55,12 +57,12 @@ const ServiceSection = ({
 }) => {
     return (
         <div className={`py-10 ${className}`}>
-            <div className="grid min-h-[400px] grid-cols-2 gap-5 overflow-hidden">
+            <div className="grid min-h-[400px] grid-cols-1 gap-5 overflow-hidden md:grid-cols-2">
                 <TextPortion title={title} content={content} />
                 <ImagePortion
                     image={image}
                     className={`object-cover ${
-                        isLeft ? "order-first" : "order-last"
+                        isLeft ? "md:order-first" : "md:order-last"
                     }`}
                 />
             </div>

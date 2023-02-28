@@ -11,7 +11,7 @@ const SocialsTab = ({
     return (
         <div
             className={`flex items-center justify-center gap-5 text-white ${
-                isVert ? "flex-col" : ""
+                isVert ? "md:flex-col" : ""
             } ${className}`}
         >
             <div className="rounded-full bg-black p-2 hover:scale-110">

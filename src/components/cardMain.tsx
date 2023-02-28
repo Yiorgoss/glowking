@@ -17,14 +17,16 @@ const CardMain = ({
     image?: string;
 }) => {
     return (
-        <Card className="mx-auto w-[250px] overflow-hidden rounded-xl bg-primary transition-transform md:hover:scale-[1.05]">
+        <Card className="mx-auto h-full w-full overflow-hidden rounded-xl bg-slate-300 p-4 transition-transform md:h-[500px] md:w-[250px] md:hover:scale-[1.05]">
             <Link href={href}>
-                <Card.Graphic className="h-[200px] w-full" src={image} />
+                <Card.Graphic className="h-[250px] w-full" src={image} />
 
                 <Card.Header className="mt-8 text-center text-2xl font-bold">
                     <Trans>{header}</Trans>
                 </Card.Header>
-                <Card.Content className="break-all p-5">{content}</Card.Content>
+                <Card.Content className="overflow-hidden text-ellipsis break-all p-5">
+                    {content}
+                </Card.Content>
             </Link>
         </Card>
     );

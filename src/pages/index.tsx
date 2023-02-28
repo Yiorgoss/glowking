@@ -40,7 +40,7 @@ const Home: PageWithHeaderLayout = ({}) => {
                 message:
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac",
             }),
-            image: "/images/black_lambo_2.jpg",
+            image: "/media/images/black_lambo_2.jpg",
         },
         {
             header: t({
@@ -52,7 +52,7 @@ const Home: PageWithHeaderLayout = ({}) => {
                 message:
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac",
             }),
-            image: "/images/clean_jeep.jpg",
+            image: "/media/images/clean_jeep.jpg",
         },
         {
             header: t({
@@ -64,7 +64,7 @@ const Home: PageWithHeaderLayout = ({}) => {
                 message:
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac",
             }),
-            image: "/images/van_lambo.jpg",
+            image: "/media/images/van_lambo.jpg",
         },
         {
             header: t({
@@ -76,7 +76,7 @@ const Home: PageWithHeaderLayout = ({}) => {
                 message:
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac",
             }),
-            image: "/images/clean_mustang.jpg",
+            image: "/media/images/clean_mustang.jpg",
         },
     ];
 
@@ -124,6 +124,7 @@ const Home: PageWithHeaderLayout = ({}) => {
             image: "/images/soapy_wheel.jpg",
         },
     ];
+
     return (
         <div className="overflow-hidden ">
             <div className="h-screen w-screen ">
@@ -135,35 +136,51 @@ const Home: PageWithHeaderLayout = ({}) => {
                         fill
                     />
                 </div>
-                <div className="absolute inset-x-0 bottom-0 pb-10 text-center text-8xl font-semibold text-secondary">
-                    <div className="">{t`More Than Just a Car`}</div>
-                    <div className="text-center text-6xl font-medium text-secondary">{t`It's a Lifestyle`}</div>
+                <div className="absolute inset-x-0 bottom-1/4 pb-10 text-center text-2xl font-semibold text-primary md:bottom-0 md:text-8xl">
+                    <div className="">
+                        <Trans id="More Than Just a Car">
+                            More than Just a{" "}
+                            <span className="bg-black font-bold tracking-wider text-tertiary">
+                                Car
+                            </span>
+                        </Trans>
+                    </div>
+                    <div className="md:text-6xl ">
+                        <Trans id="Its a lifestyle">
+                            Its a{" "}
+                            <span className="font-black tracking-wider text-tertiary md:text-7xl">
+                                Lifestyle
+                            </span>
+                        </Trans>
+                    </div>
                 </div>
                 <div className="absolute bottom-0 right-0 pr-10 pb-5 ">
                     <SocialsTab isVert={true} />
                 </div>
             </div>
-            <div className="container mx-auto">
-                <div className="py-10">
-                    <h1 className="my-10 text-center text-6xl font-bold tracking-wider">{t`Features`}</h1>
-                    <div className="grid grid-cols-4">
-                        {featureList.map((feature, i) => (
-                            <CardMain
-                                href="/service"
-                                header={feature.header}
-                                content={feature.content}
-                                image={feature.image}
-                                key={i}
-                            />
-                        ))}
-                    </div>
+            <div className="container mx-auto md:pt-10">
+                <h1 className="my-10 text-center text-2xl font-bold tracking-wider md:text-6xl">{t`Features`}</h1>
+                <div className="mx-auto grid w-fit grid-cols-1 justify-center gap-x-6 gap-y-4 md:grid-cols-4">
+                    {featureList.map((feature, i) => (
+                        <CardMain
+                            href="/service"
+                            header={feature.header}
+                            content={feature.content}
+                            image={feature.image}
+                            key={i}
+                        />
+                    ))}
                 </div>
             </div>
-            <div className="container mx-auto my-20">
+            <div className="container mx-auto my-20 h-full">
                 <ServiceSection
                     isLeft={false}
+                    title={t({
+                        id: "Home.service.section.title",
+                        message: "Section Title",
+                    })}
                     content={t({
-                        id: "Home.serviceSelection.title",
+                        id: "Home.serviceSelection.content",
                         message:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae epsum dolor sit amet, consectetur adipiscing elit. Proin vitae epsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum  ac",
                     })}
@@ -171,22 +188,15 @@ const Home: PageWithHeaderLayout = ({}) => {
                 />
             </div>
             <div className="container mx-auto my-20">
-                <h3 className="my-10 text-center text-5xl font-semibold tracking-wider">{t`Who Are We?`}</h3>
-                <div className="my-auto mx-auto h-[600px] w-full rounded-lg bg-black text-white">
-                    Video Goes Here
-                </div>
-            </div>
-            <div className="container mx-auto my-20">
                 <div className="py-10">
                     <h1 className="my-10 text-center text-5xl">{t`Our Services`}</h1>
-                    <div className="grid grid-cols-4">
+                    <div className="grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-4">
                         {serviceList.map((service, i) => (
                             <CardMain
                                 href="/services"
                                 header={service.header}
                                 content={service.content}
                                 image={service.image}
-                                key={i}
                             />
                         ))}
                     </div>

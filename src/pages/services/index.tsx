@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 
 import { ReactElement } from "react";
@@ -8,76 +7,74 @@ import { t } from "@lingui/macro";
 import LandingLayout from "@layouts/landingLayout";
 
 import ServiceSection from "@components/serviceSection";
-import CardMain from "@components/cardMain";
-import Button from "@components/common/button/button";
-import type { PageWithHeaderLayout } from "@cTypes/layoutTypes";
+import type { PageWithHeaderLayout } from "@ctypes/layoutTypes";
 
-const Services: PageWithHeaderLayout = () => {
+const services: PageWithHeaderLayout = () => {
     const servicesList = [
         {
             title: t({
-                id: "Services.servicesList.header.one",
-                message: "Service 1",
+                id: "services.serviceslist.header.one",
+                message: "service 1",
             }),
             content: t({
-                id: "Services.servicesList.content.one",
+                id: "services.serviceslist.content.one",
                 message:
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac",
+                    "lorem ipsum dolor sit amet, consectetur adipiscing elit. proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac lorem ipsum dolor sit amet, consecteturadipiscing elit. proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac",
             }),
-            image: "/images/car_1.png",
+            image: "/media/images/car_1.png",
         },
         {
             title: t({
-                id: "Services.servicesList.header.two",
-                message: "Service 2",
+                id: "services.serviceslist.header.two",
+                message: "service 2",
             }),
             content: t({
-                id: "Services.servicesList.content.two",
+                id: "services.serviceslist.content.two",
                 message:
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac",
+                    "lorem ipsum dolor sit amet, consectetur adipiscing elit. proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac lorem ipsum dolor sit amet, consecteturadipiscing elit. proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac",
             }),
-            image: "/images/car_2.png",
+            image: "/media/images/car_2.png",
         },
         {
             title: t({
-                id: "Services.servicesList.header.three",
-                message: "Service 3",
+                id: "services.serviceslist.header.three",
+                message: "service 3",
             }),
             content: t({
-                id: "Services.servicesList.content.three",
+                id: "services.serviceslist.content.three",
                 message:
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac",
+                    "lorem ipsum dolor sit amet, consectetur adipiscing elit. proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac lorem ipsum dolor sit amet, consecteturadipiscing elit. proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac",
             }),
-            image: "/images/car_3.png",
+            image: "/media/images/car_3.png",
         },
         {
             title: t({
-                id: "Services.servicesList.header.four",
-                message: "Service 4",
+                id: "services.serviceslist.header.four",
+                message: "service 4",
             }),
             content: t({
-                id: "Services.servicesList.content.four",
+                id: "services.serviceslist.content.four",
                 message:
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.Pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac Lorem ipsum dolor sit amet, consecteturadipiscing elit. Proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. Pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac",
+                    "lorem ipsum dolor sit amet, consectetur adipiscing elit. proin vitae erat luctus, venenatis tortor sit amet, aliquam ipsum.pellentesque habitant morbi tristique senectus et netus etmalesuada fames ac lorem ipsum dolor sit amet, consecteturadipiscing elit. proin vitae erat luctus, venenatis tortor sitamet, aliquam ipsum. pellentesque habitant morbi tristiquesenectus et netus et malesuada fames ac",
             }),
-            image: "/images/car_5.png",
+            image: "/media/images/car_5.png",
         },
     ];
     return (
-        <div className="mt-[100px]">
+        <div className="-z-10 mt-[100px]">
             <div className="">
                 <div className="relative mt-[100px] h-[300px] w-screen ">
                     <div className="relative mt-[100px] h-[300px] w-screen overflow-hidden ">
                         <Image
                             className="object-cover"
-                            src="/images/red_lambo.jpg"
+                            src="/media/images/red_lambo.jpg"
                             alt="banner image of a black lamborghini"
                             fill
                         />
                         <h2 className="absolute inset-x-0 bottom-0 my-20 pb-10 pt-10 text-center text-5xl font-semibold tracking-wider text-primary">
                             {t({
-                                id: "Services.services.header",
-                                message: "Services",
+                                id: "services.services.header",
+                                message: "services",
                             })}
                         </h2>
                     </div>
@@ -87,7 +84,7 @@ const Services: PageWithHeaderLayout = () => {
                 <ul className="container mx-auto">
                     {servicesList.map((service, i) => (
                         <ServiceSection
-                            isLeft={i % 2 == 1 ? true : false}
+                            isLeft={i % 2 == 0 ? true : false}
                             key={i}
                             {...service}
                         />
@@ -98,8 +95,8 @@ const Services: PageWithHeaderLayout = () => {
     );
 };
 
-Services.getLayout = function getLayout(page: ReactElement) {
+services.getLayout = function getLayout(page: ReactElement) {
     return <LandingLayout>{page}</LandingLayout>;
 };
 
-export default Services;
+export default services;
