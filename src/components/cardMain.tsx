@@ -22,7 +22,7 @@ const CardMain = ({
                 <Card.Graphic className="h-[250px] w-full" src={image} />
 
                 <Card.Header className="mt-8 text-center text-2xl font-bold">
-                    <Trans>{header}</Trans>
+                    {header}
                 </Card.Header>
                 <Card.Content className="overflow-hidden text-ellipsis break-all p-5">
                     {content}

@@ -57,22 +57,22 @@ const Home: PageWithHeaderLayout = ({}) => {
         {
             header: t({
                 id: `Home.servicesList.three.header`,
-                message: "Road Cleaning",
+                message: "Boat Washing",
             }),
             content: t({
                 id: `Home.servicesList.three.content`,
-                message: "",
+                message: "Your boat has found its master! Our company undertakes both the interior and exterior cleaning of your boat. Our trusted staff combined with the top quality of our products will make your boat shine!",
             }),
             image: "/media/images/van_lambo.jpg",
         },
         {
             header: t({
                 id: `Home.servicesList.four.header`,
-                message: "Property Cleaning",
+                message: "Pavement/Garage Washing",
             }),
             content: t({
                 id: `Home.servicesList.four.content`,
-                message: "",
+                message: "A garage full of dust, mud and clutter? Our company undertakes a complete cleaning of your garage. Our trusted staff combined with the top of our products will make your garage shine!",
             }),
             image: "/media/images/clean_mustang.jpg",
         },
