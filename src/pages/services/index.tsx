@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
+import { GetServerSideProps } from "next";
 
 import { ReactElement } from "react";
 
@@ -8,9 +8,22 @@ import { t } from "@lingui/macro";
 import LandingLayout from "@layouts/landingLayout";
 
 import ServiceSection from "@components/serviceSection";
-import CardMain from "@components/cardMain";
-import Button from "@components/common/button/button";
 import type { PageWithHeaderLayout } from "@cTypes/layoutTypes";
+
+import { loadTranslation } from "@/utils/utils";
+
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+    const translation = await loadTranslation(
+        ctx.locale!,
+        process.env.NODE_ENV === "production"
+    );
+
+    return {
+        props: {
+            translation,
+        },
+    };
+};
 
 const Services: PageWithHeaderLayout = () => {
     const servicesList = [

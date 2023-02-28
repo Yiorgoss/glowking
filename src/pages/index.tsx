@@ -7,13 +7,13 @@ import { ReactElement } from "react";
 
 import { t, Trans } from "@lingui/macro";
 
-import { loadTranslation } from "@/utils/utils";
 import LandingLayout from "@layouts/landingLayout";
 import CardMain from "@components/cardMain";
 import SocialsTab from "@components/socialsTab";
 import ServiceSection from "@components/serviceSection";
 import type { PageWithHeaderLayout } from "@cTypes/layoutTypes";
 
+import { loadTranslation } from "@/utils/utils";
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
     const translation = await loadTranslation(
         ctx.locale!,

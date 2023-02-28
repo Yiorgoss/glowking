@@ -6,6 +6,22 @@ import { t } from "@lingui/macro";
 
 import type { PageWithHeaderLayout } from "@cTypes/layoutTypes";
 
+import { GetServerSideProps, GetStaticProps } from "next";
+import { loadTranslation } from "@/utils/utils";
+
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+    const translation = await loadTranslation(
+        ctx.locale!,
+        process.env.NODE_ENV === "production"
+    );
+
+    return {
+        props: {
+            translation,
+        },
+    };
+};
+
 const Contact: PageWithHeaderLayout = () => {
     //TODO: refactor form into compound component
     //TODO: remove form elements and instead use react and axios/fetch

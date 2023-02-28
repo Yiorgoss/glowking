@@ -1,11 +1,27 @@
 import Image from "next/image";
+import {GetServerSideProps} from "next"
 
 import { ReactElement } from "react";
 
 import { Trans } from "@lingui/macro";
 
-import LandingLayout from "@layouts/landingLayout";
 import type { PageWithHeaderLayout } from "@cTypes/layoutTypes";
+import LandingLayout from "@layouts/landingLayout";
+
+import {loadTranslation} from "@/utils/utils"
+
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+    const translation = await loadTranslation(
+        ctx.locale!,
+        process.env.NODE_ENV === "production"
+    );
+
+    return {
+        props: {
+            translation,
+        },
+    };
+};
 
 const ImageGallery = [
     "/images/black_lambo.jpg",
