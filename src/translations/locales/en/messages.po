@@ -6,6 +6,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: en\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
 
 #: src/pages/contact/index.tsx:41
 msgid "Contact.contactUs"
@@ -59,89 +65,121 @@ msgstr "Where to find us"
 msgid "Footer.sitemap"
 msgstr "Sitemap"
 
-#: src/pages/index.tsx:155
+#: src/pages/index.tsx:157
 msgid "Home.Features"
 msgstr "Features"
 
-#: src/pages/index.tsx:188
+#: src/pages/index.tsx:190
 msgid "Home.Services"
 msgstr "Our Services"
 
-#: src/pages/index.tsx:123
+#: src/pages/index.tsx:124
 msgid "Home.feature.four.content"
 msgstr "Glow King Athens and its staff will never share your personal information or vehicle information without your consent."
 
-#: src/pages/index.tsx:119
+#: src/pages/index.tsx:120
 msgid "Home.feature.four.header"
 msgstr "Privacy Focused"
 
-#: src/pages/index.tsx:111
+#: src/pages/index.tsx:112
 msgid "Home.feature.three.content"
 msgstr "The products used for cleaning and disinfection are certified and friendly to humans and the environment, complying with eu standards and regulations. Our products and machines are of the utmost quality, including AUTOGLYM and KARCHER."
 
-#: src/pages/index.tsx:107
+#: src/pages/index.tsx:108
 msgid "Home.feature.three.header"
 msgstr "Safe and Effective"
 
-#: src/pages/index.tsx:99
+#: src/pages/index.tsx:100
 msgid "Home.feature.two.content"
 msgstr "In biological cleaning, we remove from the cabin area, stains, fungi, bacteria and any other organic matter. We disinfect the seats, the sky, floors, luggage compartment and side upholstery. We also disinfect the air ducts of the car, removing the stench from the use of the air conditioner."
 
-#: src/pages/index.tsx:95
+#: src/pages/index.tsx:96
 msgid "Home.feature.two.header"
 msgstr "Biological Cleaning"
 
-#: src/pages/index.tsx:87
+#: src/pages/index.tsx:88
 msgid "Home.featureList.one.content"
 msgstr "Professional washing and cleaning for your car!The mobile car wash GLOW KING a mobile business that deals exclusively with the cleaning and care of cars, gives a new dimension to the space, comes to where you are, zeroing out the distances and taking care of your own car as if it were unique."
 
-#: src/pages/index.tsx:83
+#: src/pages/index.tsx:84
 msgid "Home.featureList.one.header"
 msgstr "Location Of Your Choice"
 
-#: src/pages/index.tsx:145
+#: src/pages/index.tsx:147
 msgid "Home.motto"
 msgstr "One Call at Your Door"
 
-#: src/pages/index.tsx:177
+#: src/pages/index.tsx:179
 msgid "Home.serviceSection.content"
 msgstr "GLOW KING ATHENS is an innovative idea that annihilates distances! It started in 2019 and in the middle of the pandemic it covered all the southern suburbs. Complete cleaning services of the vehicle, the property, the pavement and everything else you need! GLOW KING ATHENS operates with the environment and people as its main focus, next to your every need. Glow King Athens starring... you!"
 
-#: src/pages/index.tsx:173
+#: src/pages/index.tsx:175
 msgid "Home.serviceSection.title"
 msgstr "Who Are We?"
 
-#: src/pages/index.tsx:73
+#: src/pages/index.tsx:74
 msgid "Home.servicesList.four.content"
 msgstr "A garage full of dust, mud and clutter? Our company undertakes a complete cleaning of your garage. Our trusted staff combined with the top of our products will make your garage shine!"
 
-#: src/pages/index.tsx:69
+#: src/pages/index.tsx:70
 msgid "Home.servicesList.four.header"
 msgstr "Pavement/Garage Washing"
 
-#: src/pages/index.tsx:38
+#: src/pages/index.tsx:39
 msgid "Home.servicesList.one.content"
 msgstr "External cleaning is done without the use of a brush or sponge, but only with the use of hot water for less damage to the car's exterior paint.At Glow King we offer you a complete exterior cleaning with pre-washing and mainly washing the vehicle with active foam, cleaning the domes and rims, removing insects, protective wax and rinsing the car with deionized water!The vehicle is then thoroughly wiped."
 
-#: src/pages/index.tsx:34
+#: src/pages/index.tsx:35
 msgid "Home.servicesList.one.header"
 msgstr "External Wash"
 
-#: src/pages/index.tsx:62
+#: src/pages/index.tsx:63
 msgid "Home.servicesList.three.content"
 msgstr "Your boat has found its master! Our company undertakes both the interior and exterior cleaning of your boat. Our trusted staff combined with the top quality of our products will make your boat shine!"
 
-#: src/pages/index.tsx:58
+#: src/pages/index.tsx:59
 msgid "Home.servicesList.three.header"
 msgstr "Boat Washing"
 
-#: src/pages/index.tsx:50
+#: src/pages/index.tsx:51
 msgid "Home.servicesList.two.content"
 msgstr "In internal cleaning, with respect for people and the environment as our guiding principle, we use ecologically biodegradable products.Internally we blow the vehicle to remove the dust and then vacuum the cabin and the luggage compartment, cleaning the windows and all glass surfaces.Finally, we proceed with cleaning and maintenance of all leather and plastic surfaces, dry cleaning of carpets and perfuming the cabin area."
 
-#: src/pages/index.tsx:46
+#: src/pages/index.tsx:47
 msgid "Home.servicesList.two.header"
 msgstr "Internal Cleaning"
+
+#: src/pages/legal.tsx:30
+msgid "Legal.GDPR.header"
+msgstr "GDPR Statement of compliance"
+
+#: src/pages/legal.tsx:36
+msgid "Legal.GDPR.p1"
+msgstr "GLOW KING ATHENS understands that your privacy is important to you and that you care about how your personal data is used and shared online."
+
+#: src/pages/legal.tsx:45
+msgid "Legal.GDPR.p2"
+msgstr "Σεβόμαστε και εκτιμούμε το απόρρητο όλων όσων επισκέπτονται αυτόν τον ιστότοπο, και θα συλλέγουμε και θα χρησιμοποιούμε προσωπικά δεδομένα μόνο με τρόπους που περιγράφονται εδώ, και με τρόπο που να συμβαδίζει με το υποχρεώσεις και τα δικαιώματά σας βάσει του νόμου."
+
+#: src/pages/legal.tsx:54
+msgid "Legal.GDPR.p3"
+msgstr "Το GLOW KING ATHENS συμμορφώνεται με τις ισχύουσες νομοθετικές, κανονιστικές και συμβατικές διατάξεις σε ό,τι αφορά την συλλογή, την αποθήκευση, την ανάκτηση αλλά και την καταστροφή των δεδομένων αυτών, ιδιαίτερα δε με τις απαιτήσεις του Ευρωπαϊκού Κανονισμού (ΕΕ) 2016/679 που αφορά στην προστασία Δεδομένων Προσωπικού Χαρακτήρα (GDPR)"
+
+#: src/pages/legal.tsx:63
+msgid "Legal.GDPR.p4"
+msgstr "Διαβάστε προσεκτικά αυτήν την Πολιτική Απορρήτου και βεβαιωθείτε ότι την κατανοείτε."
+
+#: src/pages/legal.tsx:72
+msgid "Legal.GDPR.p5"
+msgstr "Η αποδοχή της Πολιτικής Απορρήτου, θεωρείται ότι πραγματοποιείται κατά την πρώτη χρήση του ιστοτόπου ."
+
+#: src/pages/legal.tsx:81
+msgid "Legal.GDPR.p6"
+msgstr "Εάν δεν αποδέχεστε και συμφωνείτε με αυτήν την Πολιτική Απορρήτου, πρέπει να σταματήσετε να χρησιμοποιείτε την Ιστοσελίδα μας αμέσως."
+
+#: src/pages/legal.tsx:90
+msgid "Legal.GDPR.p7"
+msgstr "Η παρούσα Πολιτική ισχύει για τη χρήση οποιουδήποτε και όλων των Δεδομένων που συλλέγονται από εμάς σε σχέση με τη χρήση της Ιστοσελίδας από εσάς και οποιωνδήποτε Υπηρεσιών ή Συστημάτων σε αυτήν."
 
 #: src/pages/portfolio/index.tsx:49
 msgid "Portfolio.header"
@@ -199,7 +237,7 @@ msgstr "How to pay?"
 msgid "footer.helpLinks.two"
 msgstr "Where to ask Questions?"
 
-#: src/components/header.tsx:64
+#: src/components/header.tsx:94
 msgid "headerButton"
 msgstr "Book Now"
 

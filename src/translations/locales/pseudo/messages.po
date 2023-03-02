@@ -85,55 +85,55 @@ msgstr ""
 msgid "Footer.sitemap"
 msgstr ""
 
-#: src/pages/index.tsx:155
+#: src/pages/index.tsx:157
 msgid "Home.Features"
 msgstr ""
 
-#: src/pages/index.tsx:188
+#: src/pages/index.tsx:190
 msgid "Home.Services"
 msgstr ""
 
-#: src/pages/index.tsx:123
+#: src/pages/index.tsx:124
 msgid "Home.feature.four.content"
 msgstr ""
 
-#: src/pages/index.tsx:119
+#: src/pages/index.tsx:120
 msgid "Home.feature.four.header"
 msgstr ""
 
-#: src/pages/index.tsx:111
+#: src/pages/index.tsx:112
 msgid "Home.feature.three.content"
 msgstr ""
 
-#: src/pages/index.tsx:107
+#: src/pages/index.tsx:108
 msgid "Home.feature.three.header"
 msgstr ""
 
-#: src/pages/index.tsx:99
+#: src/pages/index.tsx:100
 msgid "Home.feature.two.content"
 msgstr ""
 
-#: src/pages/index.tsx:95
+#: src/pages/index.tsx:96
 msgid "Home.feature.two.header"
 msgstr ""
 
-#: src/pages/index.tsx:87
+#: src/pages/index.tsx:88
 msgid "Home.featureList.one.content"
 msgstr ""
 
-#: src/pages/index.tsx:83
+#: src/pages/index.tsx:84
 msgid "Home.featureList.one.header"
 msgstr ""
 
-#: src/pages/index.tsx:145
+#: src/pages/index.tsx:147
 msgid "Home.motto"
 msgstr ""
 
-#: src/pages/index.tsx:177
+#: src/pages/index.tsx:179
 msgid "Home.serviceSection.content"
 msgstr ""
 
-#: src/pages/index.tsx:173
+#: src/pages/index.tsx:175
 msgid "Home.serviceSection.title"
 msgstr ""
 
@@ -141,41 +141,73 @@ msgstr ""
 #~ msgid "Home.serviceSelection.title"
 #~ msgstr ""
 
-#: src/pages/index.tsx:73
+#: src/pages/index.tsx:74
 msgid "Home.servicesList.four.content"
 msgstr ""
 
-#: src/pages/index.tsx:69
+#: src/pages/index.tsx:70
 msgid "Home.servicesList.four.header"
 msgstr ""
 
-#: src/pages/index.tsx:38
+#: src/pages/index.tsx:39
 msgid "Home.servicesList.one.content"
 msgstr ""
 
-#: src/pages/index.tsx:34
+#: src/pages/index.tsx:35
 msgid "Home.servicesList.one.header"
 msgstr ""
 
-#: src/pages/index.tsx:62
+#: src/pages/index.tsx:63
 msgid "Home.servicesList.three.content"
 msgstr ""
 
-#: src/pages/index.tsx:58
+#: src/pages/index.tsx:59
 msgid "Home.servicesList.three.header"
 msgstr ""
 
-#: src/pages/index.tsx:50
+#: src/pages/index.tsx:51
 msgid "Home.servicesList.two.content"
 msgstr ""
 
-#: src/pages/index.tsx:46
+#: src/pages/index.tsx:47
 msgid "Home.servicesList.two.header"
 msgstr ""
 
 #: src/pages/index.tsx:140
 #~ msgid "It's a Lifestyle"
 #~ msgstr ""
+
+#: src/pages/legal.tsx:30
+msgid "Legal.GDPR.header"
+msgstr ""
+
+#: src/pages/legal.tsx:36
+msgid "Legal.GDPR.p1"
+msgstr ""
+
+#: src/pages/legal.tsx:45
+msgid "Legal.GDPR.p2"
+msgstr ""
+
+#: src/pages/legal.tsx:54
+msgid "Legal.GDPR.p3"
+msgstr ""
+
+#: src/pages/legal.tsx:63
+msgid "Legal.GDPR.p4"
+msgstr ""
+
+#: src/pages/legal.tsx:72
+msgid "Legal.GDPR.p5"
+msgstr ""
+
+#: src/pages/legal.tsx:81
+msgid "Legal.GDPR.p6"
+msgstr ""
+
+#: src/pages/legal.tsx:90
+msgid "Legal.GDPR.p7"
+msgstr ""
 
 #: src/pages/index.tsx:139
 #~ msgid "More Than Just a Car"
@@ -257,7 +289,7 @@ msgstr ""
 msgid "footer.helpLinks.two"
 msgstr ""
 
-#: src/components/header.tsx:64
+#: src/components/header.tsx:94
 msgid "headerButton"
 msgstr ""
 

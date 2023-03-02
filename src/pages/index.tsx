@@ -143,7 +143,7 @@ const Home: PageWithHeaderLayout = ({}) => {
                     />
                 </div>
                 <div className="absolute inset-x-0 -z-10 bottom-1/4 pb-10 text-center text-2xl md:text-6xl font-semibold text-secondary">
-                    <div className="mx-auto w-fit -skew-y-3 rounded-lg bg-fuchsia-800 px-6 ">
+                    <div className="mx-auto w-fit -skew-y-3 rounded-lg bg-tertiary py-1 px-6 ">
                         <Trans id="Home.motto">One Call at Your Door</Trans>
                     </div>
                 </div>
