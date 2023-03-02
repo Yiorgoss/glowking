@@ -1,8 +1,10 @@
-import LayoutLayout from "@layouts/landingLayout";
 import Image from "next/image";
 import Link from "next/link";
+import Head from 'next/head'
+
 import { ReactElement, useState } from "react";
 
+import LayoutLayout from "@layouts/landingLayout";
 import { t } from "@lingui/macro";
 
 import type { PageWithHeaderLayout } from "@cTypes/layoutTypes";
@@ -29,6 +31,7 @@ const Contact: PageWithHeaderLayout = () => {
 
     return (
         <div className="mx-auto mt-[100px]">
+            <Head><title>{t({id:"Contact.head.title", message:"Glowking | Mobile Industrial Cleaning | Location Of your Choice"})}</title></Head>
             <div className="my-10 pb-20">
                 <div className="relative mt-[100px] h-[300px] w-screen overflow-hidden ">
                     <Image

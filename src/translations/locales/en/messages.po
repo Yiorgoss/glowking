@@ -13,23 +13,27 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/pages/contact/index.tsx:41
+#: src/pages/contact/index.tsx:44
 msgid "Contact.contactUs"
 msgstr "Contact Us"
 
-#: src/pages/contact/index.tsx:68
+#: src/pages/contact/index.tsx:34
+msgid "Contact.head.title"
+msgstr "Glowking | Mobile Industrial Cleaning | Location Of your Choice"
+
+#: src/pages/contact/index.tsx:71
 msgid "Contact.orBy"
 msgstr "Or By"
 
-#: src/pages/contact/index.tsx:63
+#: src/pages/contact/index.tsx:66
 msgid "Contact.phone"
 msgstr "Phone:"
 
-#: src/pages/contact/index.tsx:47
+#: src/pages/contact/index.tsx:50
 msgid "Contact.welovetohelp"
 msgstr "We love to"
 
-#: src/pages/contact/index.tsx:54
+#: src/pages/contact/index.tsx:57
 msgid "Contact.welovetohelphelp"
 msgstr "help"
 
@@ -65,87 +69,91 @@ msgstr "Where to find us"
 msgid "Footer.sitemap"
 msgstr "Sitemap"
 
-#: src/pages/index.tsx:157
+#: src/pages/index.tsx:160
 msgid "Home.Features"
 msgstr "Features"
 
-#: src/pages/index.tsx:190
+#: src/pages/index.tsx:193
 msgid "Home.Services"
 msgstr "Our Services"
 
-#: src/pages/index.tsx:124
+#: src/pages/index.tsx:126
 msgid "Home.feature.four.content"
 msgstr "Glow King Athens and its staff will never share your personal information or vehicle information without your consent."
 
-#: src/pages/index.tsx:120
+#: src/pages/index.tsx:122
 msgid "Home.feature.four.header"
 msgstr "Privacy Focused"
 
-#: src/pages/index.tsx:112
+#: src/pages/index.tsx:114
 msgid "Home.feature.three.content"
 msgstr "The products used for cleaning and disinfection are certified and friendly to humans and the environment, complying with eu standards and regulations. Our products and machines are of the utmost quality, including AUTOGLYM and KARCHER."
 
-#: src/pages/index.tsx:108
+#: src/pages/index.tsx:110
 msgid "Home.feature.three.header"
 msgstr "Safe and Effective"
 
-#: src/pages/index.tsx:100
+#: src/pages/index.tsx:102
 msgid "Home.feature.two.content"
 msgstr "In biological cleaning, we remove from the cabin area, stains, fungi, bacteria and any other organic matter. We disinfect the seats, the sky, floors, luggage compartment and side upholstery. We also disinfect the air ducts of the car, removing the stench from the use of the air conditioner."
 
-#: src/pages/index.tsx:96
+#: src/pages/index.tsx:98
 msgid "Home.feature.two.header"
 msgstr "Biological Cleaning"
 
-#: src/pages/index.tsx:88
+#: src/pages/index.tsx:90
 msgid "Home.featureList.one.content"
 msgstr "Professional washing and cleaning for your car!The mobile car wash GLOW KING a mobile business that deals exclusively with the cleaning and care of cars, gives a new dimension to the space, comes to where you are, zeroing out the distances and taking care of your own car as if it were unique."
 
-#: src/pages/index.tsx:84
+#: src/pages/index.tsx:86
 msgid "Home.featureList.one.header"
 msgstr "Location Of Your Choice"
 
-#: src/pages/index.tsx:147
+#: src/pages/index.tsx:138
+msgid "Home.head.title"
+msgstr "Glowking | Carwash while at Work | Carwash while at Home"
+
+#: src/pages/index.tsx:150
 msgid "Home.motto"
 msgstr "One Call at Your Door"
 
-#: src/pages/index.tsx:179
+#: src/pages/index.tsx:182
 msgid "Home.serviceSection.content"
 msgstr "GLOW KING ATHENS is an innovative idea that annihilates distances! It started in 2019 and in the middle of the pandemic it covered all the southern suburbs. Complete cleaning services of the vehicle, the property, the pavement and everything else you need! GLOW KING ATHENS operates with the environment and people as its main focus, next to your every need. Glow King Athens starring... you!"
 
-#: src/pages/index.tsx:175
+#: src/pages/index.tsx:178
 msgid "Home.serviceSection.title"
 msgstr "Who Are We?"
 
-#: src/pages/index.tsx:74
+#: src/pages/index.tsx:76
 msgid "Home.servicesList.four.content"
 msgstr "A garage full of dust, mud and clutter? Our company undertakes a complete cleaning of your garage. Our trusted staff combined with the top of our products will make your garage shine!"
 
-#: src/pages/index.tsx:70
+#: src/pages/index.tsx:72
 msgid "Home.servicesList.four.header"
 msgstr "Pavement/Garage Washing"
 
-#: src/pages/index.tsx:39
+#: src/pages/index.tsx:41
 msgid "Home.servicesList.one.content"
 msgstr "External cleaning is done without the use of a brush or sponge, but only with the use of hot water for less damage to the car's exterior paint.At Glow King we offer you a complete exterior cleaning with pre-washing and mainly washing the vehicle with active foam, cleaning the domes and rims, removing insects, protective wax and rinsing the car with deionized water!The vehicle is then thoroughly wiped."
 
-#: src/pages/index.tsx:35
+#: src/pages/index.tsx:37
 msgid "Home.servicesList.one.header"
 msgstr "External Wash"
 
-#: src/pages/index.tsx:63
+#: src/pages/index.tsx:65
 msgid "Home.servicesList.three.content"
 msgstr "Your boat has found its master! Our company undertakes both the interior and exterior cleaning of your boat. Our trusted staff combined with the top quality of our products will make your boat shine!"
 
-#: src/pages/index.tsx:59
+#: src/pages/index.tsx:61
 msgid "Home.servicesList.three.header"
 msgstr "Boat Washing"
 
-#: src/pages/index.tsx:51
+#: src/pages/index.tsx:53
 msgid "Home.servicesList.two.content"
 msgstr "In internal cleaning, with respect for people and the environment as our guiding principle, we use ecologically biodegradable products.Internally we blow the vehicle to remove the dust and then vacuum the cabin and the luggage compartment, cleaning the windows and all glass surfaces.Finally, we proceed with cleaning and maintenance of all leather and plastic surfaces, dry cleaning of carpets and perfuming the cabin area."
 
-#: src/pages/index.tsx:47
+#: src/pages/index.tsx:49
 msgid "Home.servicesList.two.header"
 msgstr "Internal Cleaning"
 
@@ -182,42 +190,50 @@ msgid "Legal.GDPR.p7"
 msgstr "Η παρούσα Πολιτική ισχύει για τη χρήση οποιουδήποτε και όλων των Δεδομένων που συλλέγονται από εμάς σε σχέση με τη χρήση της Ιστοσελίδας από εσάς και οποιωνδήποτε Υπηρεσιών ή Συστημάτων σε αυτήν."
 
 #: src/pages/portfolio/index.tsx:49
+msgid "Portfolio.head.title"
+msgstr "Athens Portable Wash | We come to You | Glyfada | South"
+
+#: src/pages/portfolio/index.tsx:51
 msgid "Portfolio.header"
 msgstr "Our Portfolio"
 
-#: src/pages/services/index.tsx:89
+#: src/pages/services/index.tsx:81
+msgid "Services.head.title"
+msgstr "Portable Wash | Wash Cars | Wash Boats | Wash Pavement"
+
+#: src/pages/services/index.tsx:92
 msgid "Services.services.header"
 msgstr "services"
 
-#: src/pages/services/index.tsx:70
+#: src/pages/services/index.tsx:72
 msgid "Services.servicesList.content.four"
 msgstr "A garage full of dust, mud and clutter? Our company undertakes a complete cleaning of your garage. Our trusted staff combined with the top of our products will make your garage shine!"
 
-#: src/pages/services/index.tsx:59
+#: src/pages/services/index.tsx:61
 msgid "Services.servicesList.content.three"
 msgstr "Your boat has found its master! Our company undertakes both the interior and exterior cleaning of your boat. Our trusted staff combined with the top quality of our products will make your boat shine!"
 
-#: src/pages/services/index.tsx:47
+#: src/pages/services/index.tsx:49
 msgid "Services.servicesList.content.two"
 msgstr "In internal cleaning, with respect for people and the environment as our guiding principle, we use ecologically biodegradable products.Internally we blow the vehicle to remove the dust and then vacuum the cabin and the luggage compartment, cleaning the windows and all glass surfaces.Finally, we proceed with cleaning and maintenance of all leather and plastic surfaces, dry cleaning of carpets and perfuming the cabin area."
 
-#: src/pages/services/index.tsx:31
+#: src/pages/services/index.tsx:33
 msgid "Services.servicesList.header.one"
 msgstr "External Cleaning"
 
-#: src/pages/services/index.tsx:55
+#: src/pages/services/index.tsx:57
 msgid "Services.servicesList.header.three"
 msgstr "Boat Washing"
 
-#: src/pages/services/index.tsx:43
+#: src/pages/services/index.tsx:45
 msgid "Services.servicesList.header.two"
 msgstr "Internal Cleaning"
 
-#: src/pages/services/index.tsx:35
+#: src/pages/services/index.tsx:37
 msgid "Services.serviceslist.content.one"
 msgstr "External cleaning is done without the use of a brush or sponge, but only with the use of hot water for less damage to the car's exterior paint.At Glow King we offer you a complete exterior cleaning with pre-washing and mainly washing the vehicle with active foam, cleaning the domes and rims, removing insects, protective wax and rinsing the car with deionized water!The vehicle is then thoroughly wiped."
 
-#: src/pages/services/index.tsx:66
+#: src/pages/services/index.tsx:68
 msgid "Services.serviceslist.header.four"
 msgstr "Pavement/Garage Washing"
 
@@ -237,7 +253,7 @@ msgstr "How to pay?"
 msgid "footer.helpLinks.two"
 msgstr "Where to ask Questions?"
 
-#: src/components/header.tsx:94
+#: src/components/header.tsx:95
 msgid "headerButton"
 msgstr "Book Now"
 

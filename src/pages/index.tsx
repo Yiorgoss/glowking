@@ -1,6 +1,8 @@
 //import { getLayout as getSiteLayout } from "@layouts/headerLayout"
 import Image from "next/image";
 import Link from "next/link";
+import Head from 'next/head'
+
 
 import { GetServerSideProps, GetStaticProps } from "next";
 import { ReactElement } from "react";
@@ -133,6 +135,7 @@ const Home: PageWithHeaderLayout = ({}) => {
 
     return (
         <div className="overflow-hidden ">
+            <Head><title>{t({id:"Home.head.title", message:"Glowking | Carwash while at Work | Carwash while at Home"})}</title></Head>
             <div className="h-screen w-screen ">
                 <div className="relative -z-10 h-full w-full">
                     <Image

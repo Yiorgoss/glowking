@@ -1,9 +1,10 @@
 import Image from "next/image";
+import Head from "next/head"
 import {GetServerSideProps} from "next"
 
 import { ReactElement } from "react";
 
-import { Trans } from "@lingui/macro";
+import { t,Trans } from "@lingui/macro";
 
 import type { PageWithHeaderLayout } from "@cTypes/layoutTypes";
 import LandingLayout from "@layouts/landingLayout";
@@ -45,6 +46,7 @@ const Portfolio: PageWithHeaderLayout = () => {
 
     return (
         <div className=" container mx-auto mt-[100px]">
+            <Head><title>{t({id:"Portfolio.head.title", message:"Athens Portable Wash | We come to You | Glyfada | South"})}</title></Head>
             <h1 className="text-center pt-10 px-10 text-6xl font-bold tracking-wider">
                 <Trans id="Portfolio.header">
                     Our Portfolio
