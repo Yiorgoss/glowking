@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { useEffect, useRef } from "react";
 
 import type { AppProps } from "next/app";
+import Head from 'next/head'
 
 import { I18nProvider } from "@lingui/react";
 import { i18n } from "@lingui/core";
@@ -38,8 +39,14 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
 
     const getLayout = Component.getLayout || ((page) => page);
     return (
-        <I18nProvider i18n={i18n}>
-            {getLayout(<Component {...pageProps} />)}
-        </I18nProvider>
+        <>
+        <Head>              <title>Glowking</title>
+        </Head>
+
+            <I18nProvider i18n={i18n}>
+                {getLayout(<Component {...pageProps} />)}
+            </I18nProvider>
+        </>
+
     );
 }
