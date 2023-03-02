@@ -14,6 +14,7 @@ import ServiceSection from "@components/serviceSection";
 import type { PageWithHeaderLayout } from "@cTypes/layoutTypes";
 
 import { loadTranslation } from "@/utils/utils";
+
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
     const translation = await loadTranslation(
         ctx.locale!,
@@ -40,7 +41,7 @@ const Home: PageWithHeaderLayout = ({}) => {
                 message:
                     "External cleaning is done without the use of a brush or sponge, but only with the use of hot water for less damage to the car's exterior paint.At Glow King we offer you a complete exterior cleaning with pre-washing and mainly washing the vehicle with active foam, cleaning the domes and rims, removing insects, protective wax and rinsing the car with deionized water!The vehicle is then thoroughly wiped.",
             }),
-            image: "/media/images/black_lambo_2.jpg",
+            image: "/media/images/soapy_merc.jpg",
         },
         {
             header: t({
@@ -52,7 +53,7 @@ const Home: PageWithHeaderLayout = ({}) => {
                 message:
                     "In internal cleaning, with respect for people and the environment as our guiding principle, we use ecologically biodegradable products.Internally we blow the vehicle to remove the dust and then vacuum the cabin and the luggage compartment, cleaning the windows and all glass surfaces.Finally, we proceed with cleaning and maintenance of all leather and plastic surfaces, dry cleaning of carpets and perfuming the cabin area.",
             }),
-            image: "/media/images/clean_jeep.jpg",
+            image: "/media/images/internal.jpg",
         },
         {
             header: t({
@@ -63,7 +64,7 @@ const Home: PageWithHeaderLayout = ({}) => {
                 id: `Home.servicesList.three.content`,
                 message: "Your boat has found its master! Our company undertakes both the interior and exterior cleaning of your boat. Our trusted staff combined with the top quality of our products will make your boat shine!",
             }),
-            image: "/media/images/van_lambo.jpg",
+            image: "/media/images/boat_deck.jpg",
         },
         {
             header: t({
@@ -74,7 +75,7 @@ const Home: PageWithHeaderLayout = ({}) => {
                 id: `Home.servicesList.four.content`,
                 message: "A garage full of dust, mud and clutter? Our company undertakes a complete cleaning of your garage. Our trusted staff combined with the top of our products will make your garage shine!",
             }),
-            image: "/media/images/clean_mustang.jpg",
+            image: "/media/images/pavement.jpg",
         },
     ];
 
@@ -89,7 +90,7 @@ const Home: PageWithHeaderLayout = ({}) => {
                 message:
                     "Professional washing and cleaning for your car!The mobile car wash GLOW KING a mobile business that deals exclusively with the cleaning and care of cars, gives a new dimension to the space, comes to where you are, zeroing out the distances and taking care of your own car as if it were unique.",
             }),
-            image: "/images/lambo_orange_clean.jpg",
+            image: "/media/images/location.jpg",
         },
         {
             header: t({
@@ -101,7 +102,7 @@ const Home: PageWithHeaderLayout = ({}) => {
                 message:
                     "In biological cleaning, we remove from the cabin area, stains, fungi, bacteria and any other organic matter. We disinfect the seats, the sky, floors, luggage compartment and side upholstery. We also disinfect the air ducts of the car, removing the stench from the use of the air conditioner.",
             }),
-            image: "/images/glowking_van_1.jpg",
+            image: "/media/images/biological.jpg",
         },
         {
             header: t({
@@ -113,7 +114,7 @@ const Home: PageWithHeaderLayout = ({}) => {
                 message:
                     "The products used for cleaning and disinfection are certified and friendly to humans and the environment, complying with eu standards and regulations. Our products and machines are of the utmost quality, including AUTOGLYM and KARCHER.",
             }),
-            image: "/images/black_lambo_2.jpg",
+            image: "/media/images/black_lambo_2.jpg",
         },
         {
             header: t({
@@ -125,7 +126,8 @@ const Home: PageWithHeaderLayout = ({}) => {
                 message:
                     "Glow King Athens and its staff will never share your personal information or vehicle information without your consent.",
             }),
-            image: "/images/soapy_wheel.jpg",
+            image: "/media/images/soapy_wheel.jpg",
+            href: '/legal'
         },
     ];
 
@@ -135,12 +137,12 @@ const Home: PageWithHeaderLayout = ({}) => {
                 <div className="relative -z-10 h-full w-full">
                     <Image
                         className="object-cover"
-                        src="/images/landing_page_2.jpg"
+                        src="/media/images/landing_page_2.jpg"
                         alt="landing page image"
                         fill
                     />
                 </div>
-                <div className="absolute inset-x-0 bottom-0 pb-10 text-center text-6xl font-semibold text-secondary">
+                <div className="absolute inset-x-0 -z-10 bottom-1/4 pb-10 text-center text-2xl md:text-6xl font-semibold text-secondary">
                     <div className="mx-auto w-fit -skew-y-3 rounded-lg bg-fuchsia-800 px-6 ">
                         <Trans id="Home.motto">One Call at Your Door</Trans>
                     </div>
@@ -151,13 +153,13 @@ const Home: PageWithHeaderLayout = ({}) => {
             </div>
             <div className="container mx-auto">
                 <div className="py-10">
-                    <h1 className="my-10 text-center text-6xl font-bold tracking-wider">
+                    <h1 className="my-10 text-center text-3xl font-semibold tracking-wider">
                         {t({ id: "Home.Features", message: "Features" })}
                     </h1>
-                    <div className="grid grid-cols-1 md:grid-cols-4">
+                    <div className="grid grid-cols-1 gap-y-8 w-4/5 mx-auto justify-center 2xl:w-full 2xl:justify-between 2xl:grid-cols-4 md:grid-cols-2 gap-x-4 ">
                         {featureList.map((feature, i) => (
                             <CardMain
-                                href="/services"
+                                href={feature.href ? feature.href : "/services"}
                                 header={feature.header}
                                 content={feature.content}
                                 image={feature.image}
@@ -167,7 +169,7 @@ const Home: PageWithHeaderLayout = ({}) => {
                     </div>
                 </div>
             </div>
-            <div className="container mx-auto my-20 h-full">
+            <div className="container mx-auto mt-10 h-full">
                 <ServiceSection
                     isLeft={false}
                     title={t({
@@ -179,15 +181,15 @@ const Home: PageWithHeaderLayout = ({}) => {
                         message:
                             "GLOW KING ATHENS is an innovative idea that annihilates distances! It started in 2019 and in the middle of the pandemic it covered all the southern suburbs. Complete cleaning services of the vehicle, the property, the pavement and everything else you need! GLOW KING ATHENS operates with the environment and people as its main focus, next to your every need. Glow King Athens starring... you!",
                     })}
-                    image="/images/soapy_merc.jpg"
+                    image="/media/images/glowking_van_1.jpg"
                 />
             </div>
-            <div className="container mx-auto my-20">
+            <div className="container mx-auto">
                 <div className="py-10">
-                    <h1 className="my-10 text-center text-5xl">
+                    <h1 className="my-10 text-center font-semibold text-3xl">
                         {t({ id: "Home.Services", message: "Our Services" })}
                     </h1>
-                    <div className="grid grid-cols-1 md:grid-cols-4">
+                    <div className="grid grid-cols-1 gap-y-8 w-4/5 mx-auto justify-center 2xl:w-full 2xl:justify-between 2xl:grid-cols-4 md:grid-cols-2 gap-x-4 ">
                         {serviceList.map((service, i) => (
                             <CardMain
                                 href="/services"

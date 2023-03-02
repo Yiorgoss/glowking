@@ -17,7 +17,7 @@ const ImagePortion = ({
         <div
             className={`relative order-first h-[400px] overflow-hidden rounded-lg ${className}`}
         >
-            <Image src={image} alt="" fill />
+            <Image src={image} alt="" fill className="object-cover"/>
         </div>
     );
 };

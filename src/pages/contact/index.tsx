@@ -33,7 +33,7 @@ const Contact: PageWithHeaderLayout = () => {
                 <div className="relative mt-[100px] h-[300px] w-screen overflow-hidden ">
                     <Image
                         className="object-cover"
-                        src="/media/images/red_lambo.jpg"
+                        src="/media/images/banner_4.jpg"
                         alt="banner image of a black lamborghini"
                         fill
                     />

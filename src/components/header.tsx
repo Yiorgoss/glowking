@@ -5,6 +5,7 @@ import { useRef, useState, useEffect } from "react";
 
 import { AiOutlineMenu } from "react-icons/ai";
 import { CgPhone } from "react-icons/cg";
+import { RxCalendar, RxHamburgerMenu } from "react-icons/rx";
 
 import { t } from "@lingui/macro";
 
@@ -24,34 +25,63 @@ export default function Header({
     //TODO: refactor and split code up
     //TODO: add clickListener to close on surrounding click
 
-    const [isOpen, setIsOpen] = useState<boolean>(true);
+    const node = useRef<HTMLUListElement>(null)
+    const [isOpen, setIsOpen] = useState<boolean>(false);
 
+    const handleClickOutside = (e: MouseEvent) => {
+        if(node.current && node.current.contains(e.target as Node)){
+            return
+        }
+        setIsOpen(false)
+    }
+
+    useEffect(() => {
+        if(isOpen) {
+            document.addEventListener("mousedown", handleClickOutside);
+        } else {
+            document.removeEventListener("mousedown", handleClickOutside)
+        }
+
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside)
+        }
+    }, [isOpen])
     return (
         <div className={`${bgColor ? bgColor : "bg-transparent"} `}>
-            <div className=" grid h-[100px] w-full grid-flow-row-dense grid-cols-4 uppercase md:grid-cols-5">
-                <div className="my-auto md:pl-10">
+            <div className=" grid h-[100px] w-full grid-flow-row-dense grid-cols-2 uppercase md:grid-cols-5">
+                <div className="my-auto md:pl-10 pl-10">
+                    <Link href="/">
                     <Image
-                        src="/media/images/glowking_logo.jpg"
+                        src="/media/images/glowking_logo_1.png"
                         alt="glowking logo"
                         width={80}
                         height={80}
                     />
+                    </Link>
                 </div>
-                <Link
-                    href="tel:6980000015"
-                    className=" col-span-2 my-auto flex h-full w-full items-center justify-center gap-2 text-center text-sm md:hidden"
-                >
-                    <CgPhone className="h-8 w-8 " />
-                    <div className="my-auto">6980 000 015</div>
-                </Link>
-                <div className="col-span-full mx-auto my-auto mb-4 md:pb-0 text-sm font-medium text-secondary md:col-span-3 md:pt-4 md:text-base md:font-semibold">
-                    <ul>
-                        <LangSwitcher />
+                <div className="md:hidden my-auto flex flex-reverse h-full mr-10 ml-auto  items-center justify-center gap-8 text-center text-sm">
+                    <Link
+                        href="tel:6980000015"
+                        className=""
+                    >
+                        <CgPhone className="h-10 w-10 " />
+                    </Link>
+                    <Link href="/contact" className="">
+                        <RxCalendar className="h-10 w-10" />
+                    </Link>
+                    <div onClick={() => setIsOpen(!isOpen)}>
+                        <RxHamburgerMenu className="h-10 w-10"/>
+                    </div>
+                </div>
+                <div className={` mx-auto my-auto md:pb-0 text-sm font-medium text-secondary md:col-span-3 md:pt-4 md:text-base md:font-semibold ${isOpen ? "bg-slate-800/40 h-screen z-50 fixed  w-screen" : "hidden md:block"}`}  >
+                    <ul className={`${isOpen ? "h-screen z-50 fixed bg-primary items-center justify-center gap-2  text-secondary text-xl font-semibold flex flex-col w-8/12" : "hidden"} md:block`} ref={node}>
+                        <LangSwitcher  className="py-4"/>
                         {navLinks.map((link, i) => (
-                            <li className="inline px-2 md:px-6" key={i}>
+                            <li className="inline py-6 px-2 md:px-6" key={i} onClick={() => setIsOpen(!open)}>
                                 <ActiveLink
                                     href={link.path}
                                     activeClassName="text-tertiary"
+
                                 >
                                     {link.title}
                                 </ActiveLink>
@@ -59,7 +89,7 @@ export default function Header({
                         ))}
                     </ul>
                 </div>
-                <div className="grid-auto float-right my-auto mr-2 w-fit whitespace-nowrap md:float-none ">
+                <div className="grid-auto hidden md:block md:float-right my-auto mr-2 w-fit whitespace-nowrap md:float-none ">
                     <Button href="/contact">
                         {t({ id: "headerButton", message: "Book Now" })}
                     </Button>
