@@ -42,8 +42,8 @@ const Contact: PageWithHeaderLayout = () => {
                     </h2>
                 </div>
 
-                <div className="grid grid-cols-1 divide-y p-8 tracking-wider md:mt-20 md:grid-cols-2 ">
-                    <div className="py-6 text-right text-6xl md:pr-20 ">
+                <div className="grid grid-cols-1 divide-y md:divide-x md:divide-y-0 p-8 tracking-wider md:mt-20 md:grid-cols-2 ">
+                    <div className="py-6 text-right text-6xl md:pr-10 ">
                         {t({
                             id: "Contact.welovetohelp",
                             message: "We love to",
@@ -57,7 +57,7 @@ const Contact: PageWithHeaderLayout = () => {
                             })}
                         </span>
                     </div>
-                    <div className="my-auto flex flex-col pt-10 text-2xl">
+                    <div className="my-auto flex flex-col pt-10 pl-10 text-2xl">
                         <div className="text-lg md:text-2xl ">
                             <span className="text-xl font-semibold md:text-3xl">
                                 {t({ id: "Contact.phone", message: "Phone:" })}

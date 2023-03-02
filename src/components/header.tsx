@@ -51,12 +51,12 @@ export default function Header({
             <div className=" grid h-[100px] w-full grid-flow-row-dense grid-cols-2 uppercase md:grid-cols-5">
                 <div className="my-auto md:pl-10 pl-10">
                     <Link href="/">
-                    <Image
-                        src="/media/images/glowking_logo_1.png"
-                        alt="glowking logo"
-                        width={80}
-                        height={80}
-                    />
+                        <Image
+                            src="/media/images/glowking_logo.png"
+                            alt="glowking logo"
+                            width={80}
+                            height={80}
+                        />
                     </Link>
                 </div>
                 <div className="md:hidden my-auto flex flex-reverse h-full mr-10 ml-auto  items-center justify-center gap-8 text-center text-sm">
@@ -77,10 +77,11 @@ export default function Header({
                     <ul className={`${isOpen ? "h-screen z-50 fixed bg-primary items-center justify-center gap-2  text-secondary text-xl font-semibold flex flex-col w-8/12" : "hidden"} md:block`} ref={node}>
                         <LangSwitcher  className="py-4"/>
                         {navLinks.map((link, i) => (
-                            <li className="inline py-6 px-2 md:px-6" key={i} onClick={() => setIsOpen(!open)}>
+                            <li className="inline " key={i} onClick={() => setIsOpen(!open)}>
                                 <ActiveLink
                                     href={link.path}
                                     activeClassName="text-tertiary"
+                                    className="py-6 px-2 md:px-6"
 
                                 >
                                     {link.title}

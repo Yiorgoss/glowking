@@ -47,7 +47,7 @@ export default function Footer({
                 <div className="col-span-full p-4 md:col-span-1">
                     <div className="relative float-left mx-4 my-4 md:float-none ">
                         <Image
-                            src="/media/images/glowking_logo_1.png"
+                            src="/media/images/glowking_logo.png"
                             width={100}
                             height={100}
                             alt="glowking logo"
