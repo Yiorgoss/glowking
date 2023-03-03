@@ -135,7 +135,7 @@ const Home: PageWithHeaderLayout = ({}) => {
 
     return (
         <div className="overflow-hidden ">
-            <Head><title>{t({id:"Home.head.title", message:"Glowking | Carwash while at Work | Carwash while at Home"})}</title></Head>
+            <Head><title>{t({id:"Home.head.title", message:"Glowking | Car, Boat, Garage, Pavement Cleaning Services"})}</title></Head>
             <div className="h-screen w-screen ">
                 <div className="relative -z-10 h-full w-full">
                     <Image

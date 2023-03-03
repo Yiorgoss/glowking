@@ -78,7 +78,7 @@ const Services: PageWithHeaderLayout = () => {
     ];
     return (
         <div className="-z-10 mt-[100px]">
-            <Head><title>{t({id:"Services.head.title", message:"Portable Wash | Wash Cars | Wash Boats | Wash Pavement"})}</title></Head>
+            <Head><title>{t({id:"Services.head.title", message:"We clean anything, anywhere in South Athens"})}</title></Head>
             <div className="">
                 <div className="relative mt-[100px] h-[300px] w-screen ">
                     <div className="relative mt-[100px] h-[300px] w-screen overflow-hidden ">

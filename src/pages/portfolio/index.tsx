@@ -46,7 +46,7 @@ const Portfolio: PageWithHeaderLayout = () => {
 
     return (
         <div className=" container mx-auto mt-[100px]">
-            <Head><title>{t({id:"Portfolio.head.title", message:"Athens Portable Wash | We come to You | Glyfada | South"})}</title></Head>
+            <Head><title>{t({id:"Portfolio.head.title", message:"South Athens car cleaning services at your door"})}</title></Head>
             <h1 className="text-center pt-10 px-10 text-6xl font-bold tracking-wider">
                 <Trans id="Portfolio.header">
                     Our Portfolio

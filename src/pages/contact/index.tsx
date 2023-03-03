@@ -31,7 +31,7 @@ const Contact: PageWithHeaderLayout = () => {
 
     return (
         <div className="mx-auto mt-[100px]">
-            <Head><title>{t({id:"Contact.head.title", message:"Glowking | Mobile Industrial Cleaning | Location Of your Choice"})}</title></Head>
+            <Head><title>{t({id:"Contact.head.title", message:"Mobile Industrial Cleaning | Location Of your Choice"})}</title></Head>
             <div className="my-10 pb-20">
                 <div className="relative mt-[100px] h-[300px] w-screen overflow-hidden ">
                     <Image
@@ -68,7 +68,7 @@ const Contact: PageWithHeaderLayout = () => {
                             <Link href="tel:6980000015">6980 000 015</Link>
                         </div>
                         <div className="my-8 pl-10 text-xl font-bold md:text-6xl">
-                            {t({ id: "Contact.orBy", message: "Or By" })}
+                            {t({ id: "Contact.orBy", message: "Or Via" })}
                         </div>
                         <div className="text-lg md:text-2xl">
                             <span className="text-xl font-semibold md:text-3xl">
