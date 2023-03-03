@@ -42,10 +42,10 @@ export default function Footer({
         },
     ];
     return (
-        <div className="bg-slate-800 pb-[400px] md:py-10">
+        <div className="bg-slate-800 pb-10 md:py-10">
             <div className="container mx-auto grid grid-cols-2 gap-10 text-white">
                 <div className="col-span-full p-4 md:col-span-1">
-                    <div className="relative float-left mx-4 my-4 md:float-none ">
+                    <div className="relative float-left mx-4 mt-4  ">
                         <Image
                             src="/media/images/glowking_logo.png"
                             width={100}
@@ -54,7 +54,7 @@ export default function Footer({
                             className=""
                         />
                     </div>
-                    <div className=" mx-4 my-4 break-all">
+                    <div className=" mx-4 my-4 ">
                         {t({
                             id: "Footer.aboutUs",
                             message:
@@ -63,7 +63,7 @@ export default function Footer({
                     </div>
                     <SocialsTab className="mx-auto mt-5" />
                 </div>
-                <div className="grid-col-1 col-span-full mx-auto my-auto grid gap-4 md:divide-none divide-y md:col-span-1 md:grid-cols-3">
+                <div className="grid-col-1 col-span-full mr-auto pl-8 md:mx-auto my-auto grid gap-4 md:divide-none divide-y md:col-span-1 md:grid-cols-3">
                     <div className="">
                         <h4 className="mb-8 text-xl font-semibold">
                             {t({ id: "Footer.sitemap", message: "Sitemap" })}

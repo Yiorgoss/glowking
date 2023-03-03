@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaInstagram, FaTiktok, FaYoutube, FaFacebookF } from "react-icons/fa";
+import { FaInstagram, FaTiktok, FaFacebookF } from "react-icons/fa";
 
 const SocialsTab = ({
     isVert,
@@ -16,17 +16,17 @@ const SocialsTab = ({
         >
             <div className="rounded-full bg-black p-2 hover:scale-110">
                 <Link href="https://www.instagram.com/glowking.athens/">
-                    <FaInstagram className="h-6 w-6 " />
+                    <FaInstagram className="h-8 w-8 md:h-6 md:w-6" />
                 </Link>
             </div>
             <div className="rounded-full bg-black p-2 hover:scale-110">
-                <Link href="https://www.tiktok.com/@glowkingathens?_t=8aJ8M8kM01O&_r=1">
-                    <FaTiktok className="h-6 w-6 " />
+                <Link href="https://www.tiktok.com/@glowkingathens">
+                    <FaTiktok className="h-8 w-8 md:h-6 md:w-6" />
                 </Link>
             </div>
             <div className="rounded-full bg-black p-2 hover:scale-110">
                 <Link href="https://www.facebook.com/profile.php?id=100067022263846">
-                    <FaFacebookF className="h-6 w-6  " />
+                    <FaFacebookF className="h-8 w-8 md:h-6 md:w-6" />
                 </Link>
             </div>
         </div>

@@ -49,7 +49,7 @@ export default function Header({
     return (
         <div className={`${bgColor ? bgColor : "bg-transparent"} `}>
             <div className=" grid h-[100px] w-full grid-flow-row-dense grid-cols-2 uppercase md:grid-cols-5">
-                <div className="my-auto md:pl-10 pl-10">
+                <div className="my-auto md:pl-10 pl-4">
                     <Link href="/">
                         <Image
                             src="/media/images/glowking_logo.png"
@@ -59,7 +59,7 @@ export default function Header({
                         />
                     </Link>
                 </div>
-                <div className="md:hidden my-auto flex flex-reverse h-full mr-10 ml-auto  items-center justify-center gap-8 text-center text-sm">
+                <div className="md:hidden my-auto flex flex-reverse h-full mr-10 ml-auto items-center justify-center gap-8 text-center text-sm">
                     <Link
                         href="tel:6980000015"
                         className=""
@@ -77,7 +77,7 @@ export default function Header({
                     <ul className={`${isOpen ? "h-screen z-50 fixed bg-primary items-center justify-center gap-2  text-secondary text-xl font-semibold flex flex-col w-8/12" : "hidden"} md:block`} ref={node}>
                         <LangSwitcher  className="py-4"/>
                         {navLinks.map((link, i) => (
-                            <li className="inline " key={i} onClick={() => setIsOpen(!open)}>
+                            <li className="inline my-4" key={i} onClick={() => setIsOpen(!open)}>
                                 <ActiveLink
                                     href={link.path}
                                     activeClassName="text-tertiary"
