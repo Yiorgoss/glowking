@@ -42,7 +42,7 @@ export default function Footer({
         },
     ];
     return (
-        <div className="bg-slate-800 pb-10 md:py-10">
+        <div className="sticky z-10 top-0 bg-slate-800 mt-10 pb-10 md:py-10">
             <div className="container mx-auto grid grid-cols-2 gap-10 text-white">
                 <div className="col-span-full p-4 md:col-span-1">
                     <div className="relative float-left mx-4 mt-4  ">

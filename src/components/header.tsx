@@ -49,7 +49,7 @@ export default function Header({
     return (
         <div className={`${bgColor ? bgColor : "bg-transparent"} `}>
             <div className=" grid h-[100px] w-full grid-flow-row-dense grid-cols-2 uppercase md:grid-cols-5">
-                <div className="my-auto md:pl-10 pl-4">
+                <div className="my-auto cursor-pointer md:pl-10 pl-4">
                     <Link href="/">
                         <Image
                             src="/media/images/glowking_logo.png"
@@ -70,10 +70,10 @@ export default function Header({
                         <RxCalendar className="h-10 w-10" />
                     </Link>
                     <div onClick={() => setIsOpen(!isOpen)}>
-                        <RxHamburgerMenu className="h-10 w-10"/>
+                        <RxHamburgerMenu className="cursor-pointer h-10 w-10"/>
                     </div>
                 </div>
-                <div className={` mx-auto my-auto md:pb-0 text-sm font-medium text-secondary md:col-span-3 md:pt-4 md:text-base md:font-semibold ${isOpen ? "bg-slate-800/40 h-screen z-50 fixed  w-screen" : "hidden md:block"}`}  >
+                <div className={`mx-auto my-auto md:pb-0 text-sm font-medium text-secondary md:col-span-3 md:pt-4 md:text-base md:font-semibold ${isOpen ? "bg-slate-800/40 h-screen z-50 fixed  w-screen" : "hidden md:block"}`}  >
                     <ul className={`${isOpen ? "h-screen z-50 fixed bg-primary items-center justify-center gap-2  text-secondary text-xl font-semibold flex flex-col w-8/12" : "hidden"} md:block`} ref={node}>
                         <LangSwitcher  className="py-4"/>
                         {navLinks.map((link, i) => (

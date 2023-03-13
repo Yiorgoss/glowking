@@ -143,6 +143,7 @@ const Home: PageWithHeaderLayout = ({}) => {
                         src="/media/images/landing_page_2.jpg"
                         alt="landing page image"
                         fill
+                    priority
                     />
                 </div>
                 <div className="absolute inset-x-0 -z-10 bottom-1/4 pb-10 text-center text-2xl md:text-6xl font-semibold text-secondary">
