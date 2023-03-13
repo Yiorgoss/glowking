@@ -1,15 +1,17 @@
 import Image from "next/image";
-import Head from "next/head"
-import {GetServerSideProps} from "next"
+import Link from "next/link";
+import Head from "next/head";
+import { GetServerSideProps } from "next";
 
 import { ReactElement } from "react";
 
-import { t,Trans } from "@lingui/macro";
+import { t, Trans } from "@lingui/macro";
 
 import type { PageWithHeaderLayout } from "@cTypes/layoutTypes";
 import LandingLayout from "@layouts/landingLayout";
+import ImageEffect from "@components/imageEffect";
 
-import {loadTranslation} from "@/utils/utils"
+import { loadTranslation } from "@/utils/utils";
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
     const translation = await loadTranslation(
@@ -25,16 +27,52 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 };
 
 const ImageGallery = [
+    {
+        title: "1.",
+        href: "/portfolio/soapy_taillight_2.jpg",
+        imageData: { url: "/media/images/soapy_taillight_2.jpg" },
+    },
 
-    "/media/images/soapy_taillight_2.jpg",
+    {
+        title: "2.",
+        href: "/portfolio/collage_2.jpg",
+        imageData: { url: "/media/images/collage_2.jpg" },
+    },
 
-    "/media/images/collage_2.jpg",
+    {
+        title: "3.",
+        href: "/portfolio/in_out_jeep.jpg",
+        imageData: { url: "/media/images/in_out_jeep.jpg" },
+    },
 
-    "/media/images/in_out_jeep.jpg",
+    {
+        title: "4.",
+        href: "/portfolio/close_up_wheel.jpg",
+        imageData: { url: "/media/images/close_up_wheel.jpg" },
+    },
 
-    "/media/images/close_up_wheel.jpg",
+    {
+        title: "5.",
+        href: "/portfolio/clean_jeep.jpg",
+        imageData: { url: "/media/images/clean_jeep.jpg" },
+    },
+    {
+        title: "6.",
+        href: "/portfolio/collage_2.jpg",
+        imageData: { url: "/media/images/collage_2.jpg" },
+    },
 
-    "/media/images/clean_jeep.jpg",
+    {
+        title: "7.",
+        href: "/portfolio/in_out_jeep.jpg",
+        imageData: { url: "/media/images/in_out_jeep.jpg" },
+    },
+
+    {
+        title: "8.",
+        href: "/portfolio/close_up_wheel.jpg",
+        imageData: { url: "/media/images/close_up_wheel.jpg" },
+    },
 ];
 
 const Portfolio: PageWithHeaderLayout = () => {
@@ -42,30 +80,22 @@ const Portfolio: PageWithHeaderLayout = () => {
     //      check for details
     //      https://stackoverflow.com/questions/66353475/how-to-use-image-component-in-next-js-with-unknown-width-and-height
 
-    const overlayClasses = "fixed z-50 bg-contain bg-no-repeat w-4/5 h-4/5";
-
     return (
         <div className=" container mx-auto mt-[100px]">
-            <Head><title>{t({id:"Portfolio.head.title", message:"South Athens car cleaning services at your door"})}</title></Head>
-            <h1 className="text-center pt-10 px-10 text-6xl font-bold tracking-wider">
-                <Trans id="Portfolio.header">
-                    Our Portfolio
-                </Trans>
+            <Head>
+                <title>
+                    {t({
+                        id: "Portfolio.head.title",
+                        message:
+                            "South Athens car cleaning services at your door",
+                    })}
+                </title>
+            </Head>
+            <h1 className="px-10 pt-10 text-center text-6xl font-bold tracking-wider">
+                <Trans id="Portfolio.header">Our Portfolio</Trans>
             </h1>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 p-10 ">
-                {ImageGallery.map((pic, i) => (
-                    <div
-                        className="relative h-[300px] w-full overflow-hidden rounded-lg"
-                        key={i}
-                    >
-                        <Image
-                            src={pic}
-                            alt=""
-                            className="object-cover duration-500 hover:scale-110"
-                            fill
-                        />
-                    </div>
-                ))}
+            <div className="">
+                <ImageEffect effectData={ImageGallery} mobileUseImage={true} />
             </div>
         </div>
     );
