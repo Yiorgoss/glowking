@@ -16,7 +16,7 @@ const CImage = ({
 }) => {
     return (
         <div
-            className={`md:absolute h-[50vh] md:h-[80vh] md:w-[60vw] grayscale-0 md:grayscale transition-transform duration-500 ${
+            className={`md:absolute relative h-[50vh] md:h-[80vh] md:w-[60vw] grayscale-0 md:grayscale transition-transform duration-500 ${
                 active ? 'z-20 scale-110 ' + rotation : 'z-10 ' + rotation
             }`}
         >
@@ -48,7 +48,7 @@ const Title = ({
             onMouseEnter={() => setRotation(index)}
             onMouseLeave={() => setIndex(-1)}
         >
-            <h1 className="block border-none text-[6vw] leading-[1.25] hover:text-secondary ">
+            <h1 className="block border-none px-10 py-2 text-[6vw] leading-[1.25] hover:text-secondary ">
                 {title}
             </h1>
         </div>
