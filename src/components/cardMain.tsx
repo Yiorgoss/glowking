@@ -17,7 +17,7 @@ const CardMain = ({
     image?: string;
 }) => {
     return (
-        <Card className="mx-auto h-full w-fit overflow-hidden rounded-xl bg-slate-300 p-4 transition-transform md:min-w-[300px] md:max-w-[450px] lg:min-w-[350px]  md:hover:scale-[1.05]">
+        <Card className="mx-auto drop-shadow-lg h-full w-fit overflow-hidden rounded-xl bg-slate-300 p-4 transition-transform md:min-w-[300px] md:max-w-[450px] lg:min-w-[350px]  md:hover:scale-[1.05]">
             <Link href={href}>
                 <Card.Graphic className="min-h-[300px] max-h-[400px] w-full" src={image} />
 

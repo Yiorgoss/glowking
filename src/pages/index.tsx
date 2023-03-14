@@ -140,16 +140,10 @@ const Home: PageWithHeaderLayout = ({}) => {
                 <div className="relative -z-10 h-full w-full">
                     <Image
                         className="object-cover"
-                        src="/media/images/landing_page_2.jpg"
+                        src="/media/images/landing_image.png"
                         alt="landing page image"
                         fill
-                    priority
                     />
-                </div>
-                <div className="absolute inset-x-0 -z-10 bottom-1/4 pb-10 text-center text-2xl md:text-6xl font-semibold text-secondary">
-                    <div className="mx-auto w-fit -skew-y-3 rounded-lg bg-tertiary py-1 px-6 ">
-                        <Trans id="Home.motto">One Call at Your Door</Trans>
-                    </div>
                 </div>
                 <div className="absolute bottom-0 right-0 pr-10 pb-5 ">
                     <SocialsTab isVert={true} />
