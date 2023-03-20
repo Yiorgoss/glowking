@@ -11,7 +11,6 @@ module.exports = {
         'layered-xl': '0px 2px 4px #fb138550, 0px 4px 8px #fb138550, 0px 8px 16px #fb138550, 0px 16px 32px #fb138550'
 
       },
-
       colors: {
         primary: "#0B0B0B",
         secondary: "#fb1385",

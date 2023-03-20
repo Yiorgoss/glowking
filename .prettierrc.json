@@ -1,7 +1,17 @@
 {
-  "tabWidth": 4,
-  "plugins": [
-    "prettier-plugin-tailwindcss"
-  ],
-  "pluginSearchDirs": false
+    "bracketSameLine": true,
+    "singleQuote": true,
+    "printWidth": 80,
+    "editor.formatOnSave": true,
+    "proseWrap": "always",
+    "tabWidth": 4,
+    "requireConfig": false,
+    "useTabs": false,
+    "trailingComma": "none",
+    "bracketSpacing": true,
+    "jsxSingleQuote": true,
+    "jsxBracketSameLine": false,
+    "semi": true,
+    "plugins": ["prettier-plugin-tailwindcss"],
+    "pluginSearchDirs": false
 }
