@@ -3,8 +3,8 @@ const nextConfig = {
     reactStrictMode: true,
 
     i18n: {
-        locales: ["en", "gr", "pseudo"],
-        defaultLocale: "en",
+        locales: ["en", "el", "pseudo"],
+        defaultLocale: "el",
     },
     images: {
         remotePatterns: [

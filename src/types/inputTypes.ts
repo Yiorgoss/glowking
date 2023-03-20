@@ -1,4 +1,4 @@
-export type LOCALE = 'en' | 'gr' | 'pseudo'
+export type LOCALE = 'en' | 'el' | 'pseudo'
 
 export type navLinkType = {
     title: string;

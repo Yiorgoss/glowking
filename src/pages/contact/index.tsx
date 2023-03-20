@@ -1,74 +1,90 @@
-import HeaderLayout from "@layouts/headerLayout";
+import Image from "next/image";
+import Link from "next/link";
+import Head from 'next/head'
+
 import { ReactElement, useState } from "react";
 
+import LayoutLayout from "@layouts/landingLayout";
+import { t } from "@lingui/macro";
+
 import type { PageWithHeaderLayout } from "@cTypes/layoutTypes";
+
+import { GetServerSideProps, GetStaticProps } from "next";
+import { loadTranslation } from "@/utils/utils";
+
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+    const translation = await loadTranslation(
+        ctx.locale!,
+        process.env.NODE_ENV === "production"
+    );
+
+    return {
+        props: {
+            translation,
+        },
+    };
+};
 
 const Contact: PageWithHeaderLayout = () => {
     //TODO: refactor form into compound component
     //TODO: remove form elements and instead use react and axios/fetch
-    const [name, setName] = useState("Name");
-    const [email, setEmail] = useState("Email");
-    const [messageBody, setMessageBody] = useState("Message");
 
     return (
-        <div className="container mx-auto">
-            <div className="mt-10">
-                <h2 className="text-center font-bold text-4xl">
-                    Contact Us
-                </h2>
-                <div className="grid mt-10 grid-cols-2 gap-4 justify-center font-bold">
-                    <div className="text-xl text-right font-semibold">Telephone:</div>
-                    <div className="text-xl font-semibold">69 123 456 78</div>
-                    <div className="text-xl text-right font-semibold">Email:</div>
-                    <div className="text-xl font-semibold">glowkingath@gmail.com</div>
+        <div className="mx-auto mt-[100px]">
+            <Head><title>{t({id:"Contact.head.title", message:"Mobile Industrial Cleaning | Location Of your Choice"})}</title></Head>
+            <div className="my-10 pb-20">
+                <div className="relative mt-[100px] h-[300px] w-screen overflow-hidden ">
+                    <Image
+                        className="object-cover"
+                        src="/media/images/banner_4.jpg"
+                        alt="banner image of a black lamborghini"
+                        fill
+                    />
+                    <h2 className="absolute inset-x-0 bottom-0 my-20 pb-10 pt-10 text-center text-5xl font-semibold tracking-wider text-primary">
+                        {t({ id: "Contact.contactUs", message: "Contact Us" })}
+                    </h2>
                 </div>
-            </div>
-            <h2 className="mt-10 text-center text-3xl font-bold">
-                Send us an Email
-            </h2>
-            <div className="">
-                <form className="" action="/api/contact" method="post">
-                    <div className=" grid grid-cols-2 justify-center gap-y-5 gap-x-5 rounded-md p-10 text-lg">
-                        <input
-                            className="rounded-md px-10 py-2"
-                            placeholder="Name"
-                            type="text"
-                            required
-                            id="name"
-                            name="name"
-                        />
-                        <input
-                            className="rounded-md px-10 py-2"
-                            placeholder="Email"
-                            type="text"
-                            required
-                            id="email"
-                            name='email'
-                        />
-                        <div className="col-span-full h-[300px]">
-                            <textarea
-                                id="messageBody"
-                                required
-                                placeholder="Message"
-                                name="message"
-                                className="h-full w-full rounded-md px-10 py-5"
-                            />
-                        </div>
-                        <button
-                            className="w-1/2 rounded-md bg-white px-5 py-2"
-                            type="submit"
-                        >
-                            Submit
-                        </button>
+
+                <div className="grid grid-cols-1 divide-y md:divide-x md:divide-y-0 p-8 tracking-wider md:mt-20 md:grid-cols-2 ">
+                    <div className="py-6 text-right text-6xl md:pr-10 ">
+                        {t({
+                            id: "Contact.welovetohelp",
+                            message: "We love to",
+                        })}
+                        <br />
+                        <span className="font-bold  uppercase text-tertiary md:text-7xl">
+                            {" "}
+                            {t({
+                                id: "Contact.welovetohelphelp",
+                                message: "help",
+                            })}
+                        </span>
                     </div>
-                </form>
+                    <div className="my-auto flex flex-col pt-10 pl-10 text-2xl">
+                        <div className="text-lg md:text-2xl ">
+                            <span className="text-xl font-semibold md:text-3xl">
+                                {t({ id: "Contact.phone", message: "Phone:" })}
+                            </span>{" "}
+                            <Link href="tel:6980000015">6980 000 015</Link>
+                        </div>
+                        <div className="my-8 pl-10 text-xl font-bold md:text-6xl">
+                            {t({ id: "Contact.orBy", message: "Or Via" })}
+                        </div>
+                        <div className="text-lg md:text-2xl">
+                            <span className="text-xl font-semibold md:text-3xl">
+                                Email:
+                            </span>{" "}
+                            glowkingath@gmail.com
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );
 };
 
 Contact.getLayout = function getLayout(page: ReactElement) {
-    return <HeaderLayout>{page}</HeaderLayout>;
+    return <LayoutLayout>{page}</LayoutLayout>;
 };
 
 export default Contact;

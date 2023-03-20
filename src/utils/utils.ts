@@ -1,11 +1,11 @@
 import type { I18n } from "@lingui/core";
-import { en } from "make-plural/plurals";
+import { en,el } from "make-plural/plurals";
 
 //anounce which locales we are going to use and connect them to approprite plural rules
 export function initTranslation(i18n: I18n): void {
     i18n.loadLocaleData({
         en: { plurals: en },
-        gr: { plurals: en },
+        el: { plurals: el },
         pseudo: { plurals: en },
     });
 }

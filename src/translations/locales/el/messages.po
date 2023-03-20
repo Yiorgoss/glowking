@@ -1,0 +1,286 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2023-02-24 16:45+0200\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: el\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: src/pages/contact/index.tsx:44
+msgid "Contact.contactUs"
+msgstr "Επικοινωνία"
+
+#: src/pages/contact/index.tsx:34
+msgid "Contact.head.title"
+msgstr "Φορητός Βιομηχανικός Καθαρισμός | Τοποθεσία της επιλογής σας"
+
+#: src/pages/contact/index.tsx:71
+msgid "Contact.orBy"
+msgstr "Ή Από"
+
+#: src/pages/contact/index.tsx:66
+msgid "Contact.phone"
+msgstr "Τηλέφωνο"
+
+#: src/pages/contact/index.tsx:50
+msgid "Contact.welovetohelp"
+msgstr "Μας αρέσει να"
+
+#: src/pages/contact/index.tsx:57
+msgid "Contact.welovetohelphelp"
+msgstr "Βοηθάμε"
+
+#: src/components/footer.tsx:58
+msgid "Footer.aboutUs"
+msgstr "To GLOW KING ATHENS είναι μια πρωτοποριακή ιδέα που εκμηδενίζει τις αποστάσεις! Ξεκίνησε το 2019 και εν μέσο της πανδημίας κάλυψε όλα τα νότια προάστια.  Υπηρεσίες πλήρους καθαρισμού του οχήματος, της περιουσίας, του πεζοδρομίου και ότι άλλο χρειάζεστε ! Το GLOW KING ATHENS λειτουργεί με βασικό γνώμονα το περιβάλλον και τον άνθρωπο δίπλα σε κάθε σας ανάγκη. Glow King Athens με πρωταγωνιστή….εσένα !"
+
+#: src/components/footer.tsx:18
+msgid "Footer.contact.four"
+msgstr "Ηλιούπολη, Αργυρούπολης"
+
+#: src/components/footer.tsx:15
+msgid "Footer.contact.one"
+msgstr "Οδός της επιλογής ΣΑΣ"
+
+#: src/components/footer.tsx:17
+msgid "Footer.contact.three"
+msgstr "Βουλιαγμένης, Βάρκιζα"
+
+#: src/components/footer.tsx:16
+msgid "Footer.contact.two"
+msgstr "Γλυφάδα, Βούλα"
+
+#: src/components/footer.tsx:84
+msgid "Footer.help"
+msgstr "Βοήθεια"
+
+#: src/components/footer.tsx:99
+msgid "Footer.location"
+msgstr "Τοποθεσία"
+
+#: src/components/footer.tsx:69
+msgid "Footer.sitemap"
+msgstr "Χάρτης ιστότοπου"
+
+#: src/pages/index.tsx:160
+msgid "Home.Features"
+msgstr "Χαρακτηριστικά"
+
+#: src/pages/index.tsx:193
+msgid "Home.Services"
+msgstr "Υπηρεσίες"
+
+#: src/pages/index.tsx:126
+msgid "Home.feature.four.content"
+msgstr "Η εταιρία GLOW KING ATHENS και το προσωπικό της δεν θα κοινοποιήσει ποτέ προσωπικά σας στοιχεία ή στοιχεία του οχήματος σας χωρίς την συγκατάθεση σας."
+
+#: src/pages/index.tsx:122
+msgid "Home.feature.four.header"
+msgstr "Μυστικότητα"
+
+#: src/pages/index.tsx:114
+msgid "Home.feature.three.content"
+msgstr "Τα προϊόντα που χρησιμοποιούνται για τον καθαρισμό και την απολύμανση είναι πιστοποιημένα και φιλικά πρός τον άνθρωπο και το περιβάλλον τηρώντας τις προδιαγραφές της Ε.Ε."
+
+#: src/pages/index.tsx:110
+msgid "Home.feature.three.header"
+msgstr "Ασφαλές και αποτελεσματικό"
+
+#: src/pages/index.tsx:102
+msgid "Home.feature.two.content"
+msgstr "Στον βιολογικό καθαρισμό απομακρύνουμε από τον χώρο της καμπίνας εκτός από τους λεκέδες, καθαρίζουμε μύκητες, βακτηρίδια και οτιδήποτε επιβαρύνει τον ανθρώπινο οργανισμό. Απολυμαίνουμε τα καθίσματα, τον ουρανό,πατώματα, χώρο αποσκευών και πλαϊνές ταπετσαρίες.Επίσης υποχρεωτικά απολυμαίνουμε τους αεραγωγούς του αυτοκίνητου διώχνοντας την κακοσμία από την χρήση του κλιματιστικού."
+
+#: src/pages/index.tsx:98
+msgid "Home.feature.two.header"
+msgstr "Βιολογικός Καθαρισμός"
+
+#: src/pages/index.tsx:90
+msgid "Home.featureList.one.content"
+msgstr "Επαγγελματικό πλύσιμο και καθάρισμα για το αυτοκίνητό σας!Το κινητό πλυντήριο GLOW KING μια κινητή επιχείρηση που ασχολείται αποκλειστικά με τον καθαρισμό και την περιποίηση των αυτοκινήτων, δίνει νέα διάσταση στο χώρο, έρχεται εκεί που βρίσκεσαι μηδενίζοντας τις αποστάσεις και προσέχοντας το δικό σας αυτοκίνητο σαν να είναι μοναδικό."
+
+#: src/pages/index.tsx:86
+msgid "Home.featureList.one.header"
+msgstr "Τοποθεσία της επιλογής σας"
+
+#: src/pages/index.tsx:138
+msgid "Home.head.title"
+msgstr "καθαρισμού αυτοκινήτου, σκάφους, γκαράζ, πεζοδρομίων"
+
+#: src/pages/index.tsx:150
+msgid "Home.motto"
+msgstr "Με ένα τηλέφωνο στην πόρτα σου !"
+
+#: src/pages/index.tsx:182
+msgid "Home.serviceSection.content"
+msgstr "To GLOW KING ATHENS είναι μια πρωτοποριακή ιδέα που εκμηδενίζει τις αποστάσεις! Ξεκίνησε το 2019 και εν μέσο της πανδημίας κάλυψε όλα τα νότια προάστια.  Υπηρεσίες πλήρους καθαρισμού του οχήματος, της περιουσίας, του πεζοδρομίου και ότι άλλο χρειάζεστε ! Το GLOW KING ATHENS λειτουργεί με βασικό γνώμονα το περιβάλλον και τον άνθρωπο δίπλα σε κάθε σας ανάγκη. Glow King Athens με πρωταγωνιστή….εσένα !"
+
+#: src/pages/index.tsx:178
+msgid "Home.serviceSection.title"
+msgstr "Ποιοι είμαστε?"
+
+#: src/pages/index.tsx:76
+msgid "Home.servicesList.four.content"
+msgstr "Ένα γκαράζ γεμάτο σκόνη, λάσπη και ακαταστασία ; Η εταιρεία μας αναλαμβάνει πλήρη καθαρισμό του γκαράζ σας. Το έμπιστο προσωπικό μας σε συνδυασμό με την κορυφαία των προιόντων μας θα κάνει το γκαράζ σας να λάμψει !"
+
+#: src/pages/index.tsx:72
+msgid "Home.servicesList.four.header"
+msgstr "Πλύσιμο Πεζοδρομίων/Γκαράζ"
+
+#: src/pages/index.tsx:41
+msgid "Home.servicesList.one.content"
+msgstr "Ο εξωτερικός καθαρισμός γίνεται χωρίς τη χρήση βούρτσας η σφουγγαριού παρά μόνο με τη χρήση ζεστού νερού για την λιγότερη φθορά του εξωτερικού χρώματος του αυτοκινήτου.Στο Glow King σας προσφέρουμε ένα πλήρες εξωτερικό καθαρισμό με πρόπλυση και κυρίως πλύση του οχήματος με ενεργό αφρό, καθαρισμό των θολών και των ζαντών, αφαίρεση εντόμων, κέρωμα προστασίας και ξέπλυμα του αυτοκινήτου με απιονισμένο νερό!Στη συνέχεια γίνεται λεπτομερείς σκούπισμα του οχήματος."
+
+#: src/pages/index.tsx:37
+msgid "Home.servicesList.one.header"
+msgstr "Εξωτερικός Καθαρισμός"
+
+#: src/pages/index.tsx:65
+msgid "Home.servicesList.three.content"
+msgstr "Το σκάφος σας βρήκε τον αφέντη του! Η εταιρεία μας αναλαμβάνει τόσο τον εσωτερικό όσο και τον εξωτερικό καθαρισμό του σκάφους σας. Το έμπιστο προσωπικό μας σε συνδυασμό με την κορυφαία ποιότητα των προϊόντων μας θα κάνουν το σκάφος σας να λάμπει!"
+
+#: src/pages/index.tsx:61
+msgid "Home.servicesList.three.header"
+msgstr "Πλύσιμο σκαφών"
+
+#: src/pages/index.tsx:53
+msgid "Home.servicesList.two.content"
+msgstr "Στον εσωτερικό καθαρισμό έχοντας ως γνώμονα τον σεβασμό προς τον άνθρωπο και το περιβάλλον χρησιμοποιούμε οικολογικά βιοδιασπώμενα προϊόντα.Εσωτερικά φυσάμε το όχημα για να απομακρύνουμε τη σκόνη και στη συνέχεια καθαρίζουμε με σκούπα αναρρόφησης την καμπίνα και τους χώρους αποσκευών, καθαρισμό των τζαμιών και όλων των γυαλινών επιφανειών.Τέλος προχωρούμε σε καθαρισμό και συντήρηση όλων των δερμάτινων και πλαστικών επιφανειών χώρου, στεγνό καθαρισμό ταπέτων και αρωματισμό του καμπίνας."
+
+#: src/pages/index.tsx:49
+msgid "Home.servicesList.two.header"
+msgstr "Εσωτερικός Καθαρισμός"
+
+#: src/pages/legal.tsx:30
+msgid "Legal.GDPR.header"
+msgstr "Πολιτική απορρήτου & Όροι Χρήσης"
+
+#: src/pages/legal.tsx:36
+msgid "Legal.GDPR.p1"
+msgstr "Το GLOW KING ATHENS κατανοεί ότι το απόρρητό σας είναι σημαντικό για εσάς και ότι σας ενδιαφέρει ο τρόπος με τον οποίο χρησιμοποιούνται και κοινοποιούνται τα προσωπικά σας δεδομένα στο διαδίκτυο."
+
+#: src/pages/legal.tsx:45
+msgid "Legal.GDPR.p2"
+msgstr "Σεβόμαστε και εκτιμούμε το απόρρητο όλων όσων επισκέπτονται αυτόν τον ιστότοπο, και θα συλλέγουμε και θα χρησιμοποιούμε προσωπικά δεδομένα μόνο με τρόπους που περιγράφονται εδώ, και με τρόπο που να συμβαδίζει με το υποχρεώσεις και τα δικαιώματά σας βάσει του νόμου."
+
+#: src/pages/legal.tsx:54
+msgid "Legal.GDPR.p3"
+msgstr "Το GLOW KING ATHENS συμμορφώνεται με τις ισχύουσες νομοθετικές, κανονιστικές και συμβατικές διατάξεις σε ό,τι αφορά την συλλογή, την αποθήκευση, την ανάκτηση αλλά και την καταστροφή των δεδομένων αυτών, ιδιαίτερα δε με τις απαιτήσεις του Ευρωπαϊκού Κανονισμού (ΕΕ) 2016/679 που αφορά στην προστασία Δεδομένων Προσωπικού Χαρακτήρα (GDPR)"
+
+#: src/pages/legal.tsx:63
+msgid "Legal.GDPR.p4"
+msgstr "Διαβάστε προσεκτικά αυτήν την Πολιτική Απορρήτου και βεβαιωθείτε ότι την κατανοείτε."
+
+#: src/pages/legal.tsx:72
+msgid "Legal.GDPR.p5"
+msgstr "Η αποδοχή της Πολιτικής Απορρήτου, θεωρείται ότι πραγματοποιείται κατά την πρώτη χρήση του ιστοτόπου ."
+
+#: src/pages/legal.tsx:81
+msgid "Legal.GDPR.p6"
+msgstr "Εάν δεν αποδέχεστε και συμφωνείτε με αυτήν την Πολιτική Απορρήτου, πρέπει να σταματήσετε να χρησιμοποιείτε την Ιστοσελίδα μας αμέσως."
+
+#: src/pages/legal.tsx:90
+msgid "Legal.GDPR.p7"
+msgstr "Η παρούσα Πολιτική ισχύει για τη χρήση οποιουδήποτε και όλων των Δεδομένων που συλλέγονται από εμάς σε σχέση με τη χρήση της Ιστοσελίδας από εσάς και οποιωνδήποτε Υπηρεσιών ή Συστημάτων σε αυτήν."
+
+#: src/pages/portfolio/index.tsx:49
+msgid "Portfolio.head.title"
+msgstr "Υπηρεσίες καθαρισμού στα Νότια Προάστια στην πόρτα σας"
+
+#: src/pages/portfolio/index.tsx:51
+msgid "Portfolio.header"
+msgstr "Το χαρτοφυλάκιό μας"
+
+#: src/pages/services/index.tsx:81
+msgid "Services.head.title"
+msgstr "Καθαρίζουμε οτιδήποτε, οπουδήποτε στα Νότια προάστια"
+
+#: src/pages/services/index.tsx:92
+msgid "Services.services.header"
+msgstr "Υπηρεσίες"
+
+#: src/pages/services/index.tsx:72
+msgid "Services.servicesList.content.four"
+msgstr "Ένα γκαράζ γεμάτο σκόνη, λάσπη και ακαταστασία ; Η εταιρεία μας αναλαμβάνει πλήρη καθαρισμό του γκαράζ σας. Το έμπιστο προσωπικό μας σε συνδυασμό με την κορυφαία των προιόντων μας θα κάνει το γκαράζ σας να λάμψει !"
+
+#: src/pages/services/index.tsx:22
+#~ msgid "Services.servicesList.content.one"
+#~ msgstr "Ο εξωτερικός καθαρισμός γίνεται χωρίς την χρήση βούρτσας η σφουγγαριού παρά μόνο με την χρήση ζεστού νερού για την λιγότερη φθορά του εξωτερικού χρώματος του αυτοκινήτου.Στo Glow King σας προσφέρουμε ένα πλήρη εξωτερικό καθαρισμό με πρόπλυση και κυρίως πλύση του οχήματος με ενεργό αφρό, καθαρισμό των θολών και των ζαντών, αφαίρεση εντόμων, κέρωμα προστασίας και ξέπλυμα του αυτοκίνητου με απιονισμένο νερό!Στην συνέχεια γίνεται λεπτομερές σκούπισμα του οχήματος."
+
+#: src/pages/services/index.tsx:61
+msgid "Services.servicesList.content.three"
+msgstr "Το σκάφος σας βρήκε τον αφέντη του! Η εταιρεία μας αναλαμβάνει τόσο τον εσωτερικό όσο και τον εξωτερικό καθαρισμό του σκάφους σας. Το έμπιστο προσωπικό μας σε συνδυασμό με την κορυφαία ποιότητα των προϊόντων μας θα κάνουν το σκάφος σας να λάμπει!"
+
+#: src/pages/services/index.tsx:49
+msgid "Services.servicesList.content.two"
+msgstr "Το σκάφος σας βρήκε τον δάσκαλο του ! Η εταιρία μας αναλαμβάνει τόσο τον εσωτερικό όσο και τον εξωτερικό καθαρισμό του σκάφους σας. Το έμπιστο προσωπικό μας σε συνδυασμό με την κορυφαίας ποιότητα των προιόντων μας θα κάνει το σκάφος σας να λάμψει !Στον εσωτερικό καθαρισμό έχοντας ως γνώμονα τον σεβασμό προς τον άνθρωπο και το περιβάλλον χρησιμοποιούμε οικολογικά βιοδιασπώμενα προϊόντα.  Εσωτερικά φυσάμε το όχημα για να απομακρύνουμε την σκόνη και στην συνέχεια καθαρίζουμε με σκούπα αναρρόφησης την καμπίνα και των χώρο αποσκευών, καθαρισμό των τζαμιών και όλων των γυάλινων επιφανειών.  Τέλος προχωρούμε σε καθαρισμό και συντήρηση όλων των δερμάτινων και πλαστικών επιφανειών, στεγνό καθαρισμό ταπέτων και αρωματισμό του χώρου καμπίνας."
+
+#: src/pages/services/index.tsx:54
+#~ msgid "Services.servicesList.header.four"
+#~ msgstr "Πλύσιμο Πεζοδρομίων/Γκαράζ"
+
+#: src/pages/services/index.tsx:33
+msgid "Services.servicesList.header.one"
+msgstr "Εξωτερικός Καθαρισμός"
+
+#: src/pages/services/index.tsx:57
+msgid "Services.servicesList.header.three"
+msgstr "Πλύσιμο σκαφών"
+
+#: src/pages/services/index.tsx:45
+msgid "Services.servicesList.header.two"
+msgstr "Εσωτερικός Καθαρισμός"
+
+#: src/pages/services/index.tsx:37
+msgid "Services.serviceslist.content.one"
+msgstr "Ο εξωτερικός καθαρισμός γίνεται χωρίς την χρήση βούρτσας η σφουγγαριού παρά μόνο με την χρήση ζεστού νερού για την λιγότερη φθορά του εξωτερικού χρώματος του αυτοκινήτου.Στo Glow King σας προσφέρουμε ένα πλήρη εξωτερικό καθαρισμό με πρόπλυση και κυρίως πλύση του οχήματος με ενεργό αφρό, καθαρισμό των θολών και των ζαντών, αφαίρεση εντόμων, κέρωμα προστασίας και ξέπλυμα του αυτοκίνητου με απιονισμένο νερό!Στην συνέχεια γίνεται λεπτομερές σκούπισμα του οχήματος."
+
+#: src/pages/services/index.tsx:68
+msgid "Services.serviceslist.header.four"
+msgstr "Καθαρισμός πεζοδρομίων/Γκαράζ"
+
+#: src/components/footer.tsx:37
+msgid "footer.helpLinks.four"
+msgstr "Τι χρειάζεται για αυτό;"
+
+#: src/components/footer.tsx:22
+msgid "footer.helpLinks.one"
+msgstr "Πώς λειτουργεί;"
+
+#: src/components/footer.tsx:33
+msgid "footer.helpLinks.three"
+msgstr "Πώς πληρώνετε;"
+
+#: src/components/footer.tsx:26
+msgid "footer.helpLinks.two"
+msgstr "Πού να κάνετε ερωτήσεις;"
+
+#: src/components/header.tsx:95
+msgid "headerButton"
+msgstr "Κράτηση τώρα"
+
+#: src/layouts/landingLayout.tsx:25
+msgid "navlinks.contact"
+msgstr "Επικοινωνία"
+
+#: src/layouts/landingLayout.tsx:17
+msgid "navlinks.home"
+msgstr "Αρχική"
+
+#: src/layouts/landingLayout.tsx:29
+msgid "navlinks.portfolio"
+msgstr "Χαρτοφυλάκιο"
+
+#: src/layouts/landingLayout.tsx:21
+msgid "navlinks.services"
+msgstr "Υπηρεσίες"
+
+#: src/components/serviceSection.tsx:40
+msgid "serviceSection.button.text"
+msgstr "Κράτηση τώρα"

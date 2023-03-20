@@ -1,18 +1,16 @@
 import Link from "next/link";
 
 import { ReactElement } from "react";
-
 interface buttonProps {
-    text: string;
     href: string;
+    className?: string;
+    children: ReactElement | ReactElement[] | string;
 }
 
-export default function Button({ text, href }: buttonProps): ReactElement {
+export default function Button({  href, className, children }: buttonProps): ReactElement {
     return (
-        <div className="rounded-md shadow-layered transition-transform hover:scale-105 hover:shadow-layered-xl">
-            <div className="p-5 px-10 text-xl font-bold">
-                <Link href={href}>{text}</Link>
-            </div>
+        <div className={`bg-tertiary rounded-lg w-fit text-primary px-4 py-2 text-xs font-medium md:px-8 md:text-lg md:font-semibold ${className}`}>
+            <Link href={href}>{children}</Link>
         </div>
     );
 }
