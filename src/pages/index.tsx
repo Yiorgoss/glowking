@@ -14,7 +14,7 @@ import Divider from "@components/divider";
 
 import type { PageWithHeaderLayout } from "@cTypes/layoutTypes";
 
-import Calendar from "@components/common/calendar/calendar"
+import CalendarMain from "@components/calendarMain"
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
   const translation = await loadTranslation(
@@ -32,7 +32,7 @@ const Home: PageWithHeaderLayout = () => {
   return (
     <div className="mx-auto">
       <div className="w-fit relative h-screen bg-white text-black container mx-auto">
-          <Calendar />
+          <CalendarMain />
 
       </div>
     </div >
