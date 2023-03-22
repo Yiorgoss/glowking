@@ -1,4 +1,10 @@
-import { ReactElement, useContext, createContext, useState } from 'react';
+import {
+    ReactElement,
+    useContext,
+    createContext,
+    useState,
+    useEffect
+} from 'react';
 
 import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
 
@@ -8,17 +14,17 @@ import isTodayPlugin from 'dayjs/plugin/isToday';
 const CalendarContext = createContext({} as any);
 dayjs.extend(isTodayPlugin);
 
-const TimePicker = () => {
+const TimePicker = ({ unavailableSlots }: { unavailableSlots?: Dayjs[] }) => {
     const [open, setOpen] = useState(false);
-    const [time, setTime] = useState<Dayjs>();
+    const [, , datetime, setDateTime] = useContext(CalendarContext);
 
     const createAvailableTimeArr = () => {
-        //memoize this bish or at least stop thee constant rerendering
-        let currentTime = dayjs().hour(8).startOf('hour'); //10:00 in the morning
-        const endTime = dayjs().hour(20); //20:00 in the evening
+        //could prolly memoize this bish if needed
+        let currentTime = datetime.hour(8).startOf('hour'); //8:00 in the morning
+        const endTime = datetime.hour(20); //20:00 in the evening
 
-        console.log(currentTime);
-        let timeArr = [];
+        const timeArr: Dayjs[] = [];
+
         while (currentTime <= endTime) {
             timeArr.push(currentTime);
             currentTime = currentTime.add(1.5, 'hour');
@@ -28,22 +34,64 @@ const TimePicker = () => {
 
     const availableSlots = createAvailableTimeArr();
 
+    const isUnavailable = (dateObj: Dayjs) => {
+        //2023-03-23T08:00:00
+
+        if (dateObj.isToday()) return true;
+        const slots = unavailableSlots ?? [dayjs('2023-03-23T11:00:00')];
+        return slots.find((el) => dateObj.isSame(el)) === undefined
+            ? false
+            : true;
+    };
     return (
-        <div className='srta'>
+        <div className=''>
             {open ? (
-                <ul onClick={() => setOpen(false)}>
+                <ul
+                    className='w-fit divide-y divide-primary '
+                    onClick={() => setOpen(false)}>
                     {availableSlots.map((slot, i) => (
-                        <li onClick={() => setTime(slot)} key={i}>
+                        <li
+                            className={`px-4 py-2 ${
+                                isUnavailable(slot) ? 'text-slate-500' : ''
+                            }`}
+                            onClick={(e) =>
+                                isUnavailable(slot)
+                                    ? e.preventDefault()
+                                    : setDateTime(slot)
+                            }
+                            key={i}>
                             {slot.format('HH:mm')}
                         </li>
                     ))}
                 </ul>
             ) : (
-                <div onClick={() => setOpen(true)}>
-                    {time ? time.format('HH:mm') : 'Select Time'}
+                <div
+                    className='py-2 px-4 hover:cursor-pointer'
+                    onClick={() => setOpen(true)}>
+                    {datetime ? datetime.format('HH:mm') : 'Select Time'}
                 </div>
             )}
         </div>
+    );
+};
+
+const SelectedDateTime = ({
+    setDateTime,
+    show = false
+}: {
+    setDateTime: (value: Dayjs) => void;
+    show?: boolean;
+}) => {
+    const [, , datetime, setDatetime] = useContext(CalendarContext);
+    useEffect(() => {
+        setDateTime(datetime);
+    }, [datetime, setDateTime, setDatetime]);
+    return (
+        <>
+            {show && (
+                <div className=''>{datetime.format('YYYY-MM-DD HH:mm:ss')}</div>
+            )}
+        </>
     );
 };
 
@@ -57,7 +105,7 @@ const MonthSwitcher = () => {
     };
 
     return (
-        <div className='grid grid-cols-3 justify-items-center'>
+        <div className=' my-2 grid grid-cols-3 justify-items-center font-semibold'>
             <div className='' onClick={() => prevMonth()}>
                 <AiOutlineLeft />
             </div>
@@ -70,7 +118,7 @@ const MonthSwitcher = () => {
 };
 const DaysOfTheWeek = () => {
     return (
-        <div className='grid grid-cols-7'>
+        <div className='text-md grid grid-cols-7 pb-2 text-center font-medium'>
             {Array(7)
                 .fill(0)
                 .map((_, i) => (
@@ -116,32 +164,63 @@ const fillDateArray = (day: Dayjs): Dayjs[] => {
 };
 
 const DatesOfTheMonth = () => {
-    const [displayMonth] = useContext(CalendarContext);
+    const [displayMonth, , datetime, setDateTime] = useContext(CalendarContext);
 
     let arr = fillDateArray(displayMonth);
-
+    const today = dayjs();
+    const pickDate = (dateObj: Dayjs) => {
+        const day = dateObj.startOf('day');
+        setDateTime(day);
+    };
+    const isPickedDate = (dateObj: Dayjs) => {
+        return dateObj.startOf('day').isSame(datetime.startOf('day'));
+    };
     return (
-        <div className='grid grid-cols-7'>
+        <div className='grid grid-cols-7 justify-items-center  text-center  '>
             {arr.map((dateObj, i) => (
-                <div className='' key={i}>
-                    {dateObj.format('D')}
+                <div
+                    className={`h-8 w-8 ${
+                        dateObj.isAfter(today) ? '' : 'text-slate-400'
+                    } `}
+                    onClick={(e) =>
+                        dateObj.isAfter(today)
+                            ? pickDate(dateObj)
+                            : e.preventDefault()
+                    }
+                    key={i}>
+                    <div
+                        className={`flex h-full w-full items-center justify-center ${
+                            isPickedDate(dateObj)
+                                ? 'rounded-full bg-tertiary'
+                                : ''
+                        }`}>
+                        {dateObj.format('D')}
+                    </div>
                 </div>
             ))}
         </div>
     );
 };
 
-const SelectedDateDisplay = () => {
-    return <div className=''>needs context date</div>;
-};
 const Calendar = ({
     children
 }: {
     children: ReactElement | ReactElement[];
 }) => {
     const [displayMonth, setDisplayMonth] = useState(dayjs());
+    const [datetime, setDatetime] = useState(
+        dayjs().add(1, 'day').startOf('day')
+    );
+
+    //useEffect(() => {
+    //    console.log(datetime);
+    //}, [datetime]);
+
+    //const value = [displayMonth, setDisplayMonth, time, setTime, day, setDay];
+    const value = [displayMonth, setDisplayMonth, datetime, setDatetime];
+
     return (
-        <CalendarContext.Provider value={[displayMonth, setDisplayMonth]}>
+        <CalendarContext.Provider value={value}>
             {children}
         </CalendarContext.Provider>
     );
@@ -150,7 +229,7 @@ const Calendar = ({
 Calendar.DatesOfTheMonth = DatesOfTheMonth;
 Calendar.MonthSwitcher = MonthSwitcher;
 Calendar.DaysOfTheWeek = DaysOfTheWeek;
-Calendar.SelectedDateDisplay = SelectedDateDisplay;
+Calendar.SelectedDateTime = SelectedDateTime;
 Calendar.TimePicker = TimePicker;
 
 export default Calendar;

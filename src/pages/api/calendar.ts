@@ -1,8 +1,16 @@
+// @ts-nocheck
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { calendar_v3, google } from 'googleapis';
 
+import calendarSchema from '@/utils/calendarSchema';
+
 type Data = {
-    bookingsHMap: String;
+    bookedSlots?: String;
+    error?: {
+        message: string;
+        value?: any;
+    };
 };
 
 const createBookedTimetable = (
@@ -17,14 +25,16 @@ const createBookedTimetable = (
 } => {
     const bookingsHMap = {};
 
-    events.forEach((event) => {
-        bookingsHMap[event!.start.dateTime] = {
-            summary: event.summary,
-            start: event.start,
-            desc: event.description,
-            location: event.location
-        };
-    });
+    events
+        .filter((event) => !!event!.start.dateTime)
+        .forEach((event) => {
+            bookingsHMap[event!.start.dateTime] = {
+                summary: event.summary,
+                start: event.start,
+                desc: event.description,
+                location: event.location
+            };
+        });
 
     return bookingsHMap;
 };
@@ -59,26 +69,27 @@ const sendEmails = ({
     error
 }: {
     name: string;
-    phone?: string;
-    email: string;
-    startTime?: string;
+    phone?: number;
+    email: string | undefined;
+    startTime: string;
     location?: string;
     eventLink?: string;
     error?: string;
 }) => {
+    const [day, hour] = startTime.split('T');
     const sgMail = require('@sendgrid/mail');
     const msgToGlowking = {
         to: 'glowkingath@gmail.com',
         from: 'contact@glowking.gr',
         subject: 'Booking Confirmation',
-        text: `Name: ${name} \nEmail: ${email} \nPhone:${phone} \nHas made a booking confirmation for ${startTime}. \nThe event can be viewed: ${eventLink}`,
-        html: `Name: ${name} <br>Email: ${email} <br>Has made a booking confirmation for ${startTime}. <br>The event can be viewed: <a href='${eventLink}'>Here</a>`
+        text: `Name: ${name} \nEmail: ${email} \nPhone:${phone} \nHas made a booking confirmation for ${day} ${hour}\nLocation: ${location}. \nThe event can be viewed: ${eventLink}`,
+        html: `Name: ${name} <br>Email: ${email} <br>Has made a booking confirmation for ${day} ${hour}. <br>The event can be viewed: <a href='${eventLink}'>Here</a>`
     };
     const msgToCustomer = {
         to: email,
         from: 'contact@glowking.gr',
         subject: 'Booking Confirmation',
-        text: `Thank you for booking with us, this is an automated email to confirm. \nTime: ${startTime} \nLocation Of Clean: ${location} \nIf these details are incorrect or if you did not book an appointment from our website (glowking.gr), please contact us immediately at glowkingath@gmail.com or 698 000 0015.`,
+        text: `Thank you for booking with us, this is an automated email to confirm. \nTime: ${day} ${hour} \nLocation Of Clean: ${location} \nIf these details are incorrect or if you did not book an appointment from our website (glowking.gr), please contact us immediately at glowkingath@gmail.com or 698 000 0015.`,
         html: `Thank you for booking with us, this is an automated email to confirm. <br/>Time: ${startTime} <br/>Location Of Clean: ${location} <br/>If these details are incorrect or if you did not book an appointment from our website (glowking.gr), please contact us immediately at glowkingath@gmail.com or 698 000 0015. `
     };
     const failureMsgToGlowking = {
@@ -91,19 +102,19 @@ const sendEmails = ({
 
     sgMail.setApiKey(process.env['SENDGRID_API_KEY']);
     sgMail
-        .send(msgToCustomer)
+        .send(msgToGlowking)
         .then(() => {
-            console.log('Email to customer sent');
-            sgMail
-                .send(msgToGlowking)
-                .then(() => {
-                    console.log('Email to Glowking sent');
-                    return 1;
-                })
-                .catch((error) => {
-                    console.error(error);
-                    return -1;
-                });
+            console.log('Email to Glowking sent');
+            if (email) {
+                sgMail
+                    .send(msgToCustomer)
+                    .then(() => {
+                        console.log('Email to customer sent');
+                    })
+                    .catch((error) => {
+                        console.error(error);
+                    });
+            }
         })
         .catch((error) => {
             console.error(error);
@@ -111,12 +122,10 @@ const sendEmails = ({
                 .send(failureMsgToGlowking)
                 .then(() => {
                     console.log('Failure Email sent');
-                    return -1;
                 })
                 .catch((error) => {
                     console.log('Failure Email Failed: %s', error);
                 });
-            return -1;
         });
 };
 export default async function handler(
@@ -146,33 +155,47 @@ export default async function handler(
     });
     const events = eventListRes.data.items ?? [];
 
+    //current limitation is that only one event per timeslot
+    //TODO: convert bookingHMap into linked list
     const eventHMap = createBookedTimetable(events);
 
     if (req.method === 'GET') {
-        res.json({
-            bookingsHMap: JSON.stringify(eventHMap)
+        //remove uneeded data
+        const bookingEntries = Object.keys(eventHMap);
+
+        res.status(200).json({
+            bookedSlots: JSON.stringify(bookingEntries)
         });
     }
     if (req.method === 'POST') {
-        //const { name, phone, email, time, location } = req.body;
-        const name = 'test_6';
-        const phone = '123456';
-        const email = 'makridakisyiorgos@gmail.com';
-        const time = '2023-03-23T08:30:00';
-        const location = 'abc';
-        if (eventHMap[time] !== undefined) {
-            return res.status(409);
-        }
+        const { name, phone, email, datetime, location, messageBody } =
+            await calendarSchema.validate(JSON.parse(req.body));
+        //const parsedData = await calendarSchema
+        //    .validate(JSON.parse(req.body))
+        //    .catch((err) => {
+        //        return res.status(400).json({
+        //            error: { message: 'error validating input', value: err }
+        //        });
+        //    });
 
-        const endTime = calculateEndTime(time);
-        const description = `number: ${phone}\nemail: ${email}`;
-        let eventLink = '';
+        console.log('datetime', datetime);
+        if (!datetime)
+            return res.status(500).json({
+                error: { message: 'incorrect datetime', value: datetime }
+            });
+        if (eventHMap[datetime] !== undefined)
+            return res
+                .status(409)
+                .json({ error: { message: 'datetime is already set' } });
+
+        const endTime = calculateEndTime(datetime);
+        const description = `number: ${phone}\n${messageBody}`;
         const event = {
             summary: name,
             location: location,
             description: description,
             start: {
-                dateTime: time,
+                dateTime: datetime,
                 timeZone: 'Europe/Athens'
             },
             end: {
@@ -193,19 +216,31 @@ export default async function handler(
                         'There was an error contacting the Calendar service: ' +
                             err
                     );
-                    sendEmails({ name, email, error: err });
-                    return;
+                    sendEmails({
+                        name,
+                        email,
+                        startTime: datetime,
+                        error: err
+                    });
+                    return res.status(500).json({
+                        error: {
+                            message: 'error with calendar service',
+                            value: err
+                        }
+                    });
                 }
-                console.log('Event created: %s', event.data.htmlLink);
-                eventLink = event.data.htmlLink;
+                const eventLink = event.data.htmlLink;
                 sendEmails({
                     name,
                     phone,
                     email,
-                    startTime: time,
+                    startTime: datetime,
                     location,
                     eventLink
                 });
+
+                console.log('Event created: %s', event.data.htmlLink);
+                res.status(200);
             }
         );
     }

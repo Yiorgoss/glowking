@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Head from 'next/head'
+import { GetServerSideProps, GetStaticProps } from "next";
 
 import { ReactElement, useState } from "react";
 
@@ -9,14 +10,17 @@ import { t } from "@lingui/macro";
 
 import type { PageWithHeaderLayout } from "@cTypes/layoutTypes";
 
-import { GetServerSideProps, GetStaticProps } from "next";
 import { loadTranslation } from "@/utils/utils";
+import BookingForm from "@/components/bookingForm"
+
+
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
     const translation = await loadTranslation(
         ctx.locale!,
         process.env.NODE_ENV === "production"
     );
+
 
     return {
         props: {
@@ -79,6 +83,7 @@ const Contact: PageWithHeaderLayout = () => {
                     </div>
                 </div>
             </div>
+            <BookingForm />
         </div>
     );
 };
