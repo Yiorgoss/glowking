@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { createContext, useState, useEffect } from 'react';
 
 import useSWR from 'swr';
@@ -6,6 +5,7 @@ import dayjs, { Dayjs } from 'dayjs';
 
 import Calendar from '@components/common/calendar/calendar';
 
+// @ts-ignore
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 const Spinner = () => {

@@ -11,26 +11,27 @@ type Data = {
     };
 };
 
-const createBookedTimetable = (
-    events: calendar_v3.Schema$Event[]
-): {
+interface bookingType {
     [key: string]: {
         summary: string;
         location: string;
         desc: string;
         start: string;
     };
-} => {
-    const bookingsHMap = {};
+}
+const createBookedTimetable = (
+    events: calendar_v3.Schema$Event[]
+): bookingType => {
+    const bookingsHMap: bookingType = {};
 
     events
-        .filter((event) => !!event!.start.dateTime)
+        .filter((event) => !!event.start?.dateTime)
         .forEach((event) => {
-            bookingsHMap[event!.start.dateTime] = {
-                summary: event.summary,
-                start: event.start,
-                desc: event.description,
-                location: event.location
+            bookingsHMap[(event.start?.dateTime || 'err').toString()] = {
+                summary: event.summary ?? '',
+                start: event.start?.dateTime || 'should never be undefined',
+                desc: event.description ?? '',
+                location: event.location ?? ''
             };
         });
 
@@ -114,6 +115,8 @@ const sendEmails = ({
     };
 
     const sgMail = require('@sendgrid/mail');
+    sgMail.setApiKey(process.env['SENDGRID_API_KEY']);
+
     sgMail.setApiKey(process.env['SENDGRID_API_KEY']);
     if (error) {
         sgMail.send(failureMsgToGlowking).then(() => {
@@ -252,8 +255,7 @@ export default async function handler(
                         name,
                         email,
                         startTime: datetime,
-                        error: err,
-                        failure: true
+                        error: err
                     });
 
                     res.status(500).json({
