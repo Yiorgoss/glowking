@@ -1,5 +1,3 @@
-// @ts-nocheck
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { calendar_v3, google } from 'googleapis';
 
@@ -39,24 +37,37 @@ const createBookedTimetable = (
     return bookingsHMap;
 };
 
-const calculateEndTime = (time: string) => {
+const calculateEndTime = (datetime: string) => {
     // should always be between 0800 and 2000
     // eg '2023-03-21T20:00:00';
-    const hourArr = time.split('T')[1].split(':');
-    const minStr = hourArr[1];
 
-    let hour = parseInt(hourArr[0]) + 1;
-    let min = '';
-    if (minStr == '30') {
-        hour += 1;
-        min = '00';
-    }
+    const [day, time] = datetime.split('T');
+    const [oldHour, oldMin, _] = time.split(':');
 
-    let hourStr = hour < 10 ? '0' + hour : '' + hour;
+    const newHour =
+        oldMin === '30' ? parseInt(oldHour) + 2 : parseInt(oldHour) + 1;
+    const newMin = oldMin === '30' ? '00' : '30';
 
-    const time2 = time.split('T')[0] + 'T' + hourStr + ':' + min + ':00';
+    const hourStr = newHour < 10 ? '0' + newHour : '' + newHour;
 
-    return time2;
+    const endDatetime = `${day}T${hourStr}:${newMin}:00`;
+    return endDatetime;
+    //const minStr = hourArr[1];
+
+    //let hour = parseInt(hourArr[0]) + 1;
+    //console.log(hour, minStr);
+    //console.log('^^^^^^^');
+    //let min = '';
+    //if (minStr == '30') {
+    //    hour += 1;
+    //    min = '00';
+    //}
+
+    //let hourStr = hour < 10 ? '0' + hour : '' + hour;
+    //const time2 = time.split('T')[0] + 'T' + hourStr + ':' + min + ':00';
+
+    //console.log(time2);
+    //return time2;
 };
 
 const sendEmails = ({
@@ -76,8 +87,10 @@ const sendEmails = ({
     eventLink?: string;
     error?: string;
 }) => {
+    if (!process.env['SENDGRID_API_KEY']) {
+        throw new Error('ERROR: ENV Var: SENDGRID_KEY not found!');
+    }
     const [day, hour] = startTime.split('T');
-    const sgMail = require('@sendgrid/mail');
     const msgToGlowking = {
         to: 'glowkingath@gmail.com',
         from: 'contact@glowking.gr',
@@ -100,7 +113,14 @@ const sendEmails = ({
         html: `Problem arose when making a booking for ${email}, Please look into it. Booking was not made<br/><br/>Error:<br/>${error}`
     };
 
+    const sgMail = require('@sendgrid/mail');
     sgMail.setApiKey(process.env['SENDGRID_API_KEY']);
+    if (error) {
+        sgMail.send(failureMsgToGlowking).then(() => {
+            console.log('Event creation failure noted');
+        });
+        return;
+    }
     sgMail
         .send(msgToGlowking)
         .then(() => {
@@ -111,19 +131,19 @@ const sendEmails = ({
                     .then(() => {
                         console.log('Email to customer sent');
                     })
-                    .catch((error) => {
+                    .catch((error: any) => {
                         console.error(error);
                     });
             }
         })
-        .catch((error) => {
+        .catch((error: any) => {
             console.error(error);
             sgMail
                 .send(failureMsgToGlowking)
                 .then(() => {
                     console.log('Failure Email sent');
                 })
-                .catch((error) => {
+                .catch((error: any) => {
                     console.log('Failure Email Failed: %s', error);
                 });
         });
@@ -135,7 +155,7 @@ export default async function handler(
     // load the environment variable with our keys
     const keysEnvVar = process.env['CREDS'];
     if (!keysEnvVar) {
-        throw new Error('ERROR: ENV Var not found!');
+        throw new Error('ERROR: ENV Var: GOOGLE_CREDENTIALS not found!');
     }
     const keys = JSON.parse(keysEnvVar);
 
@@ -169,8 +189,16 @@ export default async function handler(
     }
     if (req.method === 'POST') {
         const { name, phone, email, datetime, location, messageBody } =
-            await calendarSchema.validate(JSON.parse(req.body));
-        //const parsedData = await calendarSchema
+            await calendarSchema.validate(req.body);
+        //        console.log('==============================');
+        //        console.log('1-name', name);
+        //        console.log('2-phone', phone);
+        //        console.log('3-email', email);
+        //        console.log('4-datetime', datetime);
+        //        console.log('5-location', location);
+        //        console.log('6-messageBody', messageBody);
+        //        console.log('==============================');
+        // const parsedData = await calendarSchema
         //    .validate(JSON.parse(req.body))
         //    .catch((err) => {
         //        return res.status(400).json({
@@ -178,16 +206,20 @@ export default async function handler(
         //        });
         //    });
 
-        console.log('datetime', datetime);
-        if (!datetime)
-            return res.status(500).json({
-                error: { message: 'incorrect datetime', value: datetime }
+        //console.log(datetime)
+        console.log(!datetime);
+        //console.log(!"")
+        if (!datetime) {
+            return res.status(422).json({
+                error: { message: 'incorrect datetime !!', value: datetime }
             });
-        if (eventHMap[datetime] !== undefined)
+        }
+        if (eventHMap[datetime] !== undefined) {
+            console.log('booking time already confirmed');
             return res
                 .status(409)
                 .json({ error: { message: 'datetime is already set' } });
-
+        }
         const endTime = calculateEndTime(datetime);
         const description = `number: ${phone}\n${messageBody}`;
         const event = {
@@ -210,7 +242,7 @@ export default async function handler(
                 calendarId: 'glowkingath@gmail.com',
                 requestBody: event
             },
-            function (err, event) {
+            function (err: any, event: any) {
                 if (err) {
                     console.log(
                         'There was an error contacting the Calendar service: ' +
@@ -220,14 +252,17 @@ export default async function handler(
                         name,
                         email,
                         startTime: datetime,
-                        error: err
+                        error: err,
+                        failure: true
                     });
-                    return res.status(500).json({
+
+                    res.status(500).json({
                         error: {
                             message: 'error with calendar service',
                             value: err
                         }
                     });
+                    return;
                 }
                 const eventLink = event.data.htmlLink;
                 sendEmails({
@@ -239,9 +274,10 @@ export default async function handler(
                     eventLink
                 });
 
-                console.log('Event created: %s', event.data.htmlLink);
+                console.log('Event created: %s', eventLink);
                 res.status(200);
             }
         );
+        res.status(200);
     }
 }

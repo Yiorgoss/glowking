@@ -1,11 +1,9 @@
-// @ts-nocheck
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
 import dayjs from 'dayjs';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
-//@ts-nocheck
 import { yupResolver } from '@hookform/resolvers/yup';
 
 import calendarSchema from '@/utils/calendarSchema';
@@ -21,9 +19,10 @@ const BookingForm = () => {
         resolver: yupResolver(calendarSchema)
     });
 
-    const onSubmit = async (data, e) => {
+    const onSubmit = async (data:any, e:any) => {
         e.preventDefault();
         console.log('data', data);
+
         const res = await fetch('/api/calendar', {
             method: 'POST',
             mode: 'cors',
@@ -34,7 +33,7 @@ const BookingForm = () => {
             body: JSON.stringify(data)
         });
     };
-    const onError = (err) => {
+    const onError = (err: any) => {
         console.log();
         console.log('error', err);
     };
@@ -50,40 +49,42 @@ const BookingForm = () => {
         <form noValidate onSubmit={handleSubmit(onSubmit, onError)}>
             <div className='container mx-auto grid grid-cols-1 gap-4 bg-slate-300 p-4 md:grid-cols-2'>
                 <CalendarMain setDateTimeStr={setDateTimeStr} />
-                <div className='grid grid-cols-2 gap-3'>
+                <div className='grid grid-cols-2 gap-3 text-md'>
                     <input
-                        className='rounded-lg py-0.5 px-4 text-lg text-secondary focus:outline-tertiary '
-                        placeholder='First Name'
+                        className='rounded-lg py-2 px-4 text-secondary focus:outline-tertiary '
+                        placeholder='Full Name'
                         {...register('name')}
                     />
                     <input
-                        className='rounded-lg py-0.5 px-4 text-lg text-secondary focus:outline-tertiary '
+                        className='rounded-lg py-2 px-4 text-secondary focus:outline-tertiary '
                         placeholder='Phone Number'
                         {...register('phone')}
                     />
                     <input
-                        className='rounded-lg py-0.5 px-4 text-lg text-secondary focus:outline-tertiary '
+                        className='rounded-lg py-2 px-4 text-secondary focus:outline-tertiary '
                         placeholder='Email'
                         {...register('email')}
                     />
                     <input
-                        className='rounded-lg py-0.5 px-4 text-lg text-secondary focus:outline-tertiary '
+                        className='rounded-lg py-2 px-4 text-secondary focus:outline-tertiary '
                         placeholder='Location'
                         {...register('location')}
                     />
-                    <input
-                        className='rounded-lg py-0.5 px-4 text-lg text-secondary focus:outline-tertiary '
-                        placeholder='Message Body'
-                        {...register('messageBody')}
-                    />
-                    <div className='my-2 ml-auto'>
+                    <div className="">
+                        <textarea
+                            className='rounded-lg h-[200px] w-full py-2 px-4 text-secondary focus:outline-tertiary '
+                            placeholder='Special Instructions'
+                            {...register('messageBody')}
+                        />
+                    </div>
+                    <div className='my-2 mt-auto ml-auto'>
                         <div className=''>
                             <label>
                                 Accept Terms and{' '}
                                 <Link
                                     className='mr-2 text-blue-500 underline'
                                     href='/legal'>
-                                    conditions
+                                    Conditions
                                 </Link>
                             </label>
                             <input
@@ -93,7 +94,7 @@ const BookingForm = () => {
                             />
                         </div>
                         <input
-                            className='float-none my-2 rounded-lg bg-primary px-4 py-2 hover:cursor-pointer md:float-right'
+                            className=' rounded-lg mt-4 bg-primary px-4 py-2 hover:cursor-pointer float-none md:float-right'
                             type='submit'
                             value='submit'
                         />
