@@ -1,0 +1,7 @@
+* Inbox
+** TODO replace meta and title per page
+
+[[file:~/code/gikas/glowking/src/components/bookingForm.tsx::better meta and title per page]]
+** TODO Add Recaptcha
+
+[[file:~/code/gikas/glowking/src/components/bookingForm.tsx::add recapcha]]

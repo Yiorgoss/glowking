@@ -16,7 +16,7 @@ const CImage = ({
 }) => {
     return (
         <div
-            className={`md:absolute relative h-[50vh] md:h-[80vh] md:w-[60vw] grayscale-0 md:grayscale transition-transform duration-500 ${
+            className={`md:absolute relative h-[50vh] md:h-[80vh] md:w-[60vw] grayscale-0 transition-transform duration-500 ${
                 active ? 'z-20 scale-110 ' + rotation : 'z-10 ' + rotation
             }`}
         >
@@ -86,7 +86,6 @@ const ImageEffect = ({
         const newRotation =
             rotationArr[Math.floor(Math.random() * rotationArr.length)];
         //Math.random() * 7 * Math.round(Math.random() ? 1 : -1);
-        console.log(newRotation);
         const tempState = [...rotation];
         tempState[itemIndex] = newRotation;
         setRotation(tempState);
