@@ -1,8 +1,7 @@
-import {useRouter} from 'next/router'
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
-import {t} from "@lingui/macro"
+import { t } from '@lingui/macro';
 
 import dayjs from 'dayjs';
 import { useForm } from 'react-hook-form';
@@ -11,21 +10,30 @@ import { yupResolver } from '@hookform/resolvers/yup';
 
 import calendarSchema from '@/utils/calendarSchema';
 import CalendarMain from '@components/calendarMain';
-
+import ResponseBox from '@components/responseBox';
 
 const BookingForm = () => {
     const {
         register,
         handleSubmit,
         setValue,
-        formState: { errors }
+        reset,
+        formState: { errors, isSubmitting, isSubmitSuccessful }
     } = useForm({
         resolver: yupResolver(calendarSchema)
     });
-    const router = useRouter()
 
-    const onSubmit = async (data: any, e:any) => {
+    const [serverResponse, setServerResponse] = useState(false);
+    const [message, setMessage] = useState('');
+
+    const onSubmit = async (data: any, e: any) => {
         //e.defaultPrevented=false
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+
         const res = await fetch('/api/calendar', {
             method: 'POST',
             mode: 'cors',
@@ -35,11 +43,33 @@ const BookingForm = () => {
             },
             body: JSON.stringify(data)
         });
-        router.reload()
+        const response = res.status === 200;
+
+        setServerResponse(response);
+        if (response) {
+            setMessage(
+                t({
+                    id: 'talentForm.successMessage',
+                    message: 'Successful Submission. We thank you!'
+                })
+            );
+            reset();
+        } else {
+            setMessage(
+                t({
+                    id: 'talentForm.errorMessage',
+                    message:
+                        'Submission was not recorded. Please contact us directly'
+                })
+            );
+        }
     };
     const onError = (err: any) => {
-        console.log();
         console.log('error', err);
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     };
 
     const [dateTimeStr, setDateTimeStr] = useState('');
@@ -68,35 +98,49 @@ const BookingForm = () => {
                 <CalendarMain setDateTimeStr={setDateTimeStr} />
                 <div className='text-md grid grid-cols-2 gap-3'>
                     <input
-                        className='rounded-lg py-2 px-4 text-secondary focus:outline-tertiary '
+                        className={`rounded-lg py-2 px-4 text-secondary focus:outline-tertiary ${
+                            errors.name
+                                ? 'outline outline-2 outline-red-500'
+                                : ''
+                        }`}
                         placeholder={t({
                             id: 'bookingForm.input.name',
                             message: 'Full Name'
                         })}
+                        disabled={isSubmitting}
                         {...register('name')}
                     />
                     <input
-                        className='rounded-lg py-2 px-4 text-secondary focus:outline-tertiary '
+                        className={`rounded-lg py-2 px-4 text-secondary focus:outline-tertiary ${
+                            errors.phone
+                                ? 'outline outline-2 outline-red-500'
+                                : ''
+                        } `}
                         placeholder={t({
                             id: 'bookingForm.input.number',
                             message: 'Phone Number'
                         })}
+                        disabled={isSubmitting}
                         {...register('phone')}
                     />
                     <input
-                        className='rounded-lg py-2 px-4 text-secondary focus:outline-tertiary '
+                        className={`rounded-lg py-2 px-4 text-secondary focus:outline-tertiary `}
                         placeholder={t({
                             id: 'bookingForm.input.email',
                             message: 'Email'
                         })}
+                        disabled={isSubmitting}
                         {...register('email')}
                     />
                     <input
-                        className='rounded-lg py-2 px-4 text-secondary focus:outline-tertiary '
+                        className={`rounded-lg py-2 px-4 text-secondary focus:outline-tertiary ${
+                            errors.location ? 'outline-2 outline-red-500' : ''
+                        }`}
                         placeholder={t({
                             id: 'bookingForm.input.location',
                             message: 'Location'
                         })}
+                        disabled={isSubmitting}
                         {...register('location')}
                     />
                     <div className=''>
@@ -106,6 +150,7 @@ const BookingForm = () => {
                                 id: 'bookingForm.input.message',
                                 message: 'Special Instructions'
                             })}
+                            disabled={isSubmitting}
                             {...register('messageBody')}
                         />
                     </div>
@@ -126,19 +171,30 @@ const BookingForm = () => {
                                 </Link>
                             </label>
                             <input
-                                className='focus:outline-tertiary '
+                                className={`focus:outline-tertiary ${
+                                    errors.acceptTerms
+                                        ? 'outline-2 outline-red-500'
+                                        : ''
+                                }`}
                                 type='checkbox'
+                                disabled={isSubmitting}
                                 {...register('acceptTerms')}
                             />
                         </div>
                         <input
                             className=' float-none mt-4 rounded-lg bg-primary px-4 py-2 hover:cursor-pointer md:float-right'
                             type='submit'
-                            value={t({id:'bookingForm.input.', message:'submit'})}
+                            value={t({
+                                id: 'bookingForm.input.submit',
+                                message: 'submit'
+                            })}
                         />
                     </div>
                 </div>
             </div>
+            {isSubmitSuccessful && (
+                <ResponseBox text={message} status={serverResponse} />
+            )}
         </form>
     );
 };

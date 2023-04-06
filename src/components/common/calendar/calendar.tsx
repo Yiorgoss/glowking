@@ -38,26 +38,27 @@ const TimePicker = ({ unavailableSlots }: { unavailableSlots?: Dayjs[] }) => {
         //2023-03-23T08:00:00
 
         if (dateObj.isToday()) return true;
-        const slots = unavailableSlots ?? [dayjs('2023-03-23T11:00:00')];
+        const slots = unavailableSlots ?? [];
         return slots.find((el) => dateObj.isSame(el)) === undefined
             ? false
             : true;
     };
+
     return (
-        <div className=''>
+        <div className='h-full'>
             {open ? (
                 <ul
-                    className='w-fit divide-y divide-primary '
+                    className='absolute text-center divide-primary '
                     onClick={() => setOpen(false)}>
                     {availableSlots.map((slot, i) => (
                         <li
-                            className={`px-4 py-2 ${
+                            className={`px-4 py-1 hover:cursor-pointer ${
                                 isUnavailable(slot) ? 'text-slate-500' : ''
                             }`}
                             onClick={(e) =>
                                 isUnavailable(slot)
-                                    ? e.preventDefault()
-                                    : setDateTime(slot)
+                                ? e.preventDefault()
+                                : setDateTime(slot)
                             }
                             key={i}>
                             {slot.format('HH:mm')}
@@ -66,7 +67,7 @@ const TimePicker = ({ unavailableSlots }: { unavailableSlots?: Dayjs[] }) => {
                 </ul>
             ) : (
                 <div
-                    className='py-2 px-4 hover:cursor-pointer'
+                    className='py-2 px-4 w-full hover:cursor-pointer'
                     onClick={() => setOpen(true)}>
                     {datetime ? datetime.format('HH:mm') : 'Select Time'}
                 </div>

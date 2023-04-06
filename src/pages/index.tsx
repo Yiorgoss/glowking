@@ -1,10 +1,9 @@
-//import { getLayout as getSiteLayout } from "@layouts/headerLayout"
 import Image from 'next/image';
 import Link from 'next/link';
 import Head from 'next/head';
 
 import { GetServerSideProps, GetStaticProps } from 'next';
-import { ReactElement } from 'react';
+import { ReactElement, useState } from 'react';
 
 import { t, Trans } from '@lingui/macro';
 
@@ -15,6 +14,10 @@ import ServiceSection from '@components/serviceSection';
 import type { PageWithHeaderLayout } from '@cTypes/layoutTypes';
 
 import { loadTranslation } from '@/utils/utils';
+import useWindowSize from '@/utils/useWindowSize';
+
+import mobileLandingImage from '/media/images/mobile_landing_imge.jpeg';
+import landingImage from '/media/images/landing_image.jpeg';
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
     const translation = await loadTranslation(
@@ -42,7 +45,7 @@ const Home: PageWithHeaderLayout = ({}) => {
                 message:
                     "External cleaning is done without the use of a brush or sponge, but only with the use of hot water for less damage to the car's exterior paint.At Glow King we offer you a complete exterior cleaning with pre-washing and mainly washing the vehicle with active foam, cleaning the domes and rims, removing insects, protective wax and rinsing the car with deionized water!The vehicle is then thoroughly wiped."
             }),
-            image: '/media/images/soapy_merc.jpg'
+            image: '/media/images/external.jpeg'
         },
         {
             header: t({
@@ -54,7 +57,7 @@ const Home: PageWithHeaderLayout = ({}) => {
                 message:
                     'In internal cleaning, with respect for people and the environment as our guiding principle, we use ecologically biodegradable products.Internally we blow the vehicle to remove the dust and then vacuum the cabin and the luggage compartment, cleaning the windows and all glass surfaces.Finally, we proceed with cleaning and maintenance of all leather and plastic surfaces, dry cleaning of carpets and perfuming the cabin area.'
             }),
-            image: '/media/images/internal.jpg'
+            image: '/media/images/internal.jpeg'
         },
         {
             header: t({
@@ -66,7 +69,7 @@ const Home: PageWithHeaderLayout = ({}) => {
                 message:
                     'Your boat has found its master! Our company undertakes both the interior and exterior cleaning of your boat. Our trusted staff combined with the top quality of our products will make your boat shine!'
             }),
-            image: '/media/images/boat_deck.jpg'
+            image: '/media/images/yatch.jpg'
         },
         {
             header: t({
@@ -78,7 +81,7 @@ const Home: PageWithHeaderLayout = ({}) => {
                 message:
                     'A garage full of dust, mud and clutter? Our company undertakes a complete cleaning of your garage. Our trusted staff combined with the top of our products will make your garage shine!'
             }),
-            image: '/media/images/pavement.jpg'
+            image: '/media/images/pavement.png'
         }
     ];
 
@@ -93,7 +96,7 @@ const Home: PageWithHeaderLayout = ({}) => {
                 message:
                     'Professional washing and cleaning for your car!The mobile car wash GLOW KING a mobile business that deals exclusively with the cleaning and care of cars, gives a new dimension to the space, comes to where you are, zeroing out the distances and taking care of your own car as if it were unique.'
             }),
-            image: '/media/images/location.jpg'
+            image: '/media/images/location.jpeg'
         },
         {
             header: t({
@@ -105,7 +108,7 @@ const Home: PageWithHeaderLayout = ({}) => {
                 message:
                     'In biological cleaning, we remove from the cabin area, stains, fungi, bacteria and any other organic matter. We disinfect the seats, the sky, floors, luggage compartment and side upholstery. We also disinfect the air ducts of the car, removing the stench from the use of the air conditioner.'
             }),
-            image: '/media/images/biological.jpg'
+            image: '/media/images/biological.jpeg'
         },
         {
             header: t({
@@ -117,7 +120,7 @@ const Home: PageWithHeaderLayout = ({}) => {
                 message:
                     'The products used for cleaning and disinfection are certified and friendly to humans and the environment, complying with eu standards and regulations. Our products and machines are of the utmost quality, including AUTOGLYM and KARCHER.'
             }),
-            image: '/media/images/black_lambo_2.jpg'
+            image: '/media/images/safe-effective.jpeg'
         },
         {
             header: t({
@@ -129,10 +132,21 @@ const Home: PageWithHeaderLayout = ({}) => {
                 message:
                     'Glow King Athens and its staff will never share your personal information or vehicle information without your consent.'
             }),
-            image: '/media/images/close_up_exhaust.jpeg',
+            image: '/media/images/carwash-portfolio/portfolio_9.png',
             href: '/legal'
         }
     ];
+
+    const size = useWindowSize();
+    const getImage = (): string => {
+        if (size && size['width'] < 800) {
+            console.log(size);
+            return '/media/images/mobile_landing_image.jpeg';
+        }
+
+        console.log('abc', size);
+        return '/media/images/landing_image.jpeg';
+    };
 
     return (
         <div className='overflow-hidden '>
@@ -149,7 +163,7 @@ const Home: PageWithHeaderLayout = ({}) => {
                 <div className='relative -z-10 h-full w-full'>
                     <Image
                         className='object-cover'
-                        src='/media/images/landing_lambo.jpeg'
+                        src={getImage()}
                         alt='landing page image'
                         fill
                     />

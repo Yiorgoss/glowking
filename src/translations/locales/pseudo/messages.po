@@ -17,7 +17,7 @@ msgstr ""
 #~ msgid "<0/>"
 #~ msgstr ""
 
-#: src/pages/contact/index.tsx:44
+#: src/pages/contact.tsx:62
 msgid "Contact.contactUs"
 msgstr ""
 
@@ -25,23 +25,27 @@ msgstr ""
 #~ msgid "Contact.email"
 #~ msgstr ""
 
-#: src/pages/contact/index.tsx:34
+#: src/pages/contact.tsx:46
+msgid "Contact.head.meta.description"
+msgstr ""
+
+#: src/pages/contact.tsx:38
 msgid "Contact.head.title"
 msgstr ""
 
-#: src/pages/contact/index.tsx:71
+#: src/pages/contact.tsx:89
 msgid "Contact.orBy"
 msgstr ""
 
-#: src/pages/contact/index.tsx:66
+#: src/pages/contact.tsx:84
 msgid "Contact.phone"
 msgstr ""
 
-#: src/pages/contact/index.tsx:50
+#: src/pages/contact.tsx:68
 msgid "Contact.welovetohelp"
 msgstr ""
 
-#: src/pages/contact/index.tsx:57
+#: src/pages/contact.tsx:75
 msgid "Contact.welovetohelphelp"
 msgstr ""
 
@@ -53,95 +57,131 @@ msgstr ""
 #~ msgid "Extra Careful"
 #~ msgstr ""
 
+#: src/components/faqSection.tsx:9
+msgid "FAQ.answer.1"
+msgstr ""
+
+#: src/components/faqSection.tsx:20
+msgid "FAQ.answer.2"
+msgstr ""
+
+#: src/components/faqSection.tsx:28
+msgid "FAQ.answer.3"
+msgstr ""
+
+#: src/components/faqSection.tsx:39
+msgid "FAQ.answer.4"
+msgstr ""
+
+#: src/components/faqSection.tsx:8
+msgid "FAQ.question.1"
+msgstr ""
+
+#: src/components/faqSection.tsx:16
+msgid "FAQ.question.2"
+msgstr ""
+
+#: src/components/faqSection.tsx:27
+msgid "FAQ.question.3"
+msgstr ""
+
+#: src/components/faqSection.tsx:35
+msgid "FAQ.question.4"
+msgstr ""
+
 #: src/pages/index.tsx:160
 #~ msgid "Features"
 #~ msgstr ""
 
-#: src/components/footer.tsx:58
+#: src/components/footer.tsx:67
 msgid "Footer.aboutUs"
 msgstr ""
 
-#: src/components/footer.tsx:18
-msgid "Footer.contact.four"
+#: src/components/footer.tsx:15
+msgid "Footer.contact"
 msgstr ""
+
+#: src/components/footer.tsx:18
+#~ msgid "Footer.contact.four"
+#~ msgstr ""
 
 #: src/components/footer.tsx:15
-msgid "Footer.contact.one"
-msgstr ""
+#~ msgid "Footer.contact.one"
+#~ msgstr ""
 
 #: src/components/footer.tsx:17
-msgid "Footer.contact.three"
-msgstr ""
+#~ msgid "Footer.contact.three"
+#~ msgstr ""
 
 #: src/components/footer.tsx:16
-msgid "Footer.contact.two"
-msgstr ""
+#~ msgid "Footer.contact.two"
+#~ msgstr ""
 
-#: src/components/footer.tsx:84
+#: src/components/footer.tsx:92
 msgid "Footer.help"
 msgstr ""
 
-#: src/components/footer.tsx:99
+#: src/components/footer.tsx:106
 msgid "Footer.location"
 msgstr ""
 
-#: src/components/footer.tsx:69
+#: src/components/footer.tsx:78
 msgid "Footer.sitemap"
 msgstr ""
 
-#: src/pages/index.tsx:160
+#: src/pages/index.tsx:178
 msgid "Home.Features"
 msgstr ""
 
-#: src/pages/index.tsx:193
+#: src/pages/index.tsx:211
 msgid "Home.Services"
 msgstr ""
 
-#: src/pages/index.tsx:126
+#: src/pages/index.tsx:130
 msgid "Home.feature.four.content"
 msgstr ""
 
-#: src/pages/index.tsx:122
+#: src/pages/index.tsx:126
 msgid "Home.feature.four.header"
 msgstr ""
 
-#: src/pages/index.tsx:114
+#: src/pages/index.tsx:118
 msgid "Home.feature.three.content"
 msgstr ""
 
-#: src/pages/index.tsx:110
+#: src/pages/index.tsx:114
 msgid "Home.feature.three.header"
 msgstr ""
 
-#: src/pages/index.tsx:102
+#: src/pages/index.tsx:106
 msgid "Home.feature.two.content"
 msgstr ""
 
-#: src/pages/index.tsx:98
+#: src/pages/index.tsx:102
 msgid "Home.feature.two.header"
 msgstr ""
 
-#: src/pages/index.tsx:90
+#: src/pages/index.tsx:94
 msgid "Home.featureList.one.content"
 msgstr ""
 
-#: src/pages/index.tsx:86
+#: src/pages/index.tsx:90
 msgid "Home.featureList.one.header"
 msgstr ""
 
-#: src/pages/index.tsx:138
+#: src/pages/index.tsx:155
 msgid "Home.head.title"
 msgstr ""
 
 #: src/pages/index.tsx:150
-msgid "Home.motto"
-msgstr ""
+#~ msgid "Home.motto"
+#~ msgstr ""
 
-#: src/pages/index.tsx:182
+#: src/pages/index.tsx:200
 msgid "Home.serviceSection.content"
 msgstr ""
 
-#: src/pages/index.tsx:178
+#: src/pages/index.tsx:196
 msgid "Home.serviceSection.title"
 msgstr ""
 
@@ -149,35 +189,35 @@ msgstr ""
 #~ msgid "Home.serviceSelection.title"
 #~ msgstr ""
 
-#: src/pages/index.tsx:76
+#: src/pages/index.tsx:79
 msgid "Home.servicesList.four.content"
 msgstr ""
 
-#: src/pages/index.tsx:72
+#: src/pages/index.tsx:75
 msgid "Home.servicesList.four.header"
 msgstr ""
 
-#: src/pages/index.tsx:41
+#: src/pages/index.tsx:43
 msgid "Home.servicesList.one.content"
 msgstr ""
 
-#: src/pages/index.tsx:37
+#: src/pages/index.tsx:39
 msgid "Home.servicesList.one.header"
 msgstr ""
 
-#: src/pages/index.tsx:65
+#: src/pages/index.tsx:67
 msgid "Home.servicesList.three.content"
 msgstr ""
 
-#: src/pages/index.tsx:61
+#: src/pages/index.tsx:63
 msgid "Home.servicesList.three.header"
 msgstr ""
 
-#: src/pages/index.tsx:53
+#: src/pages/index.tsx:55
 msgid "Home.servicesList.two.content"
 msgstr ""
 
-#: src/pages/index.tsx:49
+#: src/pages/index.tsx:51
 msgid "Home.servicesList.two.header"
 msgstr ""
 
@@ -225,23 +265,23 @@ msgstr ""
 #~ msgid "Our Services"
 #~ msgstr ""
 
-#: src/pages/portfolio/index.tsx:49
+#: src/pages/portfolio.tsx:74
 msgid "Portfolio.head.title"
 msgstr ""
 
-#: src/pages/portfolio/index.tsx:51
+#: src/pages/portfolio.tsx:82
 msgid "Portfolio.header"
 msgstr ""
 
-#: src/pages/services/index.tsx:81
+#: src/pages/services.tsx:81
 msgid "Services.head.title"
 msgstr ""
 
-#: src/pages/services/index.tsx:92
+#: src/pages/services.tsx:92
 msgid "Services.services.header"
 msgstr ""
 
-#: src/pages/services/index.tsx:72
+#: src/pages/services.tsx:72
 msgid "Services.servicesList.content.four"
 msgstr ""
 
@@ -249,11 +289,11 @@ msgstr ""
 #~ msgid "Services.servicesList.content.one"
 #~ msgstr ""
 
-#: src/pages/services/index.tsx:61
+#: src/pages/services.tsx:61
 msgid "Services.servicesList.content.three"
 msgstr ""
 
-#: src/pages/services/index.tsx:49
+#: src/pages/services.tsx:49
 msgid "Services.servicesList.content.two"
 msgstr ""
 
@@ -261,23 +301,23 @@ msgstr ""
 #~ msgid "Services.servicesList.header.four"
 #~ msgstr ""
 
-#: src/pages/services/index.tsx:33
+#: src/pages/services.tsx:33
 msgid "Services.servicesList.header.one"
 msgstr ""
 
-#: src/pages/services/index.tsx:57
+#: src/pages/services.tsx:57
 msgid "Services.servicesList.header.three"
 msgstr ""
 
-#: src/pages/services/index.tsx:45
+#: src/pages/services.tsx:45
 msgid "Services.servicesList.header.two"
 msgstr ""
 
-#: src/pages/services/index.tsx:37
+#: src/pages/services.tsx:37
 msgid "Services.serviceslist.content.one"
 msgstr ""
 
-#: src/pages/services/index.tsx:68
+#: src/pages/services.tsx:68
 msgid "Services.serviceslist.header.four"
 msgstr ""
 
@@ -285,28 +325,68 @@ msgstr ""
 #~ msgid "Who Are We?"
 #~ msgstr ""
 
+#: src/components/bookingForm.tsx:137
+#~ msgid "bookingForm.input."
+#~ msgstr ""
+
+#: src/components/bookingForm.tsx:160
+msgid "bookingForm.input.accept"
+msgstr ""
+
+#: src/components/bookingForm.tsx:167
+msgid "bookingForm.input.conditions"
+msgstr ""
+
+#: src/components/bookingForm.tsx:128
+msgid "bookingForm.input.email"
+msgstr ""
+
+#: src/components/bookingForm.tsx:139
+msgid "bookingForm.input.location"
+msgstr ""
+
+#: src/components/bookingForm.tsx:149
+msgid "bookingForm.input.message"
+msgstr ""
+
+#: src/components/bookingForm.tsx:106
+msgid "bookingForm.input.name"
+msgstr ""
+
+#: src/components/bookingForm.tsx:119
+msgid "bookingForm.input.number"
+msgstr ""
+
+#: src/components/bookingForm.tsx:187
+msgid "bookingForm.input.submit"
+msgstr ""
+
 #: src/pages/index.tsx:31
 #~ msgid "feature.one"
 #~ msgstr ""
 
-#: src/components/footer.tsx:37
+#: src/components/footer.tsx:46
 msgid "footer.helpLinks.four"
 msgstr ""
 
-#: src/components/footer.tsx:22
+#: src/components/footer.tsx:28
 msgid "footer.helpLinks.one"
 msgstr ""
 
-#: src/components/footer.tsx:33
+#: src/components/footer.tsx:42
 msgid "footer.helpLinks.three"
 msgstr ""
 
-#: src/components/footer.tsx:26
+#: src/components/footer.tsx:35
 msgid "footer.helpLinks.two"
 msgstr ""
 
-#: src/components/header.tsx:95
+#: src/components/header.tsx:113
 msgid "headerButton"
+msgstr ""
+
+#: src/components/header.tsx:107
+msgid "headerButton.responsive"
 msgstr ""
 
 #: src/components/footer.tsx:22
@@ -360,6 +440,14 @@ msgstr ""
 #: src/pages/services/index.tsx:55
 #~ msgid "services.serviceslist.header.three"
 #~ msgstr ""
+
+#: src/components/bookingForm.tsx:59
+msgid "talentForm.errorMessage"
+msgstr ""
+
+#: src/components/bookingForm.tsx:51
+msgid "talentForm.successMessage"
+msgstr ""
 
 #: src/components/cardMain.tsx:25
 #~ msgid "{header}"

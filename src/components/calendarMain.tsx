@@ -32,6 +32,7 @@ const CalendarMain = ({
     const [dateTime, setDateTime] = useState<Dayjs>();
 
     useEffect(() => {
+        console.log(dateTime ? dateTime.format("DD HH:MM") : "aa")
         setDateTimeStr(
             !!dateTime ? dateTime.format('YYYY-MM-DDTHH:mm:ss').toString() : ''
         );
@@ -52,11 +53,17 @@ const CalendarMain = ({
     return (
         <div className=''>
             <Calendar>
-                <Calendar.MonthSwitcher />
-                <Calendar.DaysOfTheWeek />
-                <Calendar.DatesOfTheMonth />
-                <Calendar.TimePicker unavailableSlots={dataArrDayjs} />
-                <Calendar.SelectedDateTime setDateTime={setDateTime} />
+                <div className='grid-cols-4 grid divide-x'>
+                    <div className="col-span-3">
+                        <Calendar.MonthSwitcher />
+                        <Calendar.DaysOfTheWeek />
+                        <Calendar.DatesOfTheMonth />
+                    </div>
+                    <div>
+                        <Calendar.TimePicker unavailableSlots={dataArrDayjs} />
+                        <Calendar.SelectedDateTime setDateTime={setDateTime} />
+                    </div>
+                </div>
             </Calendar>
         </div>
     );
