@@ -186,7 +186,7 @@ const Home: PageWithHeaderLayout = ({}) => {
                     <Image
                         className='object-cover'
                         src={imageUrl}
-                        alt='landing page image'
+                        alt=''
                         fill
                     />
                 </div>

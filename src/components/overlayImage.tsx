@@ -21,22 +21,20 @@ const OverlayImage = ({ src, alt }: { src: string; alt: string }) => {
                         className='object-contain'
                         src={src}
                         alt={alt}
-                        sizes='(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw'
                         fill
                     />
                 </div>
             </div>
             <div
-                className='relative h-[400px] overflow-hidden object-cover'
+                className='relative h-[100px] md:h-[400px]'
                 onClick={() => setEnlargedImage(true)}>
                 <Image
-                    className=''
-                    quality={5}
+                    className='object-cover'
+                    quality={50}
                     src={src}
                     alt={alt}
-                    sizes='20vw'
+                    sizes='(max-width: 768) 100wv,
+                30vw'
                     fill
                 />
             </div>

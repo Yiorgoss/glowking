@@ -81,7 +81,7 @@ const Portfolio: PageWithHeaderLayout = () => {
             <h1 className='px-10 pt-10 text-center text-6xl font-bold tracking-wider'>
                 <Trans id='Portfolio.header'>Our Portfolio</Trans>
             </h1>
-            <div className='grid grid-cols-3 gap-5 pt-10'>
+            <div className='grid grid-cols-2 gap-5 pt-10 md:grid-cols-3'>
                 {ImageGallery.map(({ src, alt }, index) => (
                     <div className='' key={index}>
                         <OverlayImage src={src} alt={alt} />

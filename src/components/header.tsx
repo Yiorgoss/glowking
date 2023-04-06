@@ -54,7 +54,7 @@ export default function Header({
                     <Link href='/'>
                         <Image
                             src='/media/images/glowking_logo.png'
-                            alt='glowking logo'
+                            alt=''
                             width={80}
                             height={80}
                         />
