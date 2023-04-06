@@ -1,16 +1,16 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 
-import { ReactElement, createContext } from "react";
+import { ReactElement, createContext } from 'react';
 
 //const CardContext = createContext({});
 
 const Graphic = ({
     src,
-    alt = "",
+    alt = '',
     h,
     w,
-    className,
+    className
 }: {
     src?: string;
     alt?: string;
@@ -19,7 +19,7 @@ const Graphic = ({
     className?: string;
 }) => {
     if (!src) {
-        return <></>
+        return <></>;
     }
 
     let imageProps;
@@ -30,11 +30,18 @@ const Graphic = ({
         imageProps = { fill: true };
     }
     if (src == null) {
-        return <></>
+        return <></>;
     }
     return (
-        <div className={`relative rounded-lg overflow-hidden ${className}`}>
-            <Image className="object-cover" src={src} alt={alt} {...imageProps} />
+        <div className={`relative overflow-hidden rounded-lg ${className}`}>
+            <Image
+                className='object-cover'
+                src={src}
+                alt={alt}
+                {...imageProps}
+                sizes='(max-width:768px) 100wv,
+            20vw'
+            />
         </div>
     );
 };
@@ -42,33 +49,33 @@ const Graphic = ({
 //Content and Header seperate for SEO reasons
 const Header = ({
     children,
-    className,
+    className
 }: {
     children?: ReactElement | ReactElement[] | string;
     className?: string;
 }) => {
     if (!children) {
-        return <></>
+        return <></>;
     }
     return <h3 className={className}> {children} </h3>;
 };
 
 const Content = ({
     children,
-    className,
+    className
 }: {
     children?: ReactElement | ReactElement[] | string;
     className?: string;
 }) => {
     if (!children) {
-        return <></>
+        return <></>;
     }
     return <p className={className}>{children}</p>;
 };
 
 const Card = ({
     children,
-    className,
+    className
 }: {
     children: ReactElement | ReactElement[];
     className?: string;

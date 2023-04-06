@@ -18,7 +18,7 @@ const OverlayImage = ({ src, alt }: { src: string; alt: string }) => {
                 onClick={() => setEnlargedImage(false)}>
                 <div className='relative h-5/6 w-5/6 '>
                     <Image
-                        className=' object-contain'
+                        className='object-contain'
                         src={src}
                         alt={alt}
                         sizes='(max-width: 768px) 100vw,
@@ -31,7 +31,14 @@ const OverlayImage = ({ src, alt }: { src: string; alt: string }) => {
             <div
                 className='relative h-[400px] overflow-hidden object-cover'
                 onClick={() => setEnlargedImage(true)}>
-                <Image className='' quality={5} src={src} alt={alt} fill />
+                <Image
+                    className=''
+                    quality={5}
+                    src={src}
+                    alt={alt}
+                    sizes='20vw'
+                    fill
+                />
             </div>
         </div>
     );

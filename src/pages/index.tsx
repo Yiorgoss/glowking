@@ -14,10 +14,6 @@ import ServiceSection from '@components/serviceSection';
 import type { PageWithHeaderLayout } from '@cTypes/layoutTypes';
 
 import { loadTranslation } from '@/utils/utils';
-import useWindowSize from '@/utils/useWindowSize';
-
-import mobileLandingImage from '/media/images/mobile_landing_imge.jpeg';
-import landingImage from '/media/images/landing_image.jpeg';
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
     const translation = await loadTranslation(
