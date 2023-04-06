@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Head from 'next/head';
 
 import { GetServerSideProps, GetStaticProps } from 'next';
-import { ReactElement, useState } from 'react';
+import { ReactElement, useState, useEffect } from 'react';
 
 import { t, Trans } from '@lingui/macro';
 
@@ -136,17 +136,43 @@ const Home: PageWithHeaderLayout = ({}) => {
             href: '/legal'
         }
     ];
+    //
+    //    const size = useWindowSize();
+    //    const getImage = (): string => {
+    //        if()
+    //        if (size && size['width'] < 800) {
+    //            return '/media/images/mobile_landing_image.jpeg';
+    //        }
+    //        return '/media/images/landing_image.jpeg';
+    //    };
 
-    const size = useWindowSize();
-    const getImage = (): string => {
-        if (size && size['width'] < 800) {
-            console.log(size);
-            return '/media/images/mobile_landing_image.jpeg';
+    //    const [windowSize, setWindowSize] = useState<{
+    //        width: number;
+    //        height: number;
+    //    }>();
+
+    const [imageUrl, setImageUrl] = useState('');
+    useEffect(() => {
+        // only execute all the code below in client side
+        // Handler to call on window resize
+        function handleResize() {
+            // Set window width/height to state
+            if (window.innerWidth >= 800) {
+                setImageUrl('/media/images/landing_image.jpeg');
+            } else {
+                setImageUrl('/media/images/mobile_landing_image.jpeg');
+            }
         }
 
-        console.log('abc', size);
-        return '/media/images/landing_image.jpeg';
-    };
+        // Add event listener
+        window.addEventListener('resize', handleResize);
+
+        // Call handler right away so state gets updated with initial window size
+        handleResize();
+
+        // Remove event listener on cleanup
+        return () => window.removeEventListener('resize', handleResize);
+    }, []); // Empty array heightensures that effect is only run on mount
 
     return (
         <div className='overflow-hidden '>
@@ -163,7 +189,7 @@ const Home: PageWithHeaderLayout = ({}) => {
                 <div className='relative -z-10 h-full w-full'>
                     <Image
                         className='object-cover'
-                        src={getImage()}
+                        src={imageUrl}
                         alt='landing page image'
                         fill
                     />
