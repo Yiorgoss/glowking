@@ -15,7 +15,7 @@ const ActiveLink = ({
     activeClassName: string;
     children: ReactElement | ReactElement[] | string;
     scroll?: boolean;
-    contianLevel?: number;
+    containLevel?: number;
 }) => {
     const { asPath } = useRouter();
 
