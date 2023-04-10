@@ -18,10 +18,17 @@ const ActiveLink = ({
     containLevel?: number;
 }) => {
     const { asPath } = useRouter();
+    const pathToContain = href.split('/')[containLevel];
 
+    console.log({
+        children: children,
+        path: href.split('/'),
+        contain: containLevel,
+        tf: asPath.includes(pathToContain)
+    });
     const active =
-        containLevel !== 0
-            ? href.includes(asPath.split('/')[containLevel])
+        containLevel !== 0 && pathToContain !== ''
+            ? asPath.includes(pathToContain)
                 ? true
                 : false
             : asPath === href;
@@ -32,6 +39,7 @@ const ActiveLink = ({
     //        active: active,
     //        asPath: asPath,
     //        href: href,
+    //        hrefArr: href.split('/'),
     //        ActiveClass: activeClassName
     //    });
     return (

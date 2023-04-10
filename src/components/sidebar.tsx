@@ -24,7 +24,7 @@ const Sidebar = ({
                         activeClassName="border-l-4 ml-2 border-tertiary text-tertiary"
                         href={path}
                         scroll={false}
-                        containlevel={1}
+                        containLevel={2}
                     >
                         {i18n._(title)}
                     </ActiveLink>
