@@ -26,7 +26,7 @@ const OverlayImage = ({ src, alt }: { src: string; alt: string }) => {
                 </div>
             </div>
             <div
-                className='relative h-[100px] md:h-[400px]'
+                className='relative h-[100px] rounded-lg overflow-hidden cursor-pointer md:h-[400px]'
                 onClick={() => setEnlargedImage(true)}>
                 <Image
                     className='object-cover'
