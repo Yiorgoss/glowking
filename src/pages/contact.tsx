@@ -1,19 +1,19 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import Head from 'next/head';
-import { GetServerSideProps, GetStaticProps } from 'next';
 
 import { ReactElement, useState } from 'react';
 
-import LayoutLayout from '@layouts/landingLayout';
+import LandingLayout from '@layouts/landingLayout';
 import { t } from '@lingui/macro';
 
 import type { PageWithHeaderLayout } from '@cTypes/layoutTypes';
 
-import { loadTranslation } from '@/utils/utils';
 import FAQSection from "@/components/faqSection"
 import BookingForm from '@/components/bookingForm';
 
+import { loadTranslation } from '@/utils/utils';
+import { GetServerSideProps, GetStaticProps } from 'next';
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
     const translation = await loadTranslation(
         ctx.locale!,
@@ -106,7 +106,7 @@ const Contact: PageWithHeaderLayout = () => {
 };
 
 Contact.getLayout = function getLayout(page: ReactElement) {
-    return <LayoutLayout>{page}</LayoutLayout>;
+    return <LandingLayout>{page}</LandingLayout>;
 };
 
 export default Contact;

@@ -47,6 +47,7 @@ export default function Header({
             document.removeEventListener('mousedown', handleClickOutside);
         };
     }, [isOpen]);
+
     return (
         <div>
             <div className=' grid h-[100px] w-full grid-flow-row-dense grid-cols-2 uppercase text-primary md:grid-cols-5'>
@@ -98,6 +99,7 @@ export default function Header({
                                 <ActiveLink
                                     href={link.path}
                                     activeClassName='text-tertiary'
+                                    contains={1}
                                     className='py-6 px-2 md:px-6'>
                                     {link.title}
                                 </ActiveLink>

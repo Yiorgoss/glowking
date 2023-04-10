@@ -10,9 +10,11 @@ const CardMain = ({
     header,
     content,
     image,
-    className = ''
+    className = '',
+    price
 }: {
     href: string;
+    price: number | MessageDescriptor;
     header?: string | MessageDescriptor;
     content?: string | MessageDescriptor;
     image?: string;
@@ -30,22 +32,20 @@ const CardMain = ({
         : '';
 
     return (
-        <Card
-            className={`mx-auto h-full w-fit w-fit overflow-hidden rounded-xl bg-slate-300 p-4 drop-shadow-lg transition-transform md:hover:scale-[1.05] ${className}`}>
-            <Link href={href}>
-                <Card.Graphic
-                    className='max-h-[400px] min-h-[300px] w-full'
-                    src={image}
-                />
-
+        <Link href={href} className='h-full'>
+            <Card
+                className={`mx-auto flex h-full flex-col justify-between overflow-hidden rounded-xl bg-slate-300 p-4 drop-shadow-lg transition-transform duration-300 md:hover:scale-[1.05] ${
+                    className ?? ''
+                }`}>
                 <Card.Header className='mt-8 text-center text-2xl font-medium'>
                     {headerStr}
                 </Card.Header>
                 <Card.Content className='overflow-hidden text-ellipsis p-5'>
                     {contentStr}
                 </Card.Content>
-            </Link>
-        </Card>
+                <Card.Price price={price} className='mt-auto self-end' />
+            </Card>
+        </Link>
     );
 };
 

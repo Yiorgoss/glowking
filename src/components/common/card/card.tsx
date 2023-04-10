@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 import { ReactElement, createContext } from 'react';
 
+import { MessageDescriptor, i18n } from '@lingui/core';
 //const CardContext = createContext({});
 
 const Graphic = ({
@@ -72,6 +73,24 @@ const Content = ({
     }
     return <p className={className}>{children}</p>;
 };
+const Price = ({
+    price,
+    className
+}: {
+    price: number | MessageDescriptor;
+    className: string;
+}) => {
+    const formatPrice = (price: number) => {
+        return '' + price + '.00 €';
+    };
+    const priceStr = price
+        ? typeof price === 'number'
+            ? formatPrice(price)
+            : i18n._(price! as string)
+        : '';
+
+    return <div className={className}>{priceStr}</div>;
+};
 
 const Card = ({
     children,
@@ -86,5 +105,6 @@ const Card = ({
 Card.Header = Header;
 Card.Content = Content;
 Card.Graphic = Graphic;
+Card.Price = Price;
 
 export default Card;

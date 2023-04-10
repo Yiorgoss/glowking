@@ -81,22 +81,6 @@ msgstr "GLOW KING ATHENS is an innovative idea that annihilates distances! It st
 msgid "Footer.contact"
 msgstr "We come to where you are with one click!"
 
-#: src/components/footer.tsx:18
-#~ msgid "Footer.contact.four"
-#~ msgstr "Illioupoli, Argyroupoli"
-
-#: src/components/footer.tsx:15
-#~ msgid "Footer.contact.one"
-#~ msgstr "Street of YOUR choice"
-
-#: src/components/footer.tsx:17
-#~ msgid "Footer.contact.three"
-#~ msgstr "Vouligmenis, Varkiza"
-
-#: src/components/footer.tsx:16
-#~ msgid "Footer.contact.two"
-#~ msgstr "Glyfada, Voula"
-
 #: src/components/footer.tsx:92
 msgid "Footer.help"
 msgstr "Help"
@@ -109,91 +93,87 @@ msgstr "Where to find us"
 msgid "Footer.sitemap"
 msgstr "Sitemap"
 
-#: src/pages/index.tsx:178
+#: src/pages/index.tsx:154
 msgid "Home.Features"
 msgstr "Features"
 
-#: src/pages/index.tsx:211
+#: src/pages/index.tsx:187
 msgid "Home.Services"
 msgstr "Our Services"
 
-#: src/pages/index.tsx:130
+#: src/pages/index.tsx:78
 msgid "Home.feature.four.content"
 msgstr "Glow King Athens and its staff will never share your personal information or vehicle information without your consent."
 
-#: src/pages/index.tsx:126
+#: src/pages/index.tsx:74
 msgid "Home.feature.four.header"
 msgstr "Privacy Focused"
 
-#: src/pages/index.tsx:118
+#: src/pages/index.tsx:66
 msgid "Home.feature.three.content"
 msgstr "The products used for cleaning and disinfection are certified and friendly to humans and the environment, complying with eu standards and regulations. Our products and machines are of the utmost quality, including AUTOGLYM and KARCHER."
 
-#: src/pages/index.tsx:114
+#: src/pages/index.tsx:62
 msgid "Home.feature.three.header"
 msgstr "Safe and Effective"
 
-#: src/pages/index.tsx:106
+#: src/pages/index.tsx:54
 msgid "Home.feature.two.content"
 msgstr "In biological cleaning, we remove from the cabin area, stains, fungi, bacteria and any other organic matter. We disinfect the seats, the sky, floors, luggage compartment and side upholstery. We also disinfect the air ducts of the car, removing the stench from the use of the air conditioner."
 
-#: src/pages/index.tsx:102
+#: src/pages/index.tsx:50
 msgid "Home.feature.two.header"
 msgstr "Biological Cleaning"
 
-#: src/pages/index.tsx:94
+#: src/pages/index.tsx:42
 msgid "Home.featureList.one.content"
 msgstr "Professional washing and cleaning for your car!The mobile car wash GLOW KING a mobile business that deals exclusively with the cleaning and care of cars, gives a new dimension to the space, comes to where you are, zeroing out the distances and taking care of your own car as if it were unique."
 
-#: src/pages/index.tsx:90
+#: src/pages/index.tsx:38
 msgid "Home.featureList.one.header"
 msgstr "Location Of Your Choice"
 
-#: src/pages/index.tsx:155
+#: src/pages/index.tsx:129
 msgid "Home.head.title"
 msgstr "Glowking | Carwash while at Work | Carwash while at Home"
 
-#: src/pages/index.tsx:150
-#~ msgid "Home.motto"
-#~ msgstr "One Call at Your Door"
-
-#: src/pages/index.tsx:200
+#: src/pages/index.tsx:176
 msgid "Home.serviceSection.content"
 msgstr "GLOW KING ATHENS is an innovative idea that annihilates distances! It started in 2019 and in the middle of the pandemic it covered all the southern suburbs. Complete cleaning services of the vehicle, the property, the pavement and everything else you need! GLOW KING ATHENS operates with the environment and people as its main focus, next to your every need. Glow King Athens starring... you!"
 
-#: src/pages/index.tsx:196
+#: src/pages/index.tsx:172
 msgid "Home.serviceSection.title"
 msgstr "Who Are We?"
 
-#: src/pages/index.tsx:79
+#: src/pages/services.tsx:74
 msgid "Home.servicesList.four.content"
 msgstr "A garage full of dust, mud and clutter? Our company undertakes a complete cleaning of your garage. Our trusted staff combined with the top of our products will make your garage shine!"
 
-#: src/pages/index.tsx:75
+#: src/pages/services.tsx:70
 msgid "Home.servicesList.four.header"
 msgstr "Pavement/Garage Washing"
 
-#: src/pages/index.tsx:43
+#: src/pages/services.tsx:38
 msgid "Home.servicesList.one.content"
 msgstr "External cleaning is done without the use of a brush or sponge, but only with the use of hot water for less damage to the car's exterior paint.At Glow King we offer you a complete exterior cleaning with pre-washing and mainly washing the vehicle with active foam, cleaning the domes and rims, removing insects, protective wax and rinsing the car with deionized water!The vehicle is then thoroughly wiped."
 
-#: src/pages/index.tsx:39
+#: src/pages/services.tsx:34
 msgid "Home.servicesList.one.header"
 msgstr "External Wash"
 
-#: src/pages/index.tsx:67
+#: src/pages/services.tsx:62
 msgid "Home.servicesList.three.content"
 msgstr "Your boat has found its master! Our company undertakes both the interior and exterior cleaning of your boat. Our trusted staff combined with the top quality of our products will make your boat shine!"
 
-#: src/pages/index.tsx:63
+#: src/pages/services.tsx:58
 msgid "Home.servicesList.three.header"
 msgstr "Boat Washing"
 
-#: src/pages/index.tsx:55
+#: src/pages/services.tsx:50
 msgid "Home.servicesList.two.content"
 msgstr "In internal cleaning, with respect for people and the environment as our guiding principle, we use ecologically biodegradable products.Internally we blow the vehicle to remove the dust and then vacuum the cabin and the luggage compartment, cleaning the windows and all glass surfaces.Finally, we proceed with cleaning and maintenance of all leather and plastic surfaces, dry cleaning of carpets and perfuming the cabin area."
 
-#: src/pages/index.tsx:51
+#: src/pages/services.tsx:46
 msgid "Home.servicesList.two.header"
 msgstr "Internal Cleaning"
 
@@ -237,49 +217,49 @@ msgstr "Athens Portable Wash | We come to You | Glyfada | South"
 msgid "Portfolio.header"
 msgstr "Our Portfolio"
 
-#: src/pages/services.tsx:81
+#: src/data/serviceData.ts:293
+#: src/data/serviceData.ts:307
+msgid "Services-simple-list.four.content"
+msgstr "Biocleaning sofa is the most complete sofa cleaning process and more generally fabric surfaces that you can find. This method concerns the best way to clean a fabric surface since it cleans stains refreshes colors, disinfects the entire surface and deodorizes the unpleasant ones smells. The surfaces are then fresh for a few hours."
+
+#: src/data/serviceData.ts:289
+#: src/data/serviceData.ts:303
+msgid "Services-simple-list.four.header"
+msgstr "Home Services"
+
+#: src/data/serviceData.ts:237
+msgid "Services-simple-list.one.content"
+msgstr "External cleaning is done without the use of a brush or sponge, but only with the use of hot water for less damage to the car's exterior paint.At Glow King we offer you a complete exterior cleaning with pre-washing and mainly washing the vehicle with active foam, cleaning the domes and rims, removing insects, protective wax and rinsing the car with deionized water!The vehicle is then thoroughly wiped."
+
+#: src/data/serviceData.ts:233
+msgid "Services-simple-list.one.header"
+msgstr "External Wash"
+
+#: src/data/serviceData.ts:279
+msgid "Services-simple-list.three.content"
+msgstr "Your boat has found its master! Our company undertakes both the interior and exterior cleaning of your boat. Our trusted staff combined with the top quality of our products will make your boat shine!"
+
+#: src/data/serviceData.ts:275
+msgid "Services-simple-list.three.header"
+msgstr "Yacht Services"
+
+#: src/data/serviceData.ts:251
+#: src/data/serviceData.ts:265
+msgid "Services-simple-list.two.content"
+msgstr "In internal cleaning, with respect for people and the environment as our guiding principle, we use ecologically biodegradable products.Internally we blow the vehicle to remove the dust and then vacuum the cabin and the luggage compartment, cleaning the windows and all glass surfaces.Finally, we proceed with cleaning and maintenance of all leather and plastic surfaces, dry cleaning of carpets and perfuming the cabin area."
+
+#: src/data/serviceData.ts:247
+#: src/data/serviceData.ts:261
+msgid "Services-simple-list.two.header"
+msgstr "Internal Cleaning"
+
+#: src/pages/services.tsx:84
 msgid "Services.head.title"
 msgstr "Portable Wash | Wash Cars | Wash Boats | Wash Pavement"
 
-#: src/pages/services.tsx:92
+#: src/pages/services.tsx:95
 msgid "Services.services.header"
 msgstr "services"
-
-#: src/pages/services.tsx:72
-msgid "Services.servicesList.content.four"
-msgstr "A garage full of dust, mud and clutter? Our company undertakes a complete cleaning of your garage. Our trusted staff combined with the top of our products will make your garage shine!"
-
-#: src/pages/services.tsx:61
-msgid "Services.servicesList.content.three"
-msgstr "Your boat has found its master! Our company undertakes both the interior and exterior cleaning of your boat. Our trusted staff combined with the top quality of our products will make your boat shine!"
-
-#: src/pages/services.tsx:49
-msgid "Services.servicesList.content.two"
-msgstr "In internal cleaning, with respect for people and the environment as our guiding principle, we use ecologically biodegradable products.Internally we blow the vehicle to remove the dust and then vacuum the cabin and the luggage compartment, cleaning the windows and all glass surfaces.Finally, we proceed with cleaning and maintenance of all leather and plastic surfaces, dry cleaning of carpets and perfuming the cabin area."
-
-#: src/pages/services.tsx:33
-msgid "Services.servicesList.header.one"
-msgstr "External Cleaning"
-
-#: src/pages/services.tsx:57
-msgid "Services.servicesList.header.three"
-msgstr "Boat Washing"
-
-#: src/pages/services.tsx:45
-msgid "Services.servicesList.header.two"
-msgstr "Internal Cleaning"
-
-#: src/pages/services.tsx:37
-msgid "Services.serviceslist.content.one"
-msgstr "External cleaning is done without the use of a brush or sponge, but only with the use of hot water for less damage to the car's exterior paint.At Glow King we offer you a complete exterior cleaning with pre-washing and mainly washing the vehicle with active foam, cleaning the domes and rims, removing insects, protective wax and rinsing the car with deionized water!The vehicle is then thoroughly wiped."
-
-#: src/pages/services.tsx:68
-msgid "Services.serviceslist.header.four"
-msgstr "Pavement/Garage Washing"
-
-#: src/components/bookingForm.tsx:137
-#~ msgid "bookingForm.input."
-#~ msgstr "submit"
 
 #: src/components/bookingForm.tsx:160
 msgid "bookingForm.input.accept"
@@ -313,6 +293,312 @@ msgstr "Phone Number"
 msgid "bookingForm.input.submit"
 msgstr "submit"
 
+#: src/data/serviceData.ts:32
+msgid "car-service-extras.1.content"
+msgstr "Washing the bottom of the car, removes mud, salts (from the winter season) and dirt that has accumulated over time."
+
+#: src/data/serviceData.ts:28
+msgid "car-service-extras.1.title"
+msgstr "WASHABLE FROM BELOW"
+
+#: src/data/serviceData.ts:158
+msgid "car-service-extras.10.content"
+msgstr "Biological cleaning of a child seat."
+
+#: src/data/serviceData.ts:154
+msgid "car-service-extras.10.title"
+msgstr "CHILD SEAT"
+
+#: src/data/serviceData.ts:170
+msgid "car-service-extras.11.content"
+msgstr "Biological cleaning of 2 children's seats."
+
+#: src/data/serviceData.ts:166
+msgid "car-service-extras.11.title"
+msgstr "2 CHILDREN'S SEATS"
+
+#: src/data/serviceData.ts:71
+msgid "car-service-extras.12.content"
+msgstr "Wax with AUTOGLYM wax, with a duration of 2 months, gives an extra protection to the surface of your car."
+
+#: src/data/serviceData.ts:67
+msgid "car-service-extras.12.title"
+msgstr "PREMIUM AUTOGLYM WAX"
+
+#: src/data/serviceData.ts:44
+msgid "car-service-extras.2.content"
+msgstr "Odors are not covered but neutralized. For odors such as Cigarettes, Animals and other persistent odors."
+
+#: src/data/serviceData.ts:40
+msgid "car-service-extras.2.title"
+msgstr "REMOVING ODORS + MICROBES"
+
+#: src/data/serviceData.ts:56
+msgid "car-service-extras.3.content"
+msgstr "Hand polishing, removal of deposits with plasticine and CERAMIC ceramic coating. It offers a super hydrophobic protection and an amazing polish & finish, it lasts for 3 months."
+
+#: src/data/serviceData.ts:60
+msgid "car-service-extras.3.price"
+msgstr "Request a Quote"
+
+#: src/data/serviceData.ts:52
+msgid "car-service-extras.3.title"
+msgstr "POLISHING – CERAMIC COATING"
+
+#: src/data/serviceData.ts:83
+msgid "car-service-extras.4.content"
+msgstr "Special glass coating that offers external hydrophobic and internal anti-fog protection, ideal for the winter months."
+
+#: src/data/serviceData.ts:79
+msgid "car-service-extras.4.title"
+msgstr "HYDROPHOBIC & ANTI-FOG GLASS COATING"
+
+#: src/data/serviceData.ts:95
+msgid "car-service-extras.5.content"
+msgstr "Tire pressure check & inflation."
+
+#: src/data/serviceData.ts:99
+msgid "car-service-extras.5.price"
+msgstr "FREE"
+
+#: src/data/serviceData.ts:91
+msgid "car-service-extras.5.title"
+msgstr "TIRE INFLATION"
+
+#: src/data/serviceData.ts:110
+msgid "car-service-extras.6.content"
+msgstr "Refilling of cleaning liquid soap for the windshield wipers."
+
+#: src/data/serviceData.ts:106
+msgid "car-service-extras.6.title"
+msgstr "LIQUID SOAP FOR WINDSHIELD WIPERS"
+
+#: src/data/serviceData.ts:122
+msgid "car-service-extras.7.content"
+msgstr "Hood cleaning, maintenance and waterproofing for a convertible car."
+
+#: src/data/serviceData.ts:118
+msgid "car-service-extras.7.title"
+msgstr "HOOD WATERPROOFING & MAINTENANCE"
+
+#: src/data/serviceData.ts:134
+msgid "car-service-extras.8.content"
+msgstr "We Clean Your unit air condition unit"
+
+#: src/data/serviceData.ts:130
+msgid "car-service-extras.8.title"
+msgstr "CLEANING AIR CONDITIONER"
+
+#: src/data/serviceData.ts:146
+msgid "car-service-extras.9.content"
+msgstr "Removing very fine pet hair from seats and carpeting."
+
+#: src/data/serviceData.ts:142
+msgid "car-service-extras.9.title"
+msgstr "PET HAIR REMOVAL"
+
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:45
+msgid "detail-car-wash.car-cleaning.p-1.2"
+msgstr "The external cleaning is done without the use of a brush or sponge but only with the use of hot water for less damage to the car's exterior paint."
+
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:51
+msgid "detail-car-wash.car-cleaning.p-1.3"
+msgstr "At Glow King we offer you a complete exterior cleaning with pre-washing and mainly washing the vehicle with active foam, cleaning the fog lights and rims, removing insects, protective wax and rinsing the car with deionized water!"
+
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:57
+msgid "detail-car-wash.car-cleaning.p-1.4"
+msgstr "The vehicle is then thoroughly wiped."
+
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:63
+msgid "detail-car-wash.car-cleaning.p-1.5"
+msgstr "In internal cleaning, with respect for people and the environment as our guiding principle, we use ecologically biodegradable products."
+
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:69
+msgid "detail-car-wash.car-cleaning.p-1.6"
+msgstr "Internally we blow the vehicle to remove the dust and then vacuum the cabin and the luggage compartment, cleaning the windows and all glass surfaces."
+
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:75
+msgid "detail-car-wash.car-cleaning.p-1.7"
+msgstr "Finally, we proceed with cleaning and maintenance of all leather and plastic surfaces, dry cleaning of carpets and perfuming the cabin area."
+
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:39
+msgid "detail-car-wash.car-cleaning.p-1.title"
+msgstr "External + Internal Cleaning"
+
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:90
+msgid "detail-car-wash.car-cleaning.p-2.1"
+msgstr "In biological cleaning, we remove from the cabin area, apart from stains, we clean fungi, bacteria and anything that burdens the human body."
+
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:96
+msgid "detail-car-wash.car-cleaning.p-2.2"
+msgstr "We disinfect the seats, the sky, floors, luggage compartment and side upholstery."
+
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:102
+msgid "detail-car-wash.car-cleaning.p-2.3"
+msgstr "We also compulsorily disinfect the air ducts of the car, removing the stench from the use of the air conditioner."
+
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:108
+msgid "detail-car-wash.car-cleaning.p-2.4"
+msgstr "The products used for cleaning and disinfection are certified and friendly to humans and the environment, complying with EU standards."
+
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:117
+msgid "detail-car-wash.car-cleaning.p-2.5"
+msgstr "We also offer a large list of aditional optional cleaning services for your car"
+
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:84
+msgid "detail-car-wash.car-cleaning.p-2.title"
+msgstr "Organic Matter Cleaning"
+
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:32
+msgid "detail-car-wash.car-cleaning.title"
+msgstr "Car Services"
+
+#: src/pages/services/detail-car-wash/detailing-info.tsx:43
+msgid "detail-car-wash.detailing.p-1.1.content"
+msgstr "The suspension is the system that regulates the contact and grip of the car through the tires and shock absorbers with the road surface and is one of the basic systems that the car has for our safe and stable movement. Shock absorbers and springs are the main components of the suspension system, they are responsible for adjusting and absorbing the shocks that contribute to the \"hold\" of the car. Timely cleaning of the shock absorber is imperative for the safety of the car."
+
+#: src/pages/services/detail-car-wash/detailing-info.tsx:49
+msgid "detail-car-wash.detailing.p-1.2.content"
+msgstr "Oil and Spray of excellent quality are the secret to properly cleaning your disc. Front and rear discs are one of the most important parts of your vehicle, and for that reason alone, you deserve only the best. Our experienced staff, our excellent materials, our specialized staff are the answer to your questions and the solution to your problems."
+
+#: src/pages/services/detail-car-wash/detailing-info.tsx:37
+msgid "detail-car-wash.detailing.p-1.title"
+msgstr "Shock absorber + Wheel arch + Disc cleaning"
+
+#: src/pages/services/detail-car-wash/detailing-info.tsx:61
+msgid "detail-car-wash.detailing.p-2.1.content"
+msgstr "Aluminum wheels on a car are among the places that get dirty very quickly. Sand, mud, dust and anything else that may be on the road surface will stick to and stain the tire rim. Without systematic cleaning, in fact, these impurities can lead to the destruction of the aluminum. For this reason, cleaning the rims at least 1-2 times a month is imperative and we can do it for you. Learn how!"
+
+#: src/pages/services/detail-car-wash/detailing-info.tsx:55
+msgid "detail-car-wash.detailing.p-2.title"
+msgstr "Rims"
+
+#: src/pages/services/detail-car-wash/detailing-info.tsx:73
+msgid "detail-car-wash.detailing.p-3.1.content"
+msgstr "We also have specialized staff and specialized machinery to be able to polish in detail every point inaccessible by the human hand, every difficulty for you...a challenge for us!"
+
+#: src/pages/services/detail-car-wash/detailing-info.tsx:67
+msgid "detail-car-wash.detailing.p-3.title"
+msgstr "Polishing in places inaccessible by the human hand"
+
+#: src/pages/services/detail-car-wash/detailing-info.tsx:85
+msgid "detail-car-wash.detailing.p-4.1.content"
+msgstr "Nanotechnology is a science that has the ability to control the dimensions of materials at the nanometer scale and has demonstrated the impressive properties they acquire when their dimensions are only a few nanometers."
+
+#: src/pages/services/detail-car-wash/detailing-info.tsx:91
+msgid "detail-car-wash.detailing.p-4.2.content"
+msgstr "The interest of science has turned to nanotechnology materials. Through research, they found that the particles of such materials have very different properties during their formation compared to the large particles that are visible to the naked eye or with a simple optical microscope."
+
+#: src/pages/services/detail-car-wash/detailing-info.tsx:97
+msgid "detail-car-wash.detailing.p-4.3.content"
+msgstr "Nanotechnology products are specially designed to offer protection to your favorite fabrics, wooden surfaces, glass, plastic items or stainless steel, even your floors, tiles, car rims."
+
+#: src/pages/services/detail-car-wash/detailing-info.tsx:103
+msgid "detail-car-wash.detailing.p-4.4.content"
+msgstr "Everything is protected from stains, bacteria, water, moisture and everything stays intact for a much longer time. Absolute protection is achieved by avoiding the use of harmful chemicals."
+
+#: src/pages/services/detail-car-wash/detailing-info.tsx:79
+msgid "detail-car-wash.detailing.p-4.title"
+msgstr "Nanotechnology"
+
+#: src/pages/services/detail-car-wash/detailing-info.tsx:115
+msgid "detail-car-wash.detailing.p-5.1.content"
+msgstr "Another point that we will often have to maintain is the bottom of the car, especially for cars that are exposed to sea or snow. The lower part of the car is washed after using the special chassis washing machine. Then we spray the cleaner and rinse thoroughly to clean everywhere inside the wheels and all the mechanical parts that are exposed underneath."
+
+#: src/pages/services/detail-car-wash/detailing-info.tsx:109
+msgid "detail-car-wash.detailing.p-5.title"
+msgstr "Underbody washing / Chassis"
+
+#: src/pages/services/detail-car-wash/detailing-info.tsx:30
+msgid "detail-car-wash.detailing.title"
+msgstr "Detailing Information"
+
+#: src/pages/services/detail-car-wash/motorbike-clean.tsx:36
+msgid "detail-car-wash.motorbike.p-1.1"
+msgstr "The cleaning is done without the use of a brush or sponge but only with the use of hot water for less damage to the car's exterior paint."
+
+#: src/pages/services/detail-car-wash/motorbike-clean.tsx:42
+msgid "detail-car-wash.motorbike.p-1.2"
+msgstr "At Glow King we offer you a complete cleaning with pre-washing and mainly washing the machine with active foam, cleaning the fog lights and rims, removing insects, protective wax and rinsing the car with deionized water!"
+
+#: src/pages/services/detail-car-wash/motorbike-clean.tsx:48
+msgid "detail-car-wash.motorbike.p-1.3"
+msgstr "Your machine is then thoroughly wiped."
+
+#: src/pages/services/detail-car-wash/motorbike-clean.tsx:54
+msgid "detail-car-wash.motorbike.p-1.4"
+msgstr "In cleaning, with respect for people and the environment as our guiding principle, we use ecologically biodegradable products."
+
+#: src/pages/services/detail-car-wash/motorbike-clean.tsx:60
+msgid "detail-car-wash.motorbike.p-1.5"
+msgstr "We blow the inside of your machine to remove the dust and then clean with a vacuum cleaner. Finally, we proceed with cleaning and maintenance of all plastic surfaces, dry cleaning and perfuming the saddle of your machine."
+
+#: src/pages/services/detail-car-wash/motorbike-clean.tsx:66
+msgid "detail-car-wash.motorbike.p-1.6"
+msgstr "Minimum charge to come to your place: €30.00"
+
+#: src/pages/services/detail-car-wash/motorbike-clean.tsx:30
+msgid "detail-car-wash.motorbike.title"
+msgstr "Motorbike Cleaning"
+
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:146
+#: src/pages/services/detail-car-wash/detailing-info.tsx:222
+#: src/pages/services/detail-car-wash/motorbike-clean.tsx:80
+msgid "detail-car-wash.title"
+msgstr "Car Cleaning and Detailing Services"
+
+#: src/pages/services/detail-car-wash/detailing-info.tsx:136
+msgid "detailing-car-wash.list-1.content"
+msgstr "Perfectly detailed, the paint on your vehicle draws the most attention. Primarily, the exterior is pressure washed to remove dirt and then hand dried. Finally, a hand or machine polish gives the surface an even shine and removes fine scratches to give the result you deserve."
+
+#: src/pages/services/detail-car-wash/detailing-info.tsx:130
+msgid "detailing-car-wash.list-1.title"
+msgstr "Exterior paint care and polishing"
+
+#: src/pages/services/detail-car-wash/detailing-info.tsx:150
+msgid "detailing-car-wash.list-2.content"
+msgstr "Exterior surfaces and finishes such as plastic, rubber and chrome can fade and crack without proper care or under other adverse conditions. During a full detailing, the exterior surfaces are cleaned and then protected. A plastic sealer can be applied to rubber or vinyl and the chrome tones will be polished."
+
+#: src/pages/services/detail-car-wash/detailing-info.tsx:144
+msgid "detailing-car-wash.list-2.title"
+msgstr "CLEANING AND POLISHING OF EXTERNAL SURFACES"
+
+#: src/pages/services/detail-car-wash/detailing-info.tsx:164
+msgid "detailing-car-wash.list-3.content"
+msgstr "Brake dust, dirt and grime from the road collects on your wheels and, over time, these blemishes become difficult to remove. A full service detail will completely restore your vehicle's wheels, remove those stubborn stains and polish the chrome, steel or aluminum. The tires will also be protected with rubber sealant, which gives them a glossy finish."
+
+#: src/pages/services/detail-car-wash/detailing-info.tsx:158
+msgid "detailing-car-wash.list-3.title"
+msgstr "WHEELS AND TIRES DETAILS"
+
+#: src/pages/services/detail-car-wash/detailing-info.tsx:178
+msgid "detailing-car-wash.list-4.content"
+msgstr "Every corner of your vehicle's interior tends to collect dust and dirt. The retailer's job is to remove dirt and dust from hard-to-reach cracks and crevices. This service includes all surfaces including the dashboard, entertainment console, inside doors, under the seats and any other interior surface. Once the dirt is removed, sealants are applied, which give these surfaces a high-quality shine."
+
+#: src/pages/services/detail-car-wash/detailing-info.tsx:172
+msgid "detailing-car-wash.list-4.title"
+msgstr "BIOLOGICAL CLEANING IN THE INTERIOR OF THE CAR"
+
+#: src/pages/services/detail-car-wash/detailing-info.tsx:192
+msgid "detailing-car-wash.list-5.content"
+msgstr "Leather requires special preparation and handling when cleaning. Some traditional car cleaning products are very caustic to the skin and may even do more harm than good. During an interior detail, any leather surfaces on your vehicle will be properly cleaned and conditioned. This will help restore the skin's natural glow, as well as protect it from stains and damage from water and salt or other dirt."
+
+#: src/pages/services/detail-car-wash/detailing-info.tsx:186
+msgid "detailing-car-wash.list-5.title"
+msgstr "INTERIOR DETAIL"
+
+#: src/pages/services/detail-car-wash/detailing-info.tsx:206
+msgid "detailing-car-wash.list-6.content"
+msgstr "Most automotive retailers do not have the equipment to properly clean, deodorize and wash carpet. A full detail service restores the carpet, first with a deep vacuum. The carpet is then washed with shampoo and deodorized."
+
+#: src/pages/services/detail-car-wash/detailing-info.tsx:200
+msgid "detailing-car-wash.list-6.title"
+msgstr "CARPET DEEP CLEANING"
+
+#: src/pages/services/detail-car-wash/detailing-info.tsx:122
+msgid "detailing-car-wash.list.title"
+msgstr "Our Process"
+
 #: src/components/footer.tsx:46
 msgid "footer.helpLinks.four"
 msgstr "What is needed for this?"
@@ -337,6 +623,132 @@ msgstr "Book Now"
 msgid "headerButton.responsive"
 msgstr "Book Now"
 
+#: src/pages/services/home-cleaning-couches/carpets.tsx:38
+msgid "home-cleaning-couches.carpets.p-1.1"
+msgstr "The Biological Carpet Cleaning we apply destroys harmful micro-organisms such as mites, fungi and bacteria, so you can step and touch without fear on a healthy carpet!"
+
+#: src/pages/services/home-cleaning-couches/carpets.tsx:44
+msgid "home-cleaning-couches.carpets.p-1.2"
+msgstr "At the same time, we apply all the necessary actions to eliminate any stains and dirt on your carpet to achieve a nice aesthetic result. In order to perform a Complete Carpet Cleaning there are 2 methods we follow: Dry Biological Carpet Cleaning which concerns the extermination of the microbial load & Wet Biological Carpet Cleaning which concerns the aesthetic part."
+
+#: src/pages/services/home-cleaning-couches/carpets.tsx:58
+msgid "home-cleaning-couches.carpets.p-2.item-1"
+msgstr "Cleaning Handmade Carpets"
+
+#: src/pages/services/home-cleaning-couches/carpets.tsx:64
+msgid "home-cleaning-couches.carpets.p-2.item-2"
+msgstr "Cleaning Woolen Carpets"
+
+#: src/pages/services/home-cleaning-couches/carpets.tsx:70
+msgid "home-cleaning-couches.carpets.p-2.item-3"
+msgstr "Cleaning Synthetic Carpets"
+
+#: src/pages/services/home-cleaning-couches/carpets.tsx:76
+msgid "home-cleaning-couches.carpets.p-2.item-4"
+msgstr "Dry Cleaning Carpets"
+
+#: src/pages/services/home-cleaning-couches/carpets.tsx:82
+msgid "home-cleaning-couches.carpets.p-2.item-5"
+msgstr "Cleaning Carpets from Mites"
+
+#: src/pages/services/home-cleaning-couches/carpets.tsx:88
+msgid "home-cleaning-couches.carpets.p-2.item-6"
+msgstr "Cleaning Carpets from Stains"
+
+#: src/pages/services/home-cleaning-couches/carpets.tsx:95
+msgid "home-cleaning-couches.carpets.p-3"
+msgstr "Cost: €10.00 per square meter"
+
+#: src/pages/services/home-cleaning-couches/carpets.tsx:51
+msgid "home-cleaning-couches.carpets.p2.title"
+msgstr "Categories"
+
+#: src/pages/services/home-cleaning-couches/carpets.tsx:32
+msgid "home-cleaning-couches.carpets.title"
+msgstr "Carpets"
+
+#: src/pages/services/home-cleaning-couches/couches.tsx:36
+msgid "home-cleaning-couches.couches.p-1.1"
+msgstr "Sofas and living areas usually receive the most use of all other areas of the house. The living room is cleaned with hypoallergenic Karcher products and Karcher washing-rinsing machines. Your precious furniture can lose the vibrancy of its colors and become a breeding ground for germs. Exhaust gas, smoking, dust, etc. are key factors in this wear and tear."
+
+#: src/pages/services/home-cleaning-couches/couches.tsx:42
+msgid "home-cleaning-couches.couches.p-1.2"
+msgstr "And of course the case (sofas in the same space as our little angels) is more or less known to all of us. Markers, paints, milk and many others are stains that need professional care. Do nothing in these cases except call clean4u. Remember that if a stain is destabilized by your attempt to clean it, it can become permanent on your sofa."
+
+#: src/pages/services/home-cleaning-couches/couches.tsx:56
+msgid "home-cleaning-couches.couches.p-2.item-1"
+msgstr "Bio-cleaning of a two-seater sofa: 60,00 €"
+
+#: src/pages/services/home-cleaning-couches/couches.tsx:62
+msgid "home-cleaning-couches.couches.p-2.item-2"
+msgstr "Bio-cleaning three-seater sofa: €75.00"
+
+#: src/pages/services/home-cleaning-couches/couches.tsx:68
+msgid "home-cleaning-couches.couches.p-2.item-3"
+msgstr "Bio-cleaning per additional seat: €20.00"
+
+#: src/pages/services/home-cleaning-couches/couches.tsx:74
+msgid "home-cleaning-couches.couches.p-2.item-4"
+msgstr "Bio-cleaning of a leather sofa: €38.00"
+
+#: src/pages/services/home-cleaning-couches/couches.tsx:80
+msgid "home-cleaning-couches.couches.p-2.item-5"
+msgstr "Armchair bio-cleaning: €20.00"
+
+#: src/pages/services/home-cleaning-couches/couches.tsx:86
+msgid "home-cleaning-couches.couches.p-2.item-6"
+msgstr "Berzera bio-cleaning: €20.00"
+
+#: src/pages/services/home-cleaning-couches/couches.tsx:92
+msgid "home-cleaning-couches.couches.p-2.item-7"
+msgstr "Chair bio-cleaning: €12.00"
+
+#: src/pages/services/home-cleaning-couches/couches.tsx:98
+msgid "home-cleaning-couches.couches.p-2.item-8"
+msgstr "Chair bio-cleaning (back & seat): €18.00"
+
+#: src/pages/services/home-cleaning-couches/couches.tsx:49
+msgid "home-cleaning-couches.couches.p-2.title"
+msgstr "Categories"
+
+#: src/pages/services/home-cleaning-couches/couches.tsx:105
+msgid "home-cleaning-couches.couches.p-3.1"
+msgstr "* All our prices include the chemical compound that aims to extend the life of your products."
+
+#: src/pages/services/home-cleaning-couches/couches.tsx:30
+msgid "home-cleaning-couches.couches.title"
+msgstr "Couches"
+
+#: src/pages/services/home-cleaning-couches/mattresses.tsx:44
+msgid "home-cleaning-couches.mattresses.p-1.1"
+msgstr "A house dust mite produces about 20 pellets of feces per day. If you consider that its lifespan is about 42 days, it means that it produces a total of 840 pieces of them. This amount is actually 200 times greater than the weight of the mite itself (Dermatophagoldes pteronyssinus). Even a clean pillow contains many tens of thousands of \"domestic animals\" of about 0.3 thousand. In fact, when pillows have not been cleaned for years (usually only the cover is washed), up to 400,000 mites can live there"
+
+#: src/pages/services/home-cleaning-couches/mattresses.tsx:38
+msgid "home-cleaning-couches.mattresses.p-1.2"
+msgstr "Mites always carry with them their tool, which has just that name, namely Aspergillus Repens, the fungus we mentioned earlier. In this way, the fungus is dispersed with each movement of the mite and the skin scales become more palatable to the mites. The danger, however, is not the mite itself, but their droppings. These droppings contain ingredients that cause allergies. That is, when they are exhaled as fine dust, they cause allergies, such as the allergy that comes from house dust. Want to know how much feces a mite can produce per day?"
+
+#: src/pages/services/home-cleaning-couches/mattresses.tsx:58
+msgid "home-cleaning-couches.mattresses.p-2.item-1"
+msgstr "Single layer price: €32.00"
+
+#: src/pages/services/home-cleaning-couches/mattresses.tsx:64
+msgid "home-cleaning-couches.mattresses.p-2.item-2"
+msgstr "Double layer price: €60.00"
+
+#: src/pages/services/home-cleaning-couches/mattresses.tsx:51
+msgid "home-cleaning-couches.mattresses.p-2.title"
+msgstr "Categories"
+
+#: src/pages/services/home-cleaning-couches/mattresses.tsx:32
+msgid "home-cleaning-couches.mattresses.title"
+msgstr "Mattresses"
+
+#: src/pages/services/home-cleaning-couches/carpets.tsx:120
+#: src/pages/services/home-cleaning-couches/couches.tsx:129
+#: src/pages/services/home-cleaning-couches/mattresses.tsx:92
+msgid "home-cleaning-couches.title"
+msgstr "Home Cleaning Services"
+
 #: src/layouts/landingLayout.tsx:25
 msgid "navlinks.contact"
 msgstr "Contact"
@@ -353,9 +765,65 @@ msgstr "Portfolio"
 msgid "navlinks.services"
 msgstr "Services"
 
+#: src/layouts/sidebarLayout.tsx:17
+msgid "service-sidebar.title"
+msgstr "Our Services"
+
+#: src/data/serviceData.ts:5
+msgid "serviceData.car-sub-category.1"
+msgstr "Car Wash"
+
+#: src/data/serviceData.ts:12
+msgid "serviceData.car-sub-category.2"
+msgstr "Detailing"
+
+#: src/data/serviceData.ts:19
+msgid "serviceData.car-sub-category.3"
+msgstr "Motobike Wash"
+
+#: src/data/serviceData.ts:180
+msgid "serviceData.home-sub-category.1"
+msgstr "Couches"
+
+#: src/data/serviceData.ts:187
+msgid "serviceData.home-sub-category.2"
+msgstr "Carpets"
+
+#: src/data/serviceData.ts:194
+msgid "serviceData.home-sub-category.3"
+msgstr "Matresses"
+
 #: src/components/serviceSection.tsx:40
 msgid "serviceSection.button.text"
 msgstr "Book Now"
+
+#: src/data/serviceData.ts:203
+msgid "services-side-bar.layout.1"
+msgstr "Car Wash and Detailing"
+
+#: src/data/serviceData.ts:210
+msgid "services-side-bar.layout.2"
+msgstr "Home Cleaning"
+
+#: src/data/serviceData.ts:217
+msgid "services-side-bar.layout.3"
+msgstr "Yatch Cleaning"
+
+#: src/data/serviceData.ts:224
+msgid "services-side-bar.layout.4"
+msgstr "Property Cleaning"
+
+#: src/pages/services/home-cleaning-couches/couches.tsx:114
+#: src/pages/services/home-cleaning-couches/mattresses.tsx:74
+msgid "services.book-an-appointment-now"
+msgstr "BOOK AN APPOINTMENT NOW"
+
+#: src/pages/services/home-cleaning-couches/carpets.tsx:104
+#: src/pages/services/property-cleaning-garage-driveways.tsx:47
+#: src/pages/services/yacht-cleaning-boat.tsx:95
+#: src/pages/services/yacht-cleaning-boat.tsx:181
+msgid "services.request-an-offer"
+msgstr "REQUEST AN OFFER"
 
 #: src/components/bookingForm.tsx:59
 msgid "talentForm.errorMessage"
@@ -364,3 +832,91 @@ msgstr "Submission was not recorded. Please contact us directly"
 #: src/components/bookingForm.tsx:51
 msgid "talentForm.successMessage"
 msgstr "Successful Submission. We thank you!"
+
+#: src/pages/services/yacht-cleaning-boat.tsx:34
+msgid "yacht-cleaning-boat.p-1.1"
+msgstr "Cleaning is done without the use of a brush or sponge but only with it use of hot water for less damage to the car's exterior paint. At Glow King we offer you a complete cleaning with pre-washing and mainly washing of the machine with active foam, cleaning of fogs and rims, removal of insects, protective wax and washing the car with deionized water!"
+
+#: src/pages/services/yacht-cleaning-boat.tsx:40
+msgid "yacht-cleaning-boat.p-1.2"
+msgstr "Your machine is then thoroughly cleaned. Cleaning with respect for people and the environment as a guideline we use ecological biodegradable products. Blow the inside of your machine to remove the dust and then clean with a vacuum cleaner. Finally, we proceed to cleaning and maintenance of all plastic surfaces, dry cleaning and perfuming her saddle your machine."
+
+#: src/pages/services/yacht-cleaning-boat.tsx:46
+msgid "yacht-cleaning-boat.p-1.3"
+msgstr "Minimum fee to come to your place: €30.00"
+
+#: src/pages/services/yacht-cleaning-boat.tsx:60
+msgid "yacht-cleaning-boat.p-2.desc"
+msgstr "We undertake the biological cleaning of your boat, specifically:"
+
+#: src/pages/services/yacht-cleaning-boat.tsx:67
+msgid "yacht-cleaning-boat.p-2.item-1"
+msgstr "Cleaning materials and professional equipment meet all modern standards."
+
+#: src/pages/services/yacht-cleaning-boat.tsx:73
+msgid "yacht-cleaning-boat.p-2.item-2"
+msgstr "Carpets"
+
+#: src/pages/services/yacht-cleaning-boat.tsx:79
+msgid "yacht-cleaning-boat.p-2.item-3"
+msgstr "Lounges"
+
+#: src/pages/services/yacht-cleaning-boat.tsx:85
+msgid "yacht-cleaning-boat.p-2.item-4"
+msgstr "Mattresses"
+
+#: src/pages/services/yacht-cleaning-boat.tsx:54
+msgid "yacht-cleaning-boat.p-2.title"
+msgstr "Biological Boat Cleaning"
+
+#: src/pages/services/yacht-cleaning-boat.tsx:110
+msgid "yacht-cleaning-boat.p-3.1"
+msgstr "Our company has been offering cleaning services since 1994 to professional and private boats, motor & sailing yachts / power boats / inflatables, knowing very well the requirements of a boat, the materials to be used for each surface and the attention to be paid to transportation of machinery."
+
+#: src/pages/services/yacht-cleaning-boat.tsx:116
+msgid "yacht-cleaning-boat.p-3.2"
+msgstr "Services we offer are the following:"
+
+#: src/pages/services/yacht-cleaning-boat.tsx:123
+msgid "yacht-cleaning-boat.p-3.item-1"
+msgstr "Internal cleaning"
+
+#: src/pages/services/yacht-cleaning-boat.tsx:129
+msgid "yacht-cleaning-boat.p-3.item-2"
+msgstr "Internal biological with steam"
+
+#: src/pages/services/yacht-cleaning-boat.tsx:135
+msgid "yacht-cleaning-boat.p-3.item-3"
+msgstr "External Cleaning"
+
+#: src/pages/services/yacht-cleaning-boat.tsx:141
+msgid "yacht-cleaning-boat.p-3.item-4"
+msgstr "Exterior Cleaning detaling*"
+
+#: src/pages/services/yacht-cleaning-boat.tsx:147
+msgid "yacht-cleaning-boat.p-3.item-5"
+msgstr "Biological cleaning of fabrics / mattresses & carpets"
+
+#: src/pages/services/yacht-cleaning-boat.tsx:153
+msgid "yacht-cleaning-boat.p-3.item-6"
+msgstr "Washing carpets with rotary machine & extraction"
+
+#: src/pages/services/yacht-cleaning-boat.tsx:159
+msgid "yacht-cleaning-boat.p-3.item-7"
+msgstr "Clothing laundry"
+
+#: src/pages/services/yacht-cleaning-boat.tsx:165
+msgid "yacht-cleaning-boat.p-3.item-8"
+msgstr "Stainless steel polishing"
+
+#: src/pages/services/yacht-cleaning-boat.tsx:171
+msgid "yacht-cleaning-boat.p-3.item-9"
+msgstr "Tender cleanings"
+
+#: src/pages/services/yacht-cleaning-boat.tsx:104
+msgid "yacht-cleaning-boat.p-3.title"
+msgstr "Biological Boat Cleaning"
+
+#: src/pages/services/yacht-cleaning-boat.tsx:28
+msgid "yacht-cleaning-boat.title"
+msgstr "Yatch Cleaning"

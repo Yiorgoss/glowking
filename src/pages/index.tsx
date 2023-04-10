@@ -5,13 +5,15 @@ import Head from 'next/head';
 import { GetServerSideProps, GetStaticProps } from 'next';
 import { ReactElement, useState, useEffect } from 'react';
 
-import { t, Trans } from '@lingui/macro';
+import { t } from '@lingui/macro';
 
 import LandingLayout from '@layouts/landingLayout';
 import CardMain from '@components/cardMain';
 import SocialsTab from '@components/socialsTab';
 import ServiceSection from '@components/serviceSection';
 import type { PageWithHeaderLayout } from '@cTypes/layoutTypes';
+
+import { serviceData } from '@/data/serviceData';
 
 import { loadTranslation } from '@/utils/utils';
 
@@ -30,56 +32,6 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 
 const Home: PageWithHeaderLayout = ({}) => {
     //ugly but works
-    const serviceList = [
-        {
-            header: t({
-                id: `Home.servicesList.one.header`,
-                message: 'External Wash'
-            }),
-            content: t({
-                id: `Home.servicesList.one.content`,
-                message:
-                    "External cleaning is done without the use of a brush or sponge, but only with the use of hot water for less damage to the car's exterior paint.At Glow King we offer you a complete exterior cleaning with pre-washing and mainly washing the vehicle with active foam, cleaning the domes and rims, removing insects, protective wax and rinsing the car with deionized water!The vehicle is then thoroughly wiped."
-            }),
-            image: '/media/images/external.jpeg'
-        },
-        {
-            header: t({
-                id: `Home.servicesList.two.header`,
-                message: 'Internal Cleaning'
-            }),
-            content: t({
-                id: `Home.servicesList.two.content`,
-                message:
-                    'In internal cleaning, with respect for people and the environment as our guiding principle, we use ecologically biodegradable products.Internally we blow the vehicle to remove the dust and then vacuum the cabin and the luggage compartment, cleaning the windows and all glass surfaces.Finally, we proceed with cleaning and maintenance of all leather and plastic surfaces, dry cleaning of carpets and perfuming the cabin area.'
-            }),
-            image: '/media/images/internal.jpeg'
-        },
-        {
-            header: t({
-                id: `Home.servicesList.three.header`,
-                message: 'Boat Washing'
-            }),
-            content: t({
-                id: `Home.servicesList.three.content`,
-                message:
-                    'Your boat has found its master! Our company undertakes both the interior and exterior cleaning of your boat. Our trusted staff combined with the top quality of our products will make your boat shine!'
-            }),
-            image: '/media/images/yatch.jpg'
-        },
-        {
-            header: t({
-                id: `Home.servicesList.four.header`,
-                message: 'Pavement/Garage Washing'
-            }),
-            content: t({
-                id: `Home.servicesList.four.content`,
-                message:
-                    'A garage full of dust, mud and clutter? Our company undertakes a complete cleaning of your garage. Our trusted staff combined with the top of our products will make your garage shine!'
-            }),
-            image: '/media/images/pavement.png'
-        }
-    ];
 
     const featureList = [
         {
@@ -147,16 +99,32 @@ const Home: PageWithHeaderLayout = ({}) => {
     //        height: number;
     //    }>();
 
-    const [imageUrl, setImageUrl] = useState('');
+    const [responsiveImage, setResponsiveImage] = useState(
+        <Image className="object-cover" src='/media/images/landing_image.jpeg' alt='' fill />
+    );
     useEffect(() => {
         // only execute all the code below in client side
         // Handler to call on window resize
         function handleResize() {
             // Set window width/height to state
             if (window.innerWidth >= 800) {
-                setImageUrl('/media/images/landing_image.jpeg');
+                setResponsiveImage(
+                    <Image
+                        className='object-cover'
+                        src='/media/images/landing_image.jpeg'
+                        alt=''
+                        fill
+                    />
+                )
             } else {
-                setImageUrl('/media/images/mobile_landing_image.jpeg');
+                setResponsiveImage(
+                    <Image
+                        className='object-cover'
+                        src='/media/images/mobile_landing_image.jpeg'
+                        alt=''
+                        fill
+                    />
+                );
             }
         }
 
@@ -183,12 +151,7 @@ const Home: PageWithHeaderLayout = ({}) => {
             </Head>
             <div className='h-screen w-screen '>
                 <div className='relative -z-10 h-full w-full'>
-                    <Image
-                        className='object-cover'
-                        src={imageUrl}
-                        alt=''
-                        fill
-                    />
+                    {responsiveImage}
                 </div>
                 <div className='absolute bottom-0 right-0 pr-10 pb-5 '>
                     <SocialsTab isVert={true} />
@@ -232,8 +195,8 @@ const Home: PageWithHeaderLayout = ({}) => {
                     <h1 className='my-10 text-center text-3xl font-semibold'>
                         {t({ id: 'Home.Services', message: 'Our Services' })}
                     </h1>
-                    <div className='mx-auto grid w-4/5 grid-cols-1 justify-center gap-y-8 gap-x-4 md:grid-cols-2 2xl:w-full 2xl:grid-cols-4 2xl:justify-between '>
-                        {serviceList.map((service, i) => (
+                    <div className='mx-auto grid w-4/5 grid-cols-1 gap-x-5 gap-y-10 md:grid-cols-3 '>
+                        {serviceData.map((service, i) => (
                             <CardMain
                                 href='/services'
                                 header={service.header}

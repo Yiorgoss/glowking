@@ -19,7 +19,7 @@ const NAV_LINKS = [
     },
     {
         title: t({id:'navlinks.services',message:"Services"}),
-        path: "/services",
+        path: "/services/detail-car-wash/car-cleaning",
     },
     {
         title: t({id:'navlinks.contact',message:"Contact"}),
@@ -31,7 +31,7 @@ const NAV_LINKS = [
     },
 ];
     return (
-        <div className="text-secondary">
+        <div className="text-secondary ">
             <Header navLinks={NAV_LINKS}/>
                 <div className="-mt-[100px]">{children}</div>
             <Footer navLinks={NAV_LINKS}/>
