@@ -133,7 +133,7 @@ export const carServiceExtras = [
         }),
         content: defineMessage({
             id: `car-service-extras.8.content`,
-            message: `We Clean Your unit air condition unit`
+            message: `We clean your air condition unit`
         }),
         price: 15,
         href: ''
@@ -259,13 +259,13 @@ export const serviceData = [
     },
     {
         header: defineMessage({
-            id: `Services-simple-list.two.header`,
-            message: 'Internal Cleaning'
+            id: `Services-simple-list.three.header`,
+            message: 'Full Detailing'
         }),
         content: defineMessage({
-            id: `Services-simple-list.two.content`,
+            id: `Services-simple-list.three.content`,
             message:
-                'In internal cleaning, with respect for people and the environment as our guiding principle, we use ecologically biodegradable products.Internally we blow the vehicle to remove the dust and then vacuum the cabin and the luggage compartment, cleaning the windows and all glass surfaces.Finally, we proceed with cleaning and maintenance of all leather and plastic surfaces, dry cleaning of carpets and perfuming the cabin area.'
+            'Car detailing is the service that offers you the detailing you deserve! Top quality materials and top staff are the ultimate combination for top results. A result with a protagonist...you!'
         }),
         image: '/media/images/internal.jpeg',
         className: 'col-span-3',
@@ -273,11 +273,11 @@ export const serviceData = [
     },
     {
         header: defineMessage({
-            id: `Services-simple-list.three.header`,
+            id: `Services-simple-list.four.header`,
             message: 'Yacht Services'
         }),
         content: defineMessage({
-            id: `Services-simple-list.three.content`,
+            id: `Services-simple-list.four.content`,
             message:
                 'Your boat has found its master! Our company undertakes both the interior and exterior cleaning of your boat. Our trusted staff combined with the top quality of our products will make your boat shine!'
         }),
@@ -287,11 +287,11 @@ export const serviceData = [
     },
     {
         header: defineMessage({
-            id: `Services-simple-list.four.header`,
+            id: `Services-simple-list.five.header`,
             message: 'Home Services'
         }),
         content: defineMessage({
-            id: `Services-simple-list.four.content`,
+            id: `Services-simple-list.five.content`,
             message:
                 'Biocleaning sofa is the most complete sofa cleaning process and more generally fabric surfaces that you can find. This method concerns the best way to clean a fabric surface since it cleans stains refreshes colors, disinfects the entire surface and deodorizes the unpleasant ones smells. The surfaces are then fresh for a few hours.'
         }),
@@ -301,13 +301,13 @@ export const serviceData = [
     },
     {
         header: defineMessage({
-            id: `Services-simple-list.four.header`,
-            message: 'Home Services'
+            id: `Services-simple-list.six.header`,
+            message: 'Property Services'
         }),
         content: defineMessage({
-            id: `Services-simple-list.four.content`,
+            id: `Services-simple-list.six.content`,
             message:
-                'Biocleaning sofa is the most complete sofa cleaning process and more generally fabric surfaces that you can find. This method concerns the best way to clean a fabric surface since it cleans stains refreshes colors, disinfects the entire surface and deodorizes the unpleasant ones smells. The surfaces are then fresh for a few hours.'
+            'A garage full of dust, mud and clutter? Our company undertakes a complete cleaning of your garage. Our trusted staff combined with the top quality of our products will make your garage shine!'
         }),
         image: '/media/images/pavement.png',
         className: 'col-span-2',

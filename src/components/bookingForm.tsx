@@ -49,7 +49,7 @@ const BookingForm = () => {
         if (response) {
             setMessage(
                 t({
-                    id: 'talentForm.successMessage',
+                    id: 'BookingForm.successMessage',
                     message: 'Successful Submission. We thank you!'
                 })
             );
@@ -57,7 +57,7 @@ const BookingForm = () => {
         } else {
             setMessage(
                 t({
-                    id: 'talentForm.errorMessage',
+                    id: 'BookingForm.errorMessage',
                     message:
                         'Submission was not recorded. Please contact us directly'
                 })

@@ -13,6 +13,19 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#: src/components/header.tsx:109
+#: src/components/header.tsx:115
+msgid "Book-Now"
+msgstr ""
+
+#: src/components/bookingForm.tsx:59
+msgid "BookingForm.errorMessage"
+msgstr ""
+
+#: src/components/bookingForm.tsx:51
+msgid "BookingForm.successMessage"
+msgstr ""
+
 #: src/pages/contact.tsx:62
 msgid "Contact.contactUs"
 msgstr ""
@@ -93,11 +106,11 @@ msgstr ""
 msgid "Footer.sitemap"
 msgstr ""
 
-#: src/pages/index.tsx:154
+#: src/pages/index.tsx:163
 msgid "Home.Features"
 msgstr ""
 
-#: src/pages/index.tsx:187
+#: src/pages/index.tsx:196
 msgid "Home.Services"
 msgstr ""
 
@@ -133,48 +146,16 @@ msgstr ""
 msgid "Home.featureList.one.header"
 msgstr ""
 
-#: src/pages/index.tsx:129
+#: src/pages/index.tsx:145
 msgid "Home.head.title"
 msgstr ""
 
-#: src/pages/index.tsx:176
+#: src/pages/index.tsx:185
 msgid "Home.serviceSection.content"
 msgstr ""
 
-#: src/pages/index.tsx:172
+#: src/pages/index.tsx:181
 msgid "Home.serviceSection.title"
-msgstr ""
-
-#: src/pages/services.tsx:74
-msgid "Home.servicesList.four.content"
-msgstr ""
-
-#: src/pages/services.tsx:70
-msgid "Home.servicesList.four.header"
-msgstr ""
-
-#: src/pages/services.tsx:38
-msgid "Home.servicesList.one.content"
-msgstr ""
-
-#: src/pages/services.tsx:34
-msgid "Home.servicesList.one.header"
-msgstr ""
-
-#: src/pages/services.tsx:62
-msgid "Home.servicesList.three.content"
-msgstr ""
-
-#: src/pages/services.tsx:58
-msgid "Home.servicesList.three.header"
-msgstr ""
-
-#: src/pages/services.tsx:50
-msgid "Home.servicesList.two.content"
-msgstr ""
-
-#: src/pages/services.tsx:46
-msgid "Home.servicesList.two.header"
 msgstr ""
 
 #: src/pages/legal.tsx:30
@@ -218,12 +199,18 @@ msgid "Portfolio.header"
 msgstr ""
 
 #: src/data/serviceData.ts:293
-#: src/data/serviceData.ts:307
-msgid "Services-simple-list.four.content"
+msgid "Services-simple-list.five.content"
 msgstr ""
 
 #: src/data/serviceData.ts:289
-#: src/data/serviceData.ts:303
+msgid "Services-simple-list.five.header"
+msgstr ""
+
+#: src/data/serviceData.ts:279
+msgid "Services-simple-list.four.content"
+msgstr ""
+
+#: src/data/serviceData.ts:275
 msgid "Services-simple-list.four.header"
 msgstr ""
 
@@ -235,30 +222,28 @@ msgstr ""
 msgid "Services-simple-list.one.header"
 msgstr ""
 
-#: src/data/serviceData.ts:279
+#: src/data/serviceData.ts:307
+msgid "Services-simple-list.six.content"
+msgstr ""
+
+#: src/data/serviceData.ts:303
+msgid "Services-simple-list.six.header"
+msgstr ""
+
+#: src/data/serviceData.ts:265
 msgid "Services-simple-list.three.content"
 msgstr ""
 
-#: src/data/serviceData.ts:275
+#: src/data/serviceData.ts:261
 msgid "Services-simple-list.three.header"
 msgstr ""
 
 #: src/data/serviceData.ts:251
-#: src/data/serviceData.ts:265
 msgid "Services-simple-list.two.content"
 msgstr ""
 
 #: src/data/serviceData.ts:247
-#: src/data/serviceData.ts:261
 msgid "Services-simple-list.two.header"
-msgstr ""
-
-#: src/pages/services.tsx:84
-msgid "Services.head.title"
-msgstr ""
-
-#: src/pages/services.tsx:95
-msgid "Services.services.header"
 msgstr ""
 
 #: src/components/bookingForm.tsx:160
@@ -615,14 +600,6 @@ msgstr ""
 msgid "footer.helpLinks.two"
 msgstr ""
 
-#: src/components/header.tsx:113
-msgid "headerButton"
-msgstr ""
-
-#: src/components/header.tsx:107
-msgid "headerButton.responsive"
-msgstr ""
-
 #: src/pages/services/home-cleaning-couches/carpets.tsx:38
 msgid "home-cleaning-couches.carpets.p-1.1"
 msgstr ""
@@ -820,17 +797,9 @@ msgstr ""
 
 #: src/pages/services/home-cleaning-couches/carpets.tsx:104
 #: src/pages/services/property-cleaning-garage-driveways.tsx:47
-#: src/pages/services/yacht-cleaning-boat.tsx:95
-#: src/pages/services/yacht-cleaning-boat.tsx:181
+#: src/pages/services/yacht-cleaning-boat.tsx:113
+#: src/pages/services/yacht-cleaning-boat.tsx:199
 msgid "services.request-an-offer"
-msgstr ""
-
-#: src/components/bookingForm.tsx:59
-msgid "talentForm.errorMessage"
-msgstr ""
-
-#: src/components/bookingForm.tsx:51
-msgid "talentForm.successMessage"
 msgstr ""
 
 #: src/pages/services/yacht-cleaning-boat.tsx:34
@@ -845,75 +814,87 @@ msgstr ""
 msgid "yacht-cleaning-boat.p-1.3"
 msgstr ""
 
-#: src/pages/services/yacht-cleaning-boat.tsx:60
+#: src/pages/services/yacht-cleaning-boat.tsx:52
+msgid "yacht-cleaning-boat.p-1.4"
+msgstr ""
+
+#: src/pages/services/yacht-cleaning-boat.tsx:58
+msgid "yacht-cleaning-boat.p-1.5"
+msgstr ""
+
+#: src/pages/services/yacht-cleaning-boat.tsx:64
+msgid "yacht-cleaning-boat.p-1.6"
+msgstr ""
+
+#: src/pages/services/yacht-cleaning-boat.tsx:78
 msgid "yacht-cleaning-boat.p-2.desc"
 msgstr ""
 
-#: src/pages/services/yacht-cleaning-boat.tsx:67
+#: src/pages/services/yacht-cleaning-boat.tsx:85
 msgid "yacht-cleaning-boat.p-2.item-1"
 msgstr ""
 
-#: src/pages/services/yacht-cleaning-boat.tsx:73
+#: src/pages/services/yacht-cleaning-boat.tsx:91
 msgid "yacht-cleaning-boat.p-2.item-2"
 msgstr ""
 
-#: src/pages/services/yacht-cleaning-boat.tsx:79
+#: src/pages/services/yacht-cleaning-boat.tsx:97
 msgid "yacht-cleaning-boat.p-2.item-3"
 msgstr ""
 
-#: src/pages/services/yacht-cleaning-boat.tsx:85
+#: src/pages/services/yacht-cleaning-boat.tsx:103
 msgid "yacht-cleaning-boat.p-2.item-4"
 msgstr ""
 
-#: src/pages/services/yacht-cleaning-boat.tsx:54
+#: src/pages/services/yacht-cleaning-boat.tsx:72
 msgid "yacht-cleaning-boat.p-2.title"
 msgstr ""
 
-#: src/pages/services/yacht-cleaning-boat.tsx:110
+#: src/pages/services/yacht-cleaning-boat.tsx:128
 msgid "yacht-cleaning-boat.p-3.1"
 msgstr ""
 
-#: src/pages/services/yacht-cleaning-boat.tsx:116
+#: src/pages/services/yacht-cleaning-boat.tsx:134
 msgid "yacht-cleaning-boat.p-3.2"
 msgstr ""
 
-#: src/pages/services/yacht-cleaning-boat.tsx:123
+#: src/pages/services/yacht-cleaning-boat.tsx:141
 msgid "yacht-cleaning-boat.p-3.item-1"
 msgstr ""
 
-#: src/pages/services/yacht-cleaning-boat.tsx:129
+#: src/pages/services/yacht-cleaning-boat.tsx:147
 msgid "yacht-cleaning-boat.p-3.item-2"
 msgstr ""
 
-#: src/pages/services/yacht-cleaning-boat.tsx:135
+#: src/pages/services/yacht-cleaning-boat.tsx:153
 msgid "yacht-cleaning-boat.p-3.item-3"
 msgstr ""
 
-#: src/pages/services/yacht-cleaning-boat.tsx:141
+#: src/pages/services/yacht-cleaning-boat.tsx:159
 msgid "yacht-cleaning-boat.p-3.item-4"
 msgstr ""
 
-#: src/pages/services/yacht-cleaning-boat.tsx:147
+#: src/pages/services/yacht-cleaning-boat.tsx:165
 msgid "yacht-cleaning-boat.p-3.item-5"
 msgstr ""
 
-#: src/pages/services/yacht-cleaning-boat.tsx:153
+#: src/pages/services/yacht-cleaning-boat.tsx:171
 msgid "yacht-cleaning-boat.p-3.item-6"
 msgstr ""
 
-#: src/pages/services/yacht-cleaning-boat.tsx:159
+#: src/pages/services/yacht-cleaning-boat.tsx:177
 msgid "yacht-cleaning-boat.p-3.item-7"
 msgstr ""
 
-#: src/pages/services/yacht-cleaning-boat.tsx:165
+#: src/pages/services/yacht-cleaning-boat.tsx:183
 msgid "yacht-cleaning-boat.p-3.item-8"
 msgstr ""
 
-#: src/pages/services/yacht-cleaning-boat.tsx:171
+#: src/pages/services/yacht-cleaning-boat.tsx:189
 msgid "yacht-cleaning-boat.p-3.item-9"
 msgstr ""
 
-#: src/pages/services/yacht-cleaning-boat.tsx:104
+#: src/pages/services/yacht-cleaning-boat.tsx:122
 msgid "yacht-cleaning-boat.p-3.title"
 msgstr ""
 

@@ -33,18 +33,36 @@ const ServicesYachtCleaningBoat = () => {
             <div className='pt-5'>
                 {t({
                     id: `yacht-cleaning-boat.p-1.1`,
-                    message: `Cleaning is done without the use of a brush or sponge but only with it use of hot water for less damage to the car's exterior paint. At Glow King we offer you a complete cleaning with pre-washing and mainly washing of the machine with active foam, cleaning of fogs and rims, removal of insects, protective wax and washing the car with deionized water!`
+                    message: `The cleaning is done without the use of a brush or sponge but only with the use of hot water for less damage to the car's exterior paint.`
                 })}
             </div>
             <div className='pt-5'>
                 {t({
                     id: `yacht-cleaning-boat.p-1.2`,
-                    message: `Your machine is then thoroughly cleaned. Cleaning with respect for people and the environment as a guideline we use ecological biodegradable products. Blow the inside of your machine to remove the dust and then clean with a vacuum cleaner. Finally, we proceed to cleaning and maintenance of all plastic surfaces, dry cleaning and perfuming her saddle your machine.`
+                    message: `At Glow King we offer you a complete cleaning with pre-washing and mainly washing the machine with active foam, cleaning the fog lights and rims, removing insects, protective wax and rinsing the car with deionized water!`
+                })}
+            </div>
+            <div className='pt-5'>
+                {t({
+                    id: `yacht-cleaning-boat.p-1.3`,
+                    message: `Your machine is then thoroughly wiped.`
+                })}
+            </div>
+            <div className='pt-5'>
+                {t({
+                    id: `yacht-cleaning-boat.p-1.4`,
+                    message: `In cleaning, with respect for people and the environment as our guiding principle, we use ecologically biodegradable products.`
+                })}
+            </div>
+            <div className='pt-5'>
+                {t({
+                    id: `yacht-cleaning-boat.p-1.5`,
+                    message: `We blow the inside of your machine to remove the dust and then clean with a vacuum cleaner. Finally, we proceed with cleaning and maintenance of all plastic surfaces, dry cleaning and perfuming the saddle of your machine.`
                 })}
             </div>
             <div className='text-md pt-3'>
                 {t({
-                    id: `yacht-cleaning-boat.p-1.3`,
+                    id: `yacht-cleaning-boat.p-1.6`,
                     message: `Minimum fee to come to your place: €30.00`
                 })}
             </div>

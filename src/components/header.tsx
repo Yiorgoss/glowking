@@ -99,20 +99,20 @@ export default function Header({
                                 <ActiveLink
                                     href={link.path}
                                     activeClassName='text-tertiary'
-                                    contains={1}
+                                    containLevel={1}
                                     className='py-6 px-2 md:px-6'>
                                     {link.title}
                                 </ActiveLink>
                             </li>
                         ))}
                     <Button className="font-semibold text-2xl block md:hidden" href='/contact'>
-                        {t({ id: 'headerButton.responsive', message: 'Book Now' })}
+                        {t({ id: 'Book-Now', message: 'Book Now' })}
                     </Button>
                     </ul>
                 </div>
                 <div className='grid-auto my-auto mr-2 hidden w-fit whitespace-nowrap md:float-right md:float-none md:block '>
                     <Button href='/contact'>
-                        {t({ id: 'headerButton', message: 'Book Now' })}
+                        {t({ id: 'Book-Now', message: 'Book Now' })}
                     </Button>
                 </div>
             </div>

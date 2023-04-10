@@ -13,6 +13,19 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#: src/components/header.tsx:109
+#: src/components/header.tsx:115
+msgid "Book-Now"
+msgstr "Book Now"
+
+#: src/components/bookingForm.tsx:59
+msgid "BookingForm.errorMessage"
+msgstr "Submission was not recorded. Please contact us directly"
+
+#: src/components/bookingForm.tsx:51
+msgid "BookingForm.successMessage"
+msgstr "Successful Submission. We thank you!"
+
 #: src/pages/contact.tsx:62
 msgid "Contact.contactUs"
 msgstr "Contact Us"
@@ -93,11 +106,11 @@ msgstr "Where to find us"
 msgid "Footer.sitemap"
 msgstr "Sitemap"
 
-#: src/pages/index.tsx:154
+#: src/pages/index.tsx:163
 msgid "Home.Features"
 msgstr "Features"
 
-#: src/pages/index.tsx:187
+#: src/pages/index.tsx:196
 msgid "Home.Services"
 msgstr "Our Services"
 
@@ -133,49 +146,17 @@ msgstr "Professional washing and cleaning for your car!The mobile car wash GLOW 
 msgid "Home.featureList.one.header"
 msgstr "Location Of Your Choice"
 
-#: src/pages/index.tsx:129
+#: src/pages/index.tsx:145
 msgid "Home.head.title"
 msgstr "Glowking | Carwash while at Work | Carwash while at Home"
 
-#: src/pages/index.tsx:176
+#: src/pages/index.tsx:185
 msgid "Home.serviceSection.content"
 msgstr "GLOW KING ATHENS is an innovative idea that annihilates distances! It started in 2019 and in the middle of the pandemic it covered all the southern suburbs. Complete cleaning services of the vehicle, the property, the pavement and everything else you need! GLOW KING ATHENS operates with the environment and people as its main focus, next to your every need. Glow King Athens starring... you!"
 
-#: src/pages/index.tsx:172
+#: src/pages/index.tsx:181
 msgid "Home.serviceSection.title"
 msgstr "Who Are We?"
-
-#: src/pages/services.tsx:74
-msgid "Home.servicesList.four.content"
-msgstr "A garage full of dust, mud and clutter? Our company undertakes a complete cleaning of your garage. Our trusted staff combined with the top of our products will make your garage shine!"
-
-#: src/pages/services.tsx:70
-msgid "Home.servicesList.four.header"
-msgstr "Pavement/Garage Washing"
-
-#: src/pages/services.tsx:38
-msgid "Home.servicesList.one.content"
-msgstr "External cleaning is done without the use of a brush or sponge, but only with the use of hot water for less damage to the car's exterior paint.At Glow King we offer you a complete exterior cleaning with pre-washing and mainly washing the vehicle with active foam, cleaning the domes and rims, removing insects, protective wax and rinsing the car with deionized water!The vehicle is then thoroughly wiped."
-
-#: src/pages/services.tsx:34
-msgid "Home.servicesList.one.header"
-msgstr "External Wash"
-
-#: src/pages/services.tsx:62
-msgid "Home.servicesList.three.content"
-msgstr "Your boat has found its master! Our company undertakes both the interior and exterior cleaning of your boat. Our trusted staff combined with the top quality of our products will make your boat shine!"
-
-#: src/pages/services.tsx:58
-msgid "Home.servicesList.three.header"
-msgstr "Boat Washing"
-
-#: src/pages/services.tsx:50
-msgid "Home.servicesList.two.content"
-msgstr "In internal cleaning, with respect for people and the environment as our guiding principle, we use ecologically biodegradable products.Internally we blow the vehicle to remove the dust and then vacuum the cabin and the luggage compartment, cleaning the windows and all glass surfaces.Finally, we proceed with cleaning and maintenance of all leather and plastic surfaces, dry cleaning of carpets and perfuming the cabin area."
-
-#: src/pages/services.tsx:46
-msgid "Home.servicesList.two.header"
-msgstr "Internal Cleaning"
 
 #: src/pages/legal.tsx:30
 msgid "Legal.GDPR.header"
@@ -218,12 +199,18 @@ msgid "Portfolio.header"
 msgstr "Our Portfolio"
 
 #: src/data/serviceData.ts:293
-#: src/data/serviceData.ts:307
-msgid "Services-simple-list.four.content"
+msgid "Services-simple-list.five.content"
 msgstr "Biocleaning sofa is the most complete sofa cleaning process and more generally fabric surfaces that you can find. This method concerns the best way to clean a fabric surface since it cleans stains refreshes colors, disinfects the entire surface and deodorizes the unpleasant ones smells. The surfaces are then fresh for a few hours."
 
 #: src/data/serviceData.ts:289
-#: src/data/serviceData.ts:303
+msgid "Services-simple-list.five.header"
+msgstr "Home Services"
+
+#: src/data/serviceData.ts:279
+msgid "Services-simple-list.four.content"
+msgstr "Biocleaning sofa is the most complete sofa cleaning process and more generally fabric surfaces that you can find. This method concerns the best way to clean a fabric surface since it cleans stains refreshes colors, disinfects the entire surface and deodorizes the unpleasant ones smells. The surfaces are then fresh for a few hours."
+
+#: src/data/serviceData.ts:275
 msgid "Services-simple-list.four.header"
 msgstr "Home Services"
 
@@ -235,31 +222,29 @@ msgstr "External cleaning is done without the use of a brush or sponge, but only
 msgid "Services-simple-list.one.header"
 msgstr "External Wash"
 
-#: src/data/serviceData.ts:279
+#: src/data/serviceData.ts:307
+msgid "Services-simple-list.six.content"
+msgstr "A garage full of dust, mud and clutter? Our company undertakes a complete cleaning of your garage. Our trusted staff combined with the top quality of our products will make your garage shine!"
+
+#: src/data/serviceData.ts:303
+msgid "Services-simple-list.six.header"
+msgstr "Property Services"
+
+#: src/data/serviceData.ts:265
 msgid "Services-simple-list.three.content"
 msgstr "Your boat has found its master! Our company undertakes both the interior and exterior cleaning of your boat. Our trusted staff combined with the top quality of our products will make your boat shine!"
 
-#: src/data/serviceData.ts:275
+#: src/data/serviceData.ts:261
 msgid "Services-simple-list.three.header"
 msgstr "Yacht Services"
 
 #: src/data/serviceData.ts:251
-#: src/data/serviceData.ts:265
 msgid "Services-simple-list.two.content"
 msgstr "In internal cleaning, with respect for people and the environment as our guiding principle, we use ecologically biodegradable products.Internally we blow the vehicle to remove the dust and then vacuum the cabin and the luggage compartment, cleaning the windows and all glass surfaces.Finally, we proceed with cleaning and maintenance of all leather and plastic surfaces, dry cleaning of carpets and perfuming the cabin area."
 
 #: src/data/serviceData.ts:247
-#: src/data/serviceData.ts:261
 msgid "Services-simple-list.two.header"
 msgstr "Internal Cleaning"
-
-#: src/pages/services.tsx:84
-msgid "Services.head.title"
-msgstr "Portable Wash | Wash Cars | Wash Boats | Wash Pavement"
-
-#: src/pages/services.tsx:95
-msgid "Services.services.header"
-msgstr "services"
 
 #: src/components/bookingForm.tsx:160
 msgid "bookingForm.input.accept"
@@ -615,14 +600,6 @@ msgstr "How to pay?"
 msgid "footer.helpLinks.two"
 msgstr "Where to ask Questions?"
 
-#: src/components/header.tsx:113
-msgid "headerButton"
-msgstr "Book Now"
-
-#: src/components/header.tsx:107
-msgid "headerButton.responsive"
-msgstr "Book Now"
-
 #: src/pages/services/home-cleaning-couches/carpets.tsx:38
 msgid "home-cleaning-couches.carpets.p-1.1"
 msgstr "The Biological Carpet Cleaning we apply destroys harmful micro-organisms such as mites, fungi and bacteria, so you can step and touch without fear on a healthy carpet!"
@@ -820,18 +797,10 @@ msgstr "BOOK AN APPOINTMENT NOW"
 
 #: src/pages/services/home-cleaning-couches/carpets.tsx:104
 #: src/pages/services/property-cleaning-garage-driveways.tsx:47
-#: src/pages/services/yacht-cleaning-boat.tsx:95
-#: src/pages/services/yacht-cleaning-boat.tsx:181
+#: src/pages/services/yacht-cleaning-boat.tsx:113
+#: src/pages/services/yacht-cleaning-boat.tsx:199
 msgid "services.request-an-offer"
 msgstr "REQUEST AN OFFER"
-
-#: src/components/bookingForm.tsx:59
-msgid "talentForm.errorMessage"
-msgstr "Submission was not recorded. Please contact us directly"
-
-#: src/components/bookingForm.tsx:51
-msgid "talentForm.successMessage"
-msgstr "Successful Submission. We thank you!"
 
 #: src/pages/services/yacht-cleaning-boat.tsx:34
 msgid "yacht-cleaning-boat.p-1.1"
@@ -845,75 +814,87 @@ msgstr "Your machine is then thoroughly cleaned. Cleaning with respect for peopl
 msgid "yacht-cleaning-boat.p-1.3"
 msgstr "Minimum fee to come to your place: €30.00"
 
-#: src/pages/services/yacht-cleaning-boat.tsx:60
+#: src/pages/services/yacht-cleaning-boat.tsx:52
+msgid "yacht-cleaning-boat.p-1.4"
+msgstr "In cleaning, with respect for people and the environment as our guiding principle, we use ecologically biodegradable products."
+
+#: src/pages/services/yacht-cleaning-boat.tsx:58
+msgid "yacht-cleaning-boat.p-1.5"
+msgstr "We blow the inside of your machine to remove the dust and then clean with a vacuum cleaner. Finally, we proceed with cleaning and maintenance of all plastic surfaces, dry cleaning and perfuming the saddle of your machine."
+
+#: src/pages/services/yacht-cleaning-boat.tsx:64
+msgid "yacht-cleaning-boat.p-1.6"
+msgstr "Minimum fee to come to your place: €30.00"
+
+#: src/pages/services/yacht-cleaning-boat.tsx:78
 msgid "yacht-cleaning-boat.p-2.desc"
 msgstr "We undertake the biological cleaning of your boat, specifically:"
 
-#: src/pages/services/yacht-cleaning-boat.tsx:67
+#: src/pages/services/yacht-cleaning-boat.tsx:85
 msgid "yacht-cleaning-boat.p-2.item-1"
 msgstr "Cleaning materials and professional equipment meet all modern standards."
 
-#: src/pages/services/yacht-cleaning-boat.tsx:73
+#: src/pages/services/yacht-cleaning-boat.tsx:91
 msgid "yacht-cleaning-boat.p-2.item-2"
 msgstr "Carpets"
 
-#: src/pages/services/yacht-cleaning-boat.tsx:79
+#: src/pages/services/yacht-cleaning-boat.tsx:97
 msgid "yacht-cleaning-boat.p-2.item-3"
 msgstr "Lounges"
 
-#: src/pages/services/yacht-cleaning-boat.tsx:85
+#: src/pages/services/yacht-cleaning-boat.tsx:103
 msgid "yacht-cleaning-boat.p-2.item-4"
 msgstr "Mattresses"
 
-#: src/pages/services/yacht-cleaning-boat.tsx:54
+#: src/pages/services/yacht-cleaning-boat.tsx:72
 msgid "yacht-cleaning-boat.p-2.title"
 msgstr "Biological Boat Cleaning"
 
-#: src/pages/services/yacht-cleaning-boat.tsx:110
+#: src/pages/services/yacht-cleaning-boat.tsx:128
 msgid "yacht-cleaning-boat.p-3.1"
 msgstr "Our company has been offering cleaning services since 1994 to professional and private boats, motor & sailing yachts / power boats / inflatables, knowing very well the requirements of a boat, the materials to be used for each surface and the attention to be paid to transportation of machinery."
 
-#: src/pages/services/yacht-cleaning-boat.tsx:116
+#: src/pages/services/yacht-cleaning-boat.tsx:134
 msgid "yacht-cleaning-boat.p-3.2"
 msgstr "Services we offer are the following:"
 
-#: src/pages/services/yacht-cleaning-boat.tsx:123
+#: src/pages/services/yacht-cleaning-boat.tsx:141
 msgid "yacht-cleaning-boat.p-3.item-1"
 msgstr "Internal cleaning"
 
-#: src/pages/services/yacht-cleaning-boat.tsx:129
+#: src/pages/services/yacht-cleaning-boat.tsx:147
 msgid "yacht-cleaning-boat.p-3.item-2"
 msgstr "Internal biological with steam"
 
-#: src/pages/services/yacht-cleaning-boat.tsx:135
+#: src/pages/services/yacht-cleaning-boat.tsx:153
 msgid "yacht-cleaning-boat.p-3.item-3"
 msgstr "External Cleaning"
 
-#: src/pages/services/yacht-cleaning-boat.tsx:141
+#: src/pages/services/yacht-cleaning-boat.tsx:159
 msgid "yacht-cleaning-boat.p-3.item-4"
 msgstr "Exterior Cleaning detaling*"
 
-#: src/pages/services/yacht-cleaning-boat.tsx:147
+#: src/pages/services/yacht-cleaning-boat.tsx:165
 msgid "yacht-cleaning-boat.p-3.item-5"
 msgstr "Biological cleaning of fabrics / mattresses & carpets"
 
-#: src/pages/services/yacht-cleaning-boat.tsx:153
+#: src/pages/services/yacht-cleaning-boat.tsx:171
 msgid "yacht-cleaning-boat.p-3.item-6"
 msgstr "Washing carpets with rotary machine & extraction"
 
-#: src/pages/services/yacht-cleaning-boat.tsx:159
+#: src/pages/services/yacht-cleaning-boat.tsx:177
 msgid "yacht-cleaning-boat.p-3.item-7"
 msgstr "Clothing laundry"
 
-#: src/pages/services/yacht-cleaning-boat.tsx:165
+#: src/pages/services/yacht-cleaning-boat.tsx:183
 msgid "yacht-cleaning-boat.p-3.item-8"
 msgstr "Stainless steel polishing"
 
-#: src/pages/services/yacht-cleaning-boat.tsx:171
+#: src/pages/services/yacht-cleaning-boat.tsx:189
 msgid "yacht-cleaning-boat.p-3.item-9"
 msgstr "Tender cleanings"
 
-#: src/pages/services/yacht-cleaning-boat.tsx:104
+#: src/pages/services/yacht-cleaning-boat.tsx:122
 msgid "yacht-cleaning-boat.p-3.title"
 msgstr "Biological Boat Cleaning"
 
