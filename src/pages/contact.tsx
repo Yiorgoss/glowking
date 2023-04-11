@@ -62,7 +62,6 @@ const Contact: PageWithHeaderLayout = () => {
                         {t({ id: 'Contact.contactUs', message: 'Contact Us' })}
                     </h2>
                 </div>
-
                 <div className='grid grid-cols-1 divide-y p-8 tracking-wider md:mt-20 md:grid-cols-2 md:divide-x md:divide-y-0 '>
                     <div className='py-6 text-right text-6xl md:pr-10 '>
                         {t({

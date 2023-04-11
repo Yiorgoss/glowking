@@ -1,4 +1,8 @@
 * Inbox
+** TODO bug needs hidden margin somewhere in banner on contact
+remove `overflow-x-hidden` to see
+
+[[file:~/code/gikas/glowking/src/layouts/landingLayout.tsx::<div className="-mt-\[100px\] overflow-x-hidden">{children}</div>]]
 ** TODO replace meta and title per page
 
 [[file:~/code/gikas/glowking/src/components/bookingForm.tsx::better meta and title per page]]

@@ -32,10 +32,11 @@ const CalendarMain = ({
     const [dateTime, setDateTime] = useState<Dayjs>();
 
     useEffect(() => {
-        console.log(dateTime ? dateTime.format("DD HH:MM") : "aa")
+        //console.log(dateTime ? dateTime.format("DD-HH:mm") : "aa")
         setDateTimeStr(
-            !!dateTime ? dateTime.format('YYYY-MM-DDTHH:mm:ss').toString() : ''
+            dateTime && dateTime.format("HH:mm") !== '00:00' ? dateTime.format('YYYY-MM-DDTHH:mm:ss').toString() : ''
         );
+        //console.log(datetime)
     }, [dateTime, setDateTimeStr]);
     if (error || isLoading) {
         return <Spinner />;

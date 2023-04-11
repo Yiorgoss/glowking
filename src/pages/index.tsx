@@ -84,20 +84,6 @@ const Home: PageWithHeaderLayout = ({}) => {
             href: '/legal'
         }
     ];
-    //
-    //    const size = useWindowSize();
-    //    const getImage = (): string => {
-    //        if()
-    //        if (size && size['width'] < 800) {
-    //            return '/media/images/mobile_landing_image.jpeg';
-    //        }
-    //        return '/media/images/landing_image.jpeg';
-    //    };
-
-    //    const [windowSize, setWindowSize] = useState<{
-    //        width: number;
-    //        height: number;
-    //    }>();
 
     const [responsiveImage, setResponsiveImage] = useState(
         <Image className="object-cover" src='/media/images/landing_image.jpeg' alt='' fill />
@@ -127,13 +113,10 @@ const Home: PageWithHeaderLayout = ({}) => {
                 );
             }
         }
-
         // Add event listener
         window.addEventListener('resize', handleResize);
-
         // Call handler right away so state gets updated with initial window size
         handleResize();
-
         // Remove event listener on cleanup
         return () => window.removeEventListener('resize', handleResize);
     }, []); // Empty array heightensures that effect is only run on mount
@@ -165,7 +148,7 @@ const Home: PageWithHeaderLayout = ({}) => {
                     <div className='mx-auto grid w-4/5 grid-cols-1 justify-center gap-y-8 gap-x-4 md:grid-cols-2 2xl:w-full 2xl:grid-cols-4 2xl:justify-between '>
                         {featureList.map((feature, i) => (
                             <CardMain
-                                href={feature.href ? feature.href : '/services'}
+                                href={feature.href ? feature.href : '/services/wash-car-detailing/car-cleaning'}
                                 header={feature.header}
                                 content={feature.content}
                                 image={feature.image}
@@ -198,7 +181,7 @@ const Home: PageWithHeaderLayout = ({}) => {
                     <div className='mx-auto grid w-4/5 grid-cols-1 gap-x-5 gap-y-10 md:grid-cols-3 '>
                         {serviceData.map((service, i) => (
                             <CardMain
-                                href='/services'
+                                href='/services/wash-car-detailing/car-cleaning'
                                 header={service.header}
                                 content={service.content}
                                 image={service.image}

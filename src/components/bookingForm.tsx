@@ -95,7 +95,9 @@ const BookingForm = () => {
     return (
         <form noValidate onSubmit={handleSubmit(onSubmit, onError)}>
             <div className='container mx-auto grid grid-cols-1 gap-4 bg-slate-300 p-4 md:grid-cols-2'>
-                <CalendarMain setDateTimeStr={setDateTimeStr} />
+                <div className={`${errors.datetime ? 'outline-red-500 outline p-2 outline-2' : ''}  rounded-lg`}>
+                    <CalendarMain setDateTimeStr={setDateTimeStr} />
+                </div>
                 <div className='text-md grid grid-cols-2 gap-3'>
                     <input
                         className={`rounded-lg py-2 px-4 text-secondary focus:outline-tertiary ${

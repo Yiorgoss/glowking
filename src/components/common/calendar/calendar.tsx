@@ -5,11 +5,15 @@ import {
     useState,
     useEffect
 } from 'react';
+import {useRouter} from "next/router"
 
 import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
 
+import {t} from "@lingui/macro"
+
 import dayjs, { Dayjs } from 'dayjs';
 import isTodayPlugin from 'dayjs/plugin/isToday';
+import 'dayjs/locale/el'
 
 const CalendarContext = createContext({} as any);
 dayjs.extend(isTodayPlugin);
@@ -27,36 +31,37 @@ const TimePicker = ({ unavailableSlots }: { unavailableSlots?: Dayjs[] }) => {
 
         while (currentTime <= endTime) {
             timeArr.push(currentTime);
-            currentTime = currentTime.add(1.5, 'hour');
+            currentTime = currentTime.add(.5, 'hour');
         }
         return timeArr;
     };
 
     const availableSlots = createAvailableTimeArr();
 
-    const isUnavailable = (dateObj: Dayjs) => {
-        //2023-03-23T08:00:00
+    //const isUnavailable = (dateObj: Dayjs) => {
+    //    //2023-03-23T08:00:00
 
-        if (dateObj.isToday()) return true;
-        const slots = unavailableSlots ?? [];
-        return slots.find((el) => dateObj.isSame(el)) === undefined
-            ? false
-            : true;
-    };
+    //    if (dateObj.isToday()) return true;
+    //    const slots = unavailableSlots ?? [];
+    //    return slots.find((el) => dateObj.isSame(el)) === undefined
+    //        ? false
+    //        : true;
+    //};
+    const isUnavailable = false
 
     return (
-        <div className='h-full'>
+        <div className='h-[300px] overflow-auto'>
             {open ? (
                 <ul
-                    className='absolute text-center divide-primary '
+                    className='relative overflow-auto divide-primary '
                     onClick={() => setOpen(false)}>
                     {availableSlots.map((slot, i) => (
                         <li
-                            className={`px-4 py-1 hover:cursor-pointer ${
-                                isUnavailable(slot) ? 'text-slate-500' : ''
+                            className={`px-4 py-2 hover:cursor-pointer ${
+                                isUnavailable ? 'text-slate-500' : ''
                             }`}
                             onClick={(e) =>
-                                isUnavailable(slot)
+                                isUnavailable
                                 ? e.preventDefault()
                                 : setDateTime(slot)
                             }
@@ -69,7 +74,7 @@ const TimePicker = ({ unavailableSlots }: { unavailableSlots?: Dayjs[] }) => {
                 <div
                     className='py-2 px-4 w-full hover:cursor-pointer'
                     onClick={() => setOpen(true)}>
-                    {datetime ? datetime.format('HH:mm') : 'Select Time'}
+                    {datetime.format('HH:mm') !== "00:00" ? datetime.format('HH:mm') : t({id:`Calendar-select-time`, message:`Select Time`})}
                 </div>
             )}
         </div>
@@ -117,6 +122,7 @@ const MonthSwitcher = () => {
         </div>
     );
 };
+
 const DaysOfTheWeek = () => {
     return (
         <div className='text-md grid grid-cols-7 pb-2 text-center font-medium'>
@@ -208,13 +214,20 @@ const Calendar = ({
 }: {
     children: ReactElement | ReactElement[];
 }) => {
+    const router = useRouter()
+    const locale = router.locale
+
     const [displayMonth, setDisplayMonth] = useState(dayjs());
     const [datetime, setDatetime] = useState(
-        dayjs().add(1, 'day').startOf('day')
+        dayjs().startOf('hour').add(1, 'day').startOf('day')
     );
 
+    useEffect(() => {
+        dayjs.locale(locale)
+    }, [locale])
+
     //useEffect(() => {
-    //    console.log(datetime);
+    //    console.log({datetime:datetime});
     //}, [datetime]);
 
     //const value = [displayMonth, setDisplayMonth, time, setTime, day, setDay];

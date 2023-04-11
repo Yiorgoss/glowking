@@ -26,6 +26,10 @@ msgstr "Η υποβολή δεν καταγράφηκε. Επικοινωνήσ�
 msgid "BookingForm.successMessage"
 msgstr "Επιτυχής Υποβολή. Σας ευχαριστούμε!"
 
+#: src/components/common/calendar/calendar.tsx:77
+msgid "Calendar-select-time"
+msgstr "Επιλέξτε Ώρα"
+
 #: src/pages/contact.tsx:62
 msgid "Contact.contactUs"
 msgstr "Επικοινωνία"
@@ -106,11 +110,11 @@ msgstr "Τοποθεσία"
 msgid "Footer.sitemap"
 msgstr "Χάρτης ιστότοπου"
 
-#: src/pages/index.tsx:163
+#: src/pages/index.tsx:146
 msgid "Home.Features"
 msgstr "Χαρακτηριστικά"
 
-#: src/pages/index.tsx:196
+#: src/pages/index.tsx:179
 msgid "Home.Services"
 msgstr "Υπηρεσίες"
 
@@ -146,15 +150,15 @@ msgstr "Επαγγελματικό πλύσιμο και καθάρισμα γι
 msgid "Home.featureList.one.header"
 msgstr "Τοποθεσία της επιλογής σας"
 
-#: src/pages/index.tsx:145
+#: src/pages/index.tsx:128
 msgid "Home.head.title"
 msgstr "καθαρισμού αυτοκινήτου, σκάφους, γκαράζ, πεζοδρομίων"
 
-#: src/pages/index.tsx:185
+#: src/pages/index.tsx:168
 msgid "Home.serviceSection.content"
 msgstr "To GLOW KING ATHENS είναι μια πρωτοποριακή ιδέα που εκμηδενίζει τις αποστάσεις! Ξεκίνησε το 2019 και εν μέσο της πανδημίας κάλυψε όλα τα νότια προάστια.  Υπηρεσίες πλήρους καθαρισμού του οχήματος, της περιουσίας, του πεζοδρομίου και ότι άλλο χρειάζεστε ! Το GLOW KING ATHENS λειτουργεί με βασικό γνώμονα το περιβάλλον και τον άνθρωπο δίπλα σε κάθε σας ανάγκη. Glow King Athens με πρωταγωνιστή….εσένα !"
 
-#: src/pages/index.tsx:181
+#: src/pages/index.tsx:164
 msgid "Home.serviceSection.title"
 msgstr "Ποιοι είμαστε?"
 
@@ -246,35 +250,35 @@ msgstr "Στον εσωτερικό καθαρισμό έχοντας ως γν�
 msgid "Services-simple-list.two.header"
 msgstr "Εσωτερικός Καθαρισμός"
 
-#: src/components/bookingForm.tsx:160
+#: src/components/bookingForm.tsx:162
 msgid "bookingForm.input.accept"
 msgstr "Αποδεχτείτε τους Όρους και"
 
-#: src/components/bookingForm.tsx:167
+#: src/components/bookingForm.tsx:169
 msgid "bookingForm.input.conditions"
 msgstr "Συνθήκες"
 
-#: src/components/bookingForm.tsx:128
+#: src/components/bookingForm.tsx:130
 msgid "bookingForm.input.email"
 msgstr "Email"
 
-#: src/components/bookingForm.tsx:139
+#: src/components/bookingForm.tsx:141
 msgid "bookingForm.input.location"
 msgstr "Τοποθεσία"
 
-#: src/components/bookingForm.tsx:149
+#: src/components/bookingForm.tsx:151
 msgid "bookingForm.input.message"
 msgstr "Ειδικές Οδηγίες'"
 
-#: src/components/bookingForm.tsx:106
+#: src/components/bookingForm.tsx:108
 msgid "bookingForm.input.name"
 msgstr "Ονομα"
 
-#: src/components/bookingForm.tsx:119
+#: src/components/bookingForm.tsx:121
 msgid "bookingForm.input.number"
 msgstr "αριθμός τηλεφώνου"
 
-#: src/components/bookingForm.tsx:187
+#: src/components/bookingForm.tsx:189
 msgid "bookingForm.input.submit"
 msgstr "υποβάλλουν"
 

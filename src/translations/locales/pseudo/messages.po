@@ -26,6 +26,10 @@ msgstr ""
 msgid "BookingForm.successMessage"
 msgstr ""
 
+#: src/components/common/calendar/calendar.tsx:77
+msgid "Calendar-select-time"
+msgstr ""
+
 #: src/pages/contact.tsx:62
 msgid "Contact.contactUs"
 msgstr ""
@@ -106,11 +110,11 @@ msgstr ""
 msgid "Footer.sitemap"
 msgstr ""
 
-#: src/pages/index.tsx:163
+#: src/pages/index.tsx:146
 msgid "Home.Features"
 msgstr ""
 
-#: src/pages/index.tsx:196
+#: src/pages/index.tsx:179
 msgid "Home.Services"
 msgstr ""
 
@@ -146,15 +150,15 @@ msgstr ""
 msgid "Home.featureList.one.header"
 msgstr ""
 
-#: src/pages/index.tsx:145
+#: src/pages/index.tsx:128
 msgid "Home.head.title"
 msgstr ""
 
-#: src/pages/index.tsx:185
+#: src/pages/index.tsx:168
 msgid "Home.serviceSection.content"
 msgstr ""
 
-#: src/pages/index.tsx:181
+#: src/pages/index.tsx:164
 msgid "Home.serviceSection.title"
 msgstr ""
 
@@ -246,35 +250,35 @@ msgstr ""
 msgid "Services-simple-list.two.header"
 msgstr ""
 
-#: src/components/bookingForm.tsx:160
+#: src/components/bookingForm.tsx:162
 msgid "bookingForm.input.accept"
 msgstr ""
 
-#: src/components/bookingForm.tsx:167
+#: src/components/bookingForm.tsx:169
 msgid "bookingForm.input.conditions"
 msgstr ""
 
-#: src/components/bookingForm.tsx:128
+#: src/components/bookingForm.tsx:130
 msgid "bookingForm.input.email"
 msgstr ""
 
-#: src/components/bookingForm.tsx:139
+#: src/components/bookingForm.tsx:141
 msgid "bookingForm.input.location"
 msgstr ""
 
-#: src/components/bookingForm.tsx:149
+#: src/components/bookingForm.tsx:151
 msgid "bookingForm.input.message"
 msgstr ""
 
-#: src/components/bookingForm.tsx:106
+#: src/components/bookingForm.tsx:108
 msgid "bookingForm.input.name"
 msgstr ""
 
-#: src/components/bookingForm.tsx:119
+#: src/components/bookingForm.tsx:121
 msgid "bookingForm.input.number"
 msgstr ""
 
-#: src/components/bookingForm.tsx:187
+#: src/components/bookingForm.tsx:189
 msgid "bookingForm.input.submit"
 msgstr ""
 

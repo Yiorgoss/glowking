@@ -26,6 +26,10 @@ msgstr "Submission was not recorded. Please contact us directly"
 msgid "BookingForm.successMessage"
 msgstr "Successful Submission. We thank you!"
 
+#: src/components/common/calendar/calendar.tsx:77
+msgid "Calendar-select-time"
+msgstr "Select Time"
+
 #: src/pages/contact.tsx:62
 msgid "Contact.contactUs"
 msgstr "Contact Us"
@@ -106,11 +110,11 @@ msgstr "Where to find us"
 msgid "Footer.sitemap"
 msgstr "Sitemap"
 
-#: src/pages/index.tsx:163
+#: src/pages/index.tsx:146
 msgid "Home.Features"
 msgstr "Features"
 
-#: src/pages/index.tsx:196
+#: src/pages/index.tsx:179
 msgid "Home.Services"
 msgstr "Our Services"
 
@@ -146,15 +150,15 @@ msgstr "Professional washing and cleaning for your car!The mobile car wash GLOW 
 msgid "Home.featureList.one.header"
 msgstr "Location Of Your Choice"
 
-#: src/pages/index.tsx:145
+#: src/pages/index.tsx:128
 msgid "Home.head.title"
 msgstr "Glowking | Carwash while at Work | Carwash while at Home"
 
-#: src/pages/index.tsx:185
+#: src/pages/index.tsx:168
 msgid "Home.serviceSection.content"
 msgstr "GLOW KING ATHENS is an innovative idea that annihilates distances! It started in 2019 and in the middle of the pandemic it covered all the southern suburbs. Complete cleaning services of the vehicle, the property, the pavement and everything else you need! GLOW KING ATHENS operates with the environment and people as its main focus, next to your every need. Glow King Athens starring... you!"
 
-#: src/pages/index.tsx:181
+#: src/pages/index.tsx:164
 msgid "Home.serviceSection.title"
 msgstr "Who Are We?"
 
@@ -246,35 +250,35 @@ msgstr "In internal cleaning, with respect for people and the environment as our
 msgid "Services-simple-list.two.header"
 msgstr "Internal Cleaning"
 
-#: src/components/bookingForm.tsx:160
+#: src/components/bookingForm.tsx:162
 msgid "bookingForm.input.accept"
 msgstr "Accept Terms and "
 
-#: src/components/bookingForm.tsx:167
+#: src/components/bookingForm.tsx:169
 msgid "bookingForm.input.conditions"
 msgstr "Conditions"
 
-#: src/components/bookingForm.tsx:128
+#: src/components/bookingForm.tsx:130
 msgid "bookingForm.input.email"
 msgstr "Email"
 
-#: src/components/bookingForm.tsx:139
+#: src/components/bookingForm.tsx:141
 msgid "bookingForm.input.location"
 msgstr "Location"
 
-#: src/components/bookingForm.tsx:149
+#: src/components/bookingForm.tsx:151
 msgid "bookingForm.input.message"
 msgstr "Special Instructions"
 
-#: src/components/bookingForm.tsx:106
+#: src/components/bookingForm.tsx:108
 msgid "bookingForm.input.name"
 msgstr "Full Name"
 
-#: src/components/bookingForm.tsx:119
+#: src/components/bookingForm.tsx:121
 msgid "bookingForm.input.number"
 msgstr "Phone Number"
 
-#: src/components/bookingForm.tsx:187
+#: src/components/bookingForm.tsx:189
 msgid "bookingForm.input.submit"
 msgstr "submit"
 

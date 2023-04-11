@@ -6,8 +6,17 @@ const calendarSchema = yup.object().shape({
     email: yup.string().trim().email(),
     location: yup.string().trim().required('Where should we meet you?'),
     messageBody: yup.string().trim(),
-    datetime: yup.string().trim().required(),
+    datetime: yup.string().min(5).trim().required("Please Select a Time"),
     acceptTerms: yup.boolean().required('Accept Terms and Conditions')
 });
+//const calendarSchema = yup.object().shape({
+//    datetime: yup.string().min(5).trim().required("Please Select a Time"),
+//    name: yup.string().trim(),
+//    phone: yup.number().positive().integer(),
+//    email: yup.string().trim().email(),
+//    location: yup.string().trim(),
+//    messageBody: yup.string().trim(),
+//    acceptTerms: yup.boolean()
+//});
 
 export default calendarSchema;
