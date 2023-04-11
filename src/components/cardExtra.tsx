@@ -21,7 +21,7 @@ const CardMain = ({
     content?: string | MessageDescriptor;
     image?: string;
     className?: string | undefined;
-    src: string;
+    src?: string;
 }) => {
     const headerStr = header
         ? typeof header === 'string'
@@ -42,7 +42,12 @@ const CardMain = ({
                 }`}>
                 <div className='h-[80px] min-w-[60px] max-w-[60px] '>
                     <div className='relative '>
-                        <Image src={src} alt='' fill sizes='width:60px' />
+                        <Image
+                            src={src as string}
+                            alt=''
+                            fill
+                            sizes='width:60px'
+                        />
                     </div>
                 </div>
                 <div className='mt-2 flex flex-col justify-between pl-3'>
