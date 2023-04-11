@@ -47,6 +47,7 @@ export const carServiceExtras = [
             message: `Odors are not covered but neutralized. For odors such as Cigarettes, Animals and other persistent odors.`
         }),
         price: 8,
+        src:"/media/images/car-optionals/car2.jpg",
         href: ''
     },
     {
@@ -78,7 +79,7 @@ export const carServiceExtras = [
             id: `car-service-extras.3.price`,
             message: `Request a Quote`
         }),
-        src:"/media/images/car-optionals/",
+        src:"/media/images/car-optionals/car2.jpg",
         href: ''
     },
     {
@@ -91,6 +92,7 @@ export const carServiceExtras = [
             message: `Wax with AUTOGLYM wax, with a duration of 2 months, gives an extra protection to the surface of your car.`
         }),
         price: 15,
+        src:"/media/images/car-optionals/car2.jpg",
         href: ''
     },
     {
@@ -116,6 +118,7 @@ export const carServiceExtras = [
             message: `Refilling of cleaning liquid soap for the windshield wipers.`
         }),
         price: 3,
+        src:"/media/images/car-optionals/window.jpg",
         href: ''
     },
     {

@@ -37,11 +37,11 @@ const CardMain = ({
     return (
         <Link href={href} className='h-full'>
             <Card
-                className={`mx-auto flex h-full flex-row overflow-hidden rounded-xl p-4 text-secondary outline outline-4  outline-tertiary drop-shadow-lg transition-transform duration-300 md:hover:scale-[1.05] ${
+                className={`mx-auto flex h-full flex-row overflow-hidden rounded-xl p-4 text-secondary outline outline-4  outline-tertiary transition-transform duration-300 md:hover:scale-[1.05] ${
                     className ?? ''
                 }`}>
-                <div className='h-[80px] min-w-[60px] max-w-[60px] '>
-                    <div className='relative '>
+                <div className='h-[50px] min-w-[60px] max-w-[60px] '>
+                    <div className='relative h-full w-full '>
                         <Image
                             src={src as string}
                             alt=''
