@@ -86,7 +86,12 @@ const Home: PageWithHeaderLayout = ({}) => {
     ];
 
     const [responsiveImage, setResponsiveImage] = useState(
-        <Image className="object-cover" src='/media/images/landing_image.jpeg' alt='' fill />
+        <Image
+            className='object-cover'
+            src='/media/images/mobile_landing_image.jpeg'
+            alt=''
+            fill
+        />
     );
     useEffect(() => {
         // only execute all the code below in client side
@@ -101,7 +106,7 @@ const Home: PageWithHeaderLayout = ({}) => {
                         alt=''
                         fill
                     />
-                )
+                );
             } else {
                 setResponsiveImage(
                     <Image
@@ -148,7 +153,11 @@ const Home: PageWithHeaderLayout = ({}) => {
                     <div className='mx-auto grid w-4/5 grid-cols-1 justify-center gap-y-8 gap-x-4 md:grid-cols-2 2xl:w-full 2xl:grid-cols-4 2xl:justify-between '>
                         {featureList.map((feature, i) => (
                             <CardMain
-                                href={feature.href ? feature.href : '/services/wash-car-detailing/car-cleaning'}
+                                href={
+                                    feature.href
+                                        ? feature.href
+                                        : '/services/wash-car-detailing/car-cleaning'
+                                }
                                 header={feature.header}
                                 content={feature.content}
                                 image={feature.image}
