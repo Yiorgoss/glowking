@@ -1,4 +1,4 @@
-import { ReactElement, useState, useRef, useEffect } from 'react';
+import { ReactElement, useState, useRef, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/router';
 
 const SideMenu = ({
@@ -12,7 +12,7 @@ const SideMenu = ({
     left?: boolean;
     children: ReactElement | ReactElement[] | string;
     active: boolean;
-    setActive: string;
+    setActive: (value: boolean) => void;
     innerClass?: string;
     outerClass?: string;
 }) => {
@@ -20,17 +20,20 @@ const SideMenu = ({
     const router = useRouter();
 
     const entrySide = left
-        ? ['left-0', 'left-[100vw]']
-        : ['right-0', 'right-[100vw]'];
+        ? ['right-0', 'right-[100vw]']
+        : ['left-0', 'left-[100vw]'];
 
-    const handleClickOutside = (e: MouseEvent) => {
-        if (node.current && node.current.contains(e.target as Node)) {
+    const handleClickOutside = useCallback(
+        (e: MouseEvent) => {
+            if (node.current && node.current.contains(e.target as Node)) {
+                console.log('node: false', node);
+                return;
+            }
             console.log('node: false', node);
-            return;
-        }
-        console.log('node: false', node);
-        setActive(false);
-    };
+            setActive(false);
+        },
+        [setActive]
+    );
 
     useEffect(() => {
         if (active) {

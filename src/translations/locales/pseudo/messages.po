@@ -742,6 +742,30 @@ msgstr ""
 msgid "navlinks.services"
 msgstr ""
 
+#: src/pages/services/property-cleaning-garage-driveways.tsx:34
+msgid "property-cleaning-services.p-1.1.content"
+msgstr ""
+
+#: src/pages/services/property-cleaning-garage-driveways.tsx:36
+msgid "property-cleaning-services.p-1.2.content"
+msgstr ""
+
+#: src/pages/services/property-cleaning-garage-driveways.tsx:32
+msgid "property-cleaning-services.p-1.title"
+msgstr ""
+
+#: src/pages/services/property-cleaning-garage-driveways.tsx:39
+msgid "property-cleaning-services.p-2.1.content"
+msgstr ""
+
+#: src/pages/services/property-cleaning-garage-driveways.tsx:37
+msgid "property-cleaning-services.p-2.title"
+msgstr ""
+
+#: src/pages/services/property-cleaning-garage-driveways.tsx:29
+msgid "property-cleaning-services.title"
+msgstr ""
+
 #: src/layouts/sidebarLayout.tsx:23
 #: src/layouts/sidebarLayout.tsx:44
 msgid "service-sidebar.title"
@@ -797,7 +821,7 @@ msgid "services.book-an-appointment-now"
 msgstr ""
 
 #: src/pages/services/home-cleaning-couches/carpets.tsx:104
-#: src/pages/services/property-cleaning-garage-driveways.tsx:47
+#: src/pages/services/property-cleaning-garage-driveways.tsx:45
 #: src/pages/services/yacht-cleaning-boat.tsx:113
 #: src/pages/services/yacht-cleaning-boat.tsx:199
 msgid "services.request-an-offer"
