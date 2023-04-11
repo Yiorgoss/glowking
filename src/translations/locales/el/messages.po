@@ -13,8 +13,8 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/header.tsx:109
-#: src/components/header.tsx:115
+#: src/components/header.tsx:112
+#: src/components/header.tsx:118
 msgid "Book-Now"
 msgstr "Κάνετε κράτηση"
 
@@ -382,59 +382,59 @@ msgstr "Αφαίρεση τριχών κατοικιδίου από τα καθ�
 msgid "car-service-extras.9.title"
 msgstr "ΑΦΑΙΡΕΣΗ ΤΡΙΧΩΝ ΚΑΤΟΙΚΙΔΙΟΥ"
 
-#: src/pages/services/detail-car-wash/car-cleaning.tsx:45
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:47
 msgid "detail-car-wash.car-cleaning.p-1.2"
 msgstr "Ο εξωτερικός καθαρισμός γίνεται χωρίς την χρήση βούρτσας η σφουγγαριού παρά μόνο με την χρήση ζεστού νερού για την λιγότερη φθορά του εξωτερικού χρώματος του αυτοκινήτου."
 
-#: src/pages/services/detail-car-wash/car-cleaning.tsx:51
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:53
 msgid "detail-car-wash.car-cleaning.p-1.3"
 msgstr "Στo Glow King σας προσφέρουμε ένα πλήρη εξωτερικό καθαρισμό με πρόπλυση και κυρίως πλύση του οχήματος με ενεργό αφρό, καθαρισμό των θολών και των ζαντών, αφαίρεση εντόμων, κέρωμα προστασίας και ξέπλυμα του αυτοκίνητου με απιονισμένο νερό!"
 
-#: src/pages/services/detail-car-wash/car-cleaning.tsx:57
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:59
 msgid "detail-car-wash.car-cleaning.p-1.4"
 msgstr "Στην συνέχεια γίνεται λεπτομερές σκούπισμα του οχήματος."
 
-#: src/pages/services/detail-car-wash/car-cleaning.tsx:63
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:65
 msgid "detail-car-wash.car-cleaning.p-1.5"
 msgstr "Στον εσωτερικό καθαρισμό έχοντας ως γνώμονα τον σεβασμό προς τον άνθρωπο και το περιβάλλον χρησιμοποιούμε οικολογικά βιοδιασπώμενα προϊόντα."
 
-#: src/pages/services/detail-car-wash/car-cleaning.tsx:69
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:71
 msgid "detail-car-wash.car-cleaning.p-1.6"
 msgstr "Εσωτερικά φυσάμε το όχημα για να απομακρύνουμε την σκόνη και στην συνέχεια καθαρίζουμε με σκούπα αναρρόφησης την καμπίνα και των χώρο αποσκευών, καθαρισμό των τζαμιών και όλων των γυάλινων επιφανειών."
 
-#: src/pages/services/detail-car-wash/car-cleaning.tsx:75
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:77
 msgid "detail-car-wash.car-cleaning.p-1.7"
 msgstr "Τέλος προχωρούμε σε καθαρισμό και συντήρηση όλων των δερμάτινων και πλαστικών επιφανειών, στεγνό καθαρισμό ταπέτων και αρωματισμό του χώρου καμπίνας."
 
-#: src/pages/services/detail-car-wash/car-cleaning.tsx:39
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:41
 msgid "detail-car-wash.car-cleaning.p-1.title"
 msgstr "Εξωτερικός + Εσωτερικός Καθαρισμός:"
 
-#: src/pages/services/detail-car-wash/car-cleaning.tsx:90
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:92
 msgid "detail-car-wash.car-cleaning.p-2.1"
 msgstr "Στον βιολογικό καθαρισμό απομακρύνουμε από τον χώρο της καμπίνας εκτός από τους λεκέδες, καθαρίζουμε μύκητες, βακτηρίδια και οτιδήποτε επιβαρύνει τον ανθρώπινο οργανισμό."
 
-#: src/pages/services/detail-car-wash/car-cleaning.tsx:96
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:98
 msgid "detail-car-wash.car-cleaning.p-2.2"
 msgstr "Απολυμαίνουμε τα καθίσματα, τον ουρανό,"
 
-#: src/pages/services/detail-car-wash/car-cleaning.tsx:102
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:104
 msgid "detail-car-wash.car-cleaning.p-2.3"
 msgstr "Επίσης υποχρεωτικά απολυμαίνουμε τους αεραγωγούς του αυτοκίνητου διώχνοντας την κακοσμία από την χρήση του κλιματιστικού."
 
-#: src/pages/services/detail-car-wash/car-cleaning.tsx:108
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:110
 msgid "detail-car-wash.car-cleaning.p-2.4"
 msgstr "Τα προϊόντα που χρησιμοποιούνται για τον καθαρισμό και την απολύμανση είναι πιστοποιημένα και φιλικά πρός τον άνθρωπο και το περιβάλλον τηρώντας τις προδιαγραφές της Ε.Ε."
 
-#: src/pages/services/detail-car-wash/car-cleaning.tsx:117
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:119
 msgid "detail-car-wash.car-cleaning.p-2.5"
 msgstr "Προσφέρουμε επίσης μια μεγάλη λίστα με πρόσθετες προαιρετικές υπηρεσίες καθαρισμού για το αυτοκίνητό σας"
 
-#: src/pages/services/detail-car-wash/car-cleaning.tsx:84
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:86
 msgid "detail-car-wash.car-cleaning.p-2.title"
 msgstr "Βιολογικός Καθαρισμός:"
 
-#: src/pages/services/detail-car-wash/car-cleaning.tsx:32
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:34
 msgid "detail-car-wash.car-cleaning.title"
 msgstr "ΥΠΗΡΕΣΙΕΣ ΑΥΤΟΚΙΝΗΤΩΝ"
 
@@ -526,7 +526,7 @@ msgstr "Ελάχιστη χρέωση για να έρθουμε στον χώρ
 msgid "detail-car-wash.motorbike.title"
 msgstr "Υπηρεσίες μοτοσυκλετών"
 
-#: src/pages/services/detail-car-wash/car-cleaning.tsx:146
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:148
 #: src/pages/services/detail-car-wash/detailing-info.tsx:222
 #: src/pages/services/detail-car-wash/motorbike-clean.tsx:80
 msgid "detail-car-wash.title"
@@ -742,7 +742,8 @@ msgstr "Χαρτοφυλάκιο"
 msgid "navlinks.services"
 msgstr "Υπηρεσίες"
 
-#: src/layouts/sidebarLayout.tsx:20
+#: src/layouts/sidebarLayout.tsx:23
+#: src/layouts/sidebarLayout.tsx:44
 msgid "service-sidebar.title"
 msgstr "Οι Υπηρεσίες μας"
 
