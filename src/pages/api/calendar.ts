@@ -189,6 +189,7 @@ export default async function handler(
         res.status(200).json({
             bookedSlots: JSON.stringify(bookingEntries)
         });
+        res.end();
     }
     if (req.method === 'POST') {
         const { name, phone, email, datetime, location, messageBody } =
@@ -213,16 +214,19 @@ export default async function handler(
         console.log(!datetime);
         //console.log(!"")
         if (!datetime) {
-            return res.status(422).json({
+            res.status(422).json({
                 error: { message: 'incorrect datetime !!', value: datetime }
             });
+            return res.end();
         }
-        if (eventHMap[datetime] !== undefined) {
-            console.log('booking time already confirmed');
-            return res
-                .status(409)
-                .json({ error: { message: 'datetime is already set' } });
-        }
+        //uneeded for the time being
+        //if (eventHMap[datetime] !== undefined) {
+        //    console.log('booking time already confirmed');
+        //    res.status(409).json({
+        //        error: { message: 'datetime is already set' }
+        //    });
+        //    return res.end();
+        //}
         const endTime = calculateEndTime(datetime);
         const description = `number: ${phone}\n${messageBody}`;
         const event = {
@@ -264,7 +268,7 @@ export default async function handler(
                             value: err
                         }
                     });
-                    return;
+                    return res.end();
                 }
                 const eventLink = event.data.htmlLink;
                 sendEmails({
@@ -278,8 +282,10 @@ export default async function handler(
 
                 console.log('Event created: %s', eventLink);
                 res.status(200);
+                return res.end();
             }
         );
         res.status(200);
+        return res.end();
     }
 }

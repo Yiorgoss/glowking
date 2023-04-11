@@ -59,7 +59,7 @@ const BookingForm = () => {
                 t({
                     id: 'BookingForm.errorMessage',
                     message:
-                        'Submission was not recorded. Please contact us directly'
+                        'Submission was not recorded. Please contact us directly at 6980 000 015'
                 })
             );
         }

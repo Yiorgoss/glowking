@@ -1,4 +1,7 @@
 * Inbox
+** TODO Function difficult to follow in need of refactoring
+
+[[file:~/code/gikas/glowking/src/pages/api/calendar.ts:://sgMail.setApiKey(process.env\['SENDGRID_API_KEY'\]);]]
 ** TODO bug needs hidden margin somewhere in banner on contact
 remove `overflow-x-hidden` to see
 
