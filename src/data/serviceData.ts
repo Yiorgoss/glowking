@@ -34,7 +34,7 @@ export const carServiceExtras = [
             message: `Washing the bottom of the car, removes mud, salts (from the winter season) and dirt that has accumulated over time.`
         }),
         price: 10,
-        src:"",
+        src:"/media/images/car-optionals/car_under.jpg",
         href: ''
     },
     {
@@ -62,7 +62,7 @@ export const carServiceExtras = [
             id: `car-service-extras.5.price`,
             message: `FREE`
         }),
-        src:"",
+        src:"/media/images/car-optionals/car2.jpg",
         href: ''
     },
     {
@@ -78,7 +78,7 @@ export const carServiceExtras = [
             id: `car-service-extras.3.price`,
             message: `Request a Quote`
         }),
-        src:"",
+        src:"/media/images/car-optionals/",
         href: ''
     },
     {
@@ -103,7 +103,7 @@ export const carServiceExtras = [
             message: `Special glass coating that offers external hydrophobic and internal anti-fog protection, ideal for the winter months.`
         }),
         price: 30,
-        src:"",
+        src:"/media/images/car-optionals/window.jpg",
         href: ''
     },
     {
@@ -128,7 +128,7 @@ export const carServiceExtras = [
             message: `Hood cleaning, maintenance and waterproofing for a convertible car.`
         }),
         price: 50,
-        src:"",
+        src:"/media/images/car-optionals/hood.jpg",
         href: ''
     },
     {
@@ -141,7 +141,7 @@ export const carServiceExtras = [
             message: `We clean your air condition unit`
         }),
         price: 15,
-        src:"",
+        src:"/media/images/car-optionals/hood.jpg",
         href: ''
     },
     {
@@ -154,7 +154,7 @@ export const carServiceExtras = [
             message: `Removing very fine pet hair from seats and carpeting.`
         }),
         price: 13,
-        src:"",
+        src:"/media/images/car-optionals/dog.jpg",
         href: ''
     },
     {
@@ -167,7 +167,7 @@ export const carServiceExtras = [
             message: `Biological cleaning of a child seat.`
         }),
         price: 15,
-        src:"",
+        src:"/media/images/car-optionals/baby.jpg",
         href: ''
     },
     {
@@ -180,7 +180,7 @@ export const carServiceExtras = [
             message: `Biological cleaning of 2 children's seats.`
         }),
         price: 25,
-        src:"",
+        src:"/media/images/car-optionals/baby.jpg",
         href: ''
     }
 ];
