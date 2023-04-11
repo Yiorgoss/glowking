@@ -8,29 +8,64 @@
 
 
 <url>
-  <loc>https://glowking.gr/</loc>
-  <lastmod>2023-03-13T11:50:31+00:00</lastmod>
+  <loc>https://glowking.gr/en</loc>
+  <lastmod>2023-04-11T13:21:33+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://glowking.gr/contact</loc>
-  <lastmod>2023-03-13T11:50:31+00:00</lastmod>
+  <loc>https://glowking.gr/en/contact</loc>
+  <lastmod>2023-04-11T13:21:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://glowking.gr/services</loc>
-  <lastmod>2023-03-13T11:50:31+00:00</lastmod>
+  <loc>https://glowking.gr/en/services/detail-car-wash/car-cleaning</loc>
+  <lastmod>2023-04-11T13:21:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://glowking.gr/portfolio</loc>
-  <lastmod>2023-03-13T11:50:31+00:00</lastmod>
+  <loc>https://glowking.gr/en/portfolio</loc>
+  <lastmod>2023-04-11T13:21:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://glowking.gr/legal</loc>
-  <lastmod>2023-03-13T11:50:31+00:00</lastmod>
+  <loc>https://glowking.gr/en/legal</loc>
+  <lastmod>2023-04-11T13:21:33+00:00</lastmod>
   <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://glowking.gr/en/services/detail-car-wash/detailing-info</loc>
+  <lastmod>2023-04-11T13:21:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://glowking.gr/en/services/detail-car-wash/motorbike-clean</loc>
+  <lastmod>2023-04-11T13:21:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://glowking.gr/en/services/home-cleaning-couches/couches</loc>
+  <lastmod>2023-04-11T13:21:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://glowking.gr/en/services/home-cleaning-couches/carpets</loc>
+  <lastmod>2023-04-11T13:21:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://glowking.gr/en/services/home-cleaning-couches/mattresses</loc>
+  <lastmod>2023-04-11T13:21:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://glowking.gr/en/services/yacht-cleaning-boat</loc>
+  <lastmod>2023-04-11T13:21:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://glowking.gr/en/services/property-cleaning-garage-driveways</loc>
+  <lastmod>2023-04-11T13:21:33+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 
 

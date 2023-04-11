@@ -1,9 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { ReactElement, createContext } from 'react';
+import { ReactElement, createContext, useState } from 'react';
 
 import { MessageDescriptor, i18n } from '@lingui/core';
+
+import { SlWallet } from 'react-icons/sl';
+
 //const CardContext = createContext({});
 
 const Graphic = ({
@@ -80,7 +83,9 @@ const Price = ({
     price: number | MessageDescriptor;
     className: string;
 }) => {
+    let useWallet = false;
     const formatPrice = (price: number) => {
+        useWallet = true;
         return '' + price + '.00 €';
     };
     const priceStr = price
@@ -89,7 +94,16 @@ const Price = ({
             : i18n._(price! as string)
         : '';
 
-    return <div className={className}>{priceStr}</div>;
+    return (
+        <div className={`${className} text-right`}>
+            {useWallet ? (
+                <SlWallet className='my-auto mr-2 inline h-6 w-6' />
+            ) : (
+                <></>
+            )}
+            {priceStr}
+        </div>
+    );
 };
 
 const Card = ({

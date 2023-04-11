@@ -123,13 +123,14 @@ const ServicesCarCleaning = () => {
                 </div>
                 <div className='grid grid-cols-1 mx-5 md:mx-0 md:grid-cols-3 gap-5'>
                     {carServiceExtras.map(
-                        ({ title, content, price, href }, index) => (
+                        ({ title, content, price, href, src }, index) => (
                             <div className='h-full w-full' key={index}>
                                 <CardExtra
                                     href={href}
                                     header={title}
                                     content={content}
                                     price={price}
+                                    src={src}
                                 />
                             </div>
                         )

@@ -34,6 +34,7 @@ export const carServiceExtras = [
             message: `Washing the bottom of the car, removes mud, salts (from the winter season) and dirt that has accumulated over time.`
         }),
         price: 10,
+        src:"",
         href: ''
     },
     {
@@ -50,6 +51,22 @@ export const carServiceExtras = [
     },
     {
         title: defineMessage({
+            id: `car-service-extras.5.title`,
+            message: `TIRE INFLATION`
+        }),
+        content: defineMessage({
+            id: `car-service-extras.5.content`,
+            message: `Tire pressure check & inflation.`
+        }),
+        price: defineMessage({
+            id: `car-service-extras.5.price`,
+            message: `FREE`
+        }),
+        src:"",
+        href: ''
+    },
+    {
+        title: defineMessage({
             id: `car-service-extras.3.title`,
             message: `POLISHING – CERAMIC COATING`
         }),
@@ -61,6 +78,7 @@ export const carServiceExtras = [
             id: `car-service-extras.3.price`,
             message: `Request a Quote`
         }),
+        src:"",
         href: ''
     },
     {
@@ -85,21 +103,7 @@ export const carServiceExtras = [
             message: `Special glass coating that offers external hydrophobic and internal anti-fog protection, ideal for the winter months.`
         }),
         price: 30,
-        href: ''
-    },
-    {
-        title: defineMessage({
-            id: `car-service-extras.5.title`,
-            message: `TIRE INFLATION`
-        }),
-        content: defineMessage({
-            id: `car-service-extras.5.content`,
-            message: `Tire pressure check & inflation.`
-        }),
-        price: defineMessage({
-            id: `car-service-extras.5.price`,
-            message: `FREE`
-        }),
+        src:"",
         href: ''
     },
     {
@@ -124,6 +128,7 @@ export const carServiceExtras = [
             message: `Hood cleaning, maintenance and waterproofing for a convertible car.`
         }),
         price: 50,
+        src:"",
         href: ''
     },
     {
@@ -136,6 +141,7 @@ export const carServiceExtras = [
             message: `We clean your air condition unit`
         }),
         price: 15,
+        src:"",
         href: ''
     },
     {
@@ -148,6 +154,7 @@ export const carServiceExtras = [
             message: `Removing very fine pet hair from seats and carpeting.`
         }),
         price: 13,
+        src:"",
         href: ''
     },
     {
@@ -160,6 +167,7 @@ export const carServiceExtras = [
             message: `Biological cleaning of a child seat.`
         }),
         price: 15,
+        src:"",
         href: ''
     },
     {
@@ -172,6 +180,7 @@ export const carServiceExtras = [
             message: `Biological cleaning of 2 children's seats.`
         }),
         price: 25,
+        src:"",
         href: ''
     }
 ];
