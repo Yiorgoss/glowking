@@ -33,7 +33,7 @@ const ServicesDetailingInfo = () => {
                 })}
             </h1>
             <div>
-                <h2 className='py-5 text-xl'>
+                <h2 className=' py-5 text-xl font-medium'>
                     {t({
                         id: `detail-car-wash.detailing.p-1.title`,
                         message: `Shock absorber + Wheel arch + Disc cleaning`
@@ -51,7 +51,7 @@ const ServicesDetailingInfo = () => {
                         message: `Oil and Spray of excellent quality are the secret to properly cleaning your disc. Front and rear discs are one of the most important parts of your vehicle, and for that reason alone, you deserve only the best. Our experienced staff, our excellent materials, our specialized staff are the answer to your questions and the solution to your problems.`
                     })}
                 </div>
-                <h2 className='py-5 text-xl'>
+                <h2 className=' py-5 text-xl font-medium'>
                     {t({
                         id: `detail-car-wash.detailing.p-2.title`,
                         message: `Rims`
@@ -63,7 +63,7 @@ const ServicesDetailingInfo = () => {
                         message: `Aluminum wheels on a car are among the places that get dirty very quickly. Sand, mud, dust and anything else that may be on the road surface will stick to and stain the tire rim. Without systematic cleaning, in fact, these impurities can lead to the destruction of the aluminum. For this reason, cleaning the rims at least 1-2 times a month is imperative and we can do it for you. Learn how!`
                     })}
                 </div>
-                <h2 className='py-5 text-xl'>
+                <h2 className=' py-5 text-xl font-medium'>
                     {t({
                         id: `detail-car-wash.detailing.p-3.title`,
                         message: `Polishing in places inaccessible by the human hand`
@@ -75,7 +75,7 @@ const ServicesDetailingInfo = () => {
                         message: `We also have specialized staff and specialized machinery to be able to polish in detail every point inaccessible by the human hand, every difficulty for you...a challenge for us!`
                     })}
                 </div>
-                <h2 className='py-5 text-xl'>
+                <h2 className=' py-5 text-xl font-medium'>
                     {t({
                         id: `detail-car-wash.detailing.p-4.title`,
                         message: `Nanotechnology`

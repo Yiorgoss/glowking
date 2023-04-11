@@ -10,10 +10,13 @@ import { RxCalendar, RxHamburgerMenu } from 'react-icons/rx';
 
 import { t } from '@lingui/macro';
 
-import ActiveLink from '@components/common/activeLink/activeLink';
 import { navLinkType } from '@cTypes/inputTypes';
+
 import LangSwitcher from '@/components/langSwitcher';
+import SideMenu from '@/components/sideMenu'
+
 import Button from '@components/common/button/button';
+import ActiveLink from '@components/common/activeLink/activeLink';
 
 export default function Header({
     navLinks

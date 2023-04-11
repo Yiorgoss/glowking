@@ -18,7 +18,7 @@ export const carServiceSubCategory = [
     {
         title: defineMessage({
             id: `serviceData.car-sub-category.3`,
-            message: `Motobike Wash`
+            message: `Motorbike Wash`
         }),
         href: '/services/detail-car-wash/motorbike-clean'
     }
@@ -204,14 +204,16 @@ export const sidebarLinks = [
             id: 'services-side-bar.layout.1',
             message: 'Car Wash and Detailing'
         }),
-        path: '/services/detail-car-wash/car-cleaning'
+        path: '/services/detail-car-wash/car-cleaning',
+        subPaths: carServiceSubCategory
     },
     {
         title: defineMessage({
             id: 'services-side-bar.layout.2',
             message: 'Home Cleaning'
         }),
-        path: '/services/home-cleaning-couches/couches'
+        path: '/services/home-cleaning-couches/couches',
+        subPaths: homeServiceSubCategory
     },
     {
         title: defineMessage({
@@ -265,7 +267,7 @@ export const serviceData = [
         content: defineMessage({
             id: `Services-simple-list.three.content`,
             message:
-            'Car detailing is the service that offers you the detailing you deserve! Top quality materials and top staff are the ultimate combination for top results. A result with a protagonist...you!'
+                'Car detailing is the service that offers you the detailing you deserve! Top quality materials and top staff are the ultimate combination for top results. A result with a protagonist...you!'
         }),
         image: '/media/images/internal.jpeg',
         className: 'col-span-3',
@@ -307,7 +309,7 @@ export const serviceData = [
         content: defineMessage({
             id: `Services-simple-list.six.content`,
             message:
-            'A garage full of dust, mud and clutter? Our company undertakes a complete cleaning of your garage. Our trusted staff combined with the top quality of our products will make your garage shine!'
+                'A garage full of dust, mud and clutter? Our company undertakes a complete cleaning of your garage. Our trusted staff combined with the top quality of our products will make your garage shine!'
         }),
         image: '/media/images/pavement.png',
         className: 'col-span-2',

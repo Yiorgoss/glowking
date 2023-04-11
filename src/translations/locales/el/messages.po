@@ -198,51 +198,51 @@ msgstr "Υπηρεσίες καθαρισμού στα Νότια Προάστι
 msgid "Portfolio.header"
 msgstr "Το χαρτοφυλάκιό μας"
 
-#: src/data/serviceData.ts:293
+#: src/data/serviceData.ts:295
 msgid "Services-simple-list.five.content"
 msgstr "Ο Βιοκαθαρισμός καναπέ αποτελεί την πληρέστερη διαδικασία καθαρισμού καναπέδων και γενικότερα υφασμάτινων επιφανιών που μπορείτε να βρείτε. Η μέθοδος αυτή αφορά τον καλύτερο τρόπο καθαρισμού υφασμάτινης επιφάνειας αφού καθαρίζει λεκέδες φρεσκάρει χρώματα, απολυμαίνει όλη την επιφάνεια και αποσμεί τις δυσάρεστες μυρωδιές . Οι επιφάνειες μετά ειναι νωπές για ελάχιστες ώρες."
 
-#: src/data/serviceData.ts:289
+#: src/data/serviceData.ts:291
 msgid "Services-simple-list.five.header"
 msgstr "Σπίτι Υπηρεσίας"
 
-#: src/data/serviceData.ts:279
+#: src/data/serviceData.ts:281
 msgid "Services-simple-list.four.content"
 msgstr "Ένα γκαράζ γεμάτο σκόνη, λάσπη και ακαταστασία ; Η εταιρεία μας αναλαμβάνει πλήρη καθαρισμό του γκαράζ σας. Το έμπιστο προσωπικό μας σε συνδυασμό με την κορυφαία των προιόντων μας θα κάνει το γκαράζ σας να λάμψει !"
 
-#: src/data/serviceData.ts:275
+#: src/data/serviceData.ts:277
 msgid "Services-simple-list.four.header"
 msgstr "Πλύσιμο Πεζοδρομίων/Γκαράζ"
 
-#: src/data/serviceData.ts:237
+#: src/data/serviceData.ts:239
 msgid "Services-simple-list.one.content"
 msgstr "Ο εξωτερικός καθαρισμός γίνεται χωρίς τη χρήση βούρτσας η σφουγγαριού παρά μόνο με τη χρήση ζεστού νερού για την λιγότερη φθορά του εξωτερικού χρώματος του αυτοκινήτου.Στο Glow King σας προσφέρουμε ένα πλήρες εξωτερικό καθαρισμό με πρόπλυση και κυρίως πλύση του οχήματος με ενεργό αφρό, καθαρισμό των θολών και των ζαντών, αφαίρεση εντόμων, κέρωμα προστασίας και ξέπλυμα του αυτοκινήτου με απιονισμένο νερό!Στη συνέχεια γίνεται λεπτομερείς σκούπισμα του οχήματος."
 
-#: src/data/serviceData.ts:233
+#: src/data/serviceData.ts:235
 msgid "Services-simple-list.one.header"
 msgstr "Εξωτερικός Καθαρισμός"
 
-#: src/data/serviceData.ts:307
+#: src/data/serviceData.ts:309
 msgid "Services-simple-list.six.content"
 msgstr "Ένα γκαράζ γεμάτο σκόνη, λάσπη και ακαταστασία ; Η εταιρία μας αναλαμβάνει πλήρη καθαρισμό του γκαράζ σας. Το έμπιστο προσωπικό μας σε συνδυασμό με την κορυφαίας ποιότητα των προιόντων μας θα κάνει το γκαράζ σας να λάμψει !"
 
-#: src/data/serviceData.ts:303
+#: src/data/serviceData.ts:305
 msgid "Services-simple-list.six.header"
 msgstr "Υπηρεσίες Ακίνητης Περιουσίας"
 
-#: src/data/serviceData.ts:265
+#: src/data/serviceData.ts:267
 msgid "Services-simple-list.three.content"
 msgstr "Το σκάφος σας βρήκε τον αφέντη του! Η εταιρεία μας αναλαμβάνει τόσο τον εσωτερικό όσο και τον εξωτερικό καθαρισμό του σκάφους σας. Το έμπιστο προσωπικό μας σε συνδυασμό με την κορυφαία ποιότητα των προϊόντων μας θα κάνουν το σκάφος σας να λάμπει!"
 
-#: src/data/serviceData.ts:261
+#: src/data/serviceData.ts:263
 msgid "Services-simple-list.three.header"
 msgstr "Πλύσιμο σκαφών"
 
-#: src/data/serviceData.ts:251
+#: src/data/serviceData.ts:253
 msgid "Services-simple-list.two.content"
 msgstr "Στον εσωτερικό καθαρισμό έχοντας ως γνώμονα τον σεβασμό προς τον άνθρωπο και το περιβάλλον χρησιμοποιούμε οικολογικά βιοδιασπώμενα προϊόντα.Εσωτερικά φυσάμε το όχημα για να απομακρύνουμε τη σκόνη και στη συνέχεια καθαρίζουμε με σκούπα αναρρόφησης την καμπίνα και τους χώρους αποσκευών, καθαρισμό των τζαμιών και όλων των γυαλινών επιφανειών.Τέλος προχωρούμε σε καθαρισμό και συντήρηση όλων των δερμάτινων και πλαστικών επιφανειών χώρου, στεγνό καθαρισμό ταπέτων και αρωματισμό του καμπίνας."
 
-#: src/data/serviceData.ts:247
+#: src/data/serviceData.ts:249
 msgid "Services-simple-list.two.header"
 msgstr "Εσωτερικός Καθαρισμός"
 
@@ -742,7 +742,7 @@ msgstr "Χαρτοφυλάκιο"
 msgid "navlinks.services"
 msgstr "Υπηρεσίες"
 
-#: src/layouts/sidebarLayout.tsx:17
+#: src/layouts/sidebarLayout.tsx:20
 msgid "service-sidebar.title"
 msgstr "Οι Υπηρεσίες μας"
 
@@ -778,15 +778,15 @@ msgstr "Κράτηση τώρα"
 msgid "services-side-bar.layout.1"
 msgstr "Πλύσιμο αυτοκινήτου και Detailing"
 
-#: src/data/serviceData.ts:210
+#: src/data/serviceData.ts:211
 msgid "services-side-bar.layout.2"
 msgstr "Καθαρισμός σπιτιού"
 
-#: src/data/serviceData.ts:217
+#: src/data/serviceData.ts:219
 msgid "services-side-bar.layout.3"
 msgstr "Καθαρισμός Γιοτ"
 
-#: src/data/serviceData.ts:224
+#: src/data/serviceData.ts:226
 msgid "services-side-bar.layout.4"
 msgstr "Καθαρισμός ακινήτου"
 

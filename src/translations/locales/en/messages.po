@@ -198,51 +198,51 @@ msgstr "Athens Portable Wash | We come to You | Glyfada | South"
 msgid "Portfolio.header"
 msgstr "Our Portfolio"
 
-#: src/data/serviceData.ts:293
+#: src/data/serviceData.ts:295
 msgid "Services-simple-list.five.content"
 msgstr "Biocleaning sofa is the most complete sofa cleaning process and more generally fabric surfaces that you can find. This method concerns the best way to clean a fabric surface since it cleans stains refreshes colors, disinfects the entire surface and deodorizes the unpleasant ones smells. The surfaces are then fresh for a few hours."
 
-#: src/data/serviceData.ts:289
+#: src/data/serviceData.ts:291
 msgid "Services-simple-list.five.header"
 msgstr "Home Services"
 
-#: src/data/serviceData.ts:279
+#: src/data/serviceData.ts:281
 msgid "Services-simple-list.four.content"
 msgstr "Biocleaning sofa is the most complete sofa cleaning process and more generally fabric surfaces that you can find. This method concerns the best way to clean a fabric surface since it cleans stains refreshes colors, disinfects the entire surface and deodorizes the unpleasant ones smells. The surfaces are then fresh for a few hours."
 
-#: src/data/serviceData.ts:275
+#: src/data/serviceData.ts:277
 msgid "Services-simple-list.four.header"
 msgstr "Home Services"
 
-#: src/data/serviceData.ts:237
+#: src/data/serviceData.ts:239
 msgid "Services-simple-list.one.content"
 msgstr "External cleaning is done without the use of a brush or sponge, but only with the use of hot water for less damage to the car's exterior paint.At Glow King we offer you a complete exterior cleaning with pre-washing and mainly washing the vehicle with active foam, cleaning the domes and rims, removing insects, protective wax and rinsing the car with deionized water!The vehicle is then thoroughly wiped."
 
-#: src/data/serviceData.ts:233
+#: src/data/serviceData.ts:235
 msgid "Services-simple-list.one.header"
 msgstr "External Wash"
 
-#: src/data/serviceData.ts:307
+#: src/data/serviceData.ts:309
 msgid "Services-simple-list.six.content"
 msgstr "A garage full of dust, mud and clutter? Our company undertakes a complete cleaning of your garage. Our trusted staff combined with the top quality of our products will make your garage shine!"
 
-#: src/data/serviceData.ts:303
+#: src/data/serviceData.ts:305
 msgid "Services-simple-list.six.header"
 msgstr "Property Services"
 
-#: src/data/serviceData.ts:265
+#: src/data/serviceData.ts:267
 msgid "Services-simple-list.three.content"
 msgstr "Your boat has found its master! Our company undertakes both the interior and exterior cleaning of your boat. Our trusted staff combined with the top quality of our products will make your boat shine!"
 
-#: src/data/serviceData.ts:261
+#: src/data/serviceData.ts:263
 msgid "Services-simple-list.three.header"
 msgstr "Yacht Services"
 
-#: src/data/serviceData.ts:251
+#: src/data/serviceData.ts:253
 msgid "Services-simple-list.two.content"
 msgstr "In internal cleaning, with respect for people and the environment as our guiding principle, we use ecologically biodegradable products.Internally we blow the vehicle to remove the dust and then vacuum the cabin and the luggage compartment, cleaning the windows and all glass surfaces.Finally, we proceed with cleaning and maintenance of all leather and plastic surfaces, dry cleaning of carpets and perfuming the cabin area."
 
-#: src/data/serviceData.ts:247
+#: src/data/serviceData.ts:249
 msgid "Services-simple-list.two.header"
 msgstr "Internal Cleaning"
 
@@ -742,7 +742,7 @@ msgstr "Portfolio"
 msgid "navlinks.services"
 msgstr "Services"
 
-#: src/layouts/sidebarLayout.tsx:17
+#: src/layouts/sidebarLayout.tsx:20
 msgid "service-sidebar.title"
 msgstr "Our Services"
 
@@ -778,15 +778,15 @@ msgstr "Book Now"
 msgid "services-side-bar.layout.1"
 msgstr "Car Wash and Detailing"
 
-#: src/data/serviceData.ts:210
+#: src/data/serviceData.ts:211
 msgid "services-side-bar.layout.2"
 msgstr "Home Cleaning"
 
-#: src/data/serviceData.ts:217
+#: src/data/serviceData.ts:219
 msgid "services-side-bar.layout.3"
 msgstr "Yatch Cleaning"
 
-#: src/data/serviceData.ts:224
+#: src/data/serviceData.ts:226
 msgid "services-side-bar.layout.4"
 msgstr "Property Cleaning"
 

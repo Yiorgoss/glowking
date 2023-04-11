@@ -198,51 +198,51 @@ msgstr ""
 msgid "Portfolio.header"
 msgstr ""
 
-#: src/data/serviceData.ts:293
+#: src/data/serviceData.ts:295
 msgid "Services-simple-list.five.content"
 msgstr ""
 
-#: src/data/serviceData.ts:289
+#: src/data/serviceData.ts:291
 msgid "Services-simple-list.five.header"
 msgstr ""
 
-#: src/data/serviceData.ts:279
+#: src/data/serviceData.ts:281
 msgid "Services-simple-list.four.content"
 msgstr ""
 
-#: src/data/serviceData.ts:275
+#: src/data/serviceData.ts:277
 msgid "Services-simple-list.four.header"
 msgstr ""
 
-#: src/data/serviceData.ts:237
+#: src/data/serviceData.ts:239
 msgid "Services-simple-list.one.content"
 msgstr ""
 
-#: src/data/serviceData.ts:233
+#: src/data/serviceData.ts:235
 msgid "Services-simple-list.one.header"
 msgstr ""
 
-#: src/data/serviceData.ts:307
+#: src/data/serviceData.ts:309
 msgid "Services-simple-list.six.content"
 msgstr ""
 
-#: src/data/serviceData.ts:303
+#: src/data/serviceData.ts:305
 msgid "Services-simple-list.six.header"
 msgstr ""
 
-#: src/data/serviceData.ts:265
+#: src/data/serviceData.ts:267
 msgid "Services-simple-list.three.content"
 msgstr ""
 
-#: src/data/serviceData.ts:261
+#: src/data/serviceData.ts:263
 msgid "Services-simple-list.three.header"
 msgstr ""
 
-#: src/data/serviceData.ts:251
+#: src/data/serviceData.ts:253
 msgid "Services-simple-list.two.content"
 msgstr ""
 
-#: src/data/serviceData.ts:247
+#: src/data/serviceData.ts:249
 msgid "Services-simple-list.two.header"
 msgstr ""
 
@@ -742,7 +742,7 @@ msgstr ""
 msgid "navlinks.services"
 msgstr ""
 
-#: src/layouts/sidebarLayout.tsx:17
+#: src/layouts/sidebarLayout.tsx:20
 msgid "service-sidebar.title"
 msgstr ""
 
@@ -778,15 +778,15 @@ msgstr ""
 msgid "services-side-bar.layout.1"
 msgstr ""
 
-#: src/data/serviceData.ts:210
+#: src/data/serviceData.ts:211
 msgid "services-side-bar.layout.2"
 msgstr ""
 
-#: src/data/serviceData.ts:217
+#: src/data/serviceData.ts:219
 msgid "services-side-bar.layout.3"
 msgstr ""
 
-#: src/data/serviceData.ts:224
+#: src/data/serviceData.ts:226
 msgid "services-side-bar.layout.4"
 msgstr ""
 

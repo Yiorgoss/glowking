@@ -3,6 +3,8 @@ import { ReactElement, useState } from 'react';
 
 import { t, defineMessage } from '@lingui/macro';
 
+import {AiOutlineArrowUp} from 'react-icons/ai'
+
 import SidebarLayout from '@/layouts/sidebarLayout';
 import TabSectionLayout from '@/layouts/tabSectionLayout';
 import LandingLayout from '@/layouts/landingLayout';
@@ -119,7 +121,7 @@ const ServicesCarCleaning = () => {
                         message: `We also offer a large list of aditional optional cleaning services for your car`
                     })}
                 </div>
-                <div className='grid grid-cols-3 gap-5'>
+                <div className='grid grid-cols-1 mx-5 md:mx-0 md:grid-cols-3 gap-5'>
                     {carServiceExtras.map(
                         ({ title, content, price, href }, index) => (
                             <div className='h-full w-full' key={index}>

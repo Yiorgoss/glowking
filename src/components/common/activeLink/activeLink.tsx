@@ -20,12 +20,6 @@ const ActiveLink = ({
     const { asPath } = useRouter();
     const pathToContain = href.split('/')[containLevel];
 
-    console.log({
-        children: children,
-        path: href.split('/'),
-        contain: containLevel,
-        tf: asPath.includes(pathToContain)
-    });
     const active =
         containLevel !== 0 && pathToContain !== ''
             ? asPath.includes(pathToContain)
