@@ -53,7 +53,7 @@ export default function Header({
 
     return (
         <div>
-            <div className=' grid h-[100px] w-full grid-flow-row-dense grid-cols-2 uppercase text-primary md:grid-cols-5'>
+            <div className='absolute top-0 bg-transparent grid h-[100px] w-full grid-flow-row-dense grid-cols-2 uppercase text-primary md:grid-cols-5'>
                 <div className='my-auto cursor-pointer pl-4 md:pl-10'>
                     <Link href='/'>
                         <Image

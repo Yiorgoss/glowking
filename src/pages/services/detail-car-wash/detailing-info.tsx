@@ -7,6 +7,8 @@ import SidebarLayout from '@/layouts/sidebarLayout';
 import TabSectionLayout from '@/layouts/tabSectionLayout';
 import LandingLayout from '@/layouts/landingLayout';
 
+import Card from '@/components/common/card/card'
+
 import { loadTranslation } from '@/utils/utils';
 
 import { carServiceSubCategory } from '@/data/serviceData';

@@ -1,17 +1,11 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-02-28 20:39+0200\n"
+"POT-Creation-Date: 2023-04-13 17:04+0300\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: en\n"
-"Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Plural-Forms: \n"
 
 #: src/components/header.tsx:112
 #: src/components/header.tsx:118
@@ -20,7 +14,7 @@ msgstr "Book Now"
 
 #: src/components/bookingForm.tsx:59
 msgid "BookingForm.errorMessage"
-msgstr "Submission was not recorded. Please contact us directly"
+msgstr "Submission was not recorded. Please contact us directly at 6980 000 015"
 
 #: src/components/bookingForm.tsx:51
 msgid "BookingForm.successMessage"
@@ -30,31 +24,31 @@ msgstr "Successful Submission. We thank you!"
 msgid "Calendar-select-time"
 msgstr "Select Time"
 
-#: src/pages/contact.tsx:62
+#: src/pages/contact.tsx:100
 msgid "Contact.contactUs"
 msgstr "Contact Us"
 
-#: src/pages/contact.tsx:46
+#: src/pages/contact.tsx:89
 msgid "Contact.head.meta.description"
 msgstr "Want a professional car wash but don't want to leave your house? Call us or arrange a booking now. Anywhere in south athens!!"
 
-#: src/pages/contact.tsx:38
+#: src/pages/contact.tsx:81
 msgid "Contact.head.title"
-msgstr "Glowking | Mobile Industrial Cleaning | Location Of your Choice"
+msgstr "Mobile Industrial Cleaning | Location Of your Choice"
 
-#: src/pages/contact.tsx:89
+#: src/pages/contact.tsx:126
 msgid "Contact.orBy"
-msgstr "Or By"
+msgstr "Or Via"
 
-#: src/pages/contact.tsx:84
+#: src/pages/contact.tsx:121
 msgid "Contact.phone"
 msgstr "Phone:"
 
-#: src/pages/contact.tsx:68
+#: src/pages/contact.tsx:105
 msgid "Contact.welovetohelp"
 msgstr "We love to"
 
-#: src/pages/contact.tsx:75
+#: src/pages/contact.tsx:112
 msgid "Contact.welovetohelphelp"
 msgstr "help"
 
@@ -110,11 +104,11 @@ msgstr "Where to find us"
 msgid "Footer.sitemap"
 msgstr "Sitemap"
 
-#: src/pages/index.tsx:146
+#: src/pages/index.tsx:151
 msgid "Home.Features"
 msgstr "Features"
 
-#: src/pages/index.tsx:179
+#: src/pages/index.tsx:188
 msgid "Home.Services"
 msgstr "Our Services"
 
@@ -150,21 +144,21 @@ msgstr "Professional washing and cleaning for your car!The mobile car wash GLOW 
 msgid "Home.featureList.one.header"
 msgstr "Location Of Your Choice"
 
-#: src/pages/index.tsx:128
+#: src/pages/index.tsx:133
 msgid "Home.head.title"
-msgstr "Glowking | Carwash while at Work | Carwash while at Home"
+msgstr "Glowking | Car, Boat, Garage, Pavement Cleaning Services"
 
-#: src/pages/index.tsx:168
+#: src/pages/index.tsx:177
 msgid "Home.serviceSection.content"
 msgstr "GLOW KING ATHENS is an innovative idea that annihilates distances! It started in 2019 and in the middle of the pandemic it covered all the southern suburbs. Complete cleaning services of the vehicle, the property, the pavement and everything else you need! GLOW KING ATHENS operates with the environment and people as its main focus, next to your every need. Glow King Athens starring... you!"
 
-#: src/pages/index.tsx:164
+#: src/pages/index.tsx:173
 msgid "Home.serviceSection.title"
 msgstr "Who Are We?"
 
 #: src/pages/legal.tsx:30
 msgid "Legal.GDPR.header"
-msgstr "GDPR Statement of compliance"
+msgstr "Privacy Policy & Terms of Use"
 
 #: src/pages/legal.tsx:36
 msgid "Legal.GDPR.p1"
@@ -172,23 +166,23 @@ msgstr "GLOW KING ATHENS understands that your privacy is important to you and t
 
 #: src/pages/legal.tsx:45
 msgid "Legal.GDPR.p2"
-msgstr "Σεβόμαστε και εκτιμούμε το απόρρητο όλων όσων επισκέπτονται αυτόν τον ιστότοπο, και θα συλλέγουμε και θα χρησιμοποιούμε προσωπικά δεδομένα μόνο με τρόπους που περιγράφονται εδώ, και με τρόπο που να συμβαδίζει με το υποχρεώσεις και τα δικαιώματά σας βάσει του νόμου."
+msgstr "We respect and value the privacy of everyone who visits this website, and we will only collect and use personal data in ways described here, and in a way that is consistent with your obligations and rights under the law."
 
 #: src/pages/legal.tsx:54
 msgid "Legal.GDPR.p3"
-msgstr "Το GLOW KING ATHENS συμμορφώνεται με τις ισχύουσες νομοθετικές, κανονιστικές και συμβατικές διατάξεις σε ό,τι αφορά την συλλογή, την αποθήκευση, την ανάκτηση αλλά και την καταστροφή των δεδομένων αυτών, ιδιαίτερα δε με τις απαιτήσεις του Ευρωπαϊκού Κανονισμού (ΕΕ) 2016/679 που αφορά στην προστασία Δεδομένων Προσωπικού Χαρακτήρα (GDPR)"
+msgstr "GLOW KING ATHENS complies with the applicable legislative, regulatory and contractual provisions regarding the collection, storage, recovery and destruction of this data, in particular with the directives of the competent Regulation (EU) 2016/679 which concerns the protection of Personal Data (GDPR)"
 
 #: src/pages/legal.tsx:63
 msgid "Legal.GDPR.p4"
-msgstr "Διαβάστε προσεκτικά αυτήν την Πολιτική Απορρήτου και βεβαιωθείτε ότι την κατανοείτε."
+msgstr "Please read this Privacy Policy carefully and make sure you understand it."
 
 #: src/pages/legal.tsx:72
 msgid "Legal.GDPR.p5"
-msgstr "Η αποδοχή της Πολιτικής Απορρήτου, θεωρείται ότι πραγματοποιείται κατά την πρώτη χρήση του ιστοτόπου ."
+msgstr "Acceptance of the Privacy Policy is deemed to take place upon first use of the website."
 
 #: src/pages/legal.tsx:81
 msgid "Legal.GDPR.p6"
-msgstr "Εάν δεν αποδέχεστε και συμφωνείτε με αυτήν την Πολιτική Απορρήτου, πρέπει να σταματήσετε να χρησιμοποιείτε την Ιστοσελίδα μας αμέσως."
+msgstr "If you do not accept and agree to this Privacy Policy, you must stop using our Website immediately."
 
 #: src/pages/legal.tsx:90
 msgid "Legal.GDPR.p7"
@@ -196,57 +190,57 @@ msgstr "Η παρούσα Πολιτική ισχύει για τη χρήση �
 
 #: src/pages/portfolio.tsx:74
 msgid "Portfolio.head.title"
-msgstr "Athens Portable Wash | We come to You | Glyfada | South"
+msgstr "South Athens car cleaning services at your door"
 
 #: src/pages/portfolio.tsx:82
 msgid "Portfolio.header"
 msgstr "Our Portfolio"
 
-#: src/data/serviceData.ts:295
+#: src/data/serviceData.ts:307
 msgid "Services-simple-list.five.content"
 msgstr "Biocleaning sofa is the most complete sofa cleaning process and more generally fabric surfaces that you can find. This method concerns the best way to clean a fabric surface since it cleans stains refreshes colors, disinfects the entire surface and deodorizes the unpleasant ones smells. The surfaces are then fresh for a few hours."
 
-#: src/data/serviceData.ts:291
+#: src/data/serviceData.ts:303
 msgid "Services-simple-list.five.header"
 msgstr "Home Services"
 
-#: src/data/serviceData.ts:281
+#: src/data/serviceData.ts:293
 msgid "Services-simple-list.four.content"
-msgstr "Biocleaning sofa is the most complete sofa cleaning process and more generally fabric surfaces that you can find. This method concerns the best way to clean a fabric surface since it cleans stains refreshes colors, disinfects the entire surface and deodorizes the unpleasant ones smells. The surfaces are then fresh for a few hours."
+msgstr "Your boat has found its master! Our company undertakes both the interior and exterior cleaning of your boat. Our trusted staff combined with the top quality of our products will make your boat shine!"
 
-#: src/data/serviceData.ts:277
+#: src/data/serviceData.ts:289
 msgid "Services-simple-list.four.header"
-msgstr "Home Services"
+msgstr "Yacht Services"
 
-#: src/data/serviceData.ts:239
+#: src/data/serviceData.ts:251
 msgid "Services-simple-list.one.content"
 msgstr "External cleaning is done without the use of a brush or sponge, but only with the use of hot water for less damage to the car's exterior paint.At Glow King we offer you a complete exterior cleaning with pre-washing and mainly washing the vehicle with active foam, cleaning the domes and rims, removing insects, protective wax and rinsing the car with deionized water!The vehicle is then thoroughly wiped."
 
-#: src/data/serviceData.ts:235
+#: src/data/serviceData.ts:247
 msgid "Services-simple-list.one.header"
 msgstr "External Wash"
 
-#: src/data/serviceData.ts:309
+#: src/data/serviceData.ts:321
 msgid "Services-simple-list.six.content"
 msgstr "A garage full of dust, mud and clutter? Our company undertakes a complete cleaning of your garage. Our trusted staff combined with the top quality of our products will make your garage shine!"
 
-#: src/data/serviceData.ts:305
+#: src/data/serviceData.ts:317
 msgid "Services-simple-list.six.header"
 msgstr "Property Services"
 
-#: src/data/serviceData.ts:267
+#: src/data/serviceData.ts:279
 msgid "Services-simple-list.three.content"
-msgstr "Your boat has found its master! Our company undertakes both the interior and exterior cleaning of your boat. Our trusted staff combined with the top quality of our products will make your boat shine!"
+msgstr "Car detailing is the service that offers you the detailing you deserve! Top quality materials and top staff are the ultimate combination for top results. A result with a protagonist...you!"
 
-#: src/data/serviceData.ts:263
+#: src/data/serviceData.ts:275
 msgid "Services-simple-list.three.header"
-msgstr "Yacht Services"
+msgstr "Full Detailing"
 
-#: src/data/serviceData.ts:253
+#: src/data/serviceData.ts:265
 msgid "Services-simple-list.two.content"
 msgstr "In internal cleaning, with respect for people and the environment as our guiding principle, we use ecologically biodegradable products.Internally we blow the vehicle to remove the dust and then vacuum the cabin and the luggage compartment, cleaning the windows and all glass surfaces.Finally, we proceed with cleaning and maintenance of all leather and plastic surfaces, dry cleaning of carpets and perfuming the cabin area."
 
-#: src/data/serviceData.ts:249
+#: src/data/serviceData.ts:261
 msgid "Services-simple-list.two.header"
 msgstr "Internal Cleaning"
 
@@ -290,99 +284,99 @@ msgstr "Washing the bottom of the car, removes mud, salts (from the winter seaso
 msgid "car-service-extras.1.title"
 msgstr "WASHABLE FROM BELOW"
 
-#: src/data/serviceData.ts:158
+#: src/data/serviceData.ts:168
 msgid "car-service-extras.10.content"
 msgstr "Biological cleaning of a child seat."
 
-#: src/data/serviceData.ts:154
+#: src/data/serviceData.ts:164
 msgid "car-service-extras.10.title"
 msgstr "CHILD SEAT"
 
-#: src/data/serviceData.ts:170
+#: src/data/serviceData.ts:181
 msgid "car-service-extras.11.content"
 msgstr "Biological cleaning of 2 children's seats."
 
-#: src/data/serviceData.ts:166
+#: src/data/serviceData.ts:177
 msgid "car-service-extras.11.title"
 msgstr "2 CHILDREN'S SEATS"
 
-#: src/data/serviceData.ts:71
+#: src/data/serviceData.ts:90
 msgid "car-service-extras.12.content"
 msgstr "Wax with AUTOGLYM wax, with a duration of 2 months, gives an extra protection to the surface of your car."
 
-#: src/data/serviceData.ts:67
+#: src/data/serviceData.ts:86
 msgid "car-service-extras.12.title"
 msgstr "PREMIUM AUTOGLYM WAX"
 
-#: src/data/serviceData.ts:44
+#: src/data/serviceData.ts:45
 msgid "car-service-extras.2.content"
 msgstr "Odors are not covered but neutralized. For odors such as Cigarettes, Animals and other persistent odors."
 
-#: src/data/serviceData.ts:40
+#: src/data/serviceData.ts:41
 msgid "car-service-extras.2.title"
 msgstr "REMOVING ODORS + MICROBES"
 
-#: src/data/serviceData.ts:56
+#: src/data/serviceData.ts:74
 msgid "car-service-extras.3.content"
 msgstr "Hand polishing, removal of deposits with plasticine and CERAMIC ceramic coating. It offers a super hydrophobic protection and an amazing polish & finish, it lasts for 3 months."
 
-#: src/data/serviceData.ts:60
+#: src/data/serviceData.ts:78
 msgid "car-service-extras.3.price"
 msgstr "Request a Quote"
 
-#: src/data/serviceData.ts:52
+#: src/data/serviceData.ts:70
 msgid "car-service-extras.3.title"
 msgstr "POLISHING – CERAMIC COATING"
 
-#: src/data/serviceData.ts:83
+#: src/data/serviceData.ts:103
 msgid "car-service-extras.4.content"
 msgstr "Special glass coating that offers external hydrophobic and internal anti-fog protection, ideal for the winter months."
 
-#: src/data/serviceData.ts:79
+#: src/data/serviceData.ts:99
 msgid "car-service-extras.4.title"
 msgstr "HYDROPHOBIC & ANTI-FOG GLASS COATING"
 
-#: src/data/serviceData.ts:95
+#: src/data/serviceData.ts:58
 msgid "car-service-extras.5.content"
 msgstr "Tire pressure check & inflation."
 
-#: src/data/serviceData.ts:99
+#: src/data/serviceData.ts:62
 msgid "car-service-extras.5.price"
 msgstr "FREE"
 
-#: src/data/serviceData.ts:91
+#: src/data/serviceData.ts:54
 msgid "car-service-extras.5.title"
 msgstr "TIRE INFLATION"
 
-#: src/data/serviceData.ts:110
+#: src/data/serviceData.ts:116
 msgid "car-service-extras.6.content"
 msgstr "Refilling of cleaning liquid soap for the windshield wipers."
 
-#: src/data/serviceData.ts:106
+#: src/data/serviceData.ts:112
 msgid "car-service-extras.6.title"
 msgstr "LIQUID SOAP FOR WINDSHIELD WIPERS"
 
-#: src/data/serviceData.ts:122
+#: src/data/serviceData.ts:129
 msgid "car-service-extras.7.content"
 msgstr "Hood cleaning, maintenance and waterproofing for a convertible car."
 
-#: src/data/serviceData.ts:118
+#: src/data/serviceData.ts:125
 msgid "car-service-extras.7.title"
 msgstr "HOOD WATERPROOFING & MAINTENANCE"
 
-#: src/data/serviceData.ts:134
+#: src/data/serviceData.ts:142
 msgid "car-service-extras.8.content"
-msgstr "We Clean Your unit air condition unit"
+msgstr "We clean your air condition unit"
 
-#: src/data/serviceData.ts:130
+#: src/data/serviceData.ts:138
 msgid "car-service-extras.8.title"
 msgstr "CLEANING AIR CONDITIONER"
 
-#: src/data/serviceData.ts:146
+#: src/data/serviceData.ts:155
 msgid "car-service-extras.9.content"
 msgstr "Removing very fine pet hair from seats and carpeting."
 
-#: src/data/serviceData.ts:142
+#: src/data/serviceData.ts:151
 msgid "car-service-extras.9.title"
 msgstr "PET HAIR REMOVAL"
 
@@ -530,7 +524,7 @@ msgstr "Minimum charge to come to your place: €30.00"
 msgid "detail-car-wash.motorbike.title"
 msgstr "Motorbike Cleaning"
 
-#: src/pages/services/detail-car-wash/car-cleaning.tsx:148
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:149
 #: src/pages/services/detail-car-wash/detailing-info.tsx:222
 #: src/pages/services/detail-car-wash/motorbike-clean.tsx:80
 msgid "detail-car-wash.title"
@@ -785,37 +779,37 @@ msgstr "Detailing"
 
 #: src/data/serviceData.ts:19
 msgid "serviceData.car-sub-category.3"
-msgstr "Motobike Wash"
+msgstr "Motorbike Wash"
 
-#: src/data/serviceData.ts:180
+#: src/data/serviceData.ts:192
 msgid "serviceData.home-sub-category.1"
 msgstr "Couches"
 
-#: src/data/serviceData.ts:187
+#: src/data/serviceData.ts:199
 msgid "serviceData.home-sub-category.2"
 msgstr "Carpets"
 
-#: src/data/serviceData.ts:194
+#: src/data/serviceData.ts:206
 msgid "serviceData.home-sub-category.3"
-msgstr "Matresses"
+msgstr "Mattresses"
 
 #: src/components/serviceSection.tsx:40
 msgid "serviceSection.button.text"
 msgstr "Book Now"
 
-#: src/data/serviceData.ts:203
+#: src/data/serviceData.ts:215
 msgid "services-side-bar.layout.1"
 msgstr "Car Wash and Detailing"
 
-#: src/data/serviceData.ts:211
+#: src/data/serviceData.ts:223
 msgid "services-side-bar.layout.2"
 msgstr "Home Cleaning"
 
-#: src/data/serviceData.ts:219
+#: src/data/serviceData.ts:231
 msgid "services-side-bar.layout.3"
-msgstr "Yatch Cleaning"
+msgstr "Yacht Cleaning"
 
-#: src/data/serviceData.ts:226
+#: src/data/serviceData.ts:238
 msgid "services-side-bar.layout.4"
 msgstr "Property Cleaning"
 
@@ -833,15 +827,15 @@ msgstr "REQUEST AN OFFER"
 
 #: src/pages/services/yacht-cleaning-boat.tsx:34
 msgid "yacht-cleaning-boat.p-1.1"
-msgstr "Cleaning is done without the use of a brush or sponge but only with it use of hot water for less damage to the car's exterior paint. At Glow King we offer you a complete cleaning with pre-washing and mainly washing of the machine with active foam, cleaning of fogs and rims, removal of insects, protective wax and washing the car with deionized water!"
+msgstr "The cleaning is done without the use of a brush or sponge but only with the use of hot water for less damage to the car's exterior paint."
 
 #: src/pages/services/yacht-cleaning-boat.tsx:40
 msgid "yacht-cleaning-boat.p-1.2"
-msgstr "Your machine is then thoroughly cleaned. Cleaning with respect for people and the environment as a guideline we use ecological biodegradable products. Blow the inside of your machine to remove the dust and then clean with a vacuum cleaner. Finally, we proceed to cleaning and maintenance of all plastic surfaces, dry cleaning and perfuming her saddle your machine."
+msgstr "At Glow King we offer you a complete cleaning with pre-washing and mainly washing the machine with active foam, cleaning the fog lights and rims, removing insects, protective wax and rinsing the car with deionized water!"
 
 #: src/pages/services/yacht-cleaning-boat.tsx:46
 msgid "yacht-cleaning-boat.p-1.3"
-msgstr "Minimum fee to come to your place: €30.00"
+msgstr "Your machine is then thoroughly wiped."
 
 #: src/pages/services/yacht-cleaning-boat.tsx:52
 msgid "yacht-cleaning-boat.p-1.4"

@@ -208,7 +208,7 @@ Home.getLayout = function getLayout(page: ReactElement) {
     //TODO: see other todo about getlayout function
     return (
         <LandingLayout>
-            <div className='mt-[-100px]'>{page}</div>
+            <div className=''>{page}</div>
         </LandingLayout>
     );
 };

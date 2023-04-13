@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Head from 'next/head';
 
-import { ReactElement, useState } from 'react';
+import { ReactElement, useState, useEffect } from 'react';
 
 import LandingLayout from '@layouts/landingLayout';
 import { t } from '@lingui/macro';
@@ -31,6 +31,49 @@ const Contact: PageWithHeaderLayout = () => {
     //TODO: refactor form into compound component
     //TODO: remove form elements and instead use react and axios/fetch
 
+    const [responsiveImage, setResponsiveImage] = useState(
+        <Image
+            className='object-cover'
+            src='/media/images/banner_mobile.png'
+            alt=''
+            fill
+        />
+    );
+
+    useEffect(() => {
+        // only execute all the code below in client side
+        // Handler to call on window resize
+        function handleResize() {
+            // Set window width/height to state
+            if (window.innerWidth >= 800) {
+                setResponsiveImage(
+                    <Image
+                        className='object-cover'
+                        src='/media/images/banner_desktop.jpeg'
+                        alt=''
+                        fill
+                    quality={1}
+                    />
+                );
+            } else {
+                setResponsiveImage(
+                    <Image
+                        className='object-cover'
+                        src='/media/images/banner_mobile.png'
+                        alt=''
+                        fill
+                    quality={1}
+                    />
+                );
+            }
+        }
+        // Add event listener
+        window.addEventListener('resize', handleResize);
+        // Call handler right away so state gets updated with initial window size
+        handleResize();
+        // Remove event listener on cleanup
+        return () => window.removeEventListener('resize', handleResize);
+    }, []); // Empty array heightensures that effect is only run on mount
     return (
         <div className='mx-auto mt-[100px]'>
             <Head>
@@ -52,12 +95,7 @@ const Contact: PageWithHeaderLayout = () => {
             </Head>
             <div className='my-10 pb-20'>
                 <div className='relative mt-[100px] h-[300px] w-screen overflow-hidden '>
-                    <Image
-                        className='object-cover'
-                            src="/media/images/banner_lambo.jpeg"
-                        alt='banner image of a black lamborghini'
-                        fill
-                    />
+                    {responsiveImage}
                     <h2 className='absolute inset-x-0 bottom-0 my-20 pb-10 pt-10 text-center text-5xl font-semibold tracking-wider text-primary'>
                         {t({ id: 'Contact.contactUs', message: 'Contact Us' })}
                     </h2>

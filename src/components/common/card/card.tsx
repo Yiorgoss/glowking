@@ -74,7 +74,7 @@ const Content = ({
     if (!children) {
         return <></>;
     }
-    return <p className={className}>{children}</p>;
+    return <div className={className}>{children}</div>;
 };
 const Price = ({
     price,

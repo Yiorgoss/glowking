@@ -281,9 +281,9 @@ export const serviceData = [
             message:
                 'Car detailing is the service that offers you the detailing you deserve! Top quality materials and top staff are the ultimate combination for top results. A result with a protagonist...you!'
         }),
-        image: '/media/images/internal.jpeg',
+        image: '/media/images/detailing.jpeg',
         className: 'col-span-3',
-        path: '/services/detail-car-wash/car-cleaning'
+        path: '/services/detail-car-wash/detailing-info'
     },
     {
         header: defineMessage({
@@ -309,7 +309,7 @@ export const serviceData = [
             message:
                 'Biocleaning sofa is the most complete sofa cleaning process and more generally fabric surfaces that you can find. This method concerns the best way to clean a fabric surface since it cleans stains refreshes colors, disinfects the entire surface and deodorizes the unpleasant ones smells. The surfaces are then fresh for a few hours.'
         }),
-        image: '/media/images/pavement.png',
+        image: '/media/images/home_services.jpg',
         className: 'col-span-2',
         path: '/services/property-cleaning-garage'
     },

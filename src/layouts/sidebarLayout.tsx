@@ -17,7 +17,7 @@ export default function ServiceLayout({
     return (
         <>
             <div className='container my-10 mx-auto mt-[100px] grid grid-cols-1 md:grid-cols-3'>
-                <div className=' mt-0 md:mt-[20vh]'>
+                <div className='mt-0 md:mt-[20vh]'>
                     <div className='hidden md:block'>
                         <Sidebar
                             title={defineMessage({
@@ -30,7 +30,7 @@ export default function ServiceLayout({
                 </div>
                 <div className='col-span-full md:order-last md:col-span-2'>
                     <div
-                        className='float-left my-auto mx-4 mt-10 p-1 hover:cursor-pointer md:hidden'
+                        className='float-left mx-4   hover:cursor-pointer md:hidden'
                         onClick={() => {
                             setActiveMenu(true);
                         }}>
