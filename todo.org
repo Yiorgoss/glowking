@@ -1,4 +1,12 @@
 * Inbox
+** TODO need to replace all string interpolation with tailwind merge
+
+[[file:~/code/gikas/glowking/src/components/common/card/card.tsx::return <div className={`flex flex-col justify-between ${colorPreset} ${className}`}>{children}</div>;]]
+** TODO Logging System
+
+- Axiom has integration with Vercel
+- Has dashboard
+
 ** TODO Function difficult to follow in need of refactoring
 
 [[file:~/code/gikas/glowking/src/pages/api/calendar.ts:://sgMail.setApiKey(process.env\['SENDGRID_API_KEY'\]);]]

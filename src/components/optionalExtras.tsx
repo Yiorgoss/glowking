@@ -46,7 +46,9 @@ const OptionalExtras = ({
                             Silver Wash
                         </Card.Header>
                         <Card.Content className='p-5 text-base'>
-                            test
+                            <div>
+                                hi
+                            </div>
                         </Card.Content>
                         <Card.Price price={30} />
                     </Card>

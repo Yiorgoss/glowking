@@ -1,12 +1,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { ReactElement, createContext, useState } from 'react';
+import { ReactElement, createContext, useState, ReactNode } from 'react';
 
 import { MessageDescriptor, i18n } from '@lingui/core';
 
 import { SlWallet } from 'react-icons/sl';
 
+import { isMessageDescriptor } from '@/utils/utils';
 //const CardContext = createContext({});
 
 const Graphic = ({
@@ -58,15 +59,10 @@ const Header = ({
     children?: ReactElement | ReactElement[] | string | MessageDescriptor;
     className?: string;
 }) => {
-    const header = children
-        ? typeof children === 'string'
-            ? children
-            : i18n._(children!)
-        : children;
-
-    if (!children) {
-        return <></>;
-    }
+    const header =
+        children && isMessageDescriptor(children)
+            ? (i18n._(children as MessageDescriptor) as string)
+            : (children as ReactNode);
     return <h3 className={className}> {header} </h3>;
 };
 
@@ -77,14 +73,10 @@ const Content = ({
     children?: ReactElement | ReactElement[] | string | MessageDescriptor;
     className?: string;
 }) => {
-    const content = children
-        ? typeof children === 'string'
-            ? children
-            : i18n._(children!)
-        : '';
-    if (!children) {
-        return <></>;
-    }
+    const content =
+        children && isMessageDescriptor(children)
+            ? (i18n._(children as MessageDescriptor) as string)
+            : (children as ReactNode);
     return <div className={className}>{content}</div>;
 };
 const Price = ({
@@ -126,19 +118,24 @@ enum ColorPreset {
 const Card = ({
     children,
     className,
-    colorPreset=ColorPreset.Custom
+    colorPreset = ColorPreset.Custom
 }: {
     children: ReactElement | ReactElement[];
     className?: string;
-    colorPreset?: ColorPreset
+    colorPreset?: ColorPreset;
 }) => {
-    return <div className={`flex flex-col justify-between ${colorPreset} ${className}`}>{children}</div>;
+    return (
+        <div
+            className={`flex flex-col justify-between ${colorPreset} ${className}`}>
+            {children}
+        </div>
+    );
 };
 
 Card.Header = Header;
 Card.Content = Content;
 Card.Graphic = Graphic;
 Card.Price = Price;
-Card.ColorPreset = ColorPreset
+Card.ColorPreset = ColorPreset;
 
 export default Card;

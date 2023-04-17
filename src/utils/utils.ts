@@ -1,13 +1,17 @@
-import type { I18n } from "@lingui/core";
-import { en,el } from "make-plural/plurals";
+import type { I18n, MessageDescriptor } from '@lingui/core';
+import { en, el } from 'make-plural/plurals';
 
 //anounce which locales we are going to use and connect them to approprite plural rules
 export function initTranslation(i18n: I18n): void {
     i18n.loadLocaleData({
         en: { plurals: en },
         el: { plurals: el },
-        pseudo: { plurals: en },
+        pseudo: { plurals: en }
     });
+}
+export function isMessageDescriptor(prop: any) {
+    //return typeof prop.type !== 'string'; // ReactElement SHOULD always have a type field
+    return (prop as MessageDescriptor).message !== undefined;
 }
 
 export async function loadTranslation(locale: string, isProduction = true) {

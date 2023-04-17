@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Head from 'next/head';
 
 import { GetServerSideProps, GetStaticProps } from 'next';
-import { ReactElement, useState, useEffect } from 'react';
+import { ReactElement, useState, useEffect, HTMLAttributes  } from 'react';
 
 import { t } from '@lingui/macro';
 
@@ -16,6 +16,7 @@ import type { PageWithHeaderLayout } from '@cTypes/layoutTypes';
 import { serviceData } from '@/data/serviceData';
 
 import { loadTranslation } from '@/utils/utils';
+
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
     const translation = await loadTranslation(
