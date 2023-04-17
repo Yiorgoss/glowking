@@ -19,6 +19,41 @@ interface bookingType {
         start: string;
     };
 }
+
+const makeDescription = ({
+    name,
+    phone,
+    message,
+    extras
+}: {
+    name: string;
+    phone: number;
+    message: string;
+    extras: { name: string; price: number }[];
+}) => {
+    let extrasStr = '';
+    let count = 0;
+    extrasStr += `<ol>`;
+    extras!.forEach(({ name, price }) => {
+        extrasStr += `<li><b>${name}</b> - €${price}</li>`;
+        count += price;
+    });
+    extrasStr += `</ol><br>`;
+
+    const strObj = {
+        name: name,
+        phone: phone,
+        messageBody: message ?? '',
+        extras: extrasStr,
+        count: count
+    };
+    let descStr = '';
+    Object.entries(strObj).forEach(([key, value], i) => {
+        descStr += `<b>${key}:</b> ${value}<br>`;
+    });
+
+    return descStr;
+};
 const createBookedTimetable = (
     events: calendar_v3.Schema$Event[]
 ): bookingType => {
@@ -192,16 +227,25 @@ export default async function handler(
         res.end();
     }
     if (req.method === 'POST') {
-        const { name, phone, email, datetime, location, messageBody } =
-            await calendarSchema.validate(req.body);
-        //        console.log('==============================');
-        //        console.log('1-name', name);
-        //        console.log('2-phone', phone);
-        //        console.log('3-email', email);
-        //        console.log('4-datetime', datetime);
-        //        console.log('5-location', location);
-        //        console.log('6-messageBody', messageBody);
-        //        console.log('==============================');
+        const { name, phone, email, datetime, location, messageBody, extras } =
+            await calendarSchema.validate(req.body).catch((err) => {
+                console.log('VALIDATION FAILED: %s', err);
+                res.status(400).json({
+                    error: { message: 'VALIDATION FAILED', value: err }
+                });
+                res.end();
+                throw new Error('ERROR: Validation failed: %s', err);
+            });
+
+        console.log('==============================');
+        console.log('1-name', name);
+        console.log('2-phone', phone);
+        console.log('3-email', email);
+        console.log('4-datetime', datetime);
+        console.log('5-location', location);
+        console.log('6-messageBody', messageBody);
+        console.log('7-extras', extras);
+        console.log('==============================');
         // const parsedData = await calendarSchema
         //    .validate(JSON.parse(req.body))
         //    .catch((err) => {
@@ -210,9 +254,6 @@ export default async function handler(
         //        });
         //    });
 
-        //console.log(datetime)
-        console.log(!datetime);
-        //console.log(!"")
         if (!datetime) {
             res.status(422).json({
                 error: { message: 'incorrect datetime !!', value: datetime }
@@ -228,7 +269,13 @@ export default async function handler(
         //    return res.end();
         //}
         const endTime = calculateEndTime(datetime);
-        const description = `number: ${phone}\n${messageBody}`;
+        const description = makeDescription({
+            name: name,
+            phone: phone,
+            message: messageBody ?? '',
+            extras: extras ?? []
+        });
+
         const event = {
             summary: name,
             location: location,

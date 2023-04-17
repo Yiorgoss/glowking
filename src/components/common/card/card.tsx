@@ -55,33 +55,44 @@ const Header = ({
     children,
     className
 }: {
-    children?: ReactElement | ReactElement[] | string;
+    children?: ReactElement | ReactElement[] | string | MessageDescriptor;
     className?: string;
 }) => {
+    const header = children
+        ? typeof children === 'string'
+            ? children
+            : i18n._(children!)
+        : children;
+
     if (!children) {
         return <></>;
     }
-    return <h3 className={className}> {children} </h3>;
+    return <h3 className={className}> {header} </h3>;
 };
 
 const Content = ({
     children,
     className
 }: {
-    children?: ReactElement | ReactElement[] | string;
+    children?: ReactElement | ReactElement[] | string | MessageDescriptor;
     className?: string;
 }) => {
+    const content = children
+        ? typeof children === 'string'
+            ? children
+            : i18n._(children!)
+        : '';
     if (!children) {
         return <></>;
     }
-    return <div className={className}>{children}</div>;
+    return <div className={className}>{content}</div>;
 };
 const Price = ({
     price,
     className
 }: {
     price: number | MessageDescriptor;
-    className: string;
+    className?: string;
 }) => {
     let useWallet = false;
     const formatPrice = (price: number) => {
@@ -106,19 +117,28 @@ const Price = ({
     );
 };
 
+enum ColorPreset {
+    Silver = 'bg-gradient-to-tl from-gray-100 via-gray-400 to-gray-700',
+    Gold = 'bg-gradient-to-tl from-yellow-100 via-yellow-400 to-yellow-600',
+    Detailing = 'bg-gradient-to-tl from-purple-100 via-purple-400 to-purple-700',
+    Custom = ''
+}
 const Card = ({
     children,
-    className
+    className,
+    colorPreset=ColorPreset.Custom
 }: {
     children: ReactElement | ReactElement[];
     className?: string;
+    colorPreset?: ColorPreset
 }) => {
-    return <div className={className}>{children}</div>;
+    return <div className={`flex flex-col justify-between ${colorPreset} ${className}`}>{children}</div>;
 };
 
 Card.Header = Header;
 Card.Content = Content;
 Card.Graphic = Graphic;
 Card.Price = Price;
+Card.ColorPreset = ColorPreset
 
 export default Card;

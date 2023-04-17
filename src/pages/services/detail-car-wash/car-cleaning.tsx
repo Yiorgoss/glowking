@@ -117,7 +117,7 @@ const ServicesCarCleaning = () => {
             </div>
             <div className='mt-10 grid grid-cols-1 gap-10 md:grid-cols-3'>
                 <div className='rounded-lg outline outline-2 outline-secondary '>
-                    <Card className='h-full bg-gradient-to-tl from-gray-100 via-gray-400 to-gray-700'>
+                    <Card className='h-full' colorPreset={Card.ColorPreset.Silver}>
                         <Card.Header className=' text-center'>
                             Silver Wash
                         </Card.Header>
@@ -125,7 +125,7 @@ const ServicesCarCleaning = () => {
                     </Card>
                 </div>
                 <div className='rounded-lg outline outline-2 outline-secondary '>
-                    <Card className='h-full bg-gradient-to-tl from-yellow-100 via-yellow-400 to-yellow-600'>
+                    <Card className='h-full' colorPreset={Card.ColorPreset.Gold}>
                         <Card.Header className='py-4 text-center text-2xl font-semibold'>
                             Gold Wash
                         </Card.Header>
@@ -133,98 +133,11 @@ const ServicesCarCleaning = () => {
                     </Card>
                 </div>
                 <div className='rounded-lg outline outline-2 outline-secondary '>
-                    <Card className='h-full bg-gradient-to-tl from-purple-100 via-purple-400 to-purple-700'>
+                    <Card className='h-full' colorPreset={Card.ColorPreset.Detailing}>
                         <Card.Header className='py-4 text-center text-2xl font-semibold'>
                             Detailing Wash
                         </Card.Header>
-                        <Card.Content>
-                            <ol className=' pt-2 text-base'>
-                                <li className='py-5 pl-2 '>
-                                    <h3 className='font-md text-lg uppercase'>
-                                        {t({
-                                            id: `detailing-car-wash.list-1.title`,
-                                            message: `Exterior paint care and polishing`
-                                        })}
-                                    </h3>
-                                    <div className='pt-2 pl-5'>
-                                        {t({
-                                            id: `detailing-car-wash.list-1.content`,
-                                            message: `Perfectly detailed, the paint on your vehicle draws the most attention. Primarily, the exterior is pressure washed to remove dirt and then hand dried. Finally, a hand or machine polish gives the surface an even shine and removes fine scratches to give the result you deserve.`
-                                        })}
-                                    </div>
-                                </li>
-                                <li className='py-5 pl-2 '>
-                                    <h3 className='font-md text-lg uppercase'>
-                                        {t({
-                                            id: `detailing-car-wash.list-2.title`,
-                                            message: `CLEANING AND POLISHING OF EXTERNAL SURFACES`
-                                        })}
-                                    </h3>
-                                    <div className='pt-2 pl-5'>
-                                        {t({
-                                            id: `detailing-car-wash.list-2.content`,
-                                            message: `Exterior surfaces and finishes such as plastic, rubber and chrome can fade and crack without proper care or under other adverse conditions. During a full detailing, the exterior surfaces are cleaned and then protected. A plastic sealer can be applied to rubber or vinyl and the chrome tones will be polished.`
-                                        })}
-                                    </div>
-                                </li>
-                                <li className='py-5 pl-2 '>
-                                    <h3 className='font-md text-lg uppercase'>
-                                        {t({
-                                            id: `detailing-car-wash.list-3.title`,
-                                            message: `WHEELS AND TIRES DETAILS`
-                                        })}
-                                    </h3>
-                                    <div className='pt-2 pl-5'>
-                                        {t({
-                                            id: `detailing-car-wash.list-3.content`,
-                                            message: `Brake dust, dirt and grime from the road collects on your wheels and, over time, these blemishes become difficult to remove. A full service detail will completely restore your vehicle's wheels, remove those stubborn stains and polish the chrome, steel or aluminum. The tires will also be protected with rubber sealant, which gives them a glossy finish.`
-                                        })}
-                                    </div>
-                                </li>
-                                <li className='py-5 pl-2 '>
-                                    <h3 className='font-md text-lg uppercase'>
-                                        {t({
-                                            id: `detailing-car-wash.list-4.title`,
-                                            message: `BIOLOGICAL CLEANING IN THE INTERIOR OF THE CAR`
-                                        })}
-                                    </h3>
-                                    <div className='pt-2 pl-5'>
-                                        {t({
-                                            id: `detailing-car-wash.list-4.content`,
-                                            message: `Every corner of your vehicle's interior tends to collect dust and dirt. The retailer's job is to remove dirt and dust from hard-to-reach cracks and crevices. This service includes all surfaces including the dashboard, entertainment console, inside doors, under the seats and any other interior surface. Once the dirt is removed, sealants are applied, which give these surfaces a high-quality shine.`
-                                        })}
-                                    </div>
-                                </li>
-                                <li className='py-5 pl-2 '>
-                                    <h3 className='font-md text-lg uppercase'>
-                                        {t({
-                                            id: `detailing-car-wash.list-5.title`,
-                                            message: `INTERIOR DETAIL`
-                                        })}
-                                    </h3>
-                                    <div className='pt-2 pl-5'>
-                                        {t({
-                                            id: `detailing-car-wash.list-5.content`,
-                                            message: `Leather requires special preparation and handling when cleaning. Some traditional car cleaning products are very caustic to the skin and may even do more harm than good. During an interior detail, any leather surfaces on your vehicle will be properly cleaned and conditioned. This will help restore the skin's natural glow, as well as protect it from stains and damage from water and salt or other dirt.`
-                                        })}
-                                    </div>
-                                </li>
-                                <li className='py-5 pl-2 '>
-                                    <h3 className='font-md text-lg uppercase'>
-                                        {t({
-                                            id: `detailing-car-wash.list-6.title`,
-                                            message: `CARPET DEEP CLEANING`
-                                        })}
-                                    </h3>
-                                    <div className='pt-2 pl-5'>
-                                        {t({
-                                            id: `detailing-car-wash.list-6.content`,
-                                            message: `Most automotive retailers do not have the equipment to properly clean, deodorize and wash carpet. A full detail service restores the carpet, first with a deep vacuum. The carpet is then washed with shampoo and deodorized.`
-                                        })}
-                                    </div>
-                                </li>
-                            </ol>
-                        </Card.Content>
+                        <Card.Content>bac</Card.Content>
                     </Card>
                 </div>
             </div>

@@ -18,11 +18,11 @@ msgstr ""
 msgid "Book-Now"
 msgstr "Κάνετε κράτηση"
 
-#: src/components/bookingForm.tsx:59
+#: src/components/bookingForm.tsx:70
 msgid "BookingForm.errorMessage"
 msgstr "Η υποβολή δεν καταγράφηκε. Επικοινωνήστε απευθείας μαζί μας"
 
-#: src/components/bookingForm.tsx:51
+#: src/components/bookingForm.tsx:62
 msgid "BookingForm.successMessage"
 msgstr "Επιτυχής Υποβολή. Σας ευχαριστούμε!"
 
@@ -250,35 +250,39 @@ msgstr "Στον εσωτερικό καθαρισμό έχοντας ως γν�
 msgid "Services-simple-list.two.header"
 msgstr "Εσωτερικός Καθαρισμός"
 
-#: src/components/bookingForm.tsx:162
+#: src/components/bookingForm.tsx:181
+msgid "Your Total is {total} €"
+msgstr ""
+
+#: src/components/bookingForm.tsx:185
 msgid "bookingForm.input.accept"
 msgstr "Αποδεχτείτε τους Όρους και"
 
-#: src/components/bookingForm.tsx:169
+#: src/components/bookingForm.tsx:192
 msgid "bookingForm.input.conditions"
 msgstr "Συνθήκες"
 
-#: src/components/bookingForm.tsx:130
+#: src/components/bookingForm.tsx:150
 msgid "bookingForm.input.email"
 msgstr "Email"
 
-#: src/components/bookingForm.tsx:141
+#: src/components/bookingForm.tsx:161
 msgid "bookingForm.input.location"
 msgstr "Τοποθεσία"
 
-#: src/components/bookingForm.tsx:151
+#: src/components/bookingForm.tsx:171
 msgid "bookingForm.input.message"
 msgstr "Ειδικές Οδηγίες'"
 
-#: src/components/bookingForm.tsx:108
+#: src/components/bookingForm.tsx:128
 msgid "bookingForm.input.name"
 msgstr "Ονομα"
 
-#: src/components/bookingForm.tsx:121
+#: src/components/bookingForm.tsx:141
 msgid "bookingForm.input.number"
 msgstr "αριθμός τηλεφώνου"
 
-#: src/components/bookingForm.tsx:189
+#: src/components/bookingForm.tsx:212
 msgid "bookingForm.input.submit"
 msgstr "υποβάλλουν"
 
@@ -386,119 +390,119 @@ msgstr "Αφαίρεση τριχών κατοικιδίου από τα καθ�
 msgid "car-service-extras.9.title"
 msgstr "ΑΦΑΙΡΕΣΗ ΤΡΙΧΩΝ ΚΑΤΟΙΚΙΔΙΟΥ"
 
-#: src/pages/services/detail-car-wash/car-cleaning.tsx:47
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:48
 msgid "detail-car-wash.car-cleaning.p-1.2"
 msgstr "Ο εξωτερικός καθαρισμός γίνεται χωρίς την χρήση βούρτσας η σφουγγαριού παρά μόνο με την χρήση ζεστού νερού για την λιγότερη φθορά του εξωτερικού χρώματος του αυτοκινήτου."
 
-#: src/pages/services/detail-car-wash/car-cleaning.tsx:53
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:54
 msgid "detail-car-wash.car-cleaning.p-1.3"
 msgstr "Στo Glow King σας προσφέρουμε ένα πλήρη εξωτερικό καθαρισμό με πρόπλυση και κυρίως πλύση του οχήματος με ενεργό αφρό, καθαρισμό των θολών και των ζαντών, αφαίρεση εντόμων, κέρωμα προστασίας και ξέπλυμα του αυτοκίνητου με απιονισμένο νερό!"
 
-#: src/pages/services/detail-car-wash/car-cleaning.tsx:59
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:60
 msgid "detail-car-wash.car-cleaning.p-1.4"
 msgstr "Στην συνέχεια γίνεται λεπτομερές σκούπισμα του οχήματος."
 
-#: src/pages/services/detail-car-wash/car-cleaning.tsx:65
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:66
 msgid "detail-car-wash.car-cleaning.p-1.5"
 msgstr "Στον εσωτερικό καθαρισμό έχοντας ως γνώμονα τον σεβασμό προς τον άνθρωπο και το περιβάλλον χρησιμοποιούμε οικολογικά βιοδιασπώμενα προϊόντα."
 
-#: src/pages/services/detail-car-wash/car-cleaning.tsx:71
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:72
 msgid "detail-car-wash.car-cleaning.p-1.6"
 msgstr "Εσωτερικά φυσάμε το όχημα για να απομακρύνουμε την σκόνη και στην συνέχεια καθαρίζουμε με σκούπα αναρρόφησης την καμπίνα και των χώρο αποσκευών, καθαρισμό των τζαμιών και όλων των γυάλινων επιφανειών."
 
-#: src/pages/services/detail-car-wash/car-cleaning.tsx:77
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:78
 msgid "detail-car-wash.car-cleaning.p-1.7"
 msgstr "Τέλος προχωρούμε σε καθαρισμό και συντήρηση όλων των δερμάτινων και πλαστικών επιφανειών, στεγνό καθαρισμό ταπέτων και αρωματισμό του χώρου καμπίνας."
 
-#: src/pages/services/detail-car-wash/car-cleaning.tsx:41
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:42
 msgid "detail-car-wash.car-cleaning.p-1.title"
 msgstr "Εξωτερικός + Εσωτερικός Καθαρισμός:"
 
-#: src/pages/services/detail-car-wash/car-cleaning.tsx:92
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:93
 msgid "detail-car-wash.car-cleaning.p-2.1"
 msgstr "Στον βιολογικό καθαρισμό απομακρύνουμε από τον χώρο της καμπίνας εκτός από τους λεκέδες, καθαρίζουμε μύκητες, βακτηρίδια και οτιδήποτε επιβαρύνει τον ανθρώπινο οργανισμό."
 
-#: src/pages/services/detail-car-wash/car-cleaning.tsx:98
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:99
 msgid "detail-car-wash.car-cleaning.p-2.2"
 msgstr "Απολυμαίνουμε τα καθίσματα, τον ουρανό,"
 
-#: src/pages/services/detail-car-wash/car-cleaning.tsx:104
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:105
 msgid "detail-car-wash.car-cleaning.p-2.3"
 msgstr "Επίσης υποχρεωτικά απολυμαίνουμε τους αεραγωγούς του αυτοκίνητου διώχνοντας την κακοσμία από την χρήση του κλιματιστικού."
 
-#: src/pages/services/detail-car-wash/car-cleaning.tsx:110
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:111
 msgid "detail-car-wash.car-cleaning.p-2.4"
 msgstr "Τα προϊόντα που χρησιμοποιούνται για τον καθαρισμό και την απολύμανση είναι πιστοποιημένα και φιλικά πρός τον άνθρωπο και το περιβάλλον τηρώντας τις προδιαγραφές της Ε.Ε."
 
-#: src/pages/services/detail-car-wash/car-cleaning.tsx:119
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:146
 msgid "detail-car-wash.car-cleaning.p-2.5"
 msgstr "Προσφέρουμε επίσης μια μεγάλη λίστα με πρόσθετες προαιρετικές υπηρεσίες καθαρισμού για το αυτοκίνητό σας"
 
-#: src/pages/services/detail-car-wash/car-cleaning.tsx:86
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:87
 msgid "detail-car-wash.car-cleaning.p-2.title"
 msgstr "Βιολογικός Καθαρισμός:"
 
-#: src/pages/services/detail-car-wash/car-cleaning.tsx:34
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:35
 msgid "detail-car-wash.car-cleaning.title"
 msgstr "ΥΠΗΡΕΣΙΕΣ ΑΥΤΟΚΙΝΗΤΩΝ"
 
-#: src/pages/services/detail-car-wash/detailing-info.tsx:43
+#: src/pages/services/detail-car-wash/detailing-info.tsx:44
 msgid "detail-car-wash.detailing.p-1.1.content"
 msgstr "Η ανάρτηση είναι το σύστημα πού ρυθμίζει την επαφή και το κράτημα του αυτοκινήτου μέσω των ελαστικών και των αμορτισέρ με το οδόστρωμα και είναι από τα βασικά συστήματα που διαθέτει το αυτοκίνητο για την ασφαλή και σταθερή κίνηση μας. Τα Αμορτισέρ και τα ελατήρια είναι τα βασικά εξαρτήματα του συστήματος της ανάρτησης, είναι υπεύθυνα για την ρύθμιση και απορρόφηση των κραδασμών πού συντελούν στο “κράτημα” του αυτοκινήτου. Ο έγκαιρος καθαρισμός του αμορτισέρ είναι επιτακτική ανάγκη για την ασφάλεια του αυτοκινήτου."
 
-#: src/pages/services/detail-car-wash/detailing-info.tsx:49
+#: src/pages/services/detail-car-wash/detailing-info.tsx:50
 msgid "detail-car-wash.detailing.p-1.2.content"
 msgstr "Λάδι και Spray άριστης ποιότητας είναι το μυστικό για τον σωστό καθαρισμό της δισκόπλακας σας. Οι δισκόπλακες μπροστά και πίσω είναι ένα από τα σημαντικότερα για το όχημα σας και γι αυτό και μόνο αξίζει μόνο το καλύτερο. Το έμπειρο προσωπικό μας, τα άριστα υλικά μας, το εξειδικευμένο προσωπικό μας είναι η απάντηση στα ερωτήματα σας και η λύση στα προβλήματα σας."
 
-#: src/pages/services/detail-car-wash/detailing-info.tsx:37
+#: src/pages/services/detail-car-wash/detailing-info.tsx:38
 msgid "detail-car-wash.detailing.p-1.title"
 msgstr "Αμορτισέρ + Θόλος Τροχού + Καθαρισμός δισκόπλακας"
 
-#: src/pages/services/detail-car-wash/detailing-info.tsx:61
+#: src/pages/services/detail-car-wash/detailing-info.tsx:62
 msgid "detail-car-wash.detailing.p-2.1.content"
 msgstr "Οι ζάντες αλουμινίου σε ένα αυτοκίνητο είναι από τα σημεία που λερώνουν πολύ γρήγορα. Η άμμος, η λάσπη, η σκόνη και οτιδήποτε άλλο μπορεί να υπάρχει στο οδόστρωμα, θα κολλήσει και θα λερώσει τη ζάντα του ελαστικού. Χωρίς την συστηματική καθαριότητα, μάλιστα, οι βρωμιές αυτές μπορεί να οδηγήσουν σε καταστροφή του αλουμινίου."
 
-#: src/pages/services/detail-car-wash/detailing-info.tsx:55
+#: src/pages/services/detail-car-wash/detailing-info.tsx:56
 msgid "detail-car-wash.detailing.p-2.title"
 msgstr "Ζάντες"
 
-#: src/pages/services/detail-car-wash/detailing-info.tsx:73
+#: src/pages/services/detail-car-wash/detailing-info.tsx:74
 msgid "detail-car-wash.detailing.p-3.1.content"
 msgstr "Διαθέτουμε πέρα από εξειδικευμένο προσωπικό και εξειδικευμένο μηχανισμό για να μπορούμε να γυαλίσουμε με λεπτομέρεια κάθε σημείο μη προσβάσιμο από το ανθρώπινο χέρι, κάθε δυσκολία για εσάς...μια πρόκληση για εμάς !"
 
-#: src/pages/services/detail-car-wash/detailing-info.tsx:67
+#: src/pages/services/detail-car-wash/detailing-info.tsx:68
 msgid "detail-car-wash.detailing.p-3.title"
 msgstr "Γυάλισμα σε σημεία μη προσβάσιμα από το ανθρώπινο χέρι"
 
-#: src/pages/services/detail-car-wash/detailing-info.tsx:85
+#: src/pages/services/detail-car-wash/detailing-info.tsx:86
 msgid "detail-car-wash.detailing.p-4.1.content"
 msgstr "Η νανοτεχνολογία είναι μια επιστήμη η οποία έχει τη δυνατότητα να ελέγχει τις διαστάσεις των υλικών σε κλίμακα νανομέτρων και έχει αποδείξει τις εντυπωσιακές ιδιότητες που αποκτούν όταν οι διαστάσεις τους είναι μόνο λίγα νανόμετρα."
 
-#: src/pages/services/detail-car-wash/detailing-info.tsx:91
+#: src/pages/services/detail-car-wash/detailing-info.tsx:92
 msgid "detail-car-wash.detailing.p-4.2.content"
 msgstr "Το ενδιαφέρον της επιστήμης έχει στραφεί προς υλικά νανοτεχνολογίας. Μέσω της έρευνας, βρήκαν ότι τα σωματίδια τέτοιων υλικών έχουν πολύ διαφορετικές ιδιότητες κατά τον σχηματισμό τους έναντι των μεγάλων σωματιδίων που είναι ορατά με γυμνό μάτι ή με ένα απλό οπτικό μικροσκόπιο."
 
-#: src/pages/services/detail-car-wash/detailing-info.tsx:97
+#: src/pages/services/detail-car-wash/detailing-info.tsx:98
 msgid "detail-car-wash.detailing.p-4.3.content"
 msgstr "Τα προϊόντα νανοτεχνολογίας, είναι ειδικά σχεδιασμένα για να προσφέρουν προστασία στα αγαπημένα σας υφάσματα, ξύλινες επιφάνειες, γυαλί, πλαστικά είδη ή ανοξείδωτο ατσάλι, ακόμη και τα πατώματα σας, πλακάκια, ζάντες αυτοκινήτων."
 
-#: src/pages/services/detail-car-wash/detailing-info.tsx:103
+#: src/pages/services/detail-car-wash/detailing-info.tsx:104
 msgid "detail-car-wash.detailing.p-4.4.content"
 msgstr "Όλα προστατεύονται από τους λεκέδες, τα βακτήρια, το νερό, την υγρασία και όλα διατηρούνται ανέπαφα για πολύ μεγαλύτερο χρονικό διάστημα. Η απόλυτη προστασία επιτυγχάνεται αποφεύγοντας τη χρήση των επιβλαβών χημικών ουσιών."
 
-#: src/pages/services/detail-car-wash/detailing-info.tsx:79
+#: src/pages/services/detail-car-wash/detailing-info.tsx:80
 msgid "detail-car-wash.detailing.p-4.title"
 msgstr "Νανοτεχνολογία"
 
-#: src/pages/services/detail-car-wash/detailing-info.tsx:115
+#: src/pages/services/detail-car-wash/detailing-info.tsx:116
 msgid "detail-car-wash.detailing.p-5.1.content"
 msgstr "Άλλο ένα σημείο που θα πρέπει συχνά να συντηρούμε είναι το κάτω μέρος του αυτοκινήτου, ιδίως για αυτοκίνητα που είναι εκτεθειμένα σε θάλασσα ή χιόνια. Το κάτω μέρος του αυτοκινήτου πλένεται αφού χρησιμοποιήσουμε το ειδικό μηχάνημα πλύσης σασί. Στη συνέχεια ψεκάζουμε το καθαριστικό και ξεπλένουμε καλά ώστε να καθαρίσει παντού εσωτερικά στους τροχούς και σε όλα τα μηχανικά μέρη που είναι εκτεθειμένα από κάτω."
 
-#: src/pages/services/detail-car-wash/detailing-info.tsx:109
+#: src/pages/services/detail-car-wash/detailing-info.tsx:110
 msgid "detail-car-wash.detailing.p-5.title"
 msgstr "Πλύσιμο κάτω μέρους οχήματος / Σασί"
 
-#: src/pages/services/detail-car-wash/detailing-info.tsx:30
+#: src/pages/services/detail-car-wash/detailing-info.tsx:31
 msgid "detail-car-wash.detailing.title"
 msgstr "Αναλυτικές Πληροφορίες"
 
@@ -530,61 +534,61 @@ msgstr "Ελάχιστη χρέωση για να έρθουμε στον χώρ
 msgid "detail-car-wash.motorbike.title"
 msgstr "Υπηρεσίες μοτοσυκλετών"
 
-#: src/pages/services/detail-car-wash/car-cleaning.tsx:149
-#: src/pages/services/detail-car-wash/detailing-info.tsx:222
+#: src/pages/services/detail-car-wash/car-cleaning.tsx:176
+#: src/pages/services/detail-car-wash/detailing-info.tsx:223
 #: src/pages/services/detail-car-wash/motorbike-clean.tsx:80
 msgid "detail-car-wash.title"
 msgstr "Car Cleaning and Detailing Services"
 
-#: src/pages/services/detail-car-wash/detailing-info.tsx:136
+#: src/pages/services/detail-car-wash/detailing-info.tsx:137
 msgid "detailing-car-wash.list-1.content"
 msgstr "Με απόλυτη λεπτομέρεια, η βαφή στο όχημά σας τραβάει τη μεγαλύτερη προσοχή. Πρωτίστως, το εξωτερικό πλένεται με πίεση για να αφαιρεθεί η βρωμιά και στη συνέχεια στεγνώνεται στο χέρι. Τέλος, ένα γυαλιστικό χεριού ή μηχανής δίνει στην επιφάνεια ομοιόμορφη λάμψη και αφαιρεί τις λεπτές γρατσουνιές για να δώσει το αποτέλεσμα που σας αξίζει."
 
-#: src/pages/services/detail-car-wash/detailing-info.tsx:130
+#: src/pages/services/detail-car-wash/detailing-info.tsx:131
 msgid "detailing-car-wash.list-1.title"
 msgstr "Φροντίδα εξωτερικής βαφής και γυάλισμα"
 
-#: src/pages/services/detail-car-wash/detailing-info.tsx:150
+#: src/pages/services/detail-car-wash/detailing-info.tsx:151
 msgid "detailing-car-wash.list-2.content"
 msgstr "Εξωτερικές επιφάνειες και πινελιές όπως πλαστικό, καουτσούκ και χρώμιο μπορούν να ξεθωριάσουν και να ραγίσουν χωρίς την κατάλληλη φροντίδα ή υπό άλλες δυσμενείς"
 
-#: src/pages/services/detail-car-wash/detailing-info.tsx:144
+#: src/pages/services/detail-car-wash/detailing-info.tsx:145
 msgid "detailing-car-wash.list-2.title"
 msgstr "ΚΑΘΑΡΙΣΜΟΣ ΚΑΙ ΓΥΑΛΙΣΜΑ ΣΤΙΣ ΕΞΩΤΕΡΙΚΕΣ ΕΠΙΦΑΝΕΙΕΣ"
 
-#: src/pages/services/detail-car-wash/detailing-info.tsx:164
+#: src/pages/services/detail-car-wash/detailing-info.tsx:165
 msgid "detailing-car-wash.list-3.content"
 msgstr "Η σκόνη των φρένων, η βρωμιά και οι ακαθαρσίες από το δρόμο μαζεύονται στους τροχούς σας και, μετά την πάροδο του χρόνου, αυτές οι ατέλειες γίνονται δύσκολο να αφαιρεθούν. Μια πλήρης λεπτομέρεια σέρβις θα αποκαταστήσει πλήρως τους τροχούς του οχήματός σας, θα αφαιρέσει αυτούς τους σκληρούς λεκέδες και θα γυαλίσει το χρώμιο, το ατσάλι ή το αλουμίνιο. Τα ελαστικά θα προστατεύονται επίσης με ελαστικό στεγανωτικό, που τους δίνει γυαλιστερό φινίρισμα."
 
-#: src/pages/services/detail-car-wash/detailing-info.tsx:158
+#: src/pages/services/detail-car-wash/detailing-info.tsx:159
 msgid "detailing-car-wash.list-3.title"
 msgstr "ΛΕΠΤΟΜΕΡΕΙΕΣ ΤΡΟΧΩΝ ΚΑΙ ΕΛΑΣΤΙΚΩΝ"
 
-#: src/pages/services/detail-car-wash/detailing-info.tsx:178
+#: src/pages/services/detail-car-wash/detailing-info.tsx:179
 msgid "detailing-car-wash.list-4.content"
 msgstr "Κάθε γωνιά του εσωτερικού του οχήματός σας τείνει να μαζεύει σκόνη και βρωμιά. Η δουλειά του λιανοπωλητή είναι να αφαιρεί τη βρωμιά και τη σκόνη από δυσπρόσιτες ρωγμές και ρωγμές. Αυτή η υπηρεσία περιλαμβάνει όλες τις επιφάνειες, συμπεριλαμβανομένου του ταμπλό, της κονσόλας ψυχαγωγίας, του εσωτερικού των θυρών, κάτω από τα καθίσματα και κάθε άλλη εσωτερική επιφάνεια. Μόλις αφαιρεθεί η βρωμιά, εφαρμόζονται στεγανωτικά, τα οποία δίνουν σε αυτές τις επιφάνειες μια γυαλάδα υψηλής ποιότητας."
 
-#: src/pages/services/detail-car-wash/detailing-info.tsx:172
+#: src/pages/services/detail-car-wash/detailing-info.tsx:173
 msgid "detailing-car-wash.list-4.title"
 msgstr "ΒΙΟΛΟΓΙΚΟΣ ΚΑΘΑΡΙΣΜΟΣ ΣΤΟ ΕΣΩΤΕΡΙΚΟ ΤΟΥ ΑΥΤΟΚΙΝΗΤΟΥ"
 
-#: src/pages/services/detail-car-wash/detailing-info.tsx:192
+#: src/pages/services/detail-car-wash/detailing-info.tsx:193
 msgid "detailing-car-wash.list-5.content"
 msgstr "Το δέρμα απαιτεί ειδική προετοιμασία και χειρισμό κατά τον καθαρισμό. Ορισμένα παραδοσιακά προϊόντα καθαρισμού αυτοκινήτων είναι πολύ καυστικά για το δέρμα και μπορεί ακόμη και να κάνουν περισσότερο κακό παρά καλό. Κατά τη διάρκεια μιας εσωτερικής λεπτομέρειας, τυχόν δερμάτινες επιφάνειες στο όχημά σας θα καθαρίζονται και θα ρυθμίζονται σωστά. Αυτό θα βοηθήσει στην επιστροφή της φυσικής λάμψης του δέρματος, καθώς και στην προστασία του από λεκέδες και ζημιές από το νερό και άλατα ή λοιπές βρωμιές."
 
-#: src/pages/services/detail-car-wash/detailing-info.tsx:186
+#: src/pages/services/detail-car-wash/detailing-info.tsx:187
 msgid "detailing-car-wash.list-5.title"
 msgstr "ΑΝΑΠΑΛΑΙΩΣΗ ΕΣΩΤΕΡΙΚΟΥ (ΙNTERIOR DETAIL)"
 
-#: src/pages/services/detail-car-wash/detailing-info.tsx:206
+#: src/pages/services/detail-car-wash/detailing-info.tsx:207
 msgid "detailing-car-wash.list-6.content"
 msgstr "Οι περισσότεροι λιανοπωλητές αυτοκινήτων δεν διαθέτουν τον εξοπλισμό για να καθαρίσουν, να αποσμήσουν και να λούσουν σωστά τη μοκέτα. Ένα πλήρες detail service αποκαθιστά τη μοκέτα, πρώτα με μια βαθιά σκούπα. Έπειτα, η μοκέτα λούζεται με σαμπουάν και γίνεται απόσμηση."
 
-#: src/pages/services/detail-car-wash/detailing-info.tsx:200
+#: src/pages/services/detail-car-wash/detailing-info.tsx:201
 msgid "detailing-car-wash.list-6.title"
 msgstr "ΒΑΘΥΣ ΚΑΘΑΡΙΣΜΟΣ ΜΟΚΕΤΑΣ"
 
-#: src/pages/services/detail-car-wash/detailing-info.tsx:122
+#: src/pages/services/detail-car-wash/detailing-info.tsx:123
 msgid "detailing-car-wash.list.title"
 msgstr "Η Διαδικασία μας"
 

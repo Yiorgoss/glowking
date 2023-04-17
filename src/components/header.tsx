@@ -57,7 +57,7 @@ export default function Header({
                 <div className='my-auto cursor-pointer pl-4 md:pl-10'>
                     <Link href='/'>
                         <Image
-                            src='/media/images/glowking_logo.png'
+                            src='/media/images/glowking_logo_2.jpeg'
                             alt=''
                             width={80}
                             height={80}

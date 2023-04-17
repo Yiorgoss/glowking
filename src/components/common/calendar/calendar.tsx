@@ -61,7 +61,7 @@ const TimePicker = ({ unavailableSlots }: { unavailableSlots?: Dayjs[] }) => {
                                 isUnavailable ? 'text-slate-500' : ''
                             }`}
                             onClick={(e) =>
-                                isUnavailable
+                                slot.isToday()
                                 ? e.preventDefault()
                                 : setDateTime(slot)
                             }
@@ -226,9 +226,9 @@ const Calendar = ({
         dayjs.locale(locale)
     }, [locale])
 
-    //useEffect(() => {
-    //    console.log({datetime:datetime});
-    //}, [datetime]);
+    useEffect(() => {
+        //console.log({datetime:datetime});
+    }, [datetime]);
 
     //const value = [displayMonth, setDisplayMonth, time, setTime, day, setDay];
     const value = [displayMonth, setDisplayMonth, datetime, setDatetime];
