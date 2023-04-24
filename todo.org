@@ -1,4 +1,10 @@
 * Inbox
+** TODO booking add users current day
+
+[[file:~/code/gikas/glowking]]
+** TODO Database Keep Alive
+
+[[file:~/code/gikas/glowking/src/components/multiStepForm.tsx::return (]]
 ** TODO Redo Booking process
 make booking into a step through process
 
