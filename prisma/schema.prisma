@@ -1,0 +1,75 @@
+// This is your Prisma schema file,
+// learn more about it in the docs https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model Category {
+  id          Int               @id @default(autoincrement())
+  title       String
+  description String
+  imageUrl    String
+  subtypes    CategorySubtype[]
+}
+
+model Subtype {
+  id          Int               @id @default(autoincrement())
+  title       String
+  description String
+  imageUrl    String
+  categories  CategorySubtype[]
+  packages    SubtypePackage[]
+}
+
+model Package {
+  id            Int              @id @default(autoincrement())
+  title         String
+  description   String
+  tailwindColor String
+  subtypes      SubtypePackage[]
+  extras        PackageExtra[]
+}
+
+model Extra {
+  id          Int            @id @default(autoincrement())
+  title       String
+  description String
+  imageUrl    String
+  price       Int
+  time        Decimal
+  packages    PackageExtra[]
+}
+
+model CategorySubtype {
+  category   Category @relation(fields: [categoryId], references: [id])
+  categoryId Int
+  subtype    Subtype  @relation(fields: [subtypeId], references: [id])
+  subtypeId  Int
+
+  @@id([categoryId, subtypeId])
+}
+
+model SubtypePackage {
+  subtype   Subtype @relation(fields: [subtypeId], references: [id])
+  subtypeId Int
+  package   Package @relation(fields: [packageId], references: [id])
+  packageId Int
+
+  @@id([subtypeId, packageId])
+}
+
+model PackageExtra {
+  package   Package @relation(fields: [packageId], references: [id])
+  packageId Int
+  extra     Extra   @relation(fields: [extraId], references: [id])
+  extraId   Int
+
+  @@id([packageId, extraId])
+}

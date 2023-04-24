@@ -1,22 +1,53 @@
 * Inbox
-** TODO need to replace all string interpolation with tailwind merge
+** TODO Redo Booking process
+make booking into a step through process
 
+** TODO SEO Stuff
+check SEO_strategy.txt
+** TODO Rate Limit App
+Limit Rates in case of DDOS
+** TODO Redo landing Page
+landing should link straight to booking and set state of form
+
+** TODO Upstash CronJobs
+** TODO DB i18n
+move translations to DB
+** TODO Carousel
+Carousel on Landing page
+
+** TODO Authentication
+User Accounts
+
+** TODO Payments
+Allow user to buy packages and pay online for booking
+** TODO Google Map
+add gooogle map integration on Contact page and footer
+** TODO Blog
+** TODO Optimizations
+1. serve content from cdn
+2. dynamic imports
+3. Reduce First load
+4. Check out Edge functions/ computation
+**** https://calibreapp.com/blog/bundle-size-optimization
+** TODO Tailwind Merge
+
+all string interpolations should be changed to use tailwind merge
 [[file:~/code/gikas/glowking/src/components/common/card/card.tsx::return <div className={`flex flex-col justify-between ${colorPreset} ${className}`}>{children}</div>;]]
 ** TODO Logging System
 
 - Axiom has integration with Vercel
 - Has dashboard
 
-** TODO Function difficult to follow in need of refactoring
+** TODO Refactor Calendar.ts
 
+difficult to follow
 [[file:~/code/gikas/glowking/src/pages/api/calendar.ts:://sgMail.setApiKey(process.env\['SENDGRID_API_KEY'\]);]]
-** TODO bug needs hidden margin somewhere in banner on contact
+** TODO bug contact page banner size
 remove `overflow-x-hidden` to see
 
 [[file:~/code/gikas/glowking/src/layouts/landingLayout.tsx::<div className="-mt-\[100px\] overflow-x-hidden">{children}</div>]]
-** TODO replace meta and title per page
+** TODO Improve Meta Desc and Title
 
 [[file:~/code/gikas/glowking/src/components/bookingForm.tsx::better meta and title per page]]
 ** TODO Add Recaptcha
-
 [[file:~/code/gikas/glowking/src/components/bookingForm.tsx::add recapcha]]
