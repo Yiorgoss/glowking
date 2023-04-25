@@ -187,12 +187,12 @@ const DatesOfTheMonth = () => {
             {arr.map((dateObj, i) => (
                 <div
                     className={`h-8 w-8 ${
-                        dateObj.isAfter(today) ? '' : 'text-slate-400'
+                        dateObj.isBefore(today.startOf("day")) ? 'text-slate-400' : ''
                     } `}
                     onClick={(e) =>
-                        dateObj.isAfter(today)
-                            ? pickDate(dateObj)
-                            : e.preventDefault()
+                        dateObj.isBefore(today.startOf('day'))
+                            ? e.preventDefault()
+                            : pickDate(dateObj)
                     }
                     key={i}>
                     <div
@@ -219,7 +219,7 @@ const Calendar = ({
 
     const [displayMonth, setDisplayMonth] = useState(dayjs());
     const [datetime, setDatetime] = useState(
-        dayjs().startOf('hour').add(1, 'day').startOf('day')
+        dayjs().startOf('hour').startOf('day')
     );
 
     useEffect(() => {
@@ -227,7 +227,7 @@ const Calendar = ({
     }, [locale])
 
     useEffect(() => {
-        //console.log({datetime:datetime});
+        console.log({datetime:datetime});
     }, [datetime]);
 
     //const value = [displayMonth, setDisplayMonth, time, setTime, day, setDay];
