@@ -1,4 +1,7 @@
 * Inbox
+** TODO add a card element for jsx Children
+
+[[file:~/code/gikas/glowking/src/components/optionalExtras.tsx::hr]]
 ** TODO need to replace all string interpolation with tailwind merge
 
 [[file:~/code/gikas/glowking/src/components/common/card/card.tsx::return <div className={`flex flex-col justify-between ${colorPreset} ${className}`}>{children}</div>;]]

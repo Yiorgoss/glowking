@@ -42,10 +42,10 @@ const CardMain = ({
                 </div>
                 <div className='mt-2 flex flex-col justify-between pl-3'>
                     <Card.Header className='mb-2 text-lg font-semibold '>
-                        {header}
+                        {header ?? ""}
                     </Card.Header>
                     <Card.Content className='overflow-hidden text-ellipsis py-2 text-base'>
-                        {content}
+                        {content ?? ""}
                     </Card.Content>
                     <Card.Price price={price} className='mt-auto self-end' />
                 </div>

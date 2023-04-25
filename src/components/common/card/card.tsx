@@ -56,28 +56,20 @@ const Header = ({
     children,
     className
 }: {
-    children?: ReactElement | ReactElement[] | string | MessageDescriptor;
+    children: string | MessageDescriptor;
     className?: string;
 }) => {
-    const header =
-        children && isMessageDescriptor(children)
-            ? (i18n._(children as MessageDescriptor) as string)
-            : (children as ReactNode);
-    return <h3 className={className}> {header} </h3>;
+    return <h3 className={className}> {i18n._(children)} </h3>;
 };
 
 const Content = ({
     children,
     className
 }: {
-    children?: ReactElement | ReactElement[] | string | MessageDescriptor;
+    children: string | MessageDescriptor;
     className?: string;
 }) => {
-    const content =
-        children && isMessageDescriptor(children)
-            ? (i18n._(children as MessageDescriptor) as string)
-            : (children as ReactNode);
-    return <div className={className}>{content}</div>;
+    return <div className={className}>{i18n._(children)}</div>;
 };
 const Price = ({
     price,
