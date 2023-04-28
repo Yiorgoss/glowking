@@ -1,8 +1,11 @@
-const Spinner = () => {
+interface ISpinner extends React.HTMLAttributes<HTMLDivElement> {
+}
+
+const Spinner = ({className}:ISpinner) => {
     return (
         <div className='flex h-full w-full items-center justify-center text-white'>
             <svg
-                className='h-[60px] w-[60px] animate-spin fill-white'
+                className={`h-[60px] w-[60px] animate-spin ${className}`}
                 width='24'
                 height='24'
                 viewBox='0 0 24 24'

@@ -237,15 +237,15 @@ export default async function handler(
                 throw new Error('ERROR: Validation failed: %s', err);
             });
 
-        console.log('==============================');
-        console.log('1-name', name);
-        console.log('2-phone', phone);
-        console.log('3-email', email);
-        console.log('4-datetime', datetime);
-        console.log('5-location', location);
-        console.log('6-messageBody', messageBody);
-        console.log('7-extras', extras);
-        console.log('==============================');
+  //      console.log('==============================');
+  //      console.log('1-name', name);
+  //      console.log('2-phone', phone);
+  //      console.log('3-email', email);
+  //      console.log('4-datetime', datetime);
+  //      console.log('5-location', location);
+  //      console.log('6-messageBody', messageBody);
+  //      console.log('7-extras', extras);
+  //      console.log('==============================');
         // const parsedData = await calendarSchema
         //    .validate(JSON.parse(req.body))
         //    .catch((err) => {

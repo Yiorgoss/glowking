@@ -1,13 +1,21 @@
 * Inbox
-** TODO booking add users current day
+** TODO REMOVE prisma
+Use Knex or Just raw SQL. Fuck ORMs
+
+[[file:~/code/gikas/glowking/src/pages/api/selectFromDB.ts::res.status(400).end();]]
+** TODO DB save calendar entries
+** DONE booking add users current day
 
 [[file:~/code/gikas/glowking]]
-** TODO Database Keep Alive
-
-[[file:~/code/gikas/glowking/src/components/multiStepForm.tsx::return (]]
 ** TODO Redo Booking process
 make booking into a step through process
 
+** TODO Add State to router history
+so that going back works as expected
+
+** TODO Database Keep Alive
+
+[[file:~/code/gikas/glowking/src/components/multiStepForm.tsx::return (]]
 ** TODO SEO Stuff
 check SEO_strategy.txt
 ** TODO Rate Limit App
@@ -34,6 +42,7 @@ add gooogle map integration on Contact page and footer
 2. dynamic imports
 3. Reduce First load
 4. Check out Edge functions/ computation
+5. Sharpe for images
 **** https://calibreapp.com/blog/bundle-size-optimization
 ** TODO Tailwind Merge
 

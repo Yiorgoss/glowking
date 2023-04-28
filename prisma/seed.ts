@@ -3,11 +3,15 @@ import { PrismaClient, Prisma } from '@prisma/client';
 import {
     categories,
     subtypes,
-    categorySubtypes,
     packages,
-    subtypePackages,
     extras,
-    packageExtras
+    categoriesEL,
+    subtypesEL,
+    packagesEL,
+    extrasEL,
+    categorySubtypes,
+    subtypePackages,
+    packageExtras,
 } from './data';
 const prisma = new PrismaClient();
 
@@ -60,6 +64,19 @@ async function main() {
     });
     await prisma.extra.createMany({
         data: extras
+    });
+    await prisma.extraEL.createMany({
+        data: extrasEL
+    });
+
+    await prisma.packageEL.createMany({
+        data: packagesEL,
+    });
+    await prisma.categoryEL.createMany({
+        data: categoriesEL,
+    });
+    await prisma.subtypeEL.createMany({
+        data: subtypesEL,
     });
     await prisma.packageExtra.createMany({
         data: packageExtras

@@ -60,10 +60,7 @@ const TimePicker = ({ unavailableSlots }: { unavailableSlots?: Dayjs[] }) => {
                             className={`px-4 py-2 hover:cursor-pointer ${
                                 isUnavailable ? 'text-slate-500' : ''
                             }`}
-                            onClick={(e) =>
-                                slot.isToday()
-                                ? e.preventDefault()
-                                : setDateTime(slot)
+                            onClick={() => setDateTime(slot)
                             }
                             key={i}>
                             {slot.format('HH:mm')}

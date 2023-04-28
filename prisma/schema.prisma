@@ -12,11 +12,13 @@ datasource db {
 }
 
 model Category {
-  id          Int               @id @default(autoincrement())
-  title       String
-  description String
-  imageUrl    String
-  subtypes    CategorySubtype[]
+  id           Int               @id @default(autoincrement())
+  title        String
+  description  String
+  imageUrl     String
+  subtypes     CategorySubtype[]
+  categoryEL   CategoryEL @relation(fields: [categoryELId], references: [id])
+  categoryELId Int @unique
 }
 
 model Subtype {
@@ -26,6 +28,8 @@ model Subtype {
   imageUrl    String
   categories  CategorySubtype[]
   packages    SubtypePackage[]
+  subtypeEL   SubtypeEL @relation(fields: [subtypeELId], references: [id])
+  subtypeELId Int @unique
 }
 
 model Package {
@@ -35,6 +39,8 @@ model Package {
   tailwindColor String
   subtypes      SubtypePackage[]
   extras        PackageExtra[]
+  packageEL     PackageEL @relation(fields: [packageELId], references: [id])
+  packageELId   Int @unique
 }
 
 model Extra {
@@ -45,6 +51,36 @@ model Extra {
   price       Int
   time        Decimal
   packages    PackageExtra[]
+  extraEL     ExtraEL @relation(fields: [extraELId], references: [id])
+  extraELId   Int @unique
+}
+
+model CategoryEL {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  category    Category?
+}
+
+model SubtypeEL {
+  id          Int     @id @default(autoincrement())
+  title       String
+  description String
+  subtype     Subtype?
+}
+
+model PackageEL {
+  id          Int @id @default(autoincrement())
+  title       String
+  description String
+  package     Package?
+}
+
+model ExtraEL {
+  id          Int @id @default(autoincrement())
+  title       String
+  description String
+  extraId     Extra?
 }
 
 model CategorySubtype {
