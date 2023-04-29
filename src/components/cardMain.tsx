@@ -29,10 +29,10 @@ const CardMain = ({
                 />
 
                 <Card.Header className='mt-8 text-center text-2xl font-medium'>
-                    {header}
+                    {header ?? ""}
                 </Card.Header>
                 <Card.Content className='overflow-hidden text-ellipsis p-5'>
-                    {content}
+                    {content ?? ""}
                 </Card.Content>
             </Link>
         </Card>

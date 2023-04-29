@@ -121,7 +121,7 @@ const ServicesCarCleaning = () => {
                         <Card.Header className=' text-center'>
                             Silver Wash
                         </Card.Header>
-                        <Card.Content className='p-5 text-base'></Card.Content>
+                        <Card.Content className='p-5 text-base'>Silver</Card.Content>
                     </Card>
                 </div>
                 <div className='rounded-lg outline outline-2 outline-secondary '>
@@ -129,7 +129,7 @@ const ServicesCarCleaning = () => {
                         <Card.Header className='py-4 text-center text-2xl font-semibold'>
                             Gold Wash
                         </Card.Header>
-                        <Card.Content></Card.Content>
+                        <Card.Content>Gold</Card.Content>
                     </Card>
                 </div>
                 <div className='rounded-lg outline outline-2 outline-secondary '>
@@ -137,7 +137,7 @@ const ServicesCarCleaning = () => {
                         <Card.Header className='py-4 text-center text-2xl font-semibold'>
                             Detailing Wash
                         </Card.Header>
-                        <Card.Content>bac</Card.Content>
+                        <Card.Content>Detailing</Card.Content>
                     </Card>
                 </div>
             </div>

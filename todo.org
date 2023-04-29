@@ -1,5 +1,8 @@
 * Inbox
-** TODO will need to automate this data entry
+** TODO add a card element for jsx Children
+
+[[file:~/code/gikas/glowking/src/components/optionalExtras.tsx::hr]]
+** TODO need to replace all string interpolation with tailwind merge
 
 [[file:~/code/gikas/glowking/prisma/data.ts::{]]
 ** TODO REMOVE prisma
