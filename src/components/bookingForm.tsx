@@ -29,7 +29,7 @@ const BookingForm = () => {
     const [message, setMessage] = useState('');
     const [dateTimeStr, setDateTimeStr] = useState('');
     const [extras, setExtras] = useState<Map<string, number>>(
-        new Map([['Base Wash', 30]])
+        new Map([['Silver Wash', 30]])
     );
     const [total, setTotal] = useState(30);
 

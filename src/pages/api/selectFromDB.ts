@@ -22,10 +22,25 @@ export default async function handler(
         throw new Error('id must be a number');
     }
 
-    console.log('===========');
-    console.log(req.query);
-    console.log('===========');
-    if (table === 'category') {
+    //console.log('===========');
+    //console.log(req.query);
+    //console.log('===========');
+    if (table === 'initial') {
+        if (locale == 'en') {
+            const categories = await prisma.category.findMany({
+                where: {}
+            });
+            res.status(200).end(JSON.stringify(categories));
+        } else {
+            const categories = await prisma.$queryRaw`
+                SELECT c.id, c.imageUrl, el.title, el.description
+                  FROM Category c
+             LEFT JOIN CategoryEL el
+                    ON c.categoryELId = el.id
+`;
+            res.status(200).end(JSON.stringify(categories));
+        }
+    } else if (table === 'category') {
         if (locale == 'en') {
             const subtypeCategories = await prisma.subtype.findMany({
                 where: {

@@ -25,3 +25,16 @@ export async function loadTranslation(locale: string, isProduction = true) {
     }
     return data.messages;
 }
+
+export const retryFetch = (url: string, options = {}, retries: number):any =>
+  fetch(url, options)
+    .then(res => {
+      if (res.ok) {
+        return res.json()
+      }
+      if (retries > 0) {
+        return retryFetch(url, options, retries - 1)
+      }
+      throw new Error(''+res.status)
+    })
+    .catch(error => console.error(error.message))

@@ -16,6 +16,12 @@ const FormContext = React.createContext<any>({});
 
 const fetcher = (url: string) => fetch(url).then((r) => r.json());
 
+interface ILoading extends React.HTMLAttributes<HTMLDivElement> {}
+
+const Loading = ({}: ILoading) => {
+    return <Spinner className='h-[300px] fill-slate-700' />;
+};
+
 interface IFormActiveStepCircle extends React.HTMLAttributes<HTMLDivElement> {
     step: number;
 }
@@ -117,14 +123,18 @@ const FormNavigation = ({}: IFormNavigation) => {
     );
 };
 
-interface ISelectWashCategory extends React.HTMLAttributes<HTMLDivElement> {
-    categories: Category[];
-}
+interface ISelectWashCategory extends React.HTMLAttributes<HTMLDivElement> {}
 
-const SelectWashCategory = ({ categories }: ISelectWashCategory) => {
+const SelectWashCategory = ({}: ISelectWashCategory) => {
     const { locale } = useRouter();
     const { formState, setFormState, nextStep } = React.useContext(FormContext);
+    const { data, error, isLoading } = useSWR(
+        `/api/selectFromDB?table=initial&id=0&locale=${locale}`,
+        fetcher
+    );
 
+    if (error) return <div>failed to load</div>;
+    if (isLoading) return <Loading />;
     const chooseCategory = (id: number) => {
         setFormState((prev: any) => ({ ...prev, categoryId: id }));
         nextStep();
@@ -132,31 +142,33 @@ const SelectWashCategory = ({ categories }: ISelectWashCategory) => {
 
     return (
         <div className='flex h-full w-full flex-wrap gap-0 md:gap-[2%] '>
-            {categories.map(({ title, id, description, imageUrl }, index) => (
-                <div
-                    className={`mt-[2%] flex min-h-[200px] min-w-[50%] grow flex-col md:min-w-[31%] ${
-                        formState.categoryId === id
-                            ? 'rounded-lg  outline outline-2 outline-green-400'
-                            : ''
-                    }`}
-                    key={index}
-                    onClick={() => chooseCategory(id)}>
-                    <div className='relative h-full w-full overflow-hidden rounded-lg'>
-                        <Image
-                            className='h-full w-full object-cover'
-                            src={'/media/images/' + imageUrl}
-                            alt=''
-                            fill
-                            sizes='(max-width:768) 40wv 20vw'
-                            quality={1}
-                        />
+            {(data as Category[]).map(
+                ({ title, id, description, imageUrl }, index) => (
+                    <div
+                        className={`mt-[2%] flex min-h-[200px] min-w-[50%] grow flex-col md:min-w-[31%] ${
+                            formState.categoryId === id
+                                ? 'rounded-lg  outline outline-2 outline-green-400'
+                                : ''
+                        }`}
+                        key={index}
+                        onClick={() => chooseCategory(id)}>
+                        <div className='relative h-full w-full overflow-hidden rounded-lg'>
+                            <Image
+                                className='h-full w-full object-cover'
+                                src={'/media/images/' + imageUrl}
+                                alt=''
+                                fill
+                                sizes='(max-width:768) 40wv 20vw'
+                                quality={1}
+                            />
+                        </div>
+                        <div>
+                            <div className='text-center'>{title}</div>
+                            <div className='text-center'>{description}</div>
+                        </div>
                     </div>
-                    <div>
-                        <div className='text-center'>{title}</div>
-                        <div className='text-center'>{description}</div>
-                    </div>
-                </div>
-            ))}
+                )
+            )}
         </div>
     );
 };
@@ -165,11 +177,12 @@ interface ISelectWashSubType extends React.HTMLAttributes<HTMLDivElement> {}
 const SelectWashSubType = ({}: ISelectWashSubType) => {
     const { locale } = useRouter();
     const { formState, setFormState, nextStep } = React.useContext(FormContext);
-    const { data } = useSWR(
+    const { data, error, isLoading } = useSWR(
         `/api/selectFromDB?table=category&id=${formState.categoryId}&locale=${locale}`,
-        fetcher,
-        { suspense: true }
+        fetcher
     );
+    if (error) return <div>failed to load</div>;
+    if (isLoading) return <Loading />;
 
     const chooseSubtype = (id: number) => {
         setFormState((prev: any) => ({ ...prev, subtypeId: id }));
@@ -214,11 +227,12 @@ interface ISelectPackageType extends React.HTMLAttributes<HTMLDivElement> {}
 const SelectPackageType = ({}: ISelectPackageType) => {
     const { locale } = useRouter();
     const { formState, setFormState, nextStep } = React.useContext(FormContext);
-    const { data } = useSWR(
+    const { data, error, isLoading } = useSWR(
         `/api/selectFromDB?table=subtype&id=${formState.subtypeId}&locale=${locale}`,
-        fetcher,
-        { suspense: true }
+        fetcher
     );
+    if (error) return <div>failed to load</div>;
+    if (isLoading) return <Loading />;
 
     const choosePackage = (id: number) => {
         setFormState((prev: any) => ({ ...prev, packageId: id }));
@@ -253,11 +267,12 @@ interface ISelectExtras extends React.HTMLAttributes<HTMLDivElement> {}
 const SelectExtras = ({}: ISelectExtras) => {
     const { locale } = useRouter();
     const { formState, setFormState, nextStep } = React.useContext(FormContext);
-    const { data } = useSWR(
+    const { data, error, isLoading } = useSWR(
         `/api/selectFromDB?table=package&id=${formState.packageId}&locale=${locale}`,
-        fetcher,
-        { suspense: true }
+        fetcher
     );
+    if (error) return <div>failed to load</div>;
+    if (isLoading) return <Loading />;
 
     const choosePackage = (id: number) => {
         setFormState((prev: any) => ({ ...prev, packageId: id }));
@@ -287,15 +302,14 @@ const SelectExtras = ({}: ISelectExtras) => {
 
 interface IFormPageDisplay extends React.HTMLAttributes<HTMLDivElement> {
     page: number;
-    categories: Category[];
 }
 
-const FormPageDisplay = ({ page, categories }: IFormPageDisplay) => {
+const FormPageDisplay = ({ page }: IFormPageDisplay) => {
     const { currentStep } = React.useContext(FormContext);
     const stepSwitcher = (currentStep: number) => {
         switch (currentStep) {
             case 1:
-                return <SelectWashCategory categories={categories} />;
+                return <SelectWashCategory />;
             case 2:
                 return <SelectWashSubType />;
             case 3:
@@ -310,11 +324,9 @@ const FormPageDisplay = ({ page, categories }: IFormPageDisplay) => {
     return <div className=''>{stepSwitcher(currentStep)}</div>;
 };
 
-interface IMultiStepForm extends React.HTMLAttributes<HTMLFormElement> {
-    categories: Category[];
-}
+interface IMultiStepForm extends React.HTMLAttributes<HTMLFormElement> {}
 
-const MultiStepForm = ({ categories }: IMultiStepForm) => {
+const MultiStepForm = ({}: IMultiStepForm) => {
     const [currentStep, setCurrentStep] = React.useState(1);
     const [submitReady, setSubmitReady] = React.useState(false);
 
@@ -379,15 +391,7 @@ const MultiStepForm = ({ categories }: IMultiStepForm) => {
                 <div className='container mx-auto flex h-full min-h-[500px] w-[500px] flex-col justify-between divide-y-2 divide-slate-500/50 rounded-lg border-2 border-slate-400 bg-primary p-3'>
                     <FormStepTracker />
                     <div className='min-h-[300px]'>
-                        <React.Suspense
-                            fallback={
-                                <Spinner className='h-[300px] fill-black' />
-                            }>
-                            <FormPageDisplay
-                                page={currentStep}
-                                categories={categories}
-                            />
-                        </React.Suspense>
+                        <FormPageDisplay page={currentStep} />
                     </div>
                     <FormNavigation />
                 </div>

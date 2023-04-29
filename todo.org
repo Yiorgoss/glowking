@@ -1,4 +1,7 @@
 * Inbox
+** TODO will need to automate this data entry
+
+[[file:~/code/gikas/glowking/prisma/data.ts::{]]
 ** TODO REMOVE prisma
 Use Knex or Just raw SQL. Fuck ORMs
 

@@ -1,43 +1,39 @@
-import {GetStaticProps} from "next"
-import {ReactElement} from "react"
+import { GetStaticProps } from 'next';
+import { ReactElement } from 'react';
 
-import {PrismaClient, Category} from '@prisma/client'
+import { PrismaClient, Category } from '@prisma/client';
+import useSWR from 'swr';
 
-import LandingLayout from "@/layouts/landingLayout"
+import LandingLayout from '@/layouts/landingLayout';
 
-import {loadTranslation} from "@/utils/utils"
-import MultiStepForm from "@/components/multiStepForm"
+import { loadTranslation } from '@/utils/utils';
+import MultiStepForm from '@/components/multiStepForm';
 
-const prisma = new PrismaClient()
+import { server } from '@/config';
 
-export const getStaticProps: GetStaticProps = async(ctx) => {
+export const getStaticProps: GetStaticProps = async (ctx) => {
     const translation = await loadTranslation(
         ctx.locale!,
         process.env.NODE_ENV === 'production'
     );
-    const categoryData = await prisma.category.findMany({})
-    return{
-        props:{
-            translation,
-            categoryData
+
+    return {
+        props: {
+            translation
         }
-    }
-}
+    };
+};
 
-const BookOnline = ({categoryData}:{categoryData: Category[]}) => {
-
-    return(
-        <div className="mt-[100px] container mx-auto">
-            <MultiStepForm categories={categoryData}/>
+const BookOnline = () => {
+    return (
+        <div className='container mx-auto mt-[100px]'>
+            <MultiStepForm />
         </div>
-    )
-}
+    );
+};
 
-BookOnline.getLayout = function getLayout(page:ReactElement){
+BookOnline.getLayout = function getLayout(page: ReactElement) {
+    return <LandingLayout>{page}</LandingLayout>;
+};
 
-    return(
-        <LandingLayout>{page}</LandingLayout>
-    )
-}
-
-export default BookOnline
+export default BookOnline;
