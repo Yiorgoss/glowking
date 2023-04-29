@@ -5,15 +5,15 @@ import {
     useState,
     useEffect
 } from 'react';
-import {useRouter} from "next/router"
+import { useRouter } from 'next/router';
 
 import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
 
-import {t} from "@lingui/macro"
+import { t } from '@lingui/macro';
 
 import dayjs, { Dayjs } from 'dayjs';
 import isTodayPlugin from 'dayjs/plugin/isToday';
-import 'dayjs/locale/el'
+import 'dayjs/locale/el';
 
 const CalendarContext = createContext({} as any);
 dayjs.extend(isTodayPlugin);
@@ -31,7 +31,7 @@ const TimePicker = ({ unavailableSlots }: { unavailableSlots?: Dayjs[] }) => {
 
         while (currentTime <= endTime) {
             timeArr.push(currentTime);
-            currentTime = currentTime.add(.5, 'hour');
+            currentTime = currentTime.add(0.5, 'hour');
         }
         return timeArr;
     };
@@ -47,31 +47,48 @@ const TimePicker = ({ unavailableSlots }: { unavailableSlots?: Dayjs[] }) => {
     //        ? false
     //        : true;
     //};
-    const isUnavailable = false
+    const isUnavailable = (datetime: Dayjs) => {
+        const minBookingTime = dayjs().add(1, 'hour');
+
+        return datetime.isAfter(minBookingTime);
+    };
 
     return (
         <div className='h-[300px] overflow-auto'>
             {open ? (
                 <ul
-                    className='relative overflow-auto divide-primary '
+                    className='relative divide-primary overflow-auto '
                     onClick={() => setOpen(false)}>
-                    {availableSlots.map((slot, i) => (
-                        <li
-                            className={`px-4 py-2 hover:cursor-pointer ${
-                                isUnavailable ? 'text-slate-500' : ''
-                            }`}
-                            onClick={() => setDateTime(slot)
-                            }
-                            key={i}>
-                            {slot.format('HH:mm')}
-                        </li>
-                    ))}
+                    {availableSlots.map((slot, i) => {
+                        const clickable = isUnavailable(slot);
+                        return (
+                            <li
+                                className={`px-4 py-2 hover:cursor-pointer ${
+                                    clickable
+                                        ? ''
+                                        : 'text-slate-500 hover:cursor-not-allowed'
+                                }`}
+                                onClick={(e) =>
+                                    clickable
+                                        ? setDateTime(slot)
+                                        : e.preventDefault()
+                                }
+                                key={i}>
+                                {slot.format('HH:mm')}
+                            </li>
+                        );
+                    })}
                 </ul>
             ) : (
                 <div
-                    className='py-2 px-4 w-full hover:cursor-pointer'
+                    className='w-full py-2 px-4 hover:cursor-pointer'
                     onClick={() => setOpen(true)}>
-                    {datetime.format('HH:mm') !== "00:00" ? datetime.format('HH:mm') : t({id:`Calendar-select-time`, message:`Select Time`})}
+                    {datetime.format('HH:mm') !== '00:00'
+                        ? datetime.format('HH:mm')
+                        : t({
+                              id: `Calendar-select-time`,
+                              message: `Select Time`
+                          })}
                 </div>
             )}
         </div>
@@ -181,27 +198,29 @@ const DatesOfTheMonth = () => {
     };
     return (
         <div className='grid grid-cols-7 justify-items-center  text-center  '>
-            {arr.map((dateObj, i) => (
-                <div
-                    className={`h-8 w-8 ${
-                        dateObj.isBefore(today.startOf("day")) ? 'text-slate-400' : ''
-                    } `}
-                    onClick={(e) =>
-                        dateObj.isBefore(today.startOf('day'))
-                            ? e.preventDefault()
-                            : pickDate(dateObj)
-                    }
-                    key={i}>
+            {arr.map((dateObj, i) => {
+                const isBefore = dateObj.isBefore(today.startOf('day'));
+
+                return (
                     <div
-                        className={`flex h-full w-full items-center justify-center ${
-                            isPickedDate(dateObj)
-                                ? 'rounded-full bg-tertiary'
-                                : ''
-                        }`}>
-                        {dateObj.format('D')}
+                        className={`h-8 w-8 ${
+                            isBefore ? 'cursor-not-allowed text-slate-400' : ''
+                        } `}
+                        onClick={(e) =>
+                            isBefore ? e.preventDefault() : pickDate(dateObj)
+                        }
+                        key={i}>
+                        <div
+                            className={`flex h-full w-full items-center justify-center ${
+                                isPickedDate(dateObj)
+                                    ? 'rounded-full bg-tertiary'
+                                    : ''
+                            }`}>
+                            {dateObj.format('D')}
+                        </div>
                     </div>
-                </div>
-            ))}
+                );
+            })}
         </div>
     );
 };
@@ -211,8 +230,8 @@ const Calendar = ({
 }: {
     children: ReactElement | ReactElement[];
 }) => {
-    const router = useRouter()
-    const locale = router.locale
+    const router = useRouter();
+    const locale = router.locale;
 
     const [displayMonth, setDisplayMonth] = useState(dayjs());
     const [datetime, setDatetime] = useState(
@@ -220,11 +239,11 @@ const Calendar = ({
     );
 
     useEffect(() => {
-        dayjs.locale(locale)
-    }, [locale])
+        dayjs.locale(locale);
+    }, [locale]);
 
     useEffect(() => {
-        console.log({datetime:datetime});
+        console.log({ datetime: datetime });
     }, [datetime]);
 
     //const value = [displayMonth, setDisplayMonth, time, setTime, day, setDay];
