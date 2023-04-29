@@ -109,6 +109,7 @@ const BookingForm = () => {
     //        tertiary color a bit darker
     //        show something whenever the form is submitted successfully
 
+
     return (
         <form noValidate onSubmit={handleSubmit(onSubmit, onError)}>
             <div className='container mx-auto '>

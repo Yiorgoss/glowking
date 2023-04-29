@@ -10,12 +10,45 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 
 import Spinner from '@/components/spinner';
+import Card from '@/components/common/card/card';
+import OptionalExtras from '@/components/optionalExtras';
 import onlineBookingSchema from '@/utils/onlineBookingSchema';
+import CalendarMain from '@/components/calendarMain'
 
 const FormContext = React.createContext<any>({});
 
 const fetcher = (url: string) => fetch(url).then((r) => r.json());
 
+const DisplayCard = ({
+    imageUrl,
+    title,
+    description,
+    tailwindColor
+}: {
+    imageUrl?: string;
+    title: string;
+    description: string;
+    tailwindColor?: string;
+}) => {
+    return (
+        <div className={`${tailwindColor ? tailwindColor : ''}`}>
+            <div className='relative'>
+                {imageUrl && (
+                    <Image
+                        className='h-full w-full object-cover'
+                        src={`/media/images/${imageUrl}`}
+                        alt=''
+                        fill
+                        sizes='(max-width:768) 40wv 20vw'
+                        quality={1}
+                    />
+                )}
+            </div>
+            <div className='text-center'>{title}</div>
+            <div className='text-center'>{description}</div>
+        </div>
+    );
+};
 interface ILoading extends React.HTMLAttributes<HTMLDivElement> {}
 
 const Loading = ({}: ILoading) => {
@@ -133,7 +166,13 @@ const SelectWashCategory = ({}: ISelectWashCategory) => {
         fetcher
     );
 
-    if (error) return <div>failed to load</div>;
+    if (error)
+        return (
+            <div>
+                Failed to load. Try refreshing your browser it this problem
+                persists.{' '}
+            </div>
+        );
     if (isLoading) return <Loading />;
     const chooseCategory = (id: number) => {
         setFormState((prev: any) => ({ ...prev, categoryId: id }));
@@ -152,20 +191,11 @@ const SelectWashCategory = ({}: ISelectWashCategory) => {
                         }`}
                         key={index}
                         onClick={() => chooseCategory(id)}>
-                        <div className='relative h-full w-full overflow-hidden rounded-lg'>
-                            <Image
-                                className='h-full w-full object-cover'
-                                src={'/media/images/' + imageUrl}
-                                alt=''
-                                fill
-                                sizes='(max-width:768) 40wv 20vw'
-                                quality={1}
-                            />
-                        </div>
-                        <div>
-                            <div className='text-center'>{title}</div>
-                            <div className='text-center'>{description}</div>
-                        </div>
+                        <DisplayCard
+                            title={title}
+                            description={description}
+                            imageUrl={imageUrl}
+                        />
                     </div>
                 )
             )}
@@ -181,7 +211,13 @@ const SelectWashSubType = ({}: ISelectWashSubType) => {
         `/api/selectFromDB?table=category&id=${formState.categoryId}&locale=${locale}`,
         fetcher
     );
-    if (error) return <div>failed to load</div>;
+    if (error)
+        return (
+            <div>
+                Failed to load. Try refreshing your browser it this problem
+                persists.{' '}
+            </div>
+        );
     if (isLoading) return <Loading />;
 
     const chooseSubtype = (id: number) => {
@@ -190,31 +226,22 @@ const SelectWashSubType = ({}: ISelectWashSubType) => {
     };
 
     return (
-        <div>
+        <div className='mx-auto flex h-full w-full flex-wrap gap-0 md:gap-[2%]'>
             {(data as Subtype[]).map(
                 ({ id, title, description, imageUrl }, index) => (
                     <div
-                        className={`mt-[2%] flex min-h-[200px] min-w-[50%] grow flex-col md:min-w-[31%] ${
+                        className={`mx-auto mt-[2%] flex min-h-[200px] min-w-[50%] max-w-[31%] grow flex-col md:min-w-[31%] ${
                             formState.subtypeId === id
                                 ? 'rounded-lg  outline outline-2 outline-green-400'
-                                : ''
+                                : 'outline outline-2 outline-black'
                         }`}
-                        key={index}
-                        onClick={() => chooseSubtype(id)}>
-                        <div className='relative h-full w-full overflow-hidden rounded-lg'>
-                            <Image
-                                className='h-full w-full object-cover'
-                                src={'/media/images/' + imageUrl}
-                                alt=''
-                                fill
-                                sizes='(max-width:768) 40wv 20vw'
-                                quality={1}
-                            />
-                        </div>
-                        <div>
-                            <div className='text-center'>{title}</div>
-                            <div className='text-center'>{description}</div>
-                        </div>
+                        onClick={() => chooseSubtype(id)}
+                        key={index}>
+                        <DisplayCard
+                            title={title}
+                            description={description}
+                            imageUrl={imageUrl}
+                        />
                     </div>
                 )
             )}
@@ -231,7 +258,13 @@ const SelectPackageType = ({}: ISelectPackageType) => {
         `/api/selectFromDB?table=subtype&id=${formState.subtypeId}&locale=${locale}`,
         fetcher
     );
-    if (error) return <div>failed to load</div>;
+    if (error)
+        return (
+            <div>
+                Failed to load. Try refreshing your browser it this problem
+                persists.{' '}
+            </div>
+        );
     if (isLoading) return <Loading />;
 
     const choosePackage = (id: number) => {
@@ -240,7 +273,7 @@ const SelectPackageType = ({}: ISelectPackageType) => {
     };
 
     return (
-        <div>
+        <div className='mx-auto flex h-full w-full flex-wrap gap-0 md:gap-[2%]'>
             {(data as Package[]).map(
                 ({ id, title, description, tailwindColor }, index) => (
                     <div
@@ -251,10 +284,11 @@ const SelectPackageType = ({}: ISelectPackageType) => {
                         }`}
                         key={index}
                         onClick={() => choosePackage(id)}>
-                        <div>
-                            <div className='text-center'>{title}</div>
-                            <div className='text-center'>{description}</div>
-                        </div>
+                        <DisplayCard
+                            title={title}
+                            description={description}
+                            tailwindColor={tailwindColor}
+                        />
                     </div>
                 )
             )}
@@ -271,34 +305,45 @@ const SelectExtras = ({}: ISelectExtras) => {
         `/api/selectFromDB?table=package&id=${formState.packageId}&locale=${locale}`,
         fetcher
     );
-    if (error) return <div>failed to load</div>;
+    const [extraBasket, setExtraBasket] = React.useState<Map<string, number>>(
+        new Map()
+    );
+    if (error) {
+        return (
+            <div>
+                Failed to load. Try refreshing your browser it this problem
+                persists.
+            </div>
+        );
+    }
     if (isLoading) return <Loading />;
-
-    const choosePackage = (id: number) => {
-        setFormState((prev: any) => ({ ...prev, packageId: id }));
-        nextStep();
-    };
 
     return (
         <div>
-            {(data as Extra[]).map(({ id, title, description }, index) => (
-                <div
-                    className={`mt-[2%] flex min-h-[200px] min-w-[50%] grow flex-col md:min-w-[31%] ${
-                        formState.packageId === id
-                            ? 'rounded-lg  outline outline-2 outline-green-400'
-                            : ''
-                    }`}
-                    key={index}
-                    onClick={() => choosePackage(id)}>
-                    <div>
-                        <div className='text-center'>{title}</div>
-                        <div className='text-center'>{description}</div>
-                    </div>
-                </div>
-            ))}
+            <OptionalExtras
+                extras={extraBasket}
+                setExtras={setExtraBasket}
+                data={data}
+            />
         </div>
     );
 };
+
+interface ISelectDatetime extends React.HTMLAttributes<HTMLDivElement> {
+
+}
+
+const SelectDatetime = ({}:ISelectDatetime) => {
+
+    const [datetime, setDatetime] = React.useState('');
+
+    return(
+        <div className="">
+            <CalendarMain setDateTimeStr={setDatetime}/>
+        </div>
+    )
+}
+
 
 interface IFormPageDisplay extends React.HTMLAttributes<HTMLDivElement> {
     page: number;
@@ -316,8 +361,10 @@ const FormPageDisplay = ({ page }: IFormPageDisplay) => {
                 return <SelectPackageType />;
             case 4:
                 return <SelectExtras />;
-            //case 5:
-            //    return <BookingDetails />;
+            case 5:
+                return <SelectDatetime />;
+            //case 6:
+            //   return <BookingDetails />;
         }
     };
 
@@ -388,7 +435,7 @@ const MultiStepForm = ({}: IMultiStepForm) => {
                     prevStep: prevStep,
                     nextStep: nextStep
                 }}>
-                <div className='container mx-auto flex h-full min-h-[500px] w-[500px] flex-col justify-between divide-y-2 divide-slate-500/50 rounded-lg border-2 border-slate-400 bg-primary p-3'>
+                <div className='container mx-auto flex h-full min-h-[500px] w-[800px] flex-col justify-between divide-y-2 divide-slate-500/50 rounded-lg border-2 border-slate-400 bg-primary p-3'>
                     <FormStepTracker />
                     <div className='min-h-[300px]'>
                         <FormPageDisplay page={currentStep} />
