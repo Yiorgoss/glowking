@@ -2,18 +2,20 @@ import * as React from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 
+import { Prisma } from '@prisma/client';
 import { i18n } from '@lingui/core';
 import { defineMessage } from '@lingui/macro';
 import useSWR from 'swr';
 import { Category, Subtype, Package, Extra } from '@prisma/client';
-import { useForm } from 'react-hook-form';
+import { useForm, FormProvider, useFormContext } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 
 import Spinner from '@/components/spinner';
 import Card from '@/components/common/card/card';
 import OptionalExtras from '@/components/optionalExtras';
-import onlineBookingSchema from '@/utils/onlineBookingSchema';
-import CalendarMain from '@/components/calendarMain'
+import bookingFormSchema from '@/utils/bookingFormSchema';
+import CalendarMain from '@/components/calendarMain';
+import BookingForm from '@/components/bookingForm';
 
 const FormContext = React.createContext<any>({});
 
@@ -63,7 +65,8 @@ const formSteps: { title: string; step: number }[] = [
     { title: 'Subtypes', step: 2 },
     { title: 'Packages', step: 3 },
     { title: 'Extras', step: 4 },
-    { title: 'Details', step: 5 }
+    { title: 'Confirm Date', step: 5 },
+    { title: 'Details', step: 6 }
 ];
 
 const FormActiveStepCircle = ({ step }: IFormActiveStepCircle) => {
@@ -122,36 +125,30 @@ interface IFormNavigation extends React.HTMLAttributes<HTMLButtonElement> {}
 const FormNavigation = ({}: IFormNavigation) => {
     const { currentStep, prevStep, nextStep } = React.useContext(FormContext);
 
-    const NextButton = () => {
-        const nextText =
-            currentStep === 1
-                ? 'Start'
-                : currentStep === formSteps.length
-                ? 'Submit'
-                : 'Next';
-        return (
-            <button
-                className='h-full rounded-lg bg-slate-700 py-2 px-4 text-slate-100'
-                role='submit'
-                onClick={() => nextStep()}>
-                {nextText}
-            </button>
-        );
-    };
-
     return (
         <div className='mt-8 flex justify-end gap-x-5 py-8 font-normal tracking-wide text-slate-500'>
             {currentStep > 1 && (
-                <button className='mr-auto hover:text-red-500'>Reset</button>
-            )}
-            {currentStep > 1 && (
                 <button
-                    className='rounded-lg border border-slate-700 px-4 text-slate-700 hover:bg-slate-700 hover:text-slate-100'
+                    className='rounded-lg border border-slate-700 py-2 px-7 text-slate-700 hover:bg-slate-700 hover:text-slate-100'
                     onClick={() => prevStep()}>
                     Back
                 </button>
             )}
-            <NextButton />
+            {currentStep === formSteps.length - 1 && (
+                <button
+                    className='rounded-lg border-slate-700 bg-slate-700 px-4 text-slate-100 hover:bg-slate-800'
+                    type='button'
+                    onClick={() => nextStep()}>
+                    Confirm Time
+                </button>
+            )}
+            {currentStep === formSteps.length && (
+                <button
+                    className='rounded-lg border-slate-700 bg-slate-700 px-4 text-slate-100 hover:bg-slate-800'
+                    type='submit'>
+                    Submit
+                </button>
+            )}
         </div>
     );
 };
@@ -159,6 +156,7 @@ const FormNavigation = ({}: IFormNavigation) => {
 interface ISelectWashCategory extends React.HTMLAttributes<HTMLDivElement> {}
 
 const SelectWashCategory = ({}: ISelectWashCategory) => {
+    const { setValue } = useFormContext();
     const { locale } = useRouter();
     const { formState, setFormState, nextStep } = React.useContext(FormContext);
     const { data, error, isLoading } = useSWR(
@@ -176,6 +174,7 @@ const SelectWashCategory = ({}: ISelectWashCategory) => {
     if (isLoading) return <Loading />;
     const chooseCategory = (id: number) => {
         setFormState((prev: any) => ({ ...prev, categoryId: id }));
+        setValue('category', id);
         nextStep();
     };
 
@@ -205,6 +204,7 @@ const SelectWashCategory = ({}: ISelectWashCategory) => {
 interface ISelectWashSubType extends React.HTMLAttributes<HTMLDivElement> {}
 
 const SelectWashSubType = ({}: ISelectWashSubType) => {
+    const { setValue } = useFormContext();
     const { locale } = useRouter();
     const { formState, setFormState, nextStep } = React.useContext(FormContext);
     const { data, error, isLoading } = useSWR(
@@ -222,6 +222,7 @@ const SelectWashSubType = ({}: ISelectWashSubType) => {
 
     const chooseSubtype = (id: number) => {
         setFormState((prev: any) => ({ ...prev, subtypeId: id }));
+        setValue('subtype', id);
         nextStep();
     };
 
@@ -252,6 +253,7 @@ const SelectWashSubType = ({}: ISelectWashSubType) => {
 interface ISelectPackageType extends React.HTMLAttributes<HTMLDivElement> {}
 
 const SelectPackageType = ({}: ISelectPackageType) => {
+    const { setValue } = useFormContext();
     const { locale } = useRouter();
     const { formState, setFormState, nextStep } = React.useContext(FormContext);
     const { data, error, isLoading } = useSWR(
@@ -269,6 +271,7 @@ const SelectPackageType = ({}: ISelectPackageType) => {
 
     const choosePackage = (id: number) => {
         setFormState((prev: any) => ({ ...prev, packageId: id }));
+        setValue('category', id);
         nextStep();
     };
 
@@ -299,13 +302,14 @@ const SelectPackageType = ({}: ISelectPackageType) => {
 interface ISelectExtras extends React.HTMLAttributes<HTMLDivElement> {}
 
 const SelectExtras = ({}: ISelectExtras) => {
+    const { setValue } = useFormContext();
     const { locale } = useRouter();
     const { formState, setFormState, nextStep } = React.useContext(FormContext);
     const { data, error, isLoading } = useSWR(
         `/api/selectFromDB?table=package&id=${formState.packageId}&locale=${locale}`,
         fetcher
     );
-    const [extraBasket, setExtraBasket] = React.useState<Map<string, number>>(
+    const [extraBasket, setExtraBasket] = React.useState<Map<number, Extra>>(
         new Map()
     );
     if (error) {
@@ -318,32 +322,85 @@ const SelectExtras = ({}: ISelectExtras) => {
     }
     if (isLoading) return <Loading />;
 
+    const setExtras = (extras: Map<number, Extra>) => {
+        const tmpArr: {
+            id: number;
+            title: string;
+            price: number;
+            time: Prisma.Decimal;
+        }[] = [];
+        extras.forEach(({ price, id, time, title }, key) => {
+            tmpArr.push({ id, title, price, time });
+        });
+        setValue('extras', tmpArr);
+        nextStep();
+    };
+
     return (
-        <div>
+        <div className='mx-auto flex flex-wrap justify-center py-5'>
             <OptionalExtras
                 extras={extraBasket}
                 setExtras={setExtraBasket}
                 data={data}
             />
+            <button
+                className='mt-10 w-fit rounded-lg border border-slate-700 bg-slate-700 px-10 py-5 text-slate-100 hover:bg-slate-100 hover:text-slate-700'
+                onClick={() => setExtras(extraBasket)}>
+                Go To Booking
+            </button>
         </div>
     );
 };
 
-interface ISelectDatetime extends React.HTMLAttributes<HTMLDivElement> {
+interface ISelectDatetime extends React.HTMLAttributes<HTMLDivElement> {}
 
-}
-
-const SelectDatetime = ({}:ISelectDatetime) => {
-
+const SelectDatetime = ({}: ISelectDatetime) => {
+    const { setValue } = useFormContext();
+    const { nextStep } = React.useContext(FormContext);
     const [datetime, setDatetime] = React.useState('');
+    const [pickTimeErr, setPickTimeErr] = React.useState(false);
 
-    return(
-        <div className="">
-            <CalendarMain setDateTimeStr={setDatetime}/>
+    const handleNextStep = () => {
+        if (!datetime) {
+            setPickTimeErr(true);
+            window.scrollTo({
+                top: 100,
+                behavior: 'smooth'
+            });
+            return;
+        }
+        setValue('datetime', datetime);
+        nextStep();
+    };
+
+    return (
+        <div className=''>
+            <div className='mt-3 h-14'>
+                {pickTimeErr && (
+                    <div className='ml-auto w-fit rounded-lg border border-red-500 bg-red-200 py-2 px-5 text-red-500'>
+                        Please select a time for your clean
+                    </div>
+                )}
+            </div>
+            <CalendarMain setDateTimeStr={setDatetime} />
+            <div
+                className='my-5 ml-auto w-fit rounded-lg border border-slate-700 bg-slate-700 py-2 px-5 text-slate-100 hover:bg-slate-800'
+                onClick={() => handleNextStep()}>
+                Confirm Time
+            </div>
         </div>
-    )
-}
+    );
+};
 
+interface ISelectBookingDetails extends React.HTMLAttributes<HTMLDivElement> {}
+
+const SelectBookingDetails = ({}: ISelectBookingDetails) => {
+    return (
+        <div className='my-10'>
+            <BookingForm />
+        </div>
+    );
+};
 
 interface IFormPageDisplay extends React.HTMLAttributes<HTMLDivElement> {
     page: number;
@@ -363,8 +420,8 @@ const FormPageDisplay = ({ page }: IFormPageDisplay) => {
                 return <SelectExtras />;
             case 5:
                 return <SelectDatetime />;
-            //case 6:
-            //   return <BookingDetails />;
+            case 6:
+                return <SelectBookingDetails />;
         }
     };
 
@@ -383,18 +440,11 @@ const MultiStepForm = ({}: IMultiStepForm) => {
     const [formState, setFormState] = React.useState({
         categoryId: null,
         typeId: null,
-        packageId: null,
-        extraId: null
+        packageId: null
     });
 
-    const {
-        register,
-        handleSubmit,
-        setValue,
-        reset,
-        formState: { errors, isSubmitting, isSubmitSuccessful }
-    } = useForm({
-        resolver: yupResolver(onlineBookingSchema)
+    const formMethods = useForm({
+        resolver: yupResolver(bookingFormSchema)
     });
 
     const nextStep = () => {
@@ -402,6 +452,10 @@ const MultiStepForm = ({}: IMultiStepForm) => {
             setSubmitReady(true);
             return;
         }
+        window.scrollTo({
+            top: 200,
+            behavior: 'smooth'
+        });
         setCurrentStep((cur: number) => cur + 1);
     };
     const prevStep = () => {
@@ -410,41 +464,71 @@ const MultiStepForm = ({}: IMultiStepForm) => {
         }
     };
 
-    const onSubmit = (data: any, e: any) => {
+    const onSubmit = async (data: any, e: any) => {
         e.preventDefault();
-        //console.log(data);
+
+        const res = await fetch('/api/insertBooking', {
+            method: 'POST',
+            mode: 'cors',
+            headers: {
+                Accept: 'application/json, text/plain */*',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
     };
     const onError = (err: any, e: any) => {
         e.preventDefault();
-        //console.log(err);
+        console.log('error', err);
+        window.scrollTo({
+            top: 200,
+            behavior: 'smooth'
+        });
     };
 
     return (
-        <form onSubmit={handleSubmit(onSubmit, onError)}>
-            <FormContext.Provider
-                value={{
-                    currentStep: currentStep,
-                    setCurrentStep: setCurrentStep,
-                    submitReady: submitReady,
-                    setSubmitReady: setSubmitReady,
-                    formSteps: formSteps,
-                    formState: formState,
-                    setFormState: setFormState,
-                    stepError: stepError,
-                    setStepError: setStepError,
-                    prevStep: prevStep,
-                    nextStep: nextStep
-                }}>
-                <div className='container mx-auto flex h-full min-h-[500px] w-[800px] flex-col justify-between divide-y-2 divide-slate-500/50 rounded-lg border-2 border-slate-400 bg-primary p-3'>
-                    <FormStepTracker />
-                    <div className='min-h-[300px]'>
-                        <FormPageDisplay page={currentStep} />
+        <FormProvider {...formMethods}>
+            <form
+                onSubmit={formMethods.handleSubmit(onSubmit, onError)}
+                className='py-10'>
+                <FormContext.Provider
+                    value={{
+                        currentStep: currentStep,
+                        setCurrentStep: setCurrentStep,
+                        submitReady: submitReady,
+                        setSubmitReady: setSubmitReady,
+                        formSteps: formSteps,
+                        formState: formState,
+                        setFormState: setFormState,
+                        stepError: stepError,
+                        setStepError: setStepError,
+                        prevStep: prevStep,
+                        nextStep: nextStep
+                    }}>
+                    <div className='container mx-auto flex h-full min-h-[500px] w-[800px] flex-col justify-between divide-y-2 divide-slate-500/50 rounded-lg border-2 border-slate-400 bg-primary p-3'>
+                        <FormStepTracker />
+                        <div className='min-h-[300px]'>
+                            <FormPageDisplay page={currentStep} />
+                        </div>
+                        <FormNavigation />
                     </div>
-                    <FormNavigation />
-                </div>
-            </FormContext.Provider>
-        </form>
+                </FormContext.Provider>
+            </form>
+        </FormProvider>
     );
 };
 
 export default MultiStepForm;
+/*
+   Apologies to whoever has to read this shit.
+   Form steps defined at the top of the file, these dont change
+   Each step component is handled by a switch statement
+   Each component makes a request to get the data from the backend, selectFromDB
+   Each request has 3 components,   table -> what tabled do we have data from
+                                    id -> the id to check out
+                                    locale -> anyones guess
+   To add a new step first add it to the form steps,
+   Then create the component for the page
+   Then create a new db query in the api route and return data
+   Check prisma/seed.ts for information about the database layout
+ */

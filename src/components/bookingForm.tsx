@@ -5,7 +5,7 @@ import { MessageDescriptor } from '@lingui/core';
 import { t } from '@lingui/macro';
 
 import dayjs from 'dayjs';
-import { useForm } from 'react-hook-form';
+import { useForm, useFormContext } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 
@@ -15,87 +15,79 @@ import ResponseBox from '@components/responseBox';
 import OptionalExtras from '@components/optionalExtras';
 
 const BookingForm = () => {
-    const {
-        register,
-        handleSubmit,
-        setValue,
-        reset,
-        formState: { errors, isSubmitting, isSubmitSuccessful }
-    } = useForm({
-        resolver: yupResolver(calendarSchema)
-    });
+    //const {
+    //    register,
+    //    formState: { errors, isSubmitting, isSubmitSuccessful }
+    //} = useForm({
+    //    resolver: yupResolver(calendarSchema)
+    //});
 
-    const [serverResponse, setServerResponse] = useState(false);
-    const [message, setMessage] = useState('');
-    const [dateTimeStr, setDateTimeStr] = useState('');
-    const [extras, setExtras] = useState<Map<string, number>>(
-        new Map([['Silver Wash', 30]])
-    );
+    const {register, formState: {errors, isSubmitting}} = useFormContext()
+
+    //const [serverResponse, setServerResponse] = useState(false);
+    //const [message, setMessage] = useState('');
+    //const [dateTimeStr, setDateTimeStr] = useState('');
+    //const [extras, setExtras] = useState<Map<string, number>>(
+    //    new Map([['Silver Wash', 30]])
+    //);
     const [total, setTotal] = useState(30);
 
-    useEffect(() => {
-        //console.log({ extras: extras });
-    }, [extras]);
+    //useEffect(() => {
+    //    //console.log({ extras: extras });
+    //}, [extras]);
 
-    const onSubmit = async (data: any, e: any) => {
-        //e.defaultPrevented=false
-        e.preventDefault();
-        window.scrollTo({
-            top: 800,
-            behavior: 'smooth'
-        });
+//    const onSubmit = async (data: any, e: any) => {
+//        //e.defaultPrevented=false
+//        e.preventDefault();
+//        window.scrollTo({
+//            top: 800,
+//            behavior: 'smooth'
+//        });
+//
+//        data.extras = [];
+//        extras.forEach((value, key) =>
+//            data.extras.push({ name: key, price: value })
+//        );
+//
+//        const res = await fetch('/api/calendar', {
+//            method: 'POST',
+//            mode: 'cors',
+//            headers: {
+//                Accept: 'application/json, text/plain */*',
+//                'Content-Type': 'application/json'
+//            },
+//            body: JSON.stringify(data)
+//        });
+//
+//        const response = res.status === 200;
+//        setServerResponse(response);
+//        if (response) {
+//            setMessage(
+//                t({
+//                    id: 'BookingForm.successMessage',
+//                    message: 'Successful Submission. We thank you!'
+//                })
+//            );
+//            //reset();
+//        } else {
+//            setMessage(
+//                t({
+//                    id: 'BookingForm.errorMessage',
+//                    message:
+//                        'Submission was not recorded. Please contact us directly at 6980 000 015'
+//                })
+//            );
+//        }
+//    };
 
-        data.extras = [];
-        extras.forEach((value, key) =>
-            data.extras.push({ name: key, price: value })
-        );
+    //useEffect(() => {
+    //    //console.log(dateTimeStr);
+    //    setValue('datetime', dateTimeStr);
+    //}, [dateTimeStr, setValue]);
 
-        const res = await fetch('/api/calendar', {
-            method: 'POST',
-            mode: 'cors',
-            headers: {
-                Accept: 'application/json, text/plain */*',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        });
-
-        const response = res.status === 200;
-        setServerResponse(response);
-        if (response) {
-            setMessage(
-                t({
-                    id: 'BookingForm.successMessage',
-                    message: 'Successful Submission. We thank you!'
-                })
-            );
-            //reset();
-        } else {
-            setMessage(
-                t({
-                    id: 'BookingForm.errorMessage',
-                    message:
-                        'Submission was not recorded. Please contact us directly at 6980 000 015'
-                })
-            );
-        }
-    };
-    const onError = (err: any) => {
-        console.log('error', err);
-        window.scrollTo({
-            top: 800,
-            behavior: 'smooth'
-        });
-    };
-
-    useEffect(() => {
-        //console.log(dateTimeStr);
-        setValue('datetime', dateTimeStr);
-    }, [dateTimeStr, setValue]);
-
-    useEffect(() => {
-        setTotal([...extras.values()].reduce((tot, cur) => (tot += cur)));
-    }, [extras]);
+    //useEffect(() => {
+    //    setTotal([...extras.values()].reduce((tot, cur) => (tot += cur)));
+    //}, [extras]);
     //todo    i18n the new words
     //        better meta and title per page
     //        Booking form needs to show user errors
@@ -111,19 +103,6 @@ const BookingForm = () => {
 
 
     return (
-        <form noValidate onSubmit={handleSubmit(onSubmit, onError)}>
-            <div className='container mx-auto '>
-                <OptionalExtras extras={extras} setExtras={setExtras} />
-            </div>
-            <div className='container mx-auto mt-10 grid grid-cols-1 gap-4 rounded-lg bg-gray-300 p-4 md:grid-cols-2'>
-                <div
-                    className={`${
-                        errors.datetime
-                            ? 'rounded-lg p-2 outline outline-2 outline-red-500'
-                            : ''
-                    }  border-r  `}>
-                    <CalendarMain setDateTimeStr={setDateTimeStr} />
-                </div>
                 <div className='text-md grid grid-cols-2 gap-3'>
                     <input
                         className={`rounded-lg py-2 px-4 text-secondary focus:outline-tertiary ${
@@ -183,7 +162,7 @@ const BookingForm = () => {
                         />
                     </div>
                     <div className='my-2 mt-auto ml-auto'>
-                        <div className='my-4'>
+                        <div className='my-4 px-2'>
                             {t({
                                 id: `bookingForm.YourTotalIs`,
                                 message: `Your Total is: ${total} €`
@@ -233,21 +212,8 @@ const BookingForm = () => {
                                 />
                             </div>
                         </div>
-                        <input
-                            className=' float-none mt-4 rounded-lg bg-primary px-4 py-2 hover:cursor-pointer md:float-right'
-                            type='submit'
-                            value={t({
-                                id: 'bookingForm.input.submit',
-                                message: 'submit'
-                            })}
-                        />
                     </div>
                 </div>
-            </div>
-            {isSubmitSuccessful && (
-                <ResponseBox text={message} status={serverResponse} />
-            )}
-        </form>
     );
 };
 

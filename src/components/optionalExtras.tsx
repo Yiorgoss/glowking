@@ -1,4 +1,4 @@
-import { Component, SetStateAction, Dispatch } from 'react';
+import { useEffect, Component, SetStateAction, Dispatch } from 'react';
 import Image from 'next/image';
 
 import { i18n, MessageDescriptor } from '@lingui/core';
@@ -14,55 +14,59 @@ const OptionalExtras = ({
     setExtras,
     data
 }: {
-    extras: Map<string, number>;
-    setExtras: Dispatch<SetStateAction<Map<string, number>>>;
+    extras: Map<number, Extra>;
+    setExtras: Dispatch<SetStateAction<Map<number, Extra>>>;
     data: Extra[]
 }) => {
     const addExtra = (
-        price: number | MessageDescriptor,
-        title: string | MessageDescriptor
+        extra: Extra
     ) => {
-        const parsedPrice = typeof price === 'number' ? price : 0; // will always be a number
-        const name = i18n._(title); // guys only speak greek
+        //const parsedPrice = typeof price === 'number' ? price : 0; // will always be a number
+        //const name = extra.title; // guys only speak greek
 
-        if (extras.has(name)) {
+        if (extras.has(extra.id)) {
             const tmpMap = extras;
-            tmpMap.delete(name);
+            tmpMap.delete(extra.id);
             setExtras(new Map(tmpMap));
         } else {
-            setExtras((map) => new Map(map.set(name, parsedPrice)));
+            setExtras((map) => new Map(map.set(extra.id, extra)));
         }
     };
+
+    //useEffect(() => (
+    //    console.log(extras)
+    //), [extras, setExtras])
+
     return (
         <>
             <div className='mx-2 grid grid-cols-2 gap-5 md:mx-0 md:grid-cols-3 '>
-                {data.map(({ price, title, description }, index) => (
+                {data.map((extra, index) => (
                     <div
                         className=''
                         key={index}
-                        onClick={() => addExtra(price, title)}>
+                        onClick={() => addExtra(extra)}>
                         <Card
                             className={`h-full rounded-lg p-2 outline outline-4 transition-transform duration-300 hover:scale-[1.02] ${
-                                extras.has(i18n._(title))
+                                extras.has(extra.id)
                                     ? 'outline-green-400'
                                     : 'outline-tertiary'
                             }`}>
                             <div className='flex h-full flex-col justify-between'>
                                 <div>
                                 <Card.Header className='py-5 text-xl font-semibold'>
-                                    {title}
+                                    {extra.title}
                                 </Card.Header>
                                 <Card.Content className='mx-2'>
-                                    {description}
+                                    {extra.description}
                                 </Card.Content>
                                 </div>
                                 <div className='mt-5 flex h-[40px] justify-between '>
-                                    <Card.Price price={price} />
+                                    <Card.Price price={extra.price} />
                                     <div>
-                                        {extras.has(i18n._(title)) ? (
-                                            <AiFillCheckCircle className='inline h-10 w-10 text-green-400 hover:scale-110' />
+                                        {extras.has(extra.id) ? (
+                                            <AiFillCheckCircle className='inline h-10 w-10 text-green-400' />
                                         ) : (
-                                            <AiFillPlusCircle className='inline h-10 w-10 text-tertiary hover:scale-110' />
+                                            <AiFillPlusCircle className='inline h-10 w-10 text-tertiary' />
                                         )}
                                     </div>
                                 </div>

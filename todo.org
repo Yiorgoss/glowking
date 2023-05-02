@@ -1,4 +1,8 @@
 * Inbox
+** TODO Make Email templates
+Add color, logo etc, google calendar integration
+
+[[file:~/code/gikas/glowking/src/data/emailTemplates.ts][file:~/code/gikas/glowking/src/data/emailTemplates.ts]]
 ** TODO add a card element for jsx Children
 
 [[file:~/code/gikas/glowking/src/components/optionalExtras.tsx::hr]]
