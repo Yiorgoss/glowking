@@ -13,7 +13,8 @@
         "extract": "NODE_ENV=development lingui extract",
         "compile": "lingui compile",
         "analyze": "cross-env ANALYZE=true next build",
-        "reset-db": "yarn prisma db push --force-reset && yarn prisma db seed "
+        "reset-db": "yarn prisma db push --force-reset && yarn prisma db seed ",
+            "postinstall": "prisma generate"
     },
     "dependencies": {
         "@babel/core": "^7.20.12",
