@@ -18,15 +18,7 @@ msgstr ""
 msgid "Book-Now"
 msgstr "Book Now"
 
-#: src/components/bookingForm.tsx:70
-msgid "BookingForm.errorMessage"
-msgstr "Submission was not recorded. Please contact us directly at 6980 000 015"
-
-#: src/components/bookingForm.tsx:62
-msgid "BookingForm.successMessage"
-msgstr "Successful Submission. We thank you!"
-
-#: src/components/common/calendar/calendar.tsx:77
+#: src/components/common/calendar/calendar.tsx:88
 msgid "Calendar-select-time"
 msgstr "Select Time"
 
@@ -110,55 +102,55 @@ msgstr "Where to find us"
 msgid "Footer.sitemap"
 msgstr "Sitemap"
 
-#: src/pages/index.tsx:151
+#: src/pages/index.tsx:159
 msgid "Home.Features"
 msgstr "Features"
 
-#: src/pages/index.tsx:188
+#: src/pages/index.tsx:196
 msgid "Home.Services"
 msgstr "Our Services"
 
-#: src/pages/index.tsx:78
+#: src/pages/index.tsx:84
 msgid "Home.feature.four.content"
 msgstr "Glow King Athens and its staff will never share your personal information or vehicle information without your consent."
 
-#: src/pages/index.tsx:74
+#: src/pages/index.tsx:80
 msgid "Home.feature.four.header"
 msgstr "Privacy Focused"
 
-#: src/pages/index.tsx:66
+#: src/pages/index.tsx:72
 msgid "Home.feature.three.content"
 msgstr "The products used for cleaning and disinfection are certified and friendly to humans and the environment, complying with eu standards and regulations. Our products and machines are of the utmost quality, including AUTOGLYM and KARCHER."
 
-#: src/pages/index.tsx:62
+#: src/pages/index.tsx:68
 msgid "Home.feature.three.header"
 msgstr "Safe and Effective"
 
-#: src/pages/index.tsx:54
+#: src/pages/index.tsx:60
 msgid "Home.feature.two.content"
 msgstr "In biological cleaning, we remove from the cabin area, stains, fungi, bacteria and any other organic matter. We disinfect the seats, the sky, floors, luggage compartment and side upholstery. We also disinfect the air ducts of the car, removing the stench from the use of the air conditioner."
 
-#: src/pages/index.tsx:50
+#: src/pages/index.tsx:56
 msgid "Home.feature.two.header"
 msgstr "Biological Cleaning"
 
-#: src/pages/index.tsx:42
+#: src/pages/index.tsx:48
 msgid "Home.featureList.one.content"
 msgstr "Professional washing and cleaning for your car!The mobile car wash GLOW KING a mobile business that deals exclusively with the cleaning and care of cars, gives a new dimension to the space, comes to where you are, zeroing out the distances and taking care of your own car as if it were unique."
 
-#: src/pages/index.tsx:38
+#: src/pages/index.tsx:44
 msgid "Home.featureList.one.header"
 msgstr "Location Of Your Choice"
 
-#: src/pages/index.tsx:133
+#: src/pages/index.tsx:139
 msgid "Home.head.title"
 msgstr "Glowking | Car, Boat, Garage, Pavement Cleaning Services"
 
-#: src/pages/index.tsx:177
+#: src/pages/index.tsx:185
 msgid "Home.serviceSection.content"
 msgstr "GLOW KING ATHENS is an innovative idea that annihilates distances! It started in 2019 and in the middle of the pandemic it covered all the southern suburbs. Complete cleaning services of the vehicle, the property, the pavement and everything else you need! GLOW KING ATHENS operates with the environment and people as its main focus, next to your every need. Glow King Athens starring... you!"
 
-#: src/pages/index.tsx:173
+#: src/pages/index.tsx:181
 msgid "Home.serviceSection.title"
 msgstr "Who Are We?"
 
@@ -250,9 +242,9 @@ msgstr "In internal cleaning, with respect for people and the environment as our
 msgid "Services-simple-list.two.header"
 msgstr "Internal Cleaning"
 
-#: src/components/bookingForm.tsx:181
-msgid "Your Total is {total} €"
-msgstr "Your Total is {total} €"
+#: src/components/bookingForm.tsx:168
+msgid "bookingForm.MinimumOvertimeCharge"
+msgstr "We have to mention that we charge 30€ for the first hour and a half of cleaning. Every aditional hour after that is another 30 euro. Please accept if you agree."
 
 #: src/components/bookingForm.tsx:185
 msgid "bookingForm.input.accept"
@@ -262,29 +254,25 @@ msgstr "Accept Terms and "
 msgid "bookingForm.input.conditions"
 msgstr "Conditions"
 
-#: src/components/bookingForm.tsx:150
+#: src/components/bookingForm.tsx:135
 msgid "bookingForm.input.email"
 msgstr "Email"
 
-#: src/components/bookingForm.tsx:161
+#: src/components/bookingForm.tsx:146
 msgid "bookingForm.input.location"
 msgstr "Location"
 
-#: src/components/bookingForm.tsx:171
+#: src/components/bookingForm.tsx:156
 msgid "bookingForm.input.message"
 msgstr "Special Instructions"
 
-#: src/components/bookingForm.tsx:128
+#: src/components/bookingForm.tsx:113
 msgid "bookingForm.input.name"
 msgstr "Full Name"
 
-#: src/components/bookingForm.tsx:141
+#: src/components/bookingForm.tsx:126
 msgid "bookingForm.input.number"
 msgstr "Phone Number"
-
-#: src/components/bookingForm.tsx:212
-msgid "bookingForm.input.submit"
-msgstr "submit"
 
 #: src/data/serviceData.ts:32
 msgid "car-service-extras.1.content"
@@ -293,102 +281,6 @@ msgstr "Washing the bottom of the car, removes mud, salts (from the winter seaso
 #: src/data/serviceData.ts:28
 msgid "car-service-extras.1.title"
 msgstr "WASHABLE FROM BELOW"
-
-#: src/data/serviceData.ts:168
-msgid "car-service-extras.10.content"
-msgstr "Biological cleaning of a child seat."
-
-#: src/data/serviceData.ts:164
-msgid "car-service-extras.10.title"
-msgstr "CHILD SEAT"
-
-#: src/data/serviceData.ts:181
-msgid "car-service-extras.11.content"
-msgstr "Biological cleaning of 2 children's seats."
-
-#: src/data/serviceData.ts:177
-msgid "car-service-extras.11.title"
-msgstr "2 CHILDREN'S SEATS"
-
-#: src/data/serviceData.ts:90
-msgid "car-service-extras.12.content"
-msgstr "Wax with AUTOGLYM wax, with a duration of 2 months, gives an extra protection to the surface of your car."
-
-#: src/data/serviceData.ts:86
-msgid "car-service-extras.12.title"
-msgstr "PREMIUM AUTOGLYM WAX"
-
-#: src/data/serviceData.ts:45
-msgid "car-service-extras.2.content"
-msgstr "Odors are not covered but neutralized. For odors such as Cigarettes, Animals and other persistent odors."
-
-#: src/data/serviceData.ts:41
-msgid "car-service-extras.2.title"
-msgstr "REMOVING ODORS + MICROBES"
-
-#: src/data/serviceData.ts:74
-msgid "car-service-extras.3.content"
-msgstr "Hand polishing, removal of deposits with plasticine and CERAMIC ceramic coating. It offers a super hydrophobic protection and an amazing polish & finish, it lasts for 3 months."
-
-#: src/data/serviceData.ts:78
-msgid "car-service-extras.3.price"
-msgstr "Request a Quote"
-
-#: src/data/serviceData.ts:70
-msgid "car-service-extras.3.title"
-msgstr "POLISHING – CERAMIC COATING"
-
-#: src/data/serviceData.ts:103
-msgid "car-service-extras.4.content"
-msgstr "Special glass coating that offers external hydrophobic and internal anti-fog protection, ideal for the winter months."
-
-#: src/data/serviceData.ts:99
-msgid "car-service-extras.4.title"
-msgstr "HYDROPHOBIC & ANTI-FOG GLASS COATING"
-
-#: src/data/serviceData.ts:58
-msgid "car-service-extras.5.content"
-msgstr "Tire pressure check & inflation."
-
-#: src/data/serviceData.ts:62
-msgid "car-service-extras.5.price"
-msgstr "FREE"
-
-#: src/data/serviceData.ts:54
-msgid "car-service-extras.5.title"
-msgstr "TIRE INFLATION"
-
-#: src/data/serviceData.ts:116
-msgid "car-service-extras.6.content"
-msgstr "Refilling of cleaning liquid soap for the windshield wipers."
-
-#: src/data/serviceData.ts:112
-msgid "car-service-extras.6.title"
-msgstr "LIQUID SOAP FOR WINDSHIELD WIPERS"
-
-#: src/data/serviceData.ts:129
-msgid "car-service-extras.7.content"
-msgstr "Hood cleaning, maintenance and waterproofing for a convertible car."
-
-#: src/data/serviceData.ts:125
-msgid "car-service-extras.7.title"
-msgstr "HOOD WATERPROOFING & MAINTENANCE"
-
-#: src/data/serviceData.ts:142
-msgid "car-service-extras.8.content"
-msgstr "We clean your air condition unit"
-
-#: src/data/serviceData.ts:138
-msgid "car-service-extras.8.title"
-msgstr "CLEANING AIR CONDITIONER"
-
-#: src/data/serviceData.ts:155
-msgid "car-service-extras.9.content"
-msgstr "Removing very fine pet hair from seats and carpeting."
-
-#: src/data/serviceData.ts:151
-msgid "car-service-extras.9.title"
-msgstr "PET HAIR REMOVAL"
 
 #: src/pages/services/detail-car-wash/car-cleaning.tsx:48
 msgid "detail-car-wash.car-cleaning.p-1.2"
@@ -834,6 +726,102 @@ msgstr "BOOK AN APPOINTMENT NOW"
 #: src/pages/services/yacht-cleaning-boat.tsx:199
 msgid "services.request-an-offer"
 msgstr "REQUEST AN OFFER"
+
+#: src/data/serviceData.ts:168
+msgid "wizard-form-icons/car-service-extras.10.content"
+msgstr "Biological cleaning of a child seat."
+
+#: src/data/serviceData.ts:164
+msgid "wizard-form-icons/car-service-extras.10.title"
+msgstr "CHILD SEAT"
+
+#: src/data/serviceData.ts:181
+msgid "wizard-form-icons/car-service-extras.11.content"
+msgstr "Biological cleaning of 2 children's seats."
+
+#: src/data/serviceData.ts:177
+msgid "wizard-form-icons/car-service-extras.11.title"
+msgstr "2 CHILDREN'S SEATS"
+
+#: src/data/serviceData.ts:90
+msgid "wizard-form-icons/car-service-extras.12.content"
+msgstr "Wax with AUTOGLYM wax, with a duration of 2 months, gives an extra protection to the surface of your car."
+
+#: src/data/serviceData.ts:86
+msgid "wizard-form-icons/car-service-extras.12.title"
+msgstr "PREMIUM AUTOGLYM WAX"
+
+#: src/data/serviceData.ts:45
+msgid "wizard-form-icons/car-service-extras.2.content"
+msgstr "Odors are not covered but neutralized. For odors such as Cigarettes, Animals and other persistent odors."
+
+#: src/data/serviceData.ts:41
+msgid "wizard-form-icons/car-service-extras.2.title"
+msgstr "REMOVING ODORS + MICROBES"
+
+#: src/data/serviceData.ts:74
+msgid "wizard-form-icons/car-service-extras.3.content"
+msgstr "Hand polishing, removal of deposits with plasticine and CERAMIC ceramic coating. It offers a super hydrophobic protection and an amazing polish & finish, it lasts for 3 months."
+
+#: src/data/serviceData.ts:78
+msgid "wizard-form-icons/car-service-extras.3.price"
+msgstr "Request a Quote"
+
+#: src/data/serviceData.ts:70
+msgid "wizard-form-icons/car-service-extras.3.title"
+msgstr "POLISHING – CERAMIC COATING"
+
+#: src/data/serviceData.ts:103
+msgid "wizard-form-icons/car-service-extras.4.content"
+msgstr "Special glass coating that offers external hydrophobic and internal anti-fog protection, ideal for the winter months."
+
+#: src/data/serviceData.ts:99
+msgid "wizard-form-icons/car-service-extras.4.title"
+msgstr "HYDROPHOBIC & ANTI-FOG GLASS COATING"
+
+#: src/data/serviceData.ts:58
+msgid "wizard-form-icons/car-service-extras.5.content"
+msgstr "Tire pressure check & inflation."
+
+#: src/data/serviceData.ts:62
+msgid "wizard-form-icons/car-service-extras.5.price"
+msgstr "FREE"
+
+#: src/data/serviceData.ts:54
+msgid "wizard-form-icons/car-service-extras.5.title"
+msgstr "TIRE INFLATION"
+
+#: src/data/serviceData.ts:116
+msgid "wizard-form-icons/car-service-extras.6.content"
+msgstr "Refilling of cleaning liquid soap for the windshield wipers."
+
+#: src/data/serviceData.ts:112
+msgid "wizard-form-icons/car-service-extras.6.title"
+msgstr "LIQUID SOAP FOR WINDSHIELD WIPERS"
+
+#: src/data/serviceData.ts:129
+msgid "wizard-form-icons/car-service-extras.7.content"
+msgstr "Hood cleaning, maintenance and waterproofing for a convertible car."
+
+#: src/data/serviceData.ts:125
+msgid "wizard-form-icons/car-service-extras.7.title"
+msgstr "HOOD WATERPROOFING & MAINTENANCE"
+
+#: src/data/serviceData.ts:142
+msgid "wizard-form-icons/car-service-extras.8.content"
+msgstr "We clean your air condition unit"
+
+#: src/data/serviceData.ts:138
+msgid "wizard-form-icons/car-service-extras.8.title"
+msgstr "CLEANING AIR CONDITIONER"
+
+#: src/data/serviceData.ts:155
+msgid "wizard-form-icons/car-service-extras.9.content"
+msgstr "Removing very fine pet hair from seats and carpeting."
+
+#: src/data/serviceData.ts:151
+msgid "wizard-form-icons/car-service-extras.9.title"
+msgstr "PET HAIR REMOVAL"
 
 #: src/pages/services/yacht-cleaning-boat.tsx:34
 msgid "yacht-cleaning-boat.p-1.1"

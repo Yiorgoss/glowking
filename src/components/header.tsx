@@ -71,7 +71,7 @@ export default function Header({
                     <Link href='tel:6980000015' className=''>
                         <CgPhone className='h-10 w-10 ' />
                     </Link>
-                    <Link href='/contact' className=''>
+                    <Link href='/book-online' className=''>
                         <RxCalendar className='h-10 w-10' />
                     </Link>
                     <div onClick={() => setIsOpen(!isOpen)}>
@@ -108,13 +108,13 @@ export default function Header({
                                 </ActiveLink>
                             </li>
                         ))}
-                    <Button className="font-semibold text-2xl block md:hidden" href='/contact'>
+                    <Button className="font-semibold text-2xl block md:hidden" href='/book-online'>
                         {t({ id: 'Book-Now', message: 'Book Now' })}
                     </Button>
                     </ul>
                 </div>
                 <div className='grid-auto my-auto mr-2 hidden w-fit whitespace-nowrap md:float-right md:float-none md:block '>
-                    <Button href='/contact'>
+                    <Button href='/book-online'>
                         {t({ id: 'Book-Now', message: 'Book Now' })}
                     </Button>
                 </div>

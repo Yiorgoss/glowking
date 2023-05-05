@@ -383,7 +383,7 @@ interface ISelectBookingDetails extends React.HTMLAttributes<HTMLDivElement> {}
 
 const SelectBookingDetails = ({}: ISelectBookingDetails) => {
     return (
-        <div className='my-10 flex flex-wrap justify-end'>
+        <div className='flex-cols my-10 flex flex-wrap justify-end'>
             <BookingForm />
             <button
                 className='my-5 ml-auto w-fit rounded-lg border border-slate-700 bg-slate-700 py-2 px-5 text-slate-100 hover:bg-slate-800'
@@ -462,7 +462,7 @@ interface IMultiStepForm extends React.HTMLAttributes<HTMLFormElement> {
 }
 
 const MultiStepForm = ({ categoryId }: IMultiStepForm) => {
-    const [currentStep, setCurrentStep] = React.useState(1);
+    const [currentStep, setCurrentStep] = React.useState(6);
     const [submitReady, setSubmitReady] = React.useState(false);
     const [manualBook, setManualBook] = React.useState(false);
     const [submitSuccess, setSubmitSuccess] = React.useState(false);
