@@ -586,7 +586,7 @@ const MultiStepForm = ({ categoryId }: IMultiStepForm) => {
                         setManualBook: setManualBook
                     }}>
                     <div className='container mx-auto flex h-full min-h-[500px] w-full flex-col justify-between divide-y-2 divide-slate-500/50 rounded-lg border-2 border-slate-400 bg-primary p-3 md:w-[800px]'>
-                        {formMethods.formState.isSubmitSuccessful && false ? (
+                        {formMethods.formState.isSubmitSuccessful ? (
                             <ThankYouPage />
                         ) : (
                             <>
