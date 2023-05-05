@@ -452,7 +452,8 @@ interface IThankYouPage extends React.HTMLAttributes<HTMLDivElement> {}
 const ThankYouPage = ({}: IThankYouPage) => {
     return (
         <div className=''>
-            Thank You for Your Submission. We will be in touch shortly
+            Thank you for the submission. We are emailing you the confirmation
+            now.
         </div>
     );
 };
@@ -462,7 +463,7 @@ interface IMultiStepForm extends React.HTMLAttributes<HTMLFormElement> {
 }
 
 const MultiStepForm = ({ categoryId }: IMultiStepForm) => {
-    const [currentStep, setCurrentStep] = React.useState(6);
+    const [currentStep, setCurrentStep] = React.useState(1);
     const [submitReady, setSubmitReady] = React.useState(false);
     const [manualBook, setManualBook] = React.useState(false);
     const [submitSuccess, setSubmitSuccess] = React.useState(false);
@@ -526,9 +527,7 @@ const MultiStepForm = ({ categoryId }: IMultiStepForm) => {
 
     const onSubmit = async (data: any, e: any) => {
         e.preventDefault();
-        console.log(data);
-        console.log('-----------------');
-
+        //console.log(data);
         const res = await fetch('/api/insertBooking', {
             method: 'POST',
             mode: 'cors',
@@ -566,7 +565,7 @@ const MultiStepForm = ({ categoryId }: IMultiStepForm) => {
             {submitSuccess && (
                 <ResponseBox
                     status={serverResponse}
-                    text='Thank you for the submission. We will be in contact soon'
+                    text='Thank you for the submission. We are emailing you the confirmation now.'
                 />
             )}
             <form
@@ -587,7 +586,7 @@ const MultiStepForm = ({ categoryId }: IMultiStepForm) => {
                         setManualBook: setManualBook
                     }}>
                     <div className='container mx-auto flex h-full min-h-[500px] w-full flex-col justify-between divide-y-2 divide-slate-500/50 rounded-lg border-2 border-slate-400 bg-primary p-3 md:w-[800px]'>
-                        {formMethods.formState.isSubmitted ? (
+                        {formMethods.formState.isSubmitSuccessful && false ? (
                             <ThankYouPage />
                         ) : (
                             <>

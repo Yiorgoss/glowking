@@ -95,9 +95,10 @@ export default async function handler(
         );
         // insert event into database
         // send confirmation emails
-        //if (validated.email) {
-        //    sendConfirmationEmails(validated, endtime);
-        //}
+        console.log({email:validated.email})
+        if (validated.email) {
+            sendConfirmationEmails(validated, endtime);
+        }
         return res.status(200).send({ message: 'success' });
     }
     return res.status(200).send({ message: 'success' });
@@ -105,7 +106,7 @@ export default async function handler(
 interface EmailArgs extends Asserts<typeof bookingFormSchema> {}
 
 const sendConfirmationEmails = (data: EmailArgs, endtime: string) => {
-    const { extras, datetime, name, phone, email, location, messageBody } =
+    const {  datetime, name, phone, email, location, messageBody } =
         data;
 
     if (!process.env['SENDGRID_API_KEY']) {
@@ -115,16 +116,16 @@ const sendConfirmationEmails = (data: EmailArgs, endtime: string) => {
         to: 'glowkingath@gmail.com',
         from: 'contact@glowking.gr',
         subject: 'Booking Confirmation',
-        text: `Name: ${name} \nEmail: ${email} \nPhone:${phone} \nHas made a booking confirmation for ${datetime} until ${endtime}\nLocation: ${location}. Message:\n${messageBody}`,
-        html: `Name: ${name} <br>Email: ${email} <br>Has made a booking confirmation for ${datetime} - ${endtime}. <br> Location: ${location}<br>Message: ${messageBody}`
+        text: `Name: ${name} \nEmail: ${email} \nPhone:${phone} \nHas made a booking confirmation for ${datetime.replace("T", " ")} until ${endtime.replace("T", " ")}\nLocation: ${location}. Message:\n${messageBody}`,
+        html: `Name: ${name} <br>Email: ${email} <br>Has made a booking confirmation for ${datetime.replace("T", " ")} - ${endtime.replace("T", " ")}. <br> Location: ${location}<br>Message: ${messageBody}`
     };
 
     const msgToCustomer = {
         to: email,
         from: 'contact@glowking.gr',
         subject: 'Booking Confirmation',
-        text: `Name: ${name} \nEmail: ${email} \nPhone:${phone} \nHas made a booking confirmation for ${datetime} until ${endtime}\nLocation: ${location}. `,
-        html: `Name: ${name} <br>Email: ${email} <br>Has made a booking confirmation for ${datetime} - ${endtime}. <br> Location: ${location}</a>`
+        text: `Name: ${name} \nEmail: ${email} \nPhone:${phone} \nHas made a booking confirmation for ${datetime.replace("T", " ")} until ${endtime.replace("T", " ")}\nLocation: ${location}. `,
+        html: `Name: ${name} <br>Email: ${email} <br>Has made a booking confirmation for ${datetime.replace("T", " ")} - ${endtime.replace("T", " ")}. <br> Location: ${location}</a>`
     };
 
     const mailer = require('@sendgrid/mail');
@@ -133,7 +134,7 @@ const sendConfirmationEmails = (data: EmailArgs, endtime: string) => {
     mailer
         .send(msgToGlowking)
         .then(() => {
-            console.log('Customer Email sent');
+            console.log('Glowking Email sent');
         })
         .catch((error: any) => {
             console.error('Glowking Email failed:', error);

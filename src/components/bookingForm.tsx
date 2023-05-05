@@ -171,6 +171,7 @@ const BookingForm = () => {
                                     })}
                                 </div>
                                 <input
+                                required
                                     className={`float-right h-5 w-5 px-4 focus:outline-tertiary md:h-3 md:w-3 ${
                                         errors.acceptTerms2
                                             ? 'outline-2 outline-red-500'
@@ -195,6 +196,7 @@ const BookingForm = () => {
                                     })}
                                 </Link>
                                 <input
+                                required
                                     className={`float-right h-5 w-5 px-4 focus:outline-tertiary md:h-3 md:w-3 ${
                                         errors.acceptTerms
                                             ? 'outline-2 outline-red-500'

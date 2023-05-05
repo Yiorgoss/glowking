@@ -1,5 +1,17 @@
 * Inbox
+** TODO Database Keep Alive
+will shut down if not written to in 1 week
+[[file:~/code/gikas/glowking/src/components/multiStepForm.tsx::return (]]
 ** TODO DB save calendar entries
+** TODO DB i18n
+move translations to DB
+** TODO Rate Limit App
+Limit Rates in case of DDOS
+** TODO Logging System
+
+- Axiom has integration with Vercel
+- Has dashboard
+
 ** TODO add a card element for jsx Children
 
 [[file:~/code/gikas/glowking/src/components/optionalExtras.tsx::hr]]
@@ -10,9 +22,6 @@
 Use Knex or Just raw SQL. Fuck ORMs
 
 [[file:~/code/gikas/glowking/src/pages/api/selectFromDB.ts::res.status(400).end();]]
-** DONE booking add users current day
-
-[[file:~/code/gikas/glowking]]
 ** TODO Redo Booking process
 make booking into a step through process
 
@@ -23,19 +32,9 @@ Add color, logo etc, google calendar integration
 ** TODO Add State to router history
 so that going back works as expected
 
-** TODO Database Keep Alive
-
-[[file:~/code/gikas/glowking/src/components/multiStepForm.tsx::return (]]
 ** TODO SEO Stuff
 check SEO_strategy.txt
-** TODO Rate Limit App
-Limit Rates in case of DDOS
-** TODO Redo landing Page
-landing should link straight to booking and set state of form
-
 ** TODO Upstash CronJobs
-** TODO DB i18n
-move translations to DB
 ** TODO Carousel
 Carousel on Landing page
 
@@ -58,11 +57,6 @@ add gooogle map integration on Contact page and footer
 
 all string interpolations should be changed to use tailwind merge
 [[file:~/code/gikas/glowking/src/components/common/card/card.tsx::return <div className={`flex flex-col justify-between ${colorPreset} ${className}`}>{children}</div>;]]
-** TODO Logging System
-
-- Axiom has integration with Vercel
-- Has dashboard
-
 ** TODO Refactor Calendar.ts
 
 difficult to follow
@@ -76,3 +70,9 @@ remove `overflow-x-hidden` to see
 [[file:~/code/gikas/glowking/src/components/bookingForm.tsx::better meta and title per page]]
 ** TODO Add Recaptcha
 [[file:~/code/gikas/glowking/src/components/bookingForm.tsx::add recapcha]]
+** DONE Redo landing Page
+landing should link straight to booking and set state of form
+
+** DONE booking add users current day
+
+[[file:~/code/gikas/glowking]]

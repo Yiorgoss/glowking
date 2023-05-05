@@ -14,7 +14,6 @@ const bookingFormSchema = yup.object().shape({
     ),
 
     datetime: yup.string().min(5).required(),
-
     name: yup.string().trim().required('Required'),
     phone: yup.number().positive().integer().required('Required'),
     email: yup.string().trim().email(),
