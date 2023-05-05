@@ -164,7 +164,7 @@ const Home = ({ categories }: { categories:string }) => {
                                 href={
                                     feature.href
                                         ? feature.href
-                                        : '/services/wash-car-detailing/car-cleaning'
+                                        : '/services/detail-car-wash/car-cleaning'
                                 }
                                 header={feature.header}
                                 content={feature.content}
