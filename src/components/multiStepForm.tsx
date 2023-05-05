@@ -160,7 +160,7 @@ const SelectWashCategory = ({}: ISelectWashCategory) => {
     };
 
     return (
-        <div className='flex h-full w-full flex-wrap items-center justify-center gap-[2%] md:gap-0 '>
+        <div className='flex h-full w-full flex-wrap items-center justify-center gap-[2%]  '>
             {(data as Category[]).map(
                 ({ title, id, description, imageUrl, hasNext }, index) => (
                     <div
@@ -208,7 +208,7 @@ const SelectWashSubType = ({}: ISelectWashSubType) => {
     };
 
     return (
-        <div className='mx-auto flex h-full w-full flex-wrap items-start justify-center gap-[2%] md:gap-0 '>
+        <div className='mx-auto flex h-full w-full flex-wrap items-start justify-center gap-[2%]  '>
             {(data as Subtype[]).map(
                 ({ id, title, description, imageUrl, hasNext }, index) => (
                     <div
@@ -258,7 +258,7 @@ const SelectPackageType = ({}: ISelectPackageType) => {
     };
 
     return (
-        <div className='mx-auto flex h-full w-full flex-wrap items-start justify-center gap-[2%] md:gap-0 '>
+        <div className='mx-auto flex h-full w-full flex-wrap items-start justify-center gap-[2%]  '>
             {(data as Package[]).map(
                 ({ id, title, description, tailwindColor, hasNext }, index) => (
                     <div
