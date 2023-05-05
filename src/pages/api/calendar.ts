@@ -74,7 +74,8 @@ const createBookedTimetable = (
 };
 
 const calculateEndTime = (datetime: string) => {
-    // should always be between 0800 and 2000
+
+   // should always be between 0800 and 2000
     // eg '2023-03-21T20:00:00';
 
     const [day, time] = datetime.split('T');

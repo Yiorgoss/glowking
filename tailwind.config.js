@@ -13,10 +13,21 @@ module.exports = {
             },
             bg: {
                 'radial-gold':
-              'background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);}',
+                    'background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);}',
                 'radial-gold-1': '#1d1d1d'
             }
         }
     },
+    safelist: [
+        'bg-gradient-to-tl',
+        'from-yellow-300',
+        'via-yellow-100',
+        'to-yellow-500',
+        'from-slate-200',
+        'via-slate-200 to-slate-600',
+        'from-purple-900',
+        'via-purple-300',
+        'to-purple-600'
+    ],
     plugins: []
 };

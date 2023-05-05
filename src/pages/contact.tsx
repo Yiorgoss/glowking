@@ -134,7 +134,6 @@ const Contact: PageWithHeaderLayout = () => {
                     </div>
                 </div>
             </div>
-            <BookingForm />
             <div className="mt-10 container mx-auto">
                 <FAQSection />
             </div>

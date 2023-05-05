@@ -3,10 +3,12 @@ import Link from 'next/link';
 import Head from 'next/head';
 
 import { GetServerSideProps, GetStaticProps } from 'next';
-import { ReactElement, useState, useEffect, HTMLAttributes  } from 'react';
+import { ReactElement, useState, useEffect } from 'react';
 
+import { PrismaClient, Category } from '@prisma/client';
 import { t } from '@lingui/macro';
 
+import MultiStepFormStart from '@/components/multiStepFormStart';
 import LandingLayout from '@layouts/landingLayout';
 import CardMain from '@components/cardMain';
 import SocialsTab from '@components/socialsTab';
@@ -17,21 +19,24 @@ import { serviceData } from '@/data/serviceData';
 
 import { loadTranslation } from '@/utils/utils';
 
-
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
     const translation = await loadTranslation(
         ctx.locale!,
         process.env.NODE_ENV === 'production'
     );
-
+    const prisma = new PrismaClient();
+    const categories = JSON.stringify(
+        await prisma.category.findMany({ where: {} })
+    );
     return {
         props: {
-            translation
+            translation,
+            categories
         }
     };
 };
 
-const Home: PageWithHeaderLayout = ({}) => {
+const Home = ({ categories }: { categories:string }) => {
     //ugly but works
 
     const featureList = [
@@ -128,7 +133,7 @@ const Home: PageWithHeaderLayout = ({}) => {
     }, []); // Empty array heightensures that effect is only run on mount
 
     return (
-        <div className='overflow-hidden '>
+        <div className='overflow-hidden'>
             <Head>
                 <title>
                     {t({
@@ -138,10 +143,12 @@ const Home: PageWithHeaderLayout = ({}) => {
                     })}
                 </title>
             </Head>
+
             <div className='h-screen w-screen '>
                 <div className='relative -z-10 h-full w-full'>
                     {responsiveImage}
                 </div>
+                <MultiStepFormStart categories={JSON.parse(categories)} />
                 <div className='absolute bottom-0 right-0 pr-10 pb-5 '>
                     <SocialsTab isVert={true} />
                 </div>

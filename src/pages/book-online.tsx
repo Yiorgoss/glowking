@@ -1,3 +1,5 @@
+import { useRouter } from 'next/router';
+
 import { GetStaticProps } from 'next';
 import { ReactElement } from 'react';
 
@@ -25,9 +27,14 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 };
 
 const BookOnline = () => {
+    const {query} = useRouter()
+    let category
+    if (query.category){
+        category = +query.category
+    }
     return (
         <div className='container mx-auto mt-[100px]'>
-            <MultiStepForm />
+            <MultiStepForm categoryId={category}/>
         </div>
     );
 };

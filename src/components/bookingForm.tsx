@@ -30,7 +30,7 @@ const BookingForm = () => {
     //const [extras, setExtras] = useState<Map<string, number>>(
     //    new Map([['Silver Wash', 30]])
     //);
-    const [total, setTotal] = useState(30);
+    //const [total, setTotal] = useState(30);
 
     //useEffect(() => {
     //    //console.log({ extras: extras });
@@ -162,12 +162,6 @@ const BookingForm = () => {
                         />
                     </div>
                     <div className='my-2 mt-auto ml-auto'>
-                        <div className='my-4 px-2'>
-                            {t({
-                                id: `bookingForm.YourTotalIs`,
-                                message: `Your Total is: ${total} €`
-                            })}
-                        </div>
                         <div className='text-sm'>
                             <div className='py-5 px-2'>
                                 <div className='inline'>

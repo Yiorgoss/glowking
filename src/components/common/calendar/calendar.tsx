@@ -242,9 +242,9 @@ const Calendar = ({
         dayjs.locale(locale);
     }, [locale]);
 
-    useEffect(() => {
-        console.log({ datetime: datetime });
-    }, [datetime]);
+    //useEffect(() => {
+    //    console.log({ datetime: datetime });
+    //}, [datetime]);
 
     //const value = [displayMonth, setDisplayMonth, time, setTime, day, setDay];
     const value = [displayMonth, setDisplayMonth, datetime, setDatetime];

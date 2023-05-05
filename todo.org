@@ -1,8 +1,5 @@
 * Inbox
-** TODO Make Email templates
-Add color, logo etc, google calendar integration
-
-[[file:~/code/gikas/glowking/src/data/emailTemplates.ts][file:~/code/gikas/glowking/src/data/emailTemplates.ts]]
+** TODO DB save calendar entries
 ** TODO add a card element for jsx Children
 
 [[file:~/code/gikas/glowking/src/components/optionalExtras.tsx::hr]]
@@ -13,13 +10,16 @@ Add color, logo etc, google calendar integration
 Use Knex or Just raw SQL. Fuck ORMs
 
 [[file:~/code/gikas/glowking/src/pages/api/selectFromDB.ts::res.status(400).end();]]
-** TODO DB save calendar entries
 ** DONE booking add users current day
 
 [[file:~/code/gikas/glowking]]
 ** TODO Redo Booking process
 make booking into a step through process
 
+** TODO Make Email templates
+Add color, logo etc, google calendar integration
+
+[[file:~/code/gikas/glowking/src/data/emailTemplates.ts][file:~/code/gikas/glowking/src/data/emailTemplates.ts]]
 ** TODO Add State to router history
 so that going back works as expected
 

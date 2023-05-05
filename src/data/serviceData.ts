@@ -34,156 +34,156 @@ export const carServiceExtras = [
             message: `Washing the bottom of the car, removes mud, salts (from the winter season) and dirt that has accumulated over time.`
         }),
         price: 10,
-        src:"/media/images/car-optionals/car_under.jpg",
+        src:"/media/images/wizard-form-icons/car-optionals/car_under.jpg",
         href: ''
     },
     {
         title: defineMessage({
-            id: `car-service-extras.2.title`,
+            id: `wizard-form-icons/car-service-extras.2.title`,
             message: `REMOVING ODORS + MICROBES`
         }),
         content: defineMessage({
-            id: `car-service-extras.2.content`,
+            id: `wizard-form-icons/car-service-extras.2.content`,
             message: `Odors are not covered but neutralized. For odors such as Cigarettes, Animals and other persistent odors.`
         }),
         price: 8,
-        src:"/media/images/car-optionals/car2.jpg",
+        src:"/media/images/wizard-form-icons/car-optionals/car2.jpg",
         href: ''
     },
     {
         title: defineMessage({
-            id: `car-service-extras.5.title`,
+            id: `wizard-form-icons/car-service-extras.5.title`,
             message: `TIRE INFLATION`
         }),
         content: defineMessage({
-            id: `car-service-extras.5.content`,
+            id: `wizard-form-icons/car-service-extras.5.content`,
             message: `Tire pressure check & inflation.`
         }),
         price: defineMessage({
-            id: `car-service-extras.5.price`,
+            id: `wizard-form-icons/car-service-extras.5.price`,
             message: `FREE`
         }),
-        src:"/media/images/car-optionals/car2.jpg",
+        src:"/media/images/wizard-form-icons/car-optionals/car2.jpg",
         href: ''
     },
     {
         title: defineMessage({
-            id: `car-service-extras.3.title`,
+            id: `wizard-form-icons/car-service-extras.3.title`,
             message: `POLISHING – CERAMIC COATING`
         }),
         content: defineMessage({
-            id: `car-service-extras.3.content`,
+            id: `wizard-form-icons/car-service-extras.3.content`,
             message: `Hand polishing, removal of deposits with plasticine and CERAMIC ceramic coating. It offers a super hydrophobic protection and an amazing polish & finish, it lasts for 3 months.`
         }),
         price: defineMessage({
-            id: `car-service-extras.3.price`,
+            id: `wizard-form-icons/car-service-extras.3.price`,
             message: `Request a Quote`
         }),
-        src:"/media/images/car-optionals/car2.jpg",
+        src:"/media/images/wizard-form-icons/car-optionals/car2.jpg",
         href: ''
     },
     {
         title: defineMessage({
-            id: `car-service-extras.12.title`,
+            id: `wizard-form-icons/car-service-extras.12.title`,
             message: `PREMIUM AUTOGLYM WAX`
         }),
         content: defineMessage({
-            id: `car-service-extras.12.content`,
+            id: `wizard-form-icons/car-service-extras.12.content`,
             message: `Wax with AUTOGLYM wax, with a duration of 2 months, gives an extra protection to the surface of your car.`
         }),
         price: 15,
-        src:"/media/images/car-optionals/car2.jpg",
+        src:"/media/images/wizard-form-icons/car-optionals/car2.jpg",
         href: ''
     },
     {
         title: defineMessage({
-            id: `car-service-extras.4.title`,
+            id: `wizard-form-icons/car-service-extras.4.title`,
             message: `HYDROPHOBIC & ANTI-FOG GLASS COATING`
         }),
         content: defineMessage({
-            id: `car-service-extras.4.content`,
+            id: `wizard-form-icons/car-service-extras.4.content`,
             message: `Special glass coating that offers external hydrophobic and internal anti-fog protection, ideal for the winter months.`
         }),
         price: 30,
-        src:"/media/images/car-optionals/window.jpg",
+        src:"/media/images/wizard-form-icons/car-optionals/window.jpg",
         href: ''
     },
     {
         title: defineMessage({
-            id: `car-service-extras.6.title`,
+            id: `wizard-form-icons/car-service-extras.6.title`,
             message: `LIQUID SOAP FOR WINDSHIELD WIPERS`
         }),
         content: defineMessage({
-            id: `car-service-extras.6.content`,
+            id: `wizard-form-icons/car-service-extras.6.content`,
             message: `Refilling of cleaning liquid soap for the windshield wipers.`
         }),
         price: 3,
-        src:"/media/images/car-optionals/window.jpg",
+        src:"/media/images/wizard-form-icons/car-optionals/window.jpg",
         href: ''
     },
     {
         title: defineMessage({
-            id: `car-service-extras.7.title`,
+            id: `wizard-form-icons/car-service-extras.7.title`,
             message: `HOOD WATERPROOFING & MAINTENANCE`
         }),
         content: defineMessage({
-            id: `car-service-extras.7.content`,
+            id: `wizard-form-icons/car-service-extras.7.content`,
             message: `Hood cleaning, maintenance and waterproofing for a convertible car.`
         }),
         price: 50,
-        src:"/media/images/car-optionals/hood.jpg",
+        src:"/media/images/wizard-form-icons/car-optionals/hood.jpg",
         href: ''
     },
     {
         title: defineMessage({
-            id: `car-service-extras.8.title`,
+            id: `wizard-form-icons/car-service-extras.8.title`,
             message: `CLEANING AIR CONDITIONER`
         }),
         content: defineMessage({
-            id: `car-service-extras.8.content`,
+            id: `wizard-form-icons/car-service-extras.8.content`,
             message: `We clean your air condition unit`
         }),
         price: 15,
-        src:"/media/images/car-optionals/hood.jpg",
+        src:"/media/images/wizard-form-icons/car-optionals/hood.jpg",
         href: ''
     },
     {
         title: defineMessage({
-            id: `car-service-extras.9.title`,
+            id: `wizard-form-icons/car-service-extras.9.title`,
             message: `PET HAIR REMOVAL`
         }),
         content: defineMessage({
-            id: `car-service-extras.9.content`,
+            id: `wizard-form-icons/car-service-extras.9.content`,
             message: `Removing very fine pet hair from seats and carpeting.`
         }),
         price: 13,
-        src:"/media/images/car-optionals/dog.jpg",
+        src:"/media/images/wizard-form-icons/car-optionals/dog.jpg",
         href: ''
     },
     {
         title: defineMessage({
-            id: `car-service-extras.10.title`,
+            id: `wizard-form-icons/car-service-extras.10.title`,
             message: `CHILD SEAT`
         }),
         content: defineMessage({
-            id: `car-service-extras.10.content`,
+            id: `wizard-form-icons/car-service-extras.10.content`,
             message: `Biological cleaning of a child seat.`
         }),
         price: 15,
-        src:"/media/images/car-optionals/baby.jpg",
+        src:"/media/images/wizard-form-icons/car-optionals/baby.jpg",
         href: ''
     },
     {
         title: defineMessage({
-            id: `car-service-extras.11.title`,
+            id: `wizard-form-icons/car-service-extras.11.title`,
             message: `2 CHILDREN'S SEATS`
         }),
         content: defineMessage({
-            id: `car-service-extras.11.content`,
+            id: `wizard-form-icons/car-service-extras.11.content`,
             message: `Biological cleaning of 2 children's seats.`
         }),
         price: 25,
-        src:"/media/images/car-optionals/baby.jpg",
+        src:"/media/images/wizard-form-icons/car-optionals/baby.jpg",
         href: ''
     }
 ];

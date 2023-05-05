@@ -1,17 +1,17 @@
 import * as React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 import { Prisma } from '@prisma/client';
-import { i18n } from '@lingui/core';
-import { defineMessage } from '@lingui/macro';
 import useSWR from 'swr';
 import { Category, Subtype, Package, Extra } from '@prisma/client';
 import { useForm, FormProvider, useFormContext } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { AiFillCaretLeft } from 'react-icons/ai';
 
 import Spinner from '@/components/spinner';
-import Card from '@/components/common/card/card';
+import ResponseBox from '@/components/responseBox';
 import OptionalExtras from '@/components/optionalExtras';
 import bookingFormSchema from '@/utils/bookingFormSchema';
 import CalendarMain from '@/components/calendarMain';
@@ -21,33 +21,37 @@ const FormContext = React.createContext<any>({});
 
 const fetcher = (url: string) => fetch(url).then((r) => r.json());
 
-const DisplayCard = ({
+export const DisplayCard = ({
     imageUrl,
     title,
     description,
-    tailwindColor
+    tailwindColor,
+    cover
 }: {
     imageUrl?: string;
     title: string;
     description: string;
     tailwindColor?: string;
+    cover?: boolean;
 }) => {
     return (
-        <div className={`${tailwindColor ? tailwindColor : ''}`}>
-            <div className='relative'>
-                {imageUrl && (
+        <div className={`h-full rounded-lg ${tailwindColor}`}>
+            {imageUrl && (
+                <div className='relative h-[150px] '>
                     <Image
-                        className='h-full w-full object-cover'
-                        src={`/media/images/${imageUrl}`}
+                        className={`${
+                            cover ? 'object-cover' : 'object-contain'
+                        }`}
+                        src={`/media/images/wizard-form-icons/${imageUrl}`}
                         alt=''
                         fill
                         sizes='(max-width:768) 40wv 20vw'
-                        quality={1}
+                        quality={50}
                     />
-                )}
-            </div>
-            <div className='text-center'>{title}</div>
-            <div className='text-center'>{description}</div>
+                </div>
+            )}
+            <div className='text-center text-lg font-semibold'>{title}</div>
+            <div className='p-2 text-center'>{description}</div>
         </div>
     );
 };
@@ -60,17 +64,10 @@ const Loading = ({}: ILoading) => {
 interface IFormActiveStepCircle extends React.HTMLAttributes<HTMLDivElement> {
     step: number;
 }
-const formSteps: { title: string; step: number }[] = [
-    { title: 'Categories', step: 1 },
-    { title: 'Subtypes', step: 2 },
-    { title: 'Packages', step: 3 },
-    { title: 'Extras', step: 4 },
-    { title: 'Confirm Date', step: 5 },
-    { title: 'Details', step: 6 }
-];
 
 const FormActiveStepCircle = ({ step }: IFormActiveStepCircle) => {
-    const { currentStep, setCurrentStep } = React.useContext(FormContext);
+    const { currentStep, setCurrentStep, setManualBook } =
+        React.useContext(FormContext);
 
     const colorStepCircle = (step: number) => {
         if (currentStep > step) {
@@ -82,72 +79,55 @@ const FormActiveStepCircle = ({ step }: IFormActiveStepCircle) => {
         }
 
         if (currentStep < step) {
-            return 'text-slate-700';
+            return 'text-slate-700 cursor-not-allowed';
         }
     };
 
+    const handleClick = (step: number) => {
+        if (step === 1) {
+            setManualBook(false);
+        }
+        setCurrentStep(step);
+    };
+
     return (
-        <button
+        <div
             className={`mx-auto flex h-[40px] w-[40px] items-center justify-center rounded-full ${colorStepCircle(
                 step
             )}`}
             onClick={(e) =>
-                step < currentStep ? setCurrentStep(step) : e.preventDefault()
+                step < currentStep ? handleClick(step) : e.preventDefault()
             }>
             {step}
-        </button>
+        </div>
     );
 };
 
 interface IFormStepProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 const FormStepTracker = ({}: IFormStepProps) => {
-    const { currentStep, formSteps, stepError } = React.useContext(FormContext);
+    const { prevStep, currentStep, formSteps, manualBook } =
+        React.useContext(FormContext);
 
     return (
-        <div className='my-5 flex w-full justify-center text-slate-700'>
-            <div className='w-full text-right text-red-500'>
-                {stepError && stepError}
+        <div className='my-5 flex w-full text-slate-700'>
+            <div className='w-1/5 '>
+                {currentStep > 1 && !manualBook && (
+                    <AiFillCaretLeft
+                        onClick={() => prevStep()}
+                        className='h-[40px] w-[40px]'
+                    />
+                )}
             </div>
-            {formSteps.map(({ title, step }, index) => (
-                <div className='mx-2' key={index}>
-                    <FormActiveStepCircle step={step} />
-                    <div className='mt-2 w-full text-center font-semibold'>
-                        {currentStep === step && i18n._(title)}
+            {(formSteps as { step: number; title: string }[]).map(
+                ({ step, title }, index) => (
+                    <div className='mx-2' key={index}>
+                        <FormActiveStepCircle step={step} />
+                        <div className='mt-2 w-full grow text-center font-semibold'>
+                            {currentStep === step && title}
+                        </div>
                     </div>
-                </div>
-            ))}
-        </div>
-    );
-};
-
-interface IFormNavigation extends React.HTMLAttributes<HTMLButtonElement> {}
-const FormNavigation = ({}: IFormNavigation) => {
-    const { currentStep, prevStep, nextStep } = React.useContext(FormContext);
-
-    return (
-        <div className='mt-8 flex justify-end gap-x-5 py-8 font-normal tracking-wide text-slate-500'>
-            {currentStep > 1 && (
-                <button
-                    className='rounded-lg border border-slate-700 py-2 px-7 text-slate-700 hover:bg-slate-700 hover:text-slate-100'
-                    onClick={() => prevStep()}>
-                    Back
-                </button>
-            )}
-            {currentStep === formSteps.length - 1 && (
-                <button
-                    className='rounded-lg border-slate-700 bg-slate-700 px-4 text-slate-100 hover:bg-slate-800'
-                    type='button'
-                    onClick={() => nextStep()}>
-                    Confirm Time
-                </button>
-            )}
-            {currentStep === formSteps.length && (
-                <button
-                    className='rounded-lg border-slate-700 bg-slate-700 px-4 text-slate-100 hover:bg-slate-800'
-                    type='submit'>
-                    Submit
-                </button>
+                )
             )}
         </div>
     );
@@ -172,24 +152,24 @@ const SelectWashCategory = ({}: ISelectWashCategory) => {
             </div>
         );
     if (isLoading) return <Loading />;
-    const chooseCategory = (id: number) => {
+    const chooseCategory = (id: number, hasNext: boolean) => {
         setFormState((prev: any) => ({ ...prev, categoryId: id }));
         setValue('category', id);
-        nextStep();
+        nextStep(hasNext);
     };
 
     return (
-        <div className='flex h-full w-full flex-wrap gap-0 md:gap-[2%] '>
+        <div className='flex h-full w-full flex-wrap items-center justify-center gap-0 '>
             {(data as Category[]).map(
-                ({ title, id, description, imageUrl }, index) => (
+                ({ title, id, description, imageUrl, hasNext }, index) => (
                     <div
-                        className={`mt-[2%] flex min-h-[200px] min-w-[50%] grow flex-col md:min-w-[31%] ${
+                        className={`mx-auto mt-[3%] flex w-[31%] flex-col ${
                             formState.categoryId === id
                                 ? 'rounded-lg  outline outline-2 outline-green-400'
-                                : ''
+                                : 'rounded-lg  outline outline-2 outline-slate-700'
                         }`}
                         key={index}
-                        onClick={() => chooseCategory(id)}>
+                        onClick={() => chooseCategory(id, hasNext)}>
                         <DisplayCard
                             title={title}
                             description={description}
@@ -220,27 +200,28 @@ const SelectWashSubType = ({}: ISelectWashSubType) => {
         );
     if (isLoading) return <Loading />;
 
-    const chooseSubtype = (id: number) => {
+    const chooseSubtype = (id: number, hasNext: boolean) => {
         setFormState((prev: any) => ({ ...prev, subtypeId: id }));
         setValue('subtype', id);
-        nextStep();
+        nextStep(hasNext);
     };
 
     return (
-        <div className='mx-auto flex h-full w-full flex-wrap gap-0 md:gap-[2%]'>
+        <div className='mx-auto flex h-full w-full flex-wrap items-start justify-center gap-0 md:gap-[2%]'>
             {(data as Subtype[]).map(
-                ({ id, title, description, imageUrl }, index) => (
+                ({ id, title, description, imageUrl, hasNext }, index) => (
                     <div
-                        className={`mx-auto mt-[2%] flex min-h-[200px] min-w-[50%] max-w-[31%] grow flex-col md:min-w-[31%] ${
+                        className={`mt-[3%] flex min-h-[200px] w-[31%] flex-col ${
                             formState.subtypeId === id
                                 ? 'rounded-lg  outline outline-2 outline-green-400'
-                                : 'outline outline-2 outline-black'
+                                : 'rounded-lg  outline outline-2 outline-slate-700'
                         }`}
-                        onClick={() => chooseSubtype(id)}
+                        onClick={() => chooseSubtype(id, hasNext)}
                         key={index}>
                         <DisplayCard
                             title={title}
                             description={description}
+                            cover={true}
                             imageUrl={imageUrl}
                         />
                     </div>
@@ -269,27 +250,28 @@ const SelectPackageType = ({}: ISelectPackageType) => {
         );
     if (isLoading) return <Loading />;
 
-    const choosePackage = (id: number) => {
+    const choosePackage = (id: number, hasNext: boolean) => {
         setFormState((prev: any) => ({ ...prev, packageId: id }));
         setValue('category', id);
-        nextStep();
+        nextStep(hasNext);
     };
 
     return (
-        <div className='mx-auto flex h-full w-full flex-wrap gap-0 md:gap-[2%]'>
+        <div className='mx-auto flex h-full w-full flex-wrap items-center justify-center gap-0 md:gap-[2%]'>
             {(data as Package[]).map(
-                ({ id, title, description, tailwindColor }, index) => (
+                ({ id, title, description, tailwindColor, hasNext }, index) => (
                     <div
-                        className={`mt-[2%] flex min-h-[200px] min-w-[50%] grow flex-col md:min-w-[31%] ${tailwindColor} ${
+                        className={`mt-[3%] flex h-[200px] w-[31%] flex-col ${
                             formState.packageId === id
                                 ? 'rounded-lg  outline outline-2 outline-green-400'
-                                : ''
+                                : 'rounded-lg  outline outline-2 outline-slate-700'
                         }`}
                         key={index}
-                        onClick={() => choosePackage(id)}>
+                        onClick={() => choosePackage(id, hasNext)}>
                         <DisplayCard
                             title={title}
                             description={description}
+                            cover={true}
                             tailwindColor={tailwindColor}
                         />
                     </div>
@@ -304,7 +286,7 @@ interface ISelectExtras extends React.HTMLAttributes<HTMLDivElement> {}
 const SelectExtras = ({}: ISelectExtras) => {
     const { setValue } = useFormContext();
     const { locale } = useRouter();
-    const { formState, setFormState, nextStep } = React.useContext(FormContext);
+    const { formState, nextStep } = React.useContext(FormContext);
     const { data, error, isLoading } = useSWR(
         `/api/selectFromDB?table=package&id=${formState.packageId}&locale=${locale}`,
         fetcher
@@ -329,25 +311,29 @@ const SelectExtras = ({}: ISelectExtras) => {
             price: number;
             time: Prisma.Decimal;
         }[] = [];
-        extras.forEach(({ price, id, time, title }, key) => {
+        extras.forEach(({ price, id, time, title }, _) => {
             tmpArr.push({ id, title, price, time });
         });
         setValue('extras', tmpArr);
-        nextStep();
+        nextStep(true);
     };
 
     return (
-        <div className='mx-auto flex flex-wrap justify-center py-5'>
-            <OptionalExtras
-                extras={extraBasket}
-                setExtras={setExtraBasket}
-                data={data}
-            />
-            <button
-                className='mt-10 w-fit rounded-lg border border-slate-700 bg-slate-700 px-10 py-5 text-slate-100 hover:bg-slate-100 hover:text-slate-700'
+        <div className='mx-auto flex flex-wrap py-5'>
+            {data.length !== 0 ? (
+                <OptionalExtras
+                    extras={extraBasket}
+                    setExtras={setExtraBasket}
+                    data={data}
+                />
+            ) : (
+                <div className=''>There are no packages for this category</div>
+            )}
+            <div
+                className='mt-10 ml-auto w-fit rounded-lg border border-slate-700 bg-slate-700 px-10 py-5 text-slate-100 hover:bg-slate-100 hover:text-slate-700'
                 onClick={() => setExtras(extraBasket)}>
                 Go To Booking
-            </button>
+            </div>
         </div>
     );
 };
@@ -370,7 +356,7 @@ const SelectDatetime = ({}: ISelectDatetime) => {
             return;
         }
         setValue('datetime', datetime);
-        nextStep();
+        nextStep(true);
     };
 
     return (
@@ -396,18 +382,42 @@ interface ISelectBookingDetails extends React.HTMLAttributes<HTMLDivElement> {}
 
 const SelectBookingDetails = ({}: ISelectBookingDetails) => {
     return (
-        <div className='my-10'>
+        <div className='my-10 flex flex-wrap justify-end'>
             <BookingForm />
+            <button
+                className='my-5 ml-auto w-fit rounded-lg border border-slate-700 bg-slate-700 py-2 px-5 text-slate-100 hover:bg-slate-800'
+                type='submit'>
+                Submit
+            </button>
         </div>
     );
 };
 
-interface IFormPageDisplay extends React.HTMLAttributes<HTMLDivElement> {
-    page: number;
-}
+interface IGiveUsACall extends React.HTMLAttributes<HTMLDivElement> {}
 
-const FormPageDisplay = ({ page }: IFormPageDisplay) => {
-    const { currentStep } = React.useContext(FormContext);
+const GiveUsACall = ({}: IGiveUsACall) => {
+    return (
+        <div className='mt-10 flex h-full w-full flex-col flex-wrap items-center justify-center text-xl'>
+            <div className=''>
+                Please give us a call to arrange a custom offer for you.
+            </div>
+            <div className='font-semibold'>
+                Phone:
+                <Link
+                    className='cursor-alias font-normal'
+                    href='tel:6980 000 015'>
+                    {' '}
+                    6980 000 015
+                </Link>
+            </div>
+        </div>
+    );
+};
+
+interface IFormPageDisplay extends React.HTMLAttributes<HTMLDivElement> {}
+
+const FormPageDisplay = ({}: IFormPageDisplay) => {
+    const { currentStep, manualBook } = React.useContext(FormContext);
     const stepSwitcher = (currentStep: number) => {
         switch (currentStep) {
             case 1:
@@ -425,39 +435,88 @@ const FormPageDisplay = ({ page }: IFormPageDisplay) => {
         }
     };
 
-    return <div className=''>{stepSwitcher(currentStep)}</div>;
+    return (
+        <div className=''>
+            {manualBook ? (
+                <GiveUsACall />
+            ) : (
+                <div className=''>{stepSwitcher(currentStep)}</div>
+            )}
+        </div>
+    );
 };
 
-interface IMultiStepForm extends React.HTMLAttributes<HTMLFormElement> {}
+interface IThankYouPage extends React.HTMLAttributes<HTMLDivElement> {}
 
-const MultiStepForm = ({}: IMultiStepForm) => {
+const ThankYouPage = ({}: IThankYouPage) => {
+    return (
+        <div className=''>
+            Thank You for Your Submission. We will be in touch shortly
+        </div>
+    );
+};
+
+interface IMultiStepForm extends React.HTMLAttributes<HTMLFormElement> {
+    categoryId?: number;
+}
+
+const MultiStepForm = ({ categoryId }: IMultiStepForm) => {
     const [currentStep, setCurrentStep] = React.useState(1);
     const [submitReady, setSubmitReady] = React.useState(false);
+    const [manualBook, setManualBook] = React.useState(false);
+    const [submitSuccess, setSubmitSuccess] = React.useState(false);
+    const [serverResponse, setServerResponse] = React.useState(false);
+    const [formSteps, _] = React.useState([
+        { title: 'Categories', step: 1 },
+        { title: 'Subtypes', step: 2 },
+        { title: 'Packages', step: 3 },
+        { title: 'Extras', step: 4 },
+        { title: 'Confirm Date', step: 5 },
+        { title: 'Details', step: 6 }
+    ]);
 
-    const [stepError, setStepError] =
-        React.useState<React.ReactNode>(undefined);
+    const firstVisit = React.useRef(0);
 
     const [formState, setFormState] = React.useState({
-        categoryId: null,
+        categoryId: categoryId ?? null,
         typeId: null,
         packageId: null
     });
+
+    React.useEffect(() => {
+        if (firstVisit.current === 0) {
+            if (formState.categoryId) {
+                setCurrentStep(2);
+            }
+            firstVisit.current = 1;
+        }
+    }, [formState.categoryId]);
 
     const formMethods = useForm({
         resolver: yupResolver(bookingFormSchema)
     });
 
-    const nextStep = () => {
+    const nextStep = (hasNext?: boolean) => {
+        if (!hasNext) {
+            setManualBook(true);
+            setCurrentStep(formSteps.length);
+            return;
+        }
+
+        //console.log(window.screenY);
+        window.scrollTo({
+            top: 100,
+            behavior: 'smooth'
+        });
+
         if (currentStep >= formSteps.length) {
             setSubmitReady(true);
             return;
         }
-        window.scrollTo({
-            top: 200,
-            behavior: 'smooth'
-        });
+
         setCurrentStep((cur: number) => cur + 1);
     };
+
     const prevStep = () => {
         if (currentStep > 1) {
             setCurrentStep((cur: number) => cur - 1);
@@ -466,6 +525,8 @@ const MultiStepForm = ({}: IMultiStepForm) => {
 
     const onSubmit = async (data: any, e: any) => {
         e.preventDefault();
+        console.log(data);
+        console.log('-----------------');
 
         const res = await fetch('/api/insertBooking', {
             method: 'POST',
@@ -476,18 +537,37 @@ const MultiStepForm = ({}: IMultiStepForm) => {
             },
             body: JSON.stringify(data)
         });
+
+        window.scrollTo({
+            top: 100,
+            behavior: 'smooth'
+        });
+
+        if (res.ok) {
+            setSubmitSuccess(true);
+            setServerResponse(true);
+        } else {
+            setSubmitSuccess(true);
+            setServerResponse(false);
+        }
     };
     const onError = (err: any, e: any) => {
         e.preventDefault();
         console.log('error', err);
         window.scrollTo({
-            top: 200,
+            top: 100,
             behavior: 'smooth'
         });
     };
 
     return (
         <FormProvider {...formMethods}>
+            {submitSuccess && (
+                <ResponseBox
+                    status={serverResponse}
+                    text='Thank you for the submission. We will be in contact soon'
+                />
+            )}
             <form
                 onSubmit={formMethods.handleSubmit(onSubmit, onError)}
                 className='py-10'>
@@ -500,17 +580,22 @@ const MultiStepForm = ({}: IMultiStepForm) => {
                         formSteps: formSteps,
                         formState: formState,
                         setFormState: setFormState,
-                        stepError: stepError,
-                        setStepError: setStepError,
                         prevStep: prevStep,
-                        nextStep: nextStep
+                        nextStep: nextStep,
+                        manualBook: manualBook,
+                        setManualBook: setManualBook
                     }}>
                     <div className='container mx-auto flex h-full min-h-[500px] w-[800px] flex-col justify-between divide-y-2 divide-slate-500/50 rounded-lg border-2 border-slate-400 bg-primary p-3'>
-                        <FormStepTracker />
-                        <div className='min-h-[300px]'>
-                            <FormPageDisplay page={currentStep} />
-                        </div>
-                        <FormNavigation />
+                        {formMethods.formState.isSubmitted ? (
+                            <ThankYouPage />
+                        ) : (
+                            <>
+                                <FormStepTracker />
+                                <div className='min-h-[300px]'>
+                                    <FormPageDisplay />
+                                </div>
+                            </>
+                        )}
                     </div>
                 </FormContext.Provider>
             </form>
@@ -527,8 +612,15 @@ export default MultiStepForm;
    Each request has 3 components,   table -> what tabled do we have data from
                                     id -> the id to check out
                                     locale -> anyones guess
+
    To add a new step first add it to the form steps,
    Then create the component for the page
    Then create a new db query in the api route and return data
+
+   Nextstep takes in an optional hasNext parameter in case there isnt a online booking path available
    Check prisma/seed.ts for information about the database layout
+
+   manualbook is responsible for control flow that cannot be done online
+   ie ask for price
+
  */

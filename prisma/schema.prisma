@@ -14,72 +14,78 @@ datasource db {
 model Category {
   id           Int               @id @default(autoincrement())
   title        String
-  description  String
+  description  String            @db.Text()
   imageUrl     String
+  hasNext      Boolean           @default(true)
   subtypes     CategorySubtype[]
-  categoryEL   CategoryEL @relation(fields: [categoryELId], references: [id])
-  categoryELId Int @unique
+  categoryEL   CategoryEL        @relation(fields: [categoryELId], references: [id])
+  categoryELId Int               @unique
 }
 
 model Subtype {
   id          Int               @id @default(autoincrement())
   title       String
-  description String
+  description String            @db.Text()
   imageUrl    String
+  hasNext     Boolean           @default(true)
   categories  CategorySubtype[]
   packages    SubtypePackage[]
-  subtypeEL   SubtypeEL @relation(fields: [subtypeELId], references: [id])
-  subtypeELId Int @unique
+  subtypeEL   SubtypeEL         @relation(fields: [subtypeELId], references: [id])
+  subtypeELId Int               @unique
 }
 
 model Package {
   id            Int              @id @default(autoincrement())
   title         String
-  description   String
-  tailwindColor String
+  description   String           @db.Text()
+  tailwindColor String           @default("bg-gradient-to-tl from-slate-200 via-slate-200 to-slate-600")
+  price         Int?
+  hasNext       Boolean          @default(true)
   subtypes      SubtypePackage[]
   extras        PackageExtra[]
-  packageEL     PackageEL @relation(fields: [packageELId], references: [id])
-  packageELId   Int @unique
+  packageEL     PackageEL        @relation(fields: [packageELId], references: [id])
+  packageELId   Int              @unique
 }
 
 model Extra {
   id          Int            @id @default(autoincrement())
   title       String
-  description String
+  description String         @db.Text()
   imageUrl    String
   price       Int
   time        Decimal
+  hasNext     Boolean        @default(true)
   packages    PackageExtra[]
-  extraEL     ExtraEL @relation(fields: [extraELId], references: [id])
-  extraELId   Int @unique
+  //bookings    Booking[]
+  extraEL     ExtraEL        @relation(fields: [extraELId], references: [id])
+  extraELId   Int            @unique
 }
 
 model CategoryEL {
-  id          Int      @id @default(autoincrement())
+  id          Int       @id @default(autoincrement())
   title       String
-  description String
+  description String    @db.Text()
   category    Category?
 }
 
 model SubtypeEL {
-  id          Int     @id @default(autoincrement())
+  id          Int      @id @default(autoincrement())
   title       String
-  description String
+  description String   @db.Text()
   subtype     Subtype?
 }
 
 model PackageEL {
-  id          Int @id @default(autoincrement())
+  id          Int      @id @default(autoincrement())
   title       String
-  description String
+  description String   @db.Text()
   package     Package?
 }
 
 model ExtraEL {
-  id          Int @id @default(autoincrement())
+  id          Int    @id @default(autoincrement())
   title       String
-  description String
+  description String @db.Text()
   extraId     Extra?
 }
 
@@ -109,3 +115,48 @@ model PackageExtra {
 
   @@id([packageId, extraId])
 }
+
+//model Booking {
+//  id          Int @id @default(autoincrement())
+//  name String
+//  email String?
+//  phone Int
+//  location String
+//  messageBody String?
+//  starttime DateTime
+//  endtime DateTime
+//  createdAt @default(now())
+//  subtypeId Int?
+//  packageId Int?
+//  categoryId Int?
+// // extras  Extra[]
+//}
+
+//model extraBookings {
+//  booking Booking @relation(fields: [bookingId], references:[id])
+//  bookingId Int
+//  extra Extra @relation(fields: [extraId], references: [id])
+//  extraId Int
+//}
+
+// Basic idea behind structure
+// Fields:
+// HasNext incase the flow needs to be changed.
+//        At some point maybe there needs to be
+//        next table.
+// m-m category subtypes
+//     what kind of Category subtypes
+//      eg  car -> supercar, smart, jeep etc
+// m-m subtypes packages
+//      what kind packages in subtype
+//       eg smart -> stanndard clean, gold clean
+// m-m packages extras
+//      what packages what extras
+//        eg Gold package has some included pacakges,
+// m-m booking extra
+//      what extras were chosen foor the booking
+//
+// 1-1 category categoryEL
+// etc
+// tailwindColor is usually foor the gradient of paackages but any tailwind css will work
+// make sure to include in the tailwind safelist

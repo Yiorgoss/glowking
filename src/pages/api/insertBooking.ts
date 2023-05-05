@@ -30,13 +30,14 @@ export default async function handler(
 
     const calendar = google.calendar({ version: 'v3', auth });
 
-    const eventListRes = await calendar.events.list({
-        calendarId: 'glowkingath@gmail.com',
-        timeMin: new Date().toISOString(),
-        maxResults: 10,
-        singleEvents: true,
-        orderBy: 'startTime'
-    });
+    ////How to get a list of calendars when needed
+    //const eventListRes = await calendar.events.list({
+    //    calendarId: 'glowkingath@gmail.com',
+    //    timeMin: new Date().toISOString(),
+    //    maxResults: 10,
+    //    singleEvents: true,
+    //    orderBy: 'startTime'
+    //});
 
     if (req.method === 'GET') {
         res.status(123).end();
@@ -47,10 +48,9 @@ export default async function handler(
             .validate(req.body)
             .catch((err) => {
                 console.log('VALIDATION FAILED: %s', err);
-                res.status(400).json({
+                res.status(400).end({
                     message: { error: 'VALIDATION FAILED', value: err }
                 });
-                res.end();
                 throw new Error('ERROR: Validation failed: %s', err);
             });
 
@@ -58,8 +58,6 @@ export default async function handler(
         const endtime = addCleanTime(datetime);
 
         const desc = makeDesc(validated);
-        console.log(desc);
-
         const event: calendar_v3.Schema$Event = {
             summary: validated.name,
             location: validated.location,
@@ -97,12 +95,12 @@ export default async function handler(
         );
         // insert event into database
         // send confirmation emails
-        if (validated.email) {
-            sendConfirmationEmails(validated, endtime);
-        }
-        return res.status(200).end({ message: 'success' });
+        //if (validated.email) {
+        //    sendConfirmationEmails(validated, endtime);
+        //}
+        return res.status(200).send({ message: 'success' });
     }
-    return res.status(200).end({ message: 'success' });
+    return res.status(200).send({ message: 'success' });
 }
 interface EmailArgs extends Asserts<typeof bookingFormSchema> {}
 
@@ -117,8 +115,8 @@ const sendConfirmationEmails = (data: EmailArgs, endtime: string) => {
         to: 'glowkingath@gmail.com',
         from: 'contact@glowking.gr',
         subject: 'Booking Confirmation',
-        text: `Name: ${name} \nEmail: ${email} \nPhone:${phone} \nHas made a booking confirmation for ${datetime} until ${endtime}\nLocation: ${location}. `,
-        html: `Name: ${name} <br>Email: ${email} <br>Has made a booking confirmation for ${datetime} - ${endtime}. <br> Location: ${location}</a>`
+        text: `Name: ${name} \nEmail: ${email} \nPhone:${phone} \nHas made a booking confirmation for ${datetime} until ${endtime}\nLocation: ${location}. Message:\n${messageBody}`,
+        html: `Name: ${name} <br>Email: ${email} <br>Has made a booking confirmation for ${datetime} - ${endtime}. <br> Location: ${location}<br>Message: ${messageBody}`
     };
 
     const msgToCustomer = {
