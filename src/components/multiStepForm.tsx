@@ -35,9 +35,10 @@ export const DisplayCard = ({
     cover?: boolean;
 }) => {
     return (
-        <div className={`h-full rounded-lg ${tailwindColor}`}>
+        <div
+            className={`flex h-full min-h-[200px] flex-col justify-around rounded-lg ${tailwindColor}`}>
             {imageUrl && (
-                <div className='relative h-[150px] '>
+                <div className='relative h-full min-h-[150px] '>
                     <Image
                         className={`${
                             cover ? 'object-cover' : 'object-contain'
@@ -159,11 +160,11 @@ const SelectWashCategory = ({}: ISelectWashCategory) => {
     };
 
     return (
-        <div className='flex h-full w-full flex-wrap items-center justify-center gap-0 '>
+        <div className='flex h-full w-full flex-wrap items-center justify-center gap-[2%] md:gap-0 '>
             {(data as Category[]).map(
                 ({ title, id, description, imageUrl, hasNext }, index) => (
                     <div
-                        className={`mx-auto mt-[3%] flex w-[31%] flex-col ${
+                        className={`mx-auto mt-[3%] flex w-[49%] flex-col md:w-[31%] ${
                             formState.categoryId === id
                                 ? 'rounded-lg  outline outline-2 outline-green-400'
                                 : 'rounded-lg  outline outline-2 outline-slate-700'
@@ -207,11 +208,11 @@ const SelectWashSubType = ({}: ISelectWashSubType) => {
     };
 
     return (
-        <div className='mx-auto flex h-full w-full flex-wrap items-start justify-center gap-0 md:gap-[2%]'>
+        <div className='mx-auto flex h-full w-full flex-wrap items-start justify-center gap-[2%] md:gap-0 '>
             {(data as Subtype[]).map(
                 ({ id, title, description, imageUrl, hasNext }, index) => (
                     <div
-                        className={`mt-[3%] flex min-h-[200px] w-[31%] flex-col ${
+                        className={`mt-[3%] flex min-h-[200px] w-[49%] flex-col md:w-[31%] ${
                             formState.subtypeId === id
                                 ? 'rounded-lg  outline outline-2 outline-green-400'
                                 : 'rounded-lg  outline outline-2 outline-slate-700'
@@ -257,11 +258,11 @@ const SelectPackageType = ({}: ISelectPackageType) => {
     };
 
     return (
-        <div className='mx-auto flex h-full w-full flex-wrap items-center justify-center gap-0 md:gap-[2%]'>
+        <div className='mx-auto flex h-full w-full flex-wrap items-start justify-center gap-[2%] md:gap-0 '>
             {(data as Package[]).map(
                 ({ id, title, description, tailwindColor, hasNext }, index) => (
                     <div
-                        className={`mt-[3%] flex h-[200px] w-[31%] flex-col ${
+                        className={`mt-[3%] flex w-[49%] flex-col md:w-[31%] ${
                             formState.packageId === id
                                 ? 'rounded-lg  outline outline-2 outline-green-400'
                                 : 'rounded-lg  outline outline-2 outline-slate-700'
@@ -585,7 +586,7 @@ const MultiStepForm = ({ categoryId }: IMultiStepForm) => {
                         manualBook: manualBook,
                         setManualBook: setManualBook
                     }}>
-                    <div className='container mx-auto flex h-full min-h-[500px] w-[800px] flex-col justify-between divide-y-2 divide-slate-500/50 rounded-lg border-2 border-slate-400 bg-primary p-3'>
+                    <div className='container mx-auto flex h-full min-h-[500px] w-full flex-col justify-between divide-y-2 divide-slate-500/50 rounded-lg border-2 border-slate-400 bg-primary p-3 md:w-[800px]'>
                         {formMethods.formState.isSubmitted ? (
                             <ThankYouPage />
                         ) : (

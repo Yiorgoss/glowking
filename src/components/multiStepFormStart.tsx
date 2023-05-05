@@ -18,7 +18,7 @@ const MultiStepFormStart = ({categories}: ISelectWashCategory) => {
         );
 
     return (
-        <div className='container mx-auto absolute z-20 flex h-full w-full  inset-x-0 bottom-0 top-20% h-[70%] max-w-[70%] flex-wrap items-center justify-center gap-0 '>
+        <div className='container mx-auto absolute z-20 flex h-full w-full  inset-x-0 md:bottom-0 bottom-[20%] top-[20%] md:top-20% h-[70%] md:max-w-[70%] flex-wrap items-center justify-center gap-0 '>
             {categories.map(({ title, id, description, imageUrl }, index) => (
                     <Link
                         className={`mx-auto hover:scale-110 mt-[3%] flex w-[31%] flex-col invert `}
