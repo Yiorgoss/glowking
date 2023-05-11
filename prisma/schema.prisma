@@ -61,6 +61,11 @@ model Extra {
   extraELId   Int            @unique
 }
 
+model KeepAlive {
+  id          Int       @id @default(autoincrement())
+  createdAt   DateTime  @default(now())
+}
+
 model CategoryEL {
   id          Int       @id @default(autoincrement())
   title       String
