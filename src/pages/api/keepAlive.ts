@@ -12,8 +12,6 @@ export default async function handler(
     res: NextApiResponse<Data>
 ) {
     const keepAliveApiSecret = req.headers['x-keep-alive-api-secret'];
-    console.log(keepAliveApiSecret);
-    console.log(process.env.KEEP_ALIVE_API_SECRET);
     if (keepAliveApiSecret !== process.env.KEEP_ALIVE_API_SECRET) {
         return res.status(403).json({
             message: {
