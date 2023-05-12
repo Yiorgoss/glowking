@@ -12,4 +12,5 @@ jobs:
         run: |
           curl --request PUT \
             --url '${{ secrets.SITE_URL }}/api/keepAlive' \
-            --header 'x-keep-alive-api-secret: ${{ secrets.KEEP_ALIVE_API_SECRET }}'
+            --header 'x-keep-alive-api-secret: ${{ secrets.KEEP_ALIVE_API_SECRET }}' \
+            --location

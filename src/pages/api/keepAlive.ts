@@ -13,7 +13,7 @@ export default async function handler(
 ) {
     const keepAliveApiSecret = req.headers['x-keep-alive-api-secret'];
     if (keepAliveApiSecret !== process.env.KEEP_ALIVE_API_SECRET) {
-        return res.status(403).json({
+        return res.status(403).send({
             message: {
                 error: 'Unauthorized'
             }
@@ -22,5 +22,5 @@ export default async function handler(
 
     await prisma.keepAlive.create({ data: {} });
 
-    return res.status(200);
+    return res.status(200).end();
 }
