@@ -33,7 +33,7 @@ export default async function handler(
             res.status(200).end(JSON.stringify(categories));
         } else {
             const categories = await prisma.$queryRaw`
-                SELECT c.id, c.imageUrl, el.title, el.description
+                SELECT c.id, c.hasNext, c.imageUrl, el.title, el.description
                   FROM Category c
              LEFT JOIN CategoryEL el
                     ON c.categoryELId = el.id
@@ -54,7 +54,7 @@ export default async function handler(
             res.status(200).end(JSON.stringify(subtypeCategories));
         } else {
             const subtypeCategories = await prisma.$queryRaw`
-                SELECT s.id, el.title, el.description, s.imageUrl
+                SELECT s.id, s.hasNext, el.title, el.description, s.imageUrl
                   FROM Subtype s
              LEFT JOIN SubtypeEL el
                     ON s.subtypeELId = el.id
@@ -78,7 +78,7 @@ export default async function handler(
             res.status(200).end(JSON.stringify(packageSubtypes));
         } else {
             const packageSubtypes = await prisma.$queryRaw`
-                SELECT p.id, el.title, el.description, p.tailwindColor
+                SELECT p.id, p.hasNext, p.tailwindColor, el.title, el.description
                   FROM Package p
              LEFT JOIN PackageEL as el
                     ON p.packageELId = el.id
@@ -102,7 +102,7 @@ export default async function handler(
             res.status(200).end(JSON.stringify(extraPackages));
         } else {
             const extraPackages = await prisma.$queryRaw`
-                SELECT e.id, el.title, el.description, e.imageUrl, e.price, e.time
+                SELECT e.id, e.hasNext, e.imageUrl, e.price, e.time, el.title, el.description,
                   FROM Extra e
              LEFT JOIN ExtraEL el
                     ON e.extraELId = el.id
