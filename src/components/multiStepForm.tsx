@@ -296,6 +296,7 @@ const SelectExtras = ({}: ISelectExtras) => {
         new Map()
     );
     if (error) {
+        //console.log(error)
         return (
             <div>
                 Failed to load. Try refreshing your browser it this problem

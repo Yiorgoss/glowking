@@ -102,7 +102,7 @@ export default async function handler(
             res.status(200).end(JSON.stringify(extraPackages));
         } else {
             const extraPackages = await prisma.$queryRaw`
-                SELECT e.id, e.hasNext, e.imageUrl, e.price, e.time, el.title, el.description,
+                SELECT e.id,  e.imageUrl, e.price, e.time, el.title, el.description
                   FROM Extra e
              LEFT JOIN ExtraEL el
                     ON e.extraELId = el.id
@@ -110,6 +110,7 @@ export default async function handler(
                     ON e.id = pe.extraId
                  WHERE pe.packageId = ${value}
 `;
+            console.log(extraPackages)
             res.status(200).end(JSON.stringify(extraPackages));
         }
     }
